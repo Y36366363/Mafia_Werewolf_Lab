@@ -1,0 +1,26 @@
+{
+  "config": {
+    "version": "20261010-v02",
+    "purpose": "Exploratory correction: police reject outsider claimed inspections; add covert nomination and mafia nomination mimic; new independent seeds; retain v01 evidence",
+    "small_n": 512,
+    "small_seed": 7100000,
+    "branch_n": 2048,
+    "branch_seed": 8100000,
+    "train_n": 256,
+    "train_seed": 9100000,
+    "test_n": 1024,
+    "test_seed": 10100000,
+    "mechanism_n": 1536,
+    "mechanism_seed": 11100000
+  },
+  "source_sha256": "065cba7dbd34fe7b210ac31ef5e7bbe74a63e373153fd8736847bc47475e9ec0",
+  "elapsed_seconds": 163.96581045800122,
+  "files": {
+    "tiny_exact.json": "c9b961bf3959ab99fba272a044e0705a20b1e866fc9c84b7d1214b9211ba3d3c",
+    "analytic_controls.json": "af369baeeafb47571440545b38df0b5003fb12dd68708ce5d9c2d4e474099d7f",
+    "small_games.json": "0e86e53c8b0263137b9e0d53c0461d90c8915fa4ac3079b53abec433e526c8b0",
+    "first_day_branches.json": "07d2e4bfe7384d7ef535d2686cb1792481e58c3fe0862142a04ecbb3a6af2b7a",
+    "strategy_pool.json": "42afe9d177d01d237e70c582b92f8a51cd29edb3965f103acca6ce218a23e6e8",
+    "mechanisms.json": "6cd6eff28b42e51a676d8513aeb7605408db51b954e68f34c09deb84a76d5eb9"
+  }
+}

@@ -1,0 +1,133 @@
+"""Render the frozen v02 suite and v03 counter; no choices are fitted here."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT/"results/v02"
+
+
+def load(name):
+    return json.loads((DATA/f"{name}.json").read_text())
+
+
+def pct(x):
+    return "—" if x is None else f"{x*100:.2f}%"
+
+
+def delta(x):
+    return "—" if x is None else f"{x*100:+.2f}"
+
+
+def interval(values):
+    return "—" if values is None else f"[{values[0]*100:+.2f}, {values[1]*100:+.2f}]"
+
+
+def main():
+    branch, pool, mechanisms = load("first_day_branches"), load("strategy_pool"), load("mechanisms")
+    small, manifest = load("small_games"), load("manifest")
+    signal = json.loads((ROOT/"results/signal_counter_v03.json").read_text())
+    config = manifest["config"]
+    n_games = (3*config["small_n"] + 4*config["branch_n"]
+               + len(pool["config"]["good_pool"])*len(pool["config"]["mafia_pool"])*(config["train_n"]+config["test_n"])
+               + len(mechanisms["variants"])*config["mechanism_n"])
+    text = ["# 首轮框架与修正版实验报告", "",
+        "日期：2026-10-10。本报告整合v02修正版套件与v03提名信号反制；v01源码、配置与失败/退化结果完整保留。",
+        "",
+        f"v02完成 **{n_games:,} 次到真实终局的蒙特卡洛对局**，另有1警1匪2民精确枚举和31,104条跨裁判路径核对。",
+        f"v03补充 **{signal['total_games']:,} 局**，两项修正后实验共 **{n_games+signal['total_games']:,} 局**。加上保留的v01及其补充，累计完成165,888局模拟；数量不代替模型正确性和证据范围。",
+        "这份报告中的百分比均为好人阵营整局获胜概率。模拟结论依赖冻结行为模型；没有完整16人GTO或人类教学效果证据。",
+        "",
+        "## 1. 首个可复算的精确结果", "",
+        "| 1警1匪2民受限模型 | 好人胜率 |",
+        "| --- | ---: |",
+        "| 忽略验人与声明、独立均匀投票 | 1/6 = 16.67% |",
+        "| 真警报告、平民听首个声明，对沉默匪 | 11/27 = 40.74% |",
+        "| 同一好人策略，对假查杀反制 | 5/27 = 18.52% |",
+        "| 当前18×8策略池的精确鞍点 | 8/27 = 29.63% |", "",
+        "鞍点的受限最佳回应间隙严格为0，并与独立SciPy/HiGHS求解一致。当前结果是纯策略，不要求秘密团队相关设备。首夜选择、动作模板和后续行为受限；结论不包含池外偏离。",
+        "",
+        "## 2. 16人首日遗言配对实验", "",
+        "先从共同随机首夜生成局面，再只改变首死者遗言。续局好人采用“仅死警公开报告、平民接受验人声明”；警察保留私有信息且拒绝队外假验人。两种匪方后续策略分别测试。",
+        "每个数值是相同开局的配对结果。区间是探索性95%配对正态区间，单位为百分点；原始JSON另存有界Hoeffding区间。没有进行多重比较校正，零方差区间不代表理论等价。",
+        "",
+        "| 后续匪策略 | 首死分支 / 改动 | 样本n | 对照胜率 | 改动胜率 | 差值pp | 95%区间pp |",
+        "| --- | --- | ---: | ---: | ---: | ---: | --- |"]
+    labels = {"civilian": "民：报民过→随机水包", "police_clear": "警验好人：不报→真报告",
+              "police_hit": "警验匪：不报→查杀"}
+    for r in branch["comparisons"]:
+        text.append(f"| {r['opponent']} | {labels[r['branch']]} | {r['paired']['n']} | {pct(r['control_summary']['rate'])} | {pct(r['treatment_summary']['rate'])} | {delta(r['paired']['delta'])} | {interval(r['paired']['ci95_normal'])} |")
+    text += ["", "区间覆盖零表示本次精度下未可靠区分，不构成永久淘汰策略的证据。接近零的整体胜率会掩盖局部声明收益，应结合更合理的后续策略继续研究。",
+             "", "## 3. 双方反制与独立测试", "",
+             f"每个策略组合用{config['train_n']}局选择回应，再用全新的{config['test_n']}局评估。好人和匪方各7个候选，包括新增的不报身份共同内推和模仿内推。",
+             "", "训练样本选出：", ""]
+    for k,v in pool["selection_from_train"].items():
+        text.append(f"- `{k}`：`{v}`")
+    text += ["", "下表是所有预定组合的测试胜率，避免只展示最好的组合。",
+             "", "| 好人策略 / 匪策略 | " + " | ".join(p["name"] for p in pool["config"]["mafia_pool"]) + " |",
+             "| --- | " + " | ".join(["---:"]*len(pool["config"]["mafia_pool"])) + " |"]
+    for p,row in zip(pool["config"]["good_pool"],pool["test_summaries"]):
+        text.append("| "+p["name"]+" | "+" | ".join(pct(r["rate"]) for r in row)+" |")
+    text += ["", "| 测试样本比较 | 好人胜率差pp | 95%配对区间pp |", "| --- | ---: | --- |"]
+    for k,r in pool["heldout_comparisons"].items():
+        text.append(f"| {k} | {delta(r['delta'])} | {interval(r['ci95_normal'])} |")
+    text += ["", "这些是候选策略池内的利用与反利用，不是遍历所有合法信息集后的最佳回应。纯策略方案可以公开约定，无需给好人阵营发秘密混合索引。没有把模拟矩阵的数值残差冒充原游戏exploitability。",
+             "", "### v03：新策略暴露了新的公开信号", "",
+             "v02的共同内推策略虽然不直接报警身份，但只有警察持续提名时，提名本身就可能暴露角色。此前杀手只追刀跳警者，没有利用这种新信号。v03在采样前冻结“同时追刀公开提名者”的回应，使用全新1,024个开局对每个组合配对评价，白天策略和自刀率保持不变。",
+             "", "| 好人采用共同内推；匪方白天策略 | 只追刀跳警者 | 同时追刀提名者 | 好人胜率差pp | 95%配对区间pp |",
+             "| --- | ---: | ---: | ---: | --- |"]
+    signal_cells = {(r['good_policy'], r['mafia_policy']): r for r in signal['cells']}
+    for r in signal['paired_contrasts']:
+        if r['good_policy'] != 'covert_nomination':
+            continue
+        a = signal_cells[r['good_policy'], r['control']]['summary']['rate']
+        b = signal_cells[r['good_policy'], r['treatment']]['summary']['rate']
+        label = '假跳警、假查杀' if r['control'] == 'fake_hunt' else '模仿共同内推'
+        text.append(f"| {label} | {pct(a)} | {pct(b)} | {delta(r['paired']['delta'])} | {interval(r['paired']['ci95_normal'])} |")
+    text += ["", "该结果推翻了把共同内推的高胜率解释为稳定最优策略的判断：它利用了旧对手未识别提名信号的弱点。它支持继续研究平民掩护提名、混合发言及识别反制的价值，但尚未证明这些扩展有效。",
+             "另外两种不提名的好人策略在同一白天对手下，换用提名追刀规则逐局结果不变，符合负对照预期。v03完整12个组合、六项配对比较、Wilson和配对区间及原始结果均保留。",
+             "", "## 4. 机制对照", "",
+             "为避免初版胜率触底，修正版预先固定“好人仅信死者报告”对“匪不悍跳、优先追刀跳警者”为参考。每个变体从根节点重跑同一组独立角色分配与随机流，不能按变体产生的首死角色再筛选进行因果比较。",
+             "", "| 变体 | 样本n | 好人胜率 | 相对参考差pp | 95%配对区间pp |",
+             "| --- | ---: | ---: | ---: | --- |"]
+    for r in mechanisms["variants"]:
+        text.append(f"| {r['name']} | {r['summary']['n']} | {pct(r['summary']['rate'])} | {delta(r['paired_vs_baseline']['delta'])} | {interval(r['paired_vs_baseline']['ci95_normal'])} |")
+    text += ["", "自刀25%在相同悍跳设置下的独立对比（正差表示好人得利，匪方受损）：", "",
+             "| 声明设置 | 好人胜率差pp | 95%配对区间pp |", "| --- | ---: | --- |"]
+    for k,r in mechanisms["selfkill_contrasts"].items():
+        text.append(f"| {k} | {delta(r['delta'])} | {interval(r['ci95_normal'])} |")
+    text += ["", "固定左/右在同时镜像座位、规则和策略时同构，不把有限样本某方向略高解释为普遍位置优势。近远验人使用己方合法队伍位置；目前比较的是整个固定位置策略，不是已求得首夜最优目标。",
+             "", "## 5. 小配置运行与正确性", "",
+             "通用策略模拟与精确小模型的策略集合不同，不能直接要求其胜率等于8/27。", "",
+             "| 警/匪/民 | 模拟局数 | 好人胜率 | 最多夜数 |", "| --- | ---: | ---: | ---: |"]
+    for r in small["configurations"]:
+        rules=r["rules"]
+        text.append(f"| {rules['police']}/{rules['mafia']}/{rules['civilians']} | {r['summary']['n']} | {pct(r['summary']['rate'])} | {r['max_nights']} |")
+    text += ["", "61项测试在包含SciPy的Python环境中全部通过；普通标准库Python跳过可选的SciPy交叉验证。测试覆盖隐藏身份观察等价、警队私有验人、死警当夜结果、死亡不翻牌、自刀最后一匪、最后一警死亡立即终局、同时投票、PK、遗言次数、终局有界性、随机流复现、假报告不能自证、警察识别队外假验人、公开提名信号、精确LP与跨裁判矩阵核对。",
+             "", "## 6. v01为何保留，以及v02修正了什么", "",
+             "v01完成45,824次模拟，随后完成18,432次机制补充。审查发现，警察也接受了不属于警队的验人声明，这是合法但不合理的弱行为模型。另有部分机制比较因好人胜率触底而缺乏分辨力。",
+             "v01结果、源码和配置保存在 `results/v01/`（源码在 `source/`），补充结果在 `results/mechanism_followup_v01.json`。它们不作为当前合理基线结论，不覆盖、不删除。",
+             "v02在采样前修正警察声明识别，加入不报身份的共同内推及匪方模仿，换用全新随机种子和适中的机制参考策略。其他权重仍是可解释启发式，并没有被称为最优信任推断。提名行为本身可能暴露警察，因此另有v03针对性反制测试。",
+             "", "## 7. 下一阶段与教学用途", "",
+             "优先扩展平民掩护提名和角色条件混合、票型推理、真假警历史一致性、两个候选的正式提案，以及允许死者选择方向后的重新求解。每加入新信号规则，都要让双方有机会识别并反制，不能只给一方增强。首日条件比较还应在这些新续局策略下复测。",
+             "先把精确概率和小矩阵反制构造成讲解材料；需要稳定、独立验证的局部行动价值后再冻结正式题库。人的无AI后测、迁移与保持，以及向德州扑克迁移，属于后续独立实验。",
+             "", "## 8. 复现与证据文件", "",
+             "```sh", "python3 -m unittest discover -s tests -v",
+             "python3 -m mafia_lab suite --config configs/experiment_v02.json --output results/reproduction_current",
+             "python3 scripts/run_signal_counter.py",
+             "python3 scripts/build_report.py", "```", "",
+             "当前套件重跑使用新目录，保留冻结结果。精确复现v02源码时，在项目根目录执行：", "",
+             "```sh", "cd results/v02/source",
+             "python3 -m mafia_lab suite --config configs/experiment_v02.json --output ../reproduction",
+             "```", "",
+             f"源码SHA256：`{manifest['source_sha256']}`。本次套件耗时约{manifest['elapsed_seconds']:.1f}秒；机器与版本不同会改变耗时。",
+             f"v03/当前源码SHA256：`{signal['source_sha256']}`；v03脚本和配置指纹单独保存在结果中。",
+             "",
+             "[结果清单](../results/v02/manifest.json)记录每个JSON哈希。每个模拟结果保存完整规则/策略参数、样本数、随机种子、原始逐局0/1结果及区间；[配置](../configs/experiment_v02.json)保存冻结预算。",
+             "[v03反制结果](../results/signal_counter_v03.json)与[配置](../configs/signal_counter_v03.json)保存追加实验。可以运行 `python3 scripts/verify_results.py` 检查结果、源码快照、样本分母和表格统计。"]
+    output=ROOT/"docs/experiment_report_v02.md"
+    output.write_text("\n".join(text)+"\n",encoding="utf-8")
+    print(output)
+
+
+if __name__=="__main__":
+    main()

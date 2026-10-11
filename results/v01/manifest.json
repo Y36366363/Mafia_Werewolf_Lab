@@ -1,0 +1,26 @@
+{
+  "config": {
+    "version": "20261010-v01",
+    "purpose": "Exploratory frozen-policy experiments; no full-game GTO or human-learning claim",
+    "small_n": 512,
+    "small_seed": 1100000,
+    "branch_n": 2048,
+    "branch_seed": 2100000,
+    "train_n": 256,
+    "train_seed": 3100000,
+    "test_n": 512,
+    "test_seed": 4100000,
+    "mechanism_n": 768,
+    "mechanism_seed": 5100000
+  },
+  "source_sha256": "d787a17fb5d705425770cd6983bbed25e44eb80b4cb32de2be757423a7d78e72",
+  "elapsed_seconds": 77.9286272500176,
+  "files": {
+    "tiny_exact.json": "c9b961bf3959ab99fba272a044e0705a20b1e866fc9c84b7d1214b9211ba3d3c",
+    "analytic_controls.json": "af369baeeafb47571440545b38df0b5003fb12dd68708ce5d9c2d4e474099d7f",
+    "small_games.json": "e9017346d442bbe0c6cc18be9167cd3699f6810d83f8abc7964fc1ac33f3b735",
+    "first_day_branches.json": "9bfe9e2e2be28c3faf4ee76c82385c7dfc4b9df435c34c45bcae3153335a93e4",
+    "strategy_pool.json": "2c110866a6f4632379339457143bd31f329a6ab228fdc6490dca1d0b127c3407",
+    "mechanisms.json": "62c9e0e360141761723a319b077c962e63375bbd17d4588c48dd50b356bcc0b0"
+  }
+}

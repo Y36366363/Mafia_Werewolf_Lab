@@ -1,0 +1,14 @@
+{
+  "version": "20261010-v01",
+  "purpose": "Exploratory frozen-policy experiments; no full-game GTO or human-learning claim",
+  "small_n": 512,
+  "small_seed": 1100000,
+  "branch_n": 2048,
+  "branch_seed": 2100000,
+  "train_n": 256,
+  "train_seed": 3100000,
+  "test_n": 512,
+  "test_seed": 4100000,
+  "mechanism_n": 768,
+  "mechanism_seed": 5100000
+}

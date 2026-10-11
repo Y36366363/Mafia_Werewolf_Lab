@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": {
+    "hashes": 29,
+    "win_summaries": 167,
+    "paired_summaries": 46,
+    "raw_games": 165888
+  },
+  "scope": "artifact/source integrity, reported raw-game denominators, selected responses and statistics; not a new equilibrium or replay certificate",
+  "independent_units": "Seeds shared across arms; raw_games counts terminal executions, not independent observations"
+}

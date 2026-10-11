@@ -1,0 +1,253 @@
+{
+  "model": "tiny_1p1m2c_full_terminal_restricted_policy_pool_v1",
+  "scope": "Exact restricted correlated-team-plan benchmark; not full-game GTO",
+  "extra_coordination_assumption": "A trusted device privately supplies the same ex-ante good-plan index to all good players, without revealing teammates. This device is not part of the ordinary game. Independent local mixtures are not solved.",
+  "selected_solution_requires_private_correlation": false,
+  "chance_scenarios": 216,
+  "good_plans": [
+    "p:truth|c:pass|vote:first_claim",
+    "p:truth|c:pass|vote:last_claim",
+    "p:truth|c:pass|vote:ignore_claims",
+    "p:truth|c:fake_accusation|vote:first_claim",
+    "p:truth|c:fake_accusation|vote:last_claim",
+    "p:truth|c:fake_accusation|vote:ignore_claims",
+    "p:accusation_only|c:pass|vote:first_claim",
+    "p:accusation_only|c:pass|vote:last_claim",
+    "p:accusation_only|c:pass|vote:ignore_claims",
+    "p:accusation_only|c:fake_accusation|vote:first_claim",
+    "p:accusation_only|c:fake_accusation|vote:last_claim",
+    "p:accusation_only|c:fake_accusation|vote:ignore_claims",
+    "p:silent|c:pass|vote:first_claim",
+    "p:silent|c:pass|vote:last_claim",
+    "p:silent|c:pass|vote:ignore_claims",
+    "p:silent|c:fake_accusation|vote:first_claim",
+    "p:silent|c:fake_accusation|vote:last_claim",
+    "p:silent|c:fake_accusation|vote:ignore_claims"
+  ],
+  "mafia_plans": [
+    "pass",
+    "accuse_first",
+    "accuse_last",
+    "clear_first",
+    "clear_last",
+    "counterclaim",
+    "copy_first",
+    "frame_quiet"
+  ],
+  "payoff_matrix_exact": [
+    [
+      "11/27",
+      "7/27",
+      "5/27",
+      "4/9",
+      "11/27",
+      "7/27",
+      "7/27",
+      "7/27"
+    ],
+    [
+      "11/27",
+      "7/27",
+      "7/27",
+      "14/27",
+      "10/27",
+      "7/27",
+      "10/27",
+      "7/27"
+    ],
+    [
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27"
+    ],
+    [
+      "4/9",
+      "8/27",
+      "5/27",
+      "4/9",
+      "4/9",
+      "8/27",
+      "8/27",
+      "5/27"
+    ],
+    [
+      "4/9",
+      "8/27",
+      "8/27",
+      "14/27",
+      "10/27",
+      "8/27",
+      "11/27",
+      "8/27"
+    ],
+    [
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27"
+    ],
+    [
+      "11/27",
+      "7/27",
+      "5/27",
+      "5/9",
+      "4/9",
+      "7/27",
+      "7/27",
+      "7/27"
+    ],
+    [
+      "11/27",
+      "5/27",
+      "4/27",
+      "14/27",
+      "10/27",
+      "5/27",
+      "8/27",
+      "5/27"
+    ],
+    [
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27"
+    ],
+    [
+      "4/9",
+      "8/27",
+      "5/27",
+      "5/9",
+      "13/27",
+      "8/27",
+      "8/27",
+      "5/27"
+    ],
+    [
+      "4/9",
+      "2/9",
+      "5/27",
+      "14/27",
+      "10/27",
+      "2/9",
+      "1/3",
+      "5/27"
+    ],
+    [
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27"
+    ],
+    [
+      "8/27",
+      "4/27",
+      "2/27",
+      "14/27",
+      "10/27",
+      "4/27",
+      "4/27",
+      "4/27"
+    ],
+    [
+      "8/27",
+      "4/27",
+      "2/27",
+      "14/27",
+      "10/27",
+      "4/27",
+      "4/27",
+      "4/27"
+    ],
+    [
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27"
+    ],
+    [
+      "1/3",
+      "5/27",
+      "2/27",
+      "14/27",
+      "11/27",
+      "5/27",
+      "5/27",
+      "2/27"
+    ],
+    [
+      "1/3",
+      "5/27",
+      "1/9",
+      "14/27",
+      "10/27",
+      "5/27",
+      "2/9",
+      "1/9"
+    ],
+    [
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27",
+      "8/27"
+    ]
+  ],
+  "random_vote_baseline_exact": "1/6",
+  "random_vote_baseline_analytic_exact": "1/6",
+  "value_exact": "8/27",
+  "value": 0.2962962962962963,
+  "good_mixture": {
+    "p:truth|c:pass|vote:ignore_claims": "1"
+  },
+  "mafia_mixture": {
+    "accuse_first": "1"
+  },
+  "certificate": {
+    "arithmetic": "Python fractions.Fraction simplex and direct pure best responses",
+    "scope": "Only the supplied 18 x 8 matrix with fixed uniform first-night actions",
+    "lower_bound_exact": "8/27",
+    "upper_bound_exact": "8/27",
+    "restricted_gap_exact": "0",
+    "simplex_pivots": 3
+  },
+  "first_night": {
+    "inspection": "Uniform among the police player's three other seats",
+    "kill": "Uniform among the mafia player's three other seats",
+    "dead_civilian_message": "PASS",
+    "speech_direction": "Clockwise, first survivor after the night victim"
+  },
+  "restricted_actions": {
+    "mafia_day_one_ballot": "Always first other survivor in speech order",
+    "mafia_ballot_invariance": "Good wins only when both good survivors vote mafia; either legal mafia ballot then loses, and every other good ballot pair loses.",
+    "night_actions_optimized": false,
+    "pk": false,
+    "abstention": false,
+    "self_kill": "Omitted: with one mafia, self-kill immediately loses",
+    "dead_civilian_nomination": false
+  },
+  "continuation": "After day 1, all speech is PASS, votes are independent uniform non-self, and mafia kills uniformly among non-mafia survivors; all paths terminate by night 3. A good win requires eliminating mafia on day 1."
+}

@@ -1,0 +1,27 @@
+{
+  "evidence": "exact_probability",
+  "subsets_per_q": 495,
+  "scope": "uniform self/nonself target policy; police observation excludes inspection result",
+  "rows": [
+    {
+      "q": "0",
+      "dead_mafia_given_nonpolice_death": "0",
+      "other_unknown_alive_mafia": "4/11"
+    },
+    {
+      "q": "1/4",
+      "dead_mafia_given_nonpolice_death": "1/3",
+      "other_unknown_alive_mafia": "1/3"
+    },
+    {
+      "q": "1/2",
+      "dead_mafia_given_nonpolice_death": "3/5",
+      "other_unknown_alive_mafia": "17/55"
+    },
+    {
+      "q": "1",
+      "dead_mafia_given_nonpolice_death": "1",
+      "other_unknown_alive_mafia": "3/11"
+    }
+  ]
+}

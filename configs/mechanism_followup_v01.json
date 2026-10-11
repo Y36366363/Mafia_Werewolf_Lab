@@ -1,0 +1,10 @@
+{
+  "version": "20261010-mechanism-followup-v01",
+  "reason": "Primary all_trust versus fake_hunt mechanism baseline saturated near zero; preserve primary results and test a prespecified followup with the training-selected dead_only policy",
+  "n_per_cell": 1024,
+  "seed_start": 6100000,
+  "good_policy": "dead_only",
+  "mafia_policies": ["hunt_claims", "fake_hunt"],
+  "variants": ["baseline", "pk", "four_last_words", "reverse_direction", "near_inspection", "far_inspection", "near_kill", "self25", "self50"],
+  "interpretation": "Exploratory followup, not retrospective alteration of initial experiment. Rules and policies held fixed per cell; no GTO claim."
+}

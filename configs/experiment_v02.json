@@ -1,0 +1,14 @@
+{
+  "version": "20261010-v02",
+  "purpose": "Exploratory correction: police reject outsider claimed inspections; add covert nomination and mafia nomination mimic; new independent seeds; retain v01 evidence",
+  "small_n": 512,
+  "small_seed": 7100000,
+  "branch_n": 2048,
+  "branch_seed": 8100000,
+  "train_n": 256,
+  "train_seed": 9100000,
+  "test_n": 1024,
+  "test_seed": 10100000,
+  "mechanism_n": 1536,
+  "mechanism_seed": 11100000
+}
