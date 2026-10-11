@@ -1,0 +1,62 @@
+{
+  "scope": "Exact equilibrium of the empirical TRAIN payoff matrix over the frozen finite policy pool. It assumes a trusted ex-ante faction-wide policy lottery and is not behavioral-strategy GTO, a full-game equilibrium, or a certified unrestricted best response.",
+  "selection": "Mixture weights solved from train only; heldout outcomes were not used to choose them.",
+  "train_value": 0.28524925595238093,
+  "train_value_exact": "3067/10752",
+  "train_certificate": {
+    "lower": "3067/10752",
+    "upper": "3067/10752",
+    "gap": "0",
+    "pivots": 2
+  },
+  "good_mixture": {
+    "police75": "95/126",
+    "random_inspect": "31/126"
+  },
+  "mafia_mixture": {
+    "combined_mimic": "61/84",
+    "origin_mimic": "23/84"
+  },
+  "heldout_at_train_mixtures": {
+    "n": 1024,
+    "mean": 0.26888417584915913,
+    "ci95_normal": [
+      0.2518514778214198,
+      0.28591687387689846
+    ],
+    "ci95_hoeffding": [
+      0.22644350348226477,
+      0.3113248482160535
+    ]
+  },
+  "heldout_good_mixture_vs_each_mafia": {
+    "combined_mimic": 0.2627108134920635,
+    "origin_mimic": 0.2852570064484127,
+    "vote_mimic": 0.3556315104166667,
+    "combined_split": 0.25556485615079366,
+    "origin_split": 0.3026956225198413,
+    "origin_half": 0.43488808283730157,
+    "origin_fake": 0.6564050099206349
+  },
+  "heldout_good_mixture_worst_pure_mafia": {
+    "name": "combined_split",
+    "rate": 0.25556485615079366
+  },
+  "heldout_mafia_mixture_vs_each_good": {
+    "cover100": 0.24853515625,
+    "cover100_random": 0.25551060267857145,
+    "inspect_only": 0.26669456845238093,
+    "police_vote": 0.17767624627976192,
+    "civilian_vote": 0.19728887648809523,
+    "both_vote": 0.14735630580357142,
+    "inspect_police_vote": 0.2674037388392857,
+    "cover75": 0.13941592261904762,
+    "police75": 0.26138160342261907,
+    "both75": 0.1578311011904762,
+    "random_inspect": 0.29187593005952384
+  },
+  "heldout_mafia_mixture_best_pure_good": {
+    "name": "random_inspect",
+    "rate": 0.29187593005952384
+  }
+}

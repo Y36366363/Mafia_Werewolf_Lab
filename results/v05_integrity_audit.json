@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "source_sha256": "ad46a8372d3c6adb209700c728bedd4052a33a11a8dcdc62d013d51cc6448986",
+  "checked_cells": 170,
+  "checked_branch_summaries": 680,
+  "checked_paired_contrasts": 142,
+  "executed_games": 114944,
+  "distinct_seed_units": 2304,
+  "archived_game_replays": 340,
+  "restricted_matrix_solution": {
+    "sha256": "fb332294b7ff974cc5c75ae8097a3261c22746e4e8646be30b124b1316e9761f",
+    "train_exact_gap": "0",
+    "heldout_seed_values": 1024
+  },
+  "selection_reproduced_from_train_only": {
+    "baseline_good": "cover100",
+    "mafia_response": "origin_mimic",
+    "good_response": "random_inspect",
+    "second_mafia_response": "combined_split",
+    "robust_pure_good": "inspect_police_vote",
+    "robust_train_worst_mafia": "origin_split",
+    "tie_break": "lexicographic policy name, after objective"
+  },
+  "scope": "Independent outcomes, branches, statistics, hashes, selection and archived replay; no GTO certificate"
+}

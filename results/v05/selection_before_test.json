@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "source_sha256": "ad46a8372d3c6adb209700c728bedd4052a33a11a8dcdc62d013d51cc6448986",
+  "config_sha256": "1b7149f6daa6b3180ea4455a4dd51ab4f564408b28c6f78b8af66f072f8a8460",
+  "python": "3.12.1",
+  "config": {
+    "version": "20261011-refinement-v05",
+    "purpose": "16-player role-separated ballot reasoning, inspection-only history use, cover coordination, nomination-origin and split-vote mafia counters",
+    "policy_module": "strategies_v05",
+    "baseline_good": "cover100",
+    "sensitivity_reference_mafia": "combined_mimic",
+    "rules": {
+      "police": 4,
+      "mafia": 4,
+      "civilians": 8,
+      "last_words_limit": 3,
+      "allow_self_kill": true,
+      "tie_rule": "pass",
+      "direction": 1
+    },
+    "good_policies": [
+      {
+        "name": "cover100",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": false,
+        "cover_target": "public",
+        "police_vote_reasoning": false,
+        "civilian_vote_reasoning": false
+      },
+      {
+        "name": "cover100_random",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": false,
+        "cover_target": "random",
+        "police_vote_reasoning": false,
+        "civilian_vote_reasoning": false
+      },
+      {
+        "name": "inspect_only",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": true,
+        "cover_target": "public",
+        "police_vote_reasoning": false,
+        "civilian_vote_reasoning": false
+      },
+      {
+        "name": "police_vote",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": false,
+        "cover_target": "public",
+        "police_vote_reasoning": true,
+        "civilian_vote_reasoning": false
+      },
+      {
+        "name": "civilian_vote",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": false,
+        "cover_target": "public",
+        "police_vote_reasoning": false,
+        "civilian_vote_reasoning": true
+      },
+      {
+        "name": "both_vote",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": false,
+        "cover_target": "public",
+        "police_vote_reasoning": true,
+        "civilian_vote_reasoning": true
+      },
+      {
+        "name": "inspect_police_vote",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": true,
+        "cover_target": "public",
+        "police_vote_reasoning": true,
+        "civilian_vote_reasoning": false
+      },
+      {
+        "name": "cover75",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 0.75,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": false,
+        "cover_target": "public",
+        "police_vote_reasoning": false,
+        "civilian_vote_reasoning": false
+      },
+      {
+        "name": "police75",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 0.75,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": false,
+        "cover_target": "public",
+        "police_vote_reasoning": false,
+        "civilian_vote_reasoning": false
+      },
+      {
+        "name": "both75",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 0.75,
+        "police_nominate_probability": 0.75,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": false,
+        "cover_target": "public",
+        "police_vote_reasoning": false,
+        "civilian_vote_reasoning": false
+      },
+      {
+        "name": "random_inspect",
+        "reveal": "covert",
+        "trust": "nominations",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "civilian_cover_probability": 1.0,
+        "police_nominate_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "vote_reasoning": false,
+        "inspect_reasoning": true,
+        "cover_target": "random",
+        "police_vote_reasoning": false,
+        "civilian_vote_reasoning": false
+      }
+    ],
+    "mafia_policies": [
+      {
+        "name": "combined_mimic",
+        "bluff": "nominate",
+        "kill": "signals",
+        "first_self_kill": 0,
+        "inference": "combined",
+        "nomination_probability": 1.0,
+        "vote_style": "coordinate"
+      },
+      {
+        "name": "origin_mimic",
+        "bluff": "nominate",
+        "kill": "signals",
+        "first_self_kill": 0,
+        "inference": "origin",
+        "nomination_probability": 1.0,
+        "vote_style": "coordinate"
+      },
+      {
+        "name": "vote_mimic",
+        "bluff": "nominate",
+        "kill": "signals",
+        "first_self_kill": 0,
+        "inference": "votes",
+        "nomination_probability": 1.0,
+        "vote_style": "coordinate"
+      },
+      {
+        "name": "combined_split",
+        "bluff": "nominate",
+        "kill": "signals",
+        "first_self_kill": 0,
+        "inference": "combined",
+        "nomination_probability": 1.0,
+        "vote_style": "split"
+      },
+      {
+        "name": "origin_split",
+        "bluff": "nominate",
+        "kill": "signals",
+        "first_self_kill": 0,
+        "inference": "origin",
+        "nomination_probability": 1.0,
+        "vote_style": "split"
+      },
+      {
+        "name": "origin_half",
+        "bluff": "nominate",
+        "kill": "signals",
+        "first_self_kill": 0,
+        "inference": "origin",
+        "nomination_probability": 0.5,
+        "vote_style": "coordinate"
+      },
+      {
+        "name": "origin_fake",
+        "bluff": "always",
+        "kill": "signals",
+        "first_self_kill": 0,
+        "inference": "origin",
+        "nomination_probability": 1.0,
+        "vote_style": "coordinate"
+      }
+    ],
+    "train": {
+      "n": 256,
+      "seed_start": 31000000
+    },
+    "test": {
+      "n": 1024,
+      "seed_start": 32000000
+    },
+    "sensitivity": {
+      "n": 1024,
+      "seed_start": 33000000,
+      "rule_variants": [
+        {
+          "name": "16_reference",
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pass",
+            "direction": 1
+          }
+        },
+        {
+          "name": "16_pk",
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pk",
+            "direction": 1
+          }
+        },
+        {
+          "name": "16_four_last_words",
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 4,
+            "allow_self_kill": true,
+            "tie_rule": "pass",
+            "direction": 1
+          }
+        },
+        {
+          "name": "16_reverse_direction",
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pass",
+            "direction": -1
+          }
+        }
+      ]
+    },
+    "good_contrasts": [
+      {
+        "control": "cover100",
+        "treatment": "cover100_random"
+      },
+      {
+        "control": "cover100",
+        "treatment": "inspect_only"
+      },
+      {
+        "control": "cover100",
+        "treatment": "police_vote"
+      },
+      {
+        "control": "cover100",
+        "treatment": "civilian_vote"
+      },
+      {
+        "control": "cover100",
+        "treatment": "both_vote"
+      },
+      {
+        "control": "police_vote",
+        "treatment": "both_vote"
+      },
+      {
+        "control": "civilian_vote",
+        "treatment": "both_vote"
+      },
+      {
+        "control": "inspect_only",
+        "treatment": "inspect_police_vote"
+      },
+      {
+        "control": "cover100",
+        "treatment": "cover75"
+      },
+      {
+        "control": "cover100",
+        "treatment": "police75"
+      },
+      {
+        "control": "cover100",
+        "treatment": "both75"
+      },
+      {
+        "control": "cover100_random",
+        "treatment": "random_inspect"
+      }
+    ],
+    "mafia_contrasts": [
+      {
+        "control": "combined_mimic",
+        "treatment": "origin_mimic"
+      },
+      {
+        "control": "combined_mimic",
+        "treatment": "combined_split"
+      },
+      {
+        "control": "origin_mimic",
+        "treatment": "origin_split"
+      },
+      {
+        "control": "origin_mimic",
+        "treatment": "origin_half"
+      },
+      {
+        "control": "origin_mimic",
+        "treatment": "origin_fake"
+      }
+    ],
+    "selection": "Pure train-only response chain and maximin row with lexicographic name tie break; no heldout selection.",
+    "interpretation": "All local strategies use legal observations. Origin and ballot scores are fixed proxies, not beliefs. Main and sensitivity boards are 4 police, 4 mafia, 8 civilians. No full-game GTO claim."
+  },
+  "evidence": "fixed_policy_monte_carlo",
+  "full_game_gto": false,
+  "intervals": "Pointwise Wilson and paired normal/Hoeffding; familywise 95% Hoeffding applies only to prespecified test contrasts.",
+  "outcome": "good faction terminal win, 0/1; no rollout truncation",
+  "selection": {
+    "baseline_good": "cover100",
+    "mafia_response": "origin_mimic",
+    "good_response": "random_inspect",
+    "second_mafia_response": "combined_split",
+    "robust_pure_good": "inspect_police_vote",
+    "robust_train_worst_mafia": "origin_split",
+    "tie_break": "lexicographic policy name, after objective"
+  },
+  "chosen_from": "train only; test not yet run"
+}
