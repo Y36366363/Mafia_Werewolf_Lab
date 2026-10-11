@@ -135,9 +135,9 @@ def main():
         validate_wins(row["raw_outcomes"],row["summary"])
         CHECKS["raw_games"] += len(row["raw_outcomes"])
     signal=read(ROOT/"results/signal_counter_v03.json")
-    source_digest(ROOT/"mafia_lab",signal["source_sha256"])
-    digest((ROOT/"scripts/run_signal_counter.py").read_bytes(),signal["script_sha256"])
-    digest((ROOT/"configs/signal_counter_v03.json").read_bytes(),signal["config_file_sha256"])
+    source_digest(ROOT/"results/v03_source/mafia_lab",signal["source_sha256"])
+    digest((ROOT/"results/v03_source/scripts/run_signal_counter.py").read_bytes(),signal["script_sha256"])
+    digest((ROOT/"results/v03_source/configs/signal_counter_v03.json").read_bytes(),signal["config_file_sha256"])
     digest(json.dumps(signal["config"],sort_keys=True).encode(),signal["config_sha256"])
     cells={}
     for row in signal["cells"]:

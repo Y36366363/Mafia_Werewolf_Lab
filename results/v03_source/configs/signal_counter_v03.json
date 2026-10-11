@@ -1,0 +1,35 @@
+{
+  "version": "20261010-signal-counter-v03",
+  "stage": "prospectively_frozen_counter_after_identifying_nomination_signal",
+  "reason": "The v02 covert nomination candidate may reveal police through who nominates even when it avoids an explicit police claim. Freeze a targeted public-signal hunting counter before drawing a new sample.",
+  "n_per_cell": 1024,
+  "seed_start": 12100000,
+  "seed_design": "Distinct seeds are independent replicates; reuse the same 1024 seeds across all 12 fixed-policy arms for common-random-number paired comparisons. The seed interval is disjoint from preceding experiment intervals.",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pass",
+    "direction": 1
+  },
+  "good_policies": [
+    {"name": "hit_trust", "reveal": "hit", "trust": "all", "civilian_message": "pass", "inspect": "random"},
+    {"name": "dead_only", "reveal": "dead", "trust": "dead", "civilian_message": "pass", "inspect": "random"},
+    {"name": "covert_nomination", "reveal": "covert", "trust": "nominations", "civilian_message": "pass", "inspect": "random"}
+  ],
+  "mafia_policies": [
+    {"name": "fake_hunt", "bluff": "always", "kill": "claims", "first_self_kill": 0.0},
+    {"name": "mimic_nomination", "bluff": "nominate", "kill": "claims", "first_self_kill": 0.0},
+    {"name": "mimic_signal_hunt", "bluff": "nominate", "kill": "signals", "first_self_kill": 0.0},
+    {"name": "fake_signal_hunt", "bluff": "always", "kill": "signals", "first_self_kill": 0.0}
+  ],
+  "contrasts": [
+    {"control": "fake_hunt", "treatment": "fake_signal_hunt"},
+    {"control": "mimic_nomination", "treatment": "mimic_signal_hunt"}
+  ],
+  "primary_outcome": "Good faction wins at true game termination; never score a truncated rollout.",
+  "contrast_direction": "Good win probability under signals minus under claims, holding the good policy and mafia bluff fixed; a negative delta favors the mafia counter.",
+  "interpretation": "Exploratory targeted response to an identified candidate weakness, with a prospectively fixed fresh sample. Report every cell and contrast. No additional selection or fitted mixture; no unrestricted best-response, equilibrium, or GTO certificate."
+}

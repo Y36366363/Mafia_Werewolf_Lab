@@ -1,0 +1,336 @@
+{
+  "version": "20261011-large-game-v04",
+  "purpose": "16-player primary: civilian cover, independent role-conditioned nomination mixing, public-ballot reasoning with jointly expanded mafia counterstrategies",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pass",
+    "direction": 1
+  },
+  "good_policies": [
+    {
+      "name": "uncovered",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0,
+      "police_nominate_probability": 1,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": false,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    },
+    {
+      "name": "cover25",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0.25,
+      "police_nominate_probability": 1,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": false,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    },
+    {
+      "name": "cover50",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0.5,
+      "police_nominate_probability": 1,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": false,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    },
+    {
+      "name": "cover100",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 1,
+      "police_nominate_probability": 1,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": false,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    },
+    {
+      "name": "cover50_random",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0.5,
+      "police_nominate_probability": 1,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": false,
+      "inspect_reasoning": false,
+      "cover_target": "random"
+    },
+    {
+      "name": "fixed_mix50",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0.5,
+      "police_nominate_probability": 0.5,
+      "hit_nominate_probability": 0.5,
+      "vote_reasoning": false,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    },
+    {
+      "name": "hit_mix50",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0.5,
+      "police_nominate_probability": 0.5,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": false,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    },
+    {
+      "name": "ballot_mix50",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0.5,
+      "police_nominate_probability": 0.5,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": true,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    },
+    {
+      "name": "inspect_mix50",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0.5,
+      "police_nominate_probability": 0.5,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": true,
+      "inspect_reasoning": true,
+      "cover_target": "public"
+    },
+    {
+      "name": "ballot_cover100",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 1,
+      "police_nominate_probability": 0.5,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": true,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    },
+    {
+      "name": "ballot_low25",
+      "reveal": "covert",
+      "trust": "nominations",
+      "civilian_message": "pass",
+      "inspect": "random",
+      "civilian_cover_probability": 0.25,
+      "police_nominate_probability": 0.25,
+      "hit_nominate_probability": 1,
+      "vote_reasoning": true,
+      "inspect_reasoning": false,
+      "cover_target": "public"
+    }
+  ],
+  "mafia_policies": [
+    {
+      "name": "signal_mimic",
+      "bluff": "nominate",
+      "kill": "signals",
+      "first_self_kill": 0,
+      "inference": "signals",
+      "nomination_probability": 1
+    },
+    {
+      "name": "history_mimic",
+      "bluff": "nominate",
+      "kill": "signals",
+      "first_self_kill": 0,
+      "inference": "history",
+      "nomination_probability": 1
+    },
+    {
+      "name": "vote_mimic",
+      "bluff": "nominate",
+      "kill": "signals",
+      "first_self_kill": 0,
+      "inference": "votes",
+      "nomination_probability": 1
+    },
+    {
+      "name": "combined_mimic",
+      "bluff": "nominate",
+      "kill": "signals",
+      "first_self_kill": 0,
+      "inference": "combined",
+      "nomination_probability": 1
+    },
+    {
+      "name": "combined_half",
+      "bluff": "nominate",
+      "kill": "signals",
+      "first_self_kill": 0,
+      "inference": "combined",
+      "nomination_probability": 0.5
+    },
+    {
+      "name": "combined_fake",
+      "bluff": "always",
+      "kill": "signals",
+      "first_self_kill": 0,
+      "inference": "combined",
+      "nomination_probability": 1
+    }
+  ],
+  "train": {
+    "n": 256,
+    "seed_start": 21000000
+  },
+  "test": {
+    "n": 1024,
+    "seed_start": 22000000
+  },
+  "sensitivity": {
+    "n": 1024,
+    "seed_start": 23000000,
+    "rule_variants": [
+      {
+        "name": "16_reference",
+        "rules": {
+          "police": 4,
+          "mafia": 4,
+          "civilians": 8,
+          "last_words_limit": 3,
+          "allow_self_kill": true,
+          "tie_rule": "pass",
+          "direction": 1
+        }
+      },
+      {
+        "name": "16_pk",
+        "rules": {
+          "police": 4,
+          "mafia": 4,
+          "civilians": 8,
+          "last_words_limit": 3,
+          "allow_self_kill": true,
+          "tie_rule": "pk",
+          "direction": 1
+        }
+      },
+      {
+        "name": "16_four_last_words",
+        "rules": {
+          "police": 4,
+          "mafia": 4,
+          "civilians": 8,
+          "last_words_limit": 4,
+          "allow_self_kill": true,
+          "tie_rule": "pass",
+          "direction": 1
+        }
+      },
+      {
+        "name": "12_transfer",
+        "rules": {
+          "police": 3,
+          "mafia": 3,
+          "civilians": 6,
+          "last_words_limit": 3,
+          "allow_self_kill": true,
+          "tie_rule": "pass",
+          "direction": 1
+        }
+      }
+    ]
+  },
+  "good_contrasts": [
+    {
+      "control": "uncovered",
+      "treatment": "cover25"
+    },
+    {
+      "control": "uncovered",
+      "treatment": "cover50"
+    },
+    {
+      "control": "uncovered",
+      "treatment": "cover100"
+    },
+    {
+      "control": "cover50_random",
+      "treatment": "cover50"
+    },
+    {
+      "control": "cover50",
+      "treatment": "fixed_mix50"
+    },
+    {
+      "control": "fixed_mix50",
+      "treatment": "hit_mix50"
+    },
+    {
+      "control": "hit_mix50",
+      "treatment": "ballot_mix50"
+    },
+    {
+      "control": "ballot_mix50",
+      "treatment": "inspect_mix50"
+    },
+    {
+      "control": "ballot_mix50",
+      "treatment": "ballot_cover100"
+    },
+    {
+      "control": "ballot_mix50",
+      "treatment": "ballot_low25"
+    }
+  ],
+  "mafia_contrasts": [
+    {
+      "control": "signal_mimic",
+      "treatment": "history_mimic"
+    },
+    {
+      "control": "signal_mimic",
+      "treatment": "vote_mimic"
+    },
+    {
+      "control": "signal_mimic",
+      "treatment": "combined_mimic"
+    },
+    {
+      "control": "combined_mimic",
+      "treatment": "combined_half"
+    },
+    {
+      "control": "combined_mimic",
+      "treatment": "combined_fake"
+    }
+  ],
+  "selection": "Pure train-only response chain and maximin row; name-based deterministic tie break. Test and sensitivity never used for selecting policies.",
+  "interpretation": "Prospectively frozen exploratory protocol. Local behavioral randomization, no team-secret correlation index. History scores are heuristics, not calibrated posteriors or equilibrium beliefs. Report all comparisons; paired raw seed outcomes, pointwise and familywise bounded intervals. No full-game GTO claim."
+}

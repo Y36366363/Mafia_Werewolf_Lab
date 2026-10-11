@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "source_sha256": "b6d51300b24af5cb6937389b89ef5b7483f0a1b48a708314926daa33cc1b8963",
+  "config_sha256": "192ab3a334b9cec8a68f7c65b28ce35bb1d8fc7c2ae4651dd1abe6898487ec38",
+  "checked_source_assets": 2,
+  "checked_cells": 148,
+  "checked_paired_contrasts": 118,
+  "executed_games": 100864,
+  "distinct_seed_units": 2304,
+  "seed_intervals_inclusive": {
+    "train": [
+      21000000,
+      21000255
+    ],
+    "test": [
+      22000000,
+      22001023
+    ],
+    "sensitivity": [
+      23000000,
+      23001023
+    ]
+  },
+  "archived_game_replays": 296,
+  "selection_reproduced_from_train_only": {
+    "baseline_good": "uncovered",
+    "mafia_response": "combined_mimic",
+    "good_response": "cover100",
+    "second_mafia_response": "combined_mimic",
+    "robust_pure_good": "cover100",
+    "robust_train_worst_mafia": "combined_mimic",
+    "tie_break": "lexicographic policy name, after objective"
+  },
+  "scope": "Independent raw-outcome, statistics, hash, seed-partition and selection audit; replay uses archived runner; no unrestricted equilibrium certificate"
+}
