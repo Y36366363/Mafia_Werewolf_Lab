@@ -1,0 +1,90 @@
+{
+  "selection": {
+    "method": "train-only finite-candidate double-oracle analogue",
+    "tolerance": "1/100",
+    "history": [
+      {
+        "round": 1,
+        "start_value": "1821/8224",
+        "good_response": "position_mix",
+        "good_response_value": "17393/65792",
+        "added_good": "position_mix",
+        "mafia_response": "combined_late_decoy",
+        "mafia_response_value": "423/1696",
+        "added_mafia": null,
+        "end_value": "1711/6784",
+        "good_pool": [
+          "public_base",
+          "random_base",
+          "position_mix"
+        ],
+        "mafia_pool": [
+          "combined",
+          "origin"
+        ]
+      },
+      {
+        "round": 2,
+        "start_value": "1711/6784",
+        "good_response": "public_police75",
+        "good_response_value": "3669/13568",
+        "added_good": "public_police75",
+        "mafia_response": "combined_late_decoy",
+        "mafia_response_value": "261/992",
+        "added_mafia": null,
+        "end_value": "4073/15872",
+        "good_pool": [
+          "public_base",
+          "random_base",
+          "position_mix",
+          "public_police75"
+        ],
+        "mafia_pool": [
+          "combined",
+          "origin"
+        ]
+      },
+      {
+        "round": 3,
+        "start_value": "4073/15872",
+        "good_response": "confirm_mix",
+        "good_response_value": "249/992",
+        "added_good": null,
+        "mafia_response": "combined_late_decoy",
+        "mafia_response_value": "261/992",
+        "added_mafia": null,
+        "end_value": "4073/15872",
+        "good_pool": [
+          "public_base",
+          "random_base",
+          "position_mix",
+          "public_police75"
+        ],
+        "mafia_pool": [
+          "combined",
+          "origin"
+        ]
+      }
+    ],
+    "good_pool": [
+      "public_base",
+      "random_base",
+      "position_mix",
+      "public_police75"
+    ],
+    "mafia_pool": [
+      "combined",
+      "origin"
+    ],
+    "train_value": "4073/15872",
+    "good_weights": {
+      "position_mix": "47/62",
+      "public_police75": "15/62"
+    },
+    "mafia_weights": {
+      "combined": "55/62",
+      "origin": "7/62"
+    }
+  },
+  "chosen_from": "train only; test unread"
+}

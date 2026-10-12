@@ -4,7 +4,7 @@
 
 **已实现可运行裁判、观察权限、完整对局、小模型精确求解、16人固定策略实验和反制评估。完整16人GTO与人类教学效果尚未得到验证。**
 
-111项测试通过（含SciPy独立核对）。最新v05新增114,944次16人终局模拟，完整评估11种好人策略×7种匪方反制，并保存首死身份与首验结果的条件分支。核心结果形成反制循环：公开全掩护被追踪第一提名者压制，随机全掩护反制追踪者，综合识别和散票又压制随机掩护。当前票型投票与票型验人评分均未得到稳健晋级证据。结论限于冻结候选与规则，见[最新实验报告](docs/refinement_results_v05.md)。
+123项测试通过（含SciPy独立核对）。最新v06新增102,144次16人终局模拟，评估无需阵营秘密装置的局部混合、双发起反诱饵、有限3+1散票、固定首夜状态的信息释放时点，以及训练选择/新种子留出验收的增量反制池。局部混合压平了公开与随机掩护的极端反制循环；`confirm_mix`是留出纯候选中最稳健方案，有限散票和匪方首发诱饵未晋级。结论限于冻结候选与规则，见[最新实验报告](docs/local_pool_results_v06.md)。
 
 ## 使用
 
@@ -25,6 +25,10 @@ python3 scripts/run_refinement_v05.py --output results/v05_reproduction --worker
 python3 scripts/analyze_restricted_matrix_v05.py
 python3 scripts/verify_refinement_v05.py results/v05 --replay --output results/v05_integrity_audit.json
 python3 scripts/build_refinement_report_v05.py
+python3 scripts/run_local_pool_v06.py --output results/v06_reproduction --workers 4
+python3 scripts/analyze_local_pool_v06.py
+python3 scripts/verify_local_pool_v06.py results/v06 --replay --output results/v06_integrity_audit.json
+python3 scripts/build_local_pool_report_v06.py
 ```
 
 `demo` 输出完整对局的公开发言和票型；其中验人声明不代表裁判认证。最外层结果包含赛后评价标签。`suite` 会完整重算实验并覆盖指定输出目录中的同名结果；使用新目录保留不同版本。
@@ -43,12 +47,15 @@ python3 scripts/build_refinement_report_v05.py
 | 16人反制 | 7×7策略池，训练选回应、独立种子评估；另测追刀提名者 | 候选池内找到的利用和反利用 |
 | 16人掩护与票型 | 11×6策略池，局部角色条件随机化、公开历史推理、匪方同步反制 | 独立留出验证，115项预声明配对比较，非均衡混合频率 |
 | 16人策略拆分与顺序反制 | 11×7策略池，警/民票型拆分、验人单独开关、发起者识别、匪方散票 | 139项预声明比较、首夜条件分支、训练矩阵受限混合解 |
+| 16人局部混合与信息时点 | 9×7候选池、独立本地抽样、双发起确认、有限3+1散票、固定首夜配对干预 | 新种子留出与增量扩池；非完整CFR/GTO |
 | 机制比较 | PK、3/4遗言、方向、近远验人、位置刀、自刀 | 固定策略下的开局胜率比较 |
 
 用户确认：匪胜条件为警察全灭；好人胜以匪全灭建模；夜晚共同验一人；不翻身份；允许自刀和假跳警。首夜被刀警察得到当夜验人。遗言包含夜死和白天放逐、前三次死亡可说；四次作为对照。发言从最近死者旁开始；左右固定方向均支持。基线同时投票、唯一最高票出局；PK变体对平票者再发言和复投，仍平则无人出局。
 
 ## 文档与结果
 
+- [v06最新实验报告](docs/local_pool_results_v06.md)：局部混合、反诱饵、有限散票、查杀释放时点与增量反制池。
+- [v06冻结协议](docs/local_pool_protocol_v06.md)、[配置](configs/local_pool_v06.json)、[结果清单](results/v06/manifest.json)、[独立核验](results/v06_integrity_audit.json)：126个矩阵单元、21个时点单元、2,304个固定首夜状态与147局归档重放通过。
 - [v05最新实验报告](docs/refinement_results_v05.md)：反制循环、角色拆分、首夜条件分支、全16人规则敏感性与受限矩阵混合解。
 - [v05冻结协议](docs/refinement_protocol_v05.md)、[配置](configs/refinement_v05.json)、[结果清单](results/v05/manifest.json)、[独立核验](results/v05_integrity_audit.json)：170个实验单元、680个条件摘要、142项配对统计及340局归档重放通过。
 - [v04最新实验报告](docs/large_game_results_v04.md)：完整矩阵、反制链、掩护/混合/票型效果、保留决策与规则敏感性。
@@ -63,6 +70,6 @@ python3 scripts/build_refinement_report_v05.py
 - [提名信号反制](results/signal_counter_v03.json)：后续公开行动也会泄露信息的针对性测试。
 - [最终产物核验](results/final_integrity_audit.json)：哈希、原始样本分母和报告统计复算。
 
-v01的弱策略基线及补充实验保留；v02修正了警察误信队外验人的问题；v03展示提名信号可被追刀利用；v04加入掩护、局部混合和票型；v05拆分角色动作并加入发言顺序与散票反制。各代冻结来源与结果分别保留。现有报告共记录381,696次终局执行；不同格子的共享种子不构成额外独立开局。
+v01的弱策略基线及补充实验保留；v02修正了警察误信队外验人的问题；v03展示提名信号可被追刀利用；v04加入掩护、局部混合和票型；v05拆分角色动作并加入发言顺序与散票反制；v06加入可执行本地混合、反诱饵确认、受控时点干预与增量扩池。各代冻结来源与结果分别保留。现有报告共记录483,840次终局执行；不同格子的共享种子不构成额外独立开局。
 
 沿用 AIP 与 Poker Analysis 的 `GameSpec → AlgorithmSpec → SolverArtifact → IndependentEvaluationReport → PromotionDecision` 思路。当前模块不直接导入其他项目代码。解析概率、固定策略胜率、受限均衡和完整声明游戏均衡分别标注；未经认证的模拟结果不自动成为教学标准答案。

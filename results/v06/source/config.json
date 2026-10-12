@@ -1,0 +1,180 @@
+{
+  "version": "20261012-local-pool-v06",
+  "purpose": "4P4M8C independent local mixtures, fixed-opening hit timing, limited mafia ballot disguise, anti-bait cover, and train-only incremental response-pool expansion",
+  "policy_module": "strategies_v06",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pass",
+    "direction": 1
+  },
+  "good_candidates": [
+    {
+      "name": "public_base",
+      "cover_mode": "public",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    {
+      "name": "random_base",
+      "cover_mode": "random",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    {
+      "name": "local_cover75",
+      "cover_mode": "local",
+      "local_public_probability": 0.75,
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    {
+      "name": "local_cover50",
+      "cover_mode": "local",
+      "local_public_probability": 0.5,
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    {
+      "name": "local_plan_mix",
+      "cover_mode": "local",
+      "local_public_probability": 0.754,
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 0.754,
+      "inspect_reasoning_probability": 0.246
+    },
+    {
+      "name": "position_mix",
+      "cover_mode": "local",
+      "local_public_probability": 0.75,
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 0.75,
+      "police_nomination_mode": "position",
+      "inspect_reasoning_probability": 0.25
+    },
+    {
+      "name": "confirm_cover",
+      "cover_mode": "confirm",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    {
+      "name": "confirm_mix",
+      "cover_mode": "confirm",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 0.75,
+      "inspect_reasoning_probability": 0.25
+    },
+    {
+      "name": "public_police75",
+      "cover_mode": "public",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 0.75
+    }
+  ],
+  "mafia_candidates": [
+    {
+      "name": "combined",
+      "inference": "combined",
+      "vote_style": "coordinate",
+      "nomination_style": "score"
+    },
+    {
+      "name": "origin",
+      "inference": "origin",
+      "vote_style": "coordinate",
+      "nomination_style": "score"
+    },
+    {
+      "name": "combined_split",
+      "inference": "combined",
+      "vote_style": "split",
+      "nomination_style": "score"
+    },
+    {
+      "name": "combined_one_decoy",
+      "inference": "combined",
+      "vote_style": "one_decoy",
+      "nomination_style": "score"
+    },
+    {
+      "name": "origin_one_decoy",
+      "inference": "origin",
+      "vote_style": "one_decoy",
+      "nomination_style": "score"
+    },
+    {
+      "name": "origin_late_decoy_bait",
+      "inference": "origin",
+      "vote_style": "late_decoy",
+      "nomination_style": "bait_first"
+    },
+    {
+      "name": "combined_late_decoy",
+      "inference": "combined",
+      "vote_style": "late_decoy",
+      "nomination_style": "score"
+    }
+  ],
+  "initial_pool": {
+    "good": [
+      "public_base",
+      "random_base"
+    ],
+    "mafia": [
+      "combined",
+      "origin"
+    ]
+  },
+  "expansion": {
+    "max_rounds": 5,
+    "tolerance": 0.01,
+    "rule": "At most one train best response per side per round; no heldout outcomes may change membership or weights."
+  },
+  "matrix_train": {
+    "n": 256,
+    "seed_start": 43000000
+  },
+  "matrix_test": {
+    "n": 1024,
+    "seed_start": 44000000
+  },
+  "timing": {
+    "opening_good": {
+      "name": "timing_opening_good",
+      "cover_mode": "public",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    "opening_mafia": {
+      "name": "timing_opening_mafia",
+      "inference": "combined",
+      "vote_style": "coordinate",
+      "nomination_style": "score"
+    },
+    "continuation_good": {
+      "cover_mode": "public",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    "mafia_policies": [
+      "combined",
+      "origin",
+      "origin_late_decoy_bait"
+    ],
+    "hit_openings": {
+      "n": 2048,
+      "seed_start": 45000000,
+      "scan_limit": 100000
+    },
+    "aligned_openings": {
+      "n": 256,
+      "seed_start": 46000000,
+      "scan_limit": 100000
+    }
+  },
+  "interpretation": "All main results are 4P4M8C. Local mixtures are independent actor draws or public-position rules without a secret faction plan. Matrix expansion is finite-candidate response coverage, not CFR convergence or complete-game GTO. Timing effects are paired within selected first-night states; the civilian-aligned cohort is narrower by design."
+}

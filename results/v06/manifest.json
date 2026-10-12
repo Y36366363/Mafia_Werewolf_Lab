@@ -1,0 +1,33 @@
+{
+  "version": "20261012-local-pool-v06",
+  "source_sha256": "00948f5d04406197e157696db54e5c534571e2dcf616172d666b62d6166d41d6",
+  "elapsed_seconds": 126.05499304196564,
+  "executed_games": 102144,
+  "independent_seed_blocks": {
+    "matrix_train": {
+      "n": 256,
+      "seed_start": 43000000
+    },
+    "matrix_test": {
+      "n": 1024,
+      "seed_start": 44000000
+    },
+    "timing_hit": {
+      "n": 2048,
+      "seed_start": 45000000,
+      "scan_limit": 100000
+    },
+    "timing_aligned": {
+      "n": 256,
+      "seed_start": 46000000,
+      "scan_limit": 100000
+    }
+  },
+  "files": {
+    "train.json": "0a5371187e325e793ca79efb6be8d30f0f524a1e94e6cfa59ee82383e5b48ec3",
+    "test.json": "584fe370fb0337cc1e067bb6494b459c2e18156bae6c6f2d78b35dd1c4a22070",
+    "timing.json": "4ec03868edce6c593ef635592bf183d4a48418a89e8126f1d694be331cf9d0b4",
+    "selection_before_test.json": "aebd6a0e2d6d9bee1b472f9a05880d3233bb70ffc57d3c2c4247db655087abce"
+  },
+  "scope": "4P4M8C finite observation-only local policy pool and fixed-opening timing interventions; candidate-pool response coverage, not full-game GTO or CFR convergence"
+}
