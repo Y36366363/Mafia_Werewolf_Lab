@@ -5,7 +5,8 @@ from random import Random
 from . import policies as default_decisions
 
 from .engine import (Role, Rules, State, add_message, deal, last_words_eligible,
-                     observe, resolve_night, resolve_votes, speech_order, winner)
+                     observe, publish_live_ballot, resolve_night, resolve_votes,
+                     speech_order, winner)
 from .policies import GoodPolicy, MafiaPolicy
 
 
@@ -46,7 +47,7 @@ def opening(rules: Rules, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
 
 def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
                   first_last_words: str | None = None, trace: bool = False,
-                  decision_api=default_decisions) -> Outcome:
+                  decision_api=default_decisions, public_ballots: bool = False) -> Outcome:
     """Resume just after a night; intervention applies ONLY first-night victim.
 
     first_last_words is pass/water/report, not a referee role or branch label.
@@ -85,12 +86,16 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
         last_words(first_last_words if state.day == 1 else None)
         for player in speech_order(state):
             speak(player, "day")
-        # All votes consume one common history; publish after collection.
+        # Simultaneous mode publishes only the complete result.  In the optional
+        # public mode, choices are irrevocably published in speech order.
         ballots = {}
-        for player in state.alive:
+        voters = speech_order(state) if public_ballots else state.alive
+        for player in voters:
             obs = observe(state, player)
             policy = mafia if obs.role == Role.MAFIA else good
             ballots[player] = decision_api.vote(obs, policy, decision_rng(seed, state.day, "vote", player))
+            if public_ballots:
+                state = publish_live_ballot(state, player, ballots[player])
         before = len(state.deaths)
         state = resolve_votes(state, ballots)
         record("votes", ballots)
@@ -99,11 +104,14 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
                 if player in state.pending_pk:
                     speak(player, "pk")
             ballots = {}
-            for player in state.alive:
+            voters = tuple(p for p in speech_order(state) if p in state.pending_pk) if public_ballots else state.alive
+            for player in voters:
                 obs = observe(state, player)
                 policy = mafia if obs.role == Role.MAFIA else good
                 ballots[player] = decision_api.vote(obs, policy, decision_rng(seed, state.day, "pk_vote", player),
                                        candidates=state.pending_pk)
+                if public_ballots:
+                    state = publish_live_ballot(state, player, ballots[player], pk=True)
             state = resolve_votes(state, ballots, pk=True)
             record("pk_votes", ballots)
         if len(state.deaths) > before:
@@ -118,6 +126,7 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
 
 
 def play(rules: Rules, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
-         trace: bool = False, decision_api=default_decisions) -> Outcome:
+         trace: bool = False, decision_api=default_decisions,
+         public_ballots: bool = False) -> Outcome:
     return continue_game(opening(rules, good, mafia, seed, decision_api), good, mafia, seed,
-                         trace=trace, decision_api=decision_api)
+                         trace=trace, decision_api=decision_api, public_ballots=public_ballots)

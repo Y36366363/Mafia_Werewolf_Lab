@@ -6,7 +6,8 @@ import unittest
 
 from mafia_lab.engine import (
     Message, Role, Rules, add_message, deal, from_roles, last_words_eligible,
-    night_targets, observe, resolve_night, resolve_votes, speech_order, winner,
+    night_targets, observe, publish_live_ballot, resolve_night, resolve_votes,
+    speech_order, winner,
 )
 
 
@@ -144,6 +145,16 @@ class VotingTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             resolve_votes(self.state, {0: 2})
         self.assertEqual(self.state.public_events, ())
+
+    def test_live_ballots_are_public_irrevocable_and_checked_at_resolution(self):
+        state = publish_live_ballot(self.state, 0, 2)
+        self.assertEqual(observe(state, 5).public_events[-1].ballots, ((0, 2),))
+        with self.assertRaises(ValueError):
+            publish_live_ballot(state, 0, 3)
+        votes = {0: 2, 1: 2, 2: 0, 3: 0, 4: 2, 5: None}
+        with self.assertRaises(ValueError):
+            resolve_votes(state, {**votes, 0: 3})
+        self.assertNotIn(2, resolve_votes(state, votes).alive)
 
     def test_ballot_order_does_not_change_result_and_is_public_only_after(self):
         votes = {0: 2, 1: 2, 2: 0, 3: 0, 4: 2, 5: None}

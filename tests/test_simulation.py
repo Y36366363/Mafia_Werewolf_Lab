@@ -31,6 +31,13 @@ class SimulationTests(unittest.TestCase):
         self.assertEqual(state,original)
         self.assertEqual(state.messages,())
 
+    def test_public_sequential_ballots_are_reproducible(self):
+        rules, good, mafia = Rules(), GOOD_POOL[0], MAFIA_POOL[0]
+        a = play(rules, good, mafia, 109, trace=True, public_ballots=True)
+        b = play(rules, good, mafia, 109, trace=True, public_ballots=True)
+        self.assertEqual(a, b)
+        self.assertIn(a.good_win, (0, 1))
+
     def test_same_observation_same_policy_distribution(self):
         # Civilian seat 3 cannot tell swapped police/mafia at 0/1 apart.
         a = observe(from_roles(["police","mafia","civilian","civilian"]),3)

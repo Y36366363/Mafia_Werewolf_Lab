@@ -316,6 +316,11 @@ def resolve_votes(state: State, ballots: Mapping[int, int | None], *,
     if not pk and state.pending_pk:
         raise ValueError("pending PK needs a PK ballot")
     allowed = state.pending_pk if pk else state.alive
+    live_kind = "live_pk_vote" if pk else "live_vote"
+    published = {event.player: event.ballots[0][1] for event in state.public_events
+                 if event.kind == live_kind and event.day == state.day and event.player is not None}
+    if any(ballots.get(voter) != target for voter, target in published.items()):
+        raise ValueError("resolved ballots must match already published live ballots")
     for voter, target in ballots.items():
         if target is None:
             continue
@@ -333,3 +338,33 @@ def resolve_votes(state: State, ballots: Mapping[int, int | None], *,
     if len(leaders) > 1 and state.rules.tie_rule == "pk" and not pk:
         return replace(result, pending_pk=leaders)
     return result
+
+
+def publish_live_ballot(state: State, voter: int, target: int | None, *,
+                        pk: bool = False) -> State:
+    """Publish one irrevocable ballot before final resolution.
+
+    This transition supports rulesets with an openly observed sequential vote.
+    It never resolves a partial tally; :func:`resolve_votes` still receives the
+    complete ballot map and checks it against every published choice.
+    """
+    _ongoing(state)
+    _seat(state, voter)
+    if voter not in state.alive:
+        raise ValueError("dead players cannot vote")
+    if pk and not state.pending_pk:
+        raise ValueError("no pending PK")
+    if not pk and state.pending_pk:
+        raise ValueError("pending PK needs a PK ballot")
+    allowed = state.pending_pk if pk else state.alive
+    if target is not None:
+        _seat(state, target)
+        if target == voter or target not in allowed:
+            raise ValueError("illegal vote target")
+    kind = "live_pk_vote" if pk else "live_vote"
+    if any(event.kind == kind and event.day == state.day and event.player == voter
+           for event in state.public_events):
+        raise ValueError("voter already published a ballot in this round")
+    event = PublicEvent(kind=kind, day=state.day, player=voter,
+                        ballots=((voter, target),), candidates=tuple(allowed))
+    return replace(state, public_events=state.public_events + (event,))
