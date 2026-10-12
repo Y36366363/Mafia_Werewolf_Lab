@@ -37,6 +37,9 @@ class SimulationTests(unittest.TestCase):
         b = play(rules, good, mafia, 109, trace=True, public_ballots=True)
         self.assertEqual(a, b)
         self.assertIn(a.good_win, (0, 1))
+        pk = play(replace(rules, tie_rule="pk"), good, mafia, 109,
+                  trace=True, public_ballots=True)
+        self.assertIn(pk.good_win, (0, 1))
 
     def test_same_observation_same_policy_distribution(self):
         # Civilian seat 3 cannot tell swapped police/mafia at 0/1 apart.

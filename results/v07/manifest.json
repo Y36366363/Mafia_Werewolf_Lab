@@ -1,0 +1,61 @@
+{
+  "version": "20261012-adaptive-v07",
+  "source_sha256": "c19a6a1fc0ed97f5bc44d8b961efacf78ae68747a6a2bf3a8a5f3fca758eb42f",
+  "elapsed_seconds": 193.80335916602053,
+  "executed_games": 156672,
+  "training_games": 46080,
+  "independent_seed_blocks": {
+    "table_training": {
+      "n": 128,
+      "seed_start": 50000000,
+      "max_passes": 2,
+      "probability_grid": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "initial_cover_table": [
+        0.25,
+        0.5,
+        0.75,
+        0.75,
+        1.0,
+        1.0
+      ],
+      "initial_police_table": [
+        0.5,
+        0.75,
+        1.0
+      ],
+      "policy_base": {
+        "civilian_cover_probability": 1.0,
+        "hit_nominate_probability": 1.0,
+        "inspect_reasoning_probability": 0.25
+      },
+      "opponents": [
+        "combined",
+        "origin",
+        "combined_live_margin",
+        "origin_live_margin"
+      ],
+      "selection": "Coordinate response uses train seeds only. For each table cell choose the grid value with highest worst-opponent rate, then highest mean; freeze the complete table before holdout."
+    },
+    "holdout": {
+      "n": 1024,
+      "seed_start": 51000000
+    },
+    "initiator": {
+      "n": 4096,
+      "seed_start": 52000000,
+      "scan_limit": 100000
+    }
+  },
+  "files": {
+    "table_selection_before_test.json": "30e0d7596fbbd49903640a1ba69ddf36243cd690ffc24d3e3c2c3a2cab4369ba",
+    "holdout.json": "11dbfe48c344c2bef6a0c4e055b3e2b8935cea0b1a1dbaee1ba55d3cd35c5713",
+    "initiator.json": "0c2ef70d4b88515b1d7a18dda46bda3b36a83458dfd18427c0580e07e9d9440c"
+  },
+  "scope": "4P4M8C public sequential-ballot strategy evaluation, train-generated local probability table, and public-only civilian initiators; not full-game GTO"
+}

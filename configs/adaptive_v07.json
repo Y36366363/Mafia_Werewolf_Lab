@@ -1,0 +1,43 @@
+{
+  "version": "20261012-adaptive-v07",
+  "purpose": "4P4M8C public live-vote costless decoration, multiple public-only civilian initiators, and a train-generated frozen conditional local-probability table",
+  "rules": {"police": 4, "mafia": 4, "civilians": 8, "last_words_limit": 3, "allow_self_kill": true, "tie_rule": "pass", "direction": 1},
+  "mafia_candidates": [
+    {"name": "combined", "inference": "combined", "vote_style": "coordinate"},
+    {"name": "origin", "inference": "origin", "vote_style": "coordinate"},
+    {"name": "combined_one_decoy", "inference": "combined", "vote_style": "one_decoy"},
+    {"name": "combined_live_margin", "inference": "combined", "vote_style": "live_margin"},
+    {"name": "origin_live_margin", "inference": "origin", "vote_style": "live_margin"},
+    {"name": "combined_live_final", "inference": "combined", "vote_style": "live_final"}
+  ],
+  "table_training": {
+    "n": 128,
+    "seed_start": 50000000,
+    "max_passes": 2,
+    "probability_grid": [0.0, 0.25, 0.5, 0.75, 1.0],
+    "initial_cover_table": [0.25, 0.5, 0.75, 0.75, 1.0, 1.0],
+    "initial_police_table": [0.5, 0.75, 1.0],
+    "policy_base": {"civilian_cover_probability": 1.0, "hit_nominate_probability": 1.0, "inspect_reasoning_probability": 0.25},
+    "opponents": ["combined", "origin", "combined_live_margin", "origin_live_margin"],
+    "selection": "Coordinate response uses train seeds only. For each table cell choose the grid value with highest worst-opponent rate, then highest mean; freeze the complete table before holdout."
+  },
+  "holdout": {"n": 1024, "seed_start": 51000000},
+  "holdout_good_base": {"civilian_cover_probability": 1.0, "hit_nominate_probability": 1.0},
+  "initiator_experiment": {
+    "opening_good": {"name": "initiator_opening_good", "cover_mode": "public", "civilian_cover_probability": 1.0, "police_nominate_probability": 1.0},
+    "opening_mafia": "combined",
+    "continuation_good": {"cover_mode": "public", "civilian_cover_probability": 1.0, "police_nominate_probability": 1.0},
+    "opponents": ["combined", "origin", "combined_live_margin"],
+    "treatments": [
+      {"name": "early", "timing": "early"},
+      {"name": "silent", "timing": "silent"},
+      {"name": "civilian_next", "timing": "civilian_first", "rule": "next"},
+      {"name": "civilian_second", "timing": "civilian_first", "rule": "second"},
+      {"name": "civilian_opposite", "timing": "civilian_first", "rule": "opposite"},
+      {"name": "civilian_hashed", "timing": "civilian_first", "rule": "hashed"},
+      {"name": "civilian_cycle", "timing": "civilian_first", "rule": "cycle"}
+    ],
+    "openings": {"n": 4096, "seed_start": 52000000, "scan_limit": 100000}
+  },
+  "interpretation": "All evaluations are 4P4M8C. Public-ballot variants are a distinct voting protocol from v06 simultaneous voting. Live-margin decoration guarantees only that the intended main target remains the unique leader at the actor's observed tally; later ballots can still change the outcome. The learned table is a train-only finite-grid response and is tested without holdout retuning. Civilian rules never read investigations; their unconditional outcomes include misses and ineligible noncivilian first speakers."
+}

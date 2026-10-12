@@ -104,7 +104,7 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
                 if player in state.pending_pk:
                     speak(player, "pk")
             ballots = {}
-            voters = tuple(p for p in speech_order(state) if p in state.pending_pk) if public_ballots else state.alive
+            voters = speech_order(state) if public_ballots else state.alive
             for player in voters:
                 obs = observe(state, player)
                 policy = mafia if obs.role == Role.MAFIA else good

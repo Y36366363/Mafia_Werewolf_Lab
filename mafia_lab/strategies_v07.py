@@ -21,7 +21,7 @@ def _probabilities(values, name, length):
 
 @dataclass(frozen=True)
 class GoodPolicyV7(v6.GoodPolicyV6):
-    civilian_first_rule: str = "next"  # next, second, opposite, hashed
+    civilian_first_rule: str = "next"  # next, second, opposite, hashed, cycle
     conditional_cover_table: tuple[float, ...] = ()  # 1/2+ nominations x speech tercile
     conditional_police_table: tuple[float, ...] = ()  # speech tercile
 
@@ -38,7 +38,7 @@ class GoodPolicyV7(v6.GoodPolicyV6):
             raise ValueError("invalid police nomination mode")
         if self.day1_timing not in {"normal", "early", "late", "silent", "civilian_first"}:
             raise ValueError("invalid day-one timing")
-        if self.civilian_first_rule not in {"next", "second", "opposite", "hashed"}:
+        if self.civilian_first_rule not in {"next", "second", "opposite", "hashed", "cycle"}:
             raise ValueError("invalid civilian-first rule")
         if self.cover_mode == "table":
             _probabilities(self.conditional_cover_table, "conditional_cover_table", 6)
@@ -85,6 +85,10 @@ def civilian_rule_target(obs: Observation, rule: str) -> int | None:
     pool = [p for p in obs.alive if p != obs.player]
     if not pool:
         return None
+    if rule == "cycle":
+        anchor = obs.last_anchor if obs.last_anchor is not None else 0
+        selected = ("next", "second", "opposite", "hashed")[(obs.player + anchor) % 4]
+        return civilian_rule_target(obs, selected)
     if rule == "next":
         return next((p for p in order if p != obs.player), None)
     if rule == "second":

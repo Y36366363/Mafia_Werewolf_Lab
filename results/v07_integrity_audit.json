@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "source_sha256": "c19a6a1fc0ed97f5bc44d8b961efacf78ae68747a6a2bf3a8a5f3fca758eb42f",
+  "checked_training_cells": 360,
+  "checked_holdout_cells": 24,
+  "checked_initiator_cells": 21,
+  "checked_openings": 4096,
+  "sampled_game_replays": 63,
+  "selection_path_recomputed": true,
+  "archived_source_assets": {
+    "source/mafia_lab/__init__.py": "163e9f77922cd89a4f1ec0d1adfd8df0798fe36b8ebfc68f90d58110443aa7e7",
+    "source/mafia_lab/__main__.py": "80d349b3e5e19225221de67b14a98e6fda33bebf22cc62b22769f505b33678e4",
+    "source/mafia_lab/adaptive_experiment.py": "5a2f149043e7a93f960ded05130bcfaacfcbf74aa0ab898b2a03a9b04688baaa",
+    "source/mafia_lab/engine.py": "277e15458354d851be9223fa629abdce61615793d4f721dedec62533111bd45f",
+    "source/mafia_lab/experiments.py": "e8331a7b766e7bc9b1e663fae7c62a6f262654645764976781805986d4b5b9f9",
+    "source/mafia_lab/large_experiment.py": "e631a487d85adfd32f246fff95ee17f7c17096b6184ed45804c08b9c003dc191",
+    "source/mafia_lab/local_pool_experiment.py": "43880e6d529ef41fb3729bb029a51ef3d74e5c3e164e99ecfb3e0fff122b1682",
+    "source/mafia_lab/policies.py": "8e72e63b0578730de46840e1f2da2d0e4278cc6eb1ed6f026de5172c0923037c",
+    "source/mafia_lab/refinement_experiment.py": "9daf616559622ccf08965aaae6deb754a7d01c000b573e5af9f9b0a9f145a56d",
+    "source/mafia_lab/simulation.py": "4ef0fd94a2834675420446276e8b6b42be733c0edf98f8d39d497ea8aa3f85e7",
+    "source/mafia_lab/statistics.py": "c215b025b8a16ed214608c70a1cb48c2a5b8d6665f909f7b32a0e8c36d0b460a",
+    "source/mafia_lab/strategies_v04.py": "6fa39a2df7f2c72aee65aabb279b01f82e3df7d8d5f5f44cf7353127a484623a",
+    "source/mafia_lab/strategies_v05.py": "0dea71c3617d94329926e92592796a4b8016e5afaba967af179823a13788bff8",
+    "source/mafia_lab/strategies_v06.py": "922dd39843ce740bb7e3856af6967b2c9719540580eb19b0e0c9e795aec89c97",
+    "source/mafia_lab/strategies_v07.py": "e4ff8fe0aa16150293fb27706370fbc562c83f8d42dc99ffdb4e0378fb214b80",
+    "source/mafia_lab/tiny.py": "8990b6867ebcacba58ddf24b2747a1e4e4f45955b1f45abbd7b4515ca30c432d"
+  },
+  "scope": "Integrity and deterministic replay audit, not an independent strategy model."
+}

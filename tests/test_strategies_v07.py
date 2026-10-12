@@ -26,7 +26,7 @@ class V7StrategyTests(unittest.TestCase):
         a = observe(resolve_night(from_roles(roles_a), 0, 3), 1)
         b = observe(resolve_night(from_roles(roles_b), 0, 2), 1)
         self.assertEqual(a, b)
-        for rule in ("next", "second", "opposite", "hashed"):
+        for rule in ("next", "second", "opposite", "hashed", "cycle"):
             self.assertEqual(v7.civilian_rule_target(a, rule), v7.civilian_rule_target(b, rule))
 
     def test_table_cover_uses_public_support_and_speech_tercile(self):
