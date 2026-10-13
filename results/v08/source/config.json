@@ -1,0 +1,195 @@
+{
+  "version": "20261013-crossfit-v08",
+  "purpose": "4P4M8C common deterministic mafia exile target, disjoint coordinate fit/validation folds, and unconditional coverage-benefit selection for public civilian probes",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pass",
+    "direction": 1
+  },
+  "mafia_candidates": [
+    {
+      "name": "combined_det",
+      "inference": "combined",
+      "vote_style": "deterministic"
+    },
+    {
+      "name": "origin_det",
+      "inference": "origin",
+      "vote_style": "deterministic"
+    },
+    {
+      "name": "combined_det_one_decoy",
+      "inference": "combined",
+      "vote_style": "deterministic_one_decoy"
+    },
+    {
+      "name": "combined_det_live_margin",
+      "inference": "combined",
+      "vote_style": "deterministic_live_margin"
+    },
+    {
+      "name": "origin_det_live_margin",
+      "inference": "origin",
+      "vote_style": "deterministic_live_margin"
+    },
+    {
+      "name": "combined_det_live_final",
+      "inference": "combined",
+      "vote_style": "deterministic_live_final"
+    }
+  ],
+  "table_crossfit": {
+    "max_passes": 2,
+    "probability_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "initial_cover_table": [
+      0.25,
+      0.5,
+      0.75,
+      0.75,
+      1.0,
+      1.0
+    ],
+    "initial_police_table": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "policy_base": {
+      "civilian_cover_probability": 1.0,
+      "hit_nominate_probability": 1.0,
+      "inspect_reasoning_probability": 0.25
+    },
+    "opponents": [
+      "combined_det",
+      "origin_det",
+      "combined_det_live_margin",
+      "origin_det_live_margin"
+    ],
+    "fit": {
+      "n": 96,
+      "seed_start": 60000000
+    },
+    "validate": {
+      "n": 192,
+      "seed_start": 61000000
+    },
+    "accept_worst_gain": 0.005,
+    "mean_noninferiority": 0.005,
+    "selection": "Each coordinate-pass pair has unique fit and validation seed blocks. Fit proposes a grid response; validation accepts only if worst-opponent rate improves by at least 0.5pp and mean is noninferior within 0.5pp."
+  },
+  "matrix_holdout": {
+    "n": 2048,
+    "seed_start": 65000000
+  },
+  "holdout_good_base": {
+    "civilian_cover_probability": 1.0,
+    "hit_nominate_probability": 1.0
+  },
+  "probe_selection": {
+    "opening_good": {
+      "name": "probe_opening_good",
+      "cover_mode": "public",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    "opening_mafia": "combined_det",
+    "continuation_good": {
+      "cover_mode": "public",
+      "civilian_cover_probability": 1.0,
+      "police_nominate_probability": 1.0
+    },
+    "opponents": [
+      "combined_det",
+      "origin_det",
+      "combined_det_live_margin"
+    ],
+    "accept_worst_gain": 0.0025,
+    "candidates": [
+      {
+        "name": "silent",
+        "timing": "silent"
+      },
+      {
+        "name": "early",
+        "timing": "early"
+      },
+      {
+        "name": "probe_w1_cycle",
+        "timing": "civilian_first",
+        "window": 1,
+        "pattern": [
+          "cycle"
+        ]
+      },
+      {
+        "name": "probe_w2_stagger",
+        "timing": "civilian_first",
+        "window": 2,
+        "pattern": [
+          "next",
+          "opposite"
+        ]
+      },
+      {
+        "name": "probe_w4_stagger",
+        "timing": "civilian_first",
+        "window": 4,
+        "pattern": [
+          "next",
+          "second",
+          "opposite",
+          "hashed"
+        ]
+      },
+      {
+        "name": "probe_w6_cycle",
+        "timing": "civilian_first",
+        "window": 6,
+        "pattern": [
+          "next",
+          "second",
+          "opposite",
+          "hashed"
+        ]
+      },
+      {
+        "name": "probe_w8_cycle",
+        "timing": "civilian_first",
+        "window": 8,
+        "pattern": [
+          "next",
+          "second",
+          "opposite",
+          "hashed"
+        ]
+      }
+    ],
+    "fit_openings": {
+      "n": 1024,
+      "seed_start": 62000000,
+      "scan_limit": 100000
+    },
+    "validate_openings": {
+      "n": 2048,
+      "seed_start": 63000000,
+      "scan_limit": 100000
+    },
+    "holdout_openings": {
+      "n": 4096,
+      "seed_start": 64000000,
+      "scan_limit": 100000
+    },
+    "selection": "Choose the civilian probe with highest unconditional worst-opponent complete-game win rate on fit openings. Accept over silent only if independent validation improves worst rate by at least 0.25pp and does not lower mean rate."
+  },
+  "interpretation": "All experiments use 4P4M8C and public sequential ballots. Deterministic mafia vote ties use shared score, public speech order and seat. Every table coordinate-pass has distinct fit and validation seeds, and final matrix seeds are untouched. Civilian probes are selected and reported by unconditional outcomes across every hit opening; activation and alignment only decompose coverage. Results are finite-policy strategy evaluation, not full-game GTO or CFR convergence."
+}

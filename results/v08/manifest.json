@@ -1,0 +1,15 @@
+{
+  "version": "20261013-crossfit-v08",
+  "source_sha256": "c01809600c3b5d2af297dbb275ea9f7b8c92222b09d2b004c47c2da2e2989708",
+  "elapsed_seconds": 520.5741699170321,
+  "executed_games": 225792,
+  "table_training_games": 56832,
+  "probe_training_games": 33792,
+  "files": {
+    "table_selection_before_holdout.json": "86835a20a5890e4489ac34bb04598e0a3b24bba4d7bac439362c26e98cb81757",
+    "probe_selection_before_holdout.json": "7c8ef9d0b154698e333c3a3c93e4c212c9bd661d8e3113a8d82d0801a54f8ff0",
+    "matrix_holdout.json": "ee9a045978280d4c9be1476d664f68f42a1ac9e26572703032d296af3b346aa0",
+    "probe_holdout.json": "0c737cf6cc6719142471efc0f9957f3545f91ef87b2eddb457dcb7d3db2008c8"
+  },
+  "scope": "4P4M8C deterministic shared mafia target, disjoint-fold conditional-table selection and unconditional public-probe evaluation; not full-game GTO"
+}

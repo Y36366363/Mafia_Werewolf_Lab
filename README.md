@@ -4,7 +4,7 @@
 
 **已实现可运行裁判、观察权限、完整对局、小模型精确求解、16人固定策略实验和反制评估。完整16人GTO与人类教学效果尚未得到验证。**
 
-134项测试通过（含SciPy独立核对）。最新v07新增156,672次16人终局模拟，引入公开顺序投票并测试实时票差门控的装饰票、五种无需验人信息的平民首发规则，以及由训练回应生成后冻结的条件概率表。实时门控避免了固定3+1的明显协调损失，但尚无稳定匪方收益；平民首发无条件收益很小；训练表在新种子留出上未超过人工`confirm_mix`。结论限于冻结候选与规则，见[最新实验报告](docs/adaptive_results_v07.md)。
+143项测试通过（含SciPy独立核对）。最新v08新增225,792次16人终局模拟，修复匪方主目标的公共确定性破同分规则，以互不复用的坐标拟合/验证子批次冻结条件概率表，并按无条件完整对局胜率选择公开平民首发。确定性匪策略的非预期散票降为零；交叉拟合表在未读候选池矩阵取得最高纯策略最差胜率；扩大平民首发窗口提高了覆盖与无条件胜率。结论限于冻结候选与规则，见[最新实验报告](docs/crossfit_results_v08.md)。
 
 ## 使用
 
@@ -33,6 +33,10 @@ python3 scripts/run_adaptive_v07.py --output results/v07_reproduction --workers 
 python3 scripts/analyze_adaptive_v07.py
 python3 scripts/verify_adaptive_v07.py results/v07 --replay --output results/v07_integrity_audit.json
 python3 scripts/build_adaptive_report_v07.py
+python3 scripts/run_crossfit_v08.py --output results/v08_reproduction --workers 4
+python3 scripts/analyze_crossfit_v08.py
+python3 scripts/verify_crossfit_v08.py results/v08 --replay --output results/v08_integrity_audit.json
+python3 scripts/build_crossfit_report_v08.py
 ```
 
 `demo` 输出完整对局的公开发言和票型；其中验人声明不代表裁判认证。最外层结果包含赛后评价标签。`suite` 会完整重算实验并覆盖指定输出目录中的同名结果；使用新目录保留不同版本。
@@ -53,12 +57,15 @@ python3 scripts/build_adaptive_report_v07.py
 | 16人策略拆分与顺序反制 | 11×7策略池，警/民票型拆分、验人单独开关、发起者识别、匪方散票 | 139项预声明比较、首夜条件分支、训练矩阵受限混合解 |
 | 16人局部混合与信息时点 | 9×7候选池、独立本地抽样、双发起确认、有限3+1散票、固定首夜配对干预 | 新种子留出与增量扩池；非完整CFR/GTO |
 | 16人公开票差与自适应表 | 公开顺序票、票差安全装饰、五种平民首发、训练生成条件表 | 独立留出拦截过拟合；规则变体策略评估，非完整GTO |
+| 16人交叉拟合与覆盖收益 | 公共确定性匪目标、坐标独立拟合/验证、平民多窗口公开首发 | 完全未读留出；候选池纯策略评估，非受限混合或完整GTO |
 | 机制比较 | PK、3/4遗言、方向、近远验人、位置刀、自刀 | 固定策略下的开局胜率比较 |
 
 用户确认：匪胜条件为警察全灭；好人胜以匪全灭建模；夜晚共同验一人；不翻身份；允许自刀和假跳警。首夜被刀警察得到当夜验人。遗言包含夜死和白天放逐、前三次死亡可说；四次作为对照。发言从最近死者旁开始；左右固定方向均支持。基线同时投票、唯一最高票出局；PK变体对平票者再发言和复投，仍平则无人出局。
 
 ## 文档与结果
 
+- [v08最新实验报告](docs/crossfit_results_v08.md)：公共匪目标、坐标交叉拟合与平民首发覆盖收益。
+- [v08冻结协议](docs/crossfit_protocol_v08.md)、[配置](configs/crossfit_v08.json)、[结果清单](results/v08/manifest.json)、[独立核验](results/v08_integrity_audit.json)：476个训练单元、24个矩阵单元、21个首发单元、7,168个开局和81局归档重放通过。
 - [v07最新实验报告](docs/adaptive_results_v07.md)：实时票差装饰、公开平民首发与训练生成条件表。
 - [v07冻结协议](docs/adaptive_protocol_v07.md)、[配置](configs/adaptive_v07.json)、[结果清单](results/v07/manifest.json)、[独立核验](results/v07_integrity_audit.json)：360个训练候选单元、24个留出单元、21个首发单元、4,096个开局和63局归档重放通过。
 - [v06最新实验报告](docs/local_pool_results_v06.md)：局部混合、反诱饵、有限散票、查杀释放时点与增量反制池。
@@ -77,6 +84,6 @@ python3 scripts/build_adaptive_report_v07.py
 - [提名信号反制](results/signal_counter_v03.json)：后续公开行动也会泄露信息的针对性测试。
 - [最终产物核验](results/final_integrity_audit.json)：哈希、原始样本分母和报告统计复算。
 
-v01的弱策略基线及补充实验保留；v02修正了警察误信队外验人的问题；v03展示提名信号可被追刀利用；v04加入掩护、局部混合和票型；v05拆分角色动作并加入发言顺序与散票反制；v06加入可执行本地混合、反诱饵确认、受控时点干预与增量扩池；v07加入公开顺序票、实时票差门控、公开平民规则和训练生成条件表。各代冻结来源与结果分别保留。现有报告共记录640,512次终局执行；不同格子的共享种子不构成额外独立开局。
+v01的弱策略基线及补充实验保留；v02修正了警察误信队外验人的问题；v03展示提名信号可被追刀利用；v04加入掩护、局部混合和票型；v05拆分角色动作并加入发言顺序与散票反制；v06加入可执行本地混合、反诱饵确认、受控时点干预与增量扩池；v07加入公开顺序票、实时票差门控、公开平民规则和训练生成条件表；v08统一匪方主目标，并以不复用坐标子批次和未读留出选择条件表与覆盖型首发。各代冻结来源与结果分别保留。现有报告共记录866,304次终局执行；不同格子的共享种子不构成额外独立开局。
 
 沿用 AIP 与 Poker Analysis 的 `GameSpec → AlgorithmSpec → SolverArtifact → IndependentEvaluationReport → PromotionDecision` 思路。当前模块不直接导入其他项目代码。解析概率、固定策略胜率、受限均衡和完整声明游戏均衡分别标注；未经认证的模拟结果不自动成为教学标准答案。
