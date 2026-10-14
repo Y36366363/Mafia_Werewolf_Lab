@@ -1,0 +1,1748 @@
+{
+  "scope": "Post-freeze analysis of v09 outer blocks and untouched holdout; no retuning.",
+  "replication_block_scores": {
+    "outer_a": {
+      "public_base": {
+        "worst": 0.11067708333333333,
+        "mean": 0.2802734375,
+        "worst_opponent": "origin_det"
+      },
+      "confirm_mix": {
+        "worst": 0.22395833333333334,
+        "mean": 0.275390625,
+        "worst_opponent": "echo_mimic_det"
+      },
+      "position_mix": {
+        "worst": 0.23958333333333334,
+        "mean": 0.3154296875,
+        "worst_opponent": "combined_det"
+      },
+      "crossfit_table": {
+        "worst": 0.2643229166666667,
+        "mean": 0.3116861979166667,
+        "worst_opponent": "echo_mimic_det"
+      }
+    },
+    "outer_b": {
+      "public_base": {
+        "worst": 0.13020833333333334,
+        "mean": 0.2986653645833333,
+        "worst_opponent": "origin_det"
+      },
+      "confirm_mix": {
+        "worst": 0.22526041666666666,
+        "mean": 0.2635091145833333,
+        "worst_opponent": "combined_det"
+      },
+      "position_mix": {
+        "worst": 0.24088541666666666,
+        "mean": 0.3103841145833333,
+        "worst_opponent": "combined_live_final"
+      },
+      "crossfit_table": {
+        "worst": 0.2630208333333333,
+        "mean": 0.3035481770833333,
+        "worst_opponent": "combined_det"
+      }
+    },
+    "outer_c": {
+      "public_base": {
+        "worst": 0.07682291666666667,
+        "mean": 0.2662760416666667,
+        "worst_opponent": "origin_det"
+      },
+      "confirm_mix": {
+        "worst": 0.19921875,
+        "mean": 0.2576497395833333,
+        "worst_opponent": "echo_mimic_det"
+      },
+      "position_mix": {
+        "worst": 0.2734375,
+        "mean": 0.32275390625,
+        "worst_opponent": "combined_live_margin"
+      },
+      "crossfit_table": {
+        "worst": 0.2591145833333333,
+        "mean": 0.2919921875,
+        "worst_opponent": "origin_det"
+      }
+    },
+    "outer_d": {
+      "public_base": {
+        "worst": 0.11458333333333333,
+        "mean": 0.28727213541666663,
+        "worst_opponent": "origin_det"
+      },
+      "confirm_mix": {
+        "worst": 0.20052083333333334,
+        "mean": 0.2931315104166667,
+        "worst_opponent": "echo_mimic_det"
+      },
+      "position_mix": {
+        "worst": 0.22526041666666666,
+        "mean": 0.30078125,
+        "worst_opponent": "combined_det"
+      },
+      "crossfit_table": {
+        "worst": 0.2799479166666667,
+        "mean": 0.3151041666666667,
+        "worst_opponent": "echo_mimic_det"
+      }
+    }
+  },
+  "replication_block_winners": {
+    "outer_a": "crossfit_table",
+    "outer_b": "crossfit_table",
+    "outer_c": "position_mix",
+    "outer_d": "crossfit_table"
+  },
+  "crossfit_table_block_wins": 3,
+  "replication_pooled_scores": {
+    "public_base": {
+      "worst": 0.10807291666666667,
+      "mean": 0.2831217447916667,
+      "worst_opponent": "origin_det"
+    },
+    "confirm_mix": {
+      "worst": 0.212890625,
+      "mean": 0.2724202473958333,
+      "worst_opponent": "echo_mimic_det"
+    },
+    "position_mix": {
+      "worst": 0.24544270833333334,
+      "mean": 0.3123372395833333,
+      "worst_opponent": "combined_live_final"
+    },
+    "crossfit_table": {
+      "worst": 0.2740885416666667,
+      "mean": 0.3055826822916667,
+      "worst_opponent": "combined_det"
+    }
+  },
+  "replication_pooled_winner": "crossfit_table",
+  "replication_contrasts": [
+    {
+      "control": "confirm_mix",
+      "treatment": "crossfit_table",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 3072,
+        "delta": 0.025390625,
+        "ci95_normal": [
+          0.005110881246245983,
+          0.04567036875375402
+        ],
+        "ci95_hoeffding": [
+          -0.02361564223123034,
+          0.07439689223123033
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 545,
+        "worsened": 467,
+        "unchanged": 2060
+      }
+    },
+    {
+      "control": "confirm_mix",
+      "treatment": "crossfit_table",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 3072,
+        "delta": -0.0029296875,
+        "ci95_normal": [
+          -0.02341871551577513,
+          0.01755934051577513
+        ],
+        "ci95_hoeffding": [
+          -0.05193595473123034,
+          0.04607657973123034
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 511,
+        "worsened": 520,
+        "unchanged": 2041
+      }
+    },
+    {
+      "control": "confirm_mix",
+      "treatment": "crossfit_table",
+      "mafia": "combined_one_decoy",
+      "paired": {
+        "n": 3072,
+        "delta": 0.03125,
+        "ci95_normal": [
+          0.01066158366558688,
+          0.05183841633441312
+        ],
+        "ci95_hoeffding": [
+          -0.01775626723123034,
+          0.08025626723123033
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 570,
+        "worsened": 474,
+        "unchanged": 2028
+      }
+    },
+    {
+      "control": "confirm_mix",
+      "treatment": "crossfit_table",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 3072,
+        "delta": 0.024739583333333332,
+        "ci95_normal": [
+          0.004318773702391601,
+          0.04516039296427506
+        ],
+        "ci95_hoeffding": [
+          -0.024266683897897007,
+          0.07374585056456368
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 551,
+        "worsened": 475,
+        "unchanged": 2046
+      }
+    },
+    {
+      "control": "confirm_mix",
+      "treatment": "crossfit_table",
+      "mafia": "origin_live_margin",
+      "paired": {
+        "n": 3072,
+        "delta": -0.0009765625,
+        "ci95_normal": [
+          -0.021742185084523764,
+          0.019789060084523764
+        ],
+        "ci95_hoeffding": [
+          -0.04998282973123034,
+          0.04802970473123034
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 528,
+        "worsened": 531,
+        "unchanged": 2013
+      }
+    },
+    {
+      "control": "confirm_mix",
+      "treatment": "crossfit_table",
+      "mafia": "combined_live_final",
+      "paired": {
+        "n": 3072,
+        "delta": 0.025065104166666668,
+        "ci95_normal": [
+          0.004774817331184043,
+          0.04535539100214929
+        ],
+        "ci95_hoeffding": [
+          -0.023941163064563672,
+          0.074071371397897
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 545,
+        "worsened": 468,
+        "unchanged": 2059
+      }
+    },
+    {
+      "control": "confirm_mix",
+      "treatment": "crossfit_table",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 3072,
+        "delta": 0.09147135416666667,
+        "ci95_normal": [
+          0.06987618784412608,
+          0.11306652048920726
+        ],
+        "ci95_hoeffding": [
+          0.04246508693543633,
+          0.14047762139789702
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 726,
+        "worsened": 445,
+        "unchanged": 1901
+      }
+    },
+    {
+      "control": "confirm_mix",
+      "treatment": "crossfit_table",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 3072,
+        "delta": 0.0712890625,
+        "ci95_normal": [
+          0.05173126204723277,
+          0.09084686295276723
+        ],
+        "ci95_hoeffding": [
+          0.02228279526876966,
+          0.12029532973123033
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 587,
+        "worsened": 368,
+        "unchanged": 2117
+      }
+    },
+    {
+      "control": "position_mix",
+      "treatment": "crossfit_table",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 3072,
+        "delta": 0.027994791666666668,
+        "ci95_normal": [
+          0.007047646296972798,
+          0.04894193703636054
+        ],
+        "ci95_hoeffding": [
+          -0.021011475564563672,
+          0.077001058897897
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 583,
+        "worsened": 497,
+        "unchanged": 1992
+      }
+    },
+    {
+      "control": "position_mix",
+      "treatment": "crossfit_table",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 3072,
+        "delta": -0.06901041666666667,
+        "ci95_normal": [
+          -0.09068156193468294,
+          -0.04733927139865041
+        ],
+        "ci95_hoeffding": [
+          -0.11801668389789702,
+          -0.02000414943543633
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 478,
+        "worsened": 690,
+        "unchanged": 1904
+      }
+    },
+    {
+      "control": "position_mix",
+      "treatment": "crossfit_table",
+      "mafia": "combined_one_decoy",
+      "paired": {
+        "n": 3072,
+        "delta": 0.028645833333333332,
+        "ci95_normal": [
+          0.0071055817325663025,
+          0.05018608493410036
+        ],
+        "ci95_hoeffding": [
+          -0.020360433897897007,
+          0.07765210056456368
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 615,
+        "worsened": 527,
+        "unchanged": 1930
+      }
+    },
+    {
+      "control": "position_mix",
+      "treatment": "crossfit_table",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 3072,
+        "delta": 0.030924479166666668,
+        "ci95_normal": [
+          0.00974083730862135,
+          0.05210812102471199
+        ],
+        "ci95_hoeffding": [
+          -0.018081788064563672,
+          0.079930746397897
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 600,
+        "worsened": 505,
+        "unchanged": 1967
+      }
+    },
+    {
+      "control": "position_mix",
+      "treatment": "crossfit_table",
+      "mafia": "origin_live_margin",
+      "paired": {
+        "n": 3072,
+        "delta": -0.0654296875,
+        "ci95_normal": [
+          -0.08712410825794072,
+          -0.043735266742059284
+        ],
+        "ci95_hoeffding": [
+          -0.11443595473123033,
+          -0.01642342026876966
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 484,
+        "worsened": 685,
+        "unchanged": 1903
+      }
+    },
+    {
+      "control": "position_mix",
+      "treatment": "crossfit_table",
+      "mafia": "combined_live_final",
+      "paired": {
+        "n": 3072,
+        "delta": 0.028645833333333332,
+        "ci95_normal": [
+          0.007699789020528914,
+          0.04959187764613775
+        ],
+        "ci95_hoeffding": [
+          -0.020360433897897007,
+          0.07765210056456368
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 584,
+        "worsened": 496,
+        "unchanged": 1992
+      }
+    },
+    {
+      "control": "position_mix",
+      "treatment": "crossfit_table",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 3072,
+        "delta": 0.022135416666666668,
+        "ci95_normal": [
+          -0.0005915733571092742,
+          0.04486240669044261
+        ],
+        "ci95_hoeffding": [
+          -0.026870850564563672,
+          0.071141683897897
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 669,
+        "worsened": 601,
+        "unchanged": 1802
+      }
+    },
+    {
+      "control": "position_mix",
+      "treatment": "crossfit_table",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 3072,
+        "delta": -0.057942708333333336,
+        "ci95_normal": [
+          -0.07883236950812515,
+          -0.03705304715854152
+        ],
+        "ci95_hoeffding": [
+          -0.10694897556456368,
+          -0.008936441102102996
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 452,
+        "worsened": 630,
+        "unchanged": 1990
+      }
+    }
+  ],
+  "probe_selection": {
+    "proposed": "probe_w8_diverse",
+    "comparator": "early",
+    "accepted": true,
+    "selected": "probe_w8_diverse"
+  },
+  "probe_holdout_scores": {
+    "silent": {
+      "worst": 0.04052734375,
+      "mean": 0.158203125,
+      "worst_opponent": "origin_det",
+      "activation_rate": 0.0,
+      "alignment_rate": 0.0,
+      "mean_probes": 0.0,
+      "mean_unique_targets": 0.0
+    },
+    "early": {
+      "worst": 0.0517578125,
+      "mean": 0.1298828125,
+      "worst_opponent": "origin_det",
+      "activation_rate": 0.0,
+      "alignment_rate": 0.0,
+      "mean_probes": 0.0,
+      "mean_unique_targets": 0.0
+    },
+    "probe_w4_diverse": {
+      "worst": 0.08154296875,
+      "mean": 0.21083984375,
+      "worst_opponent": "origin_det",
+      "activation_rate": 0.96142578125,
+      "alignment_rate": 0.04541015625,
+      "mean_probes": 1.9521484375,
+      "mean_unique_targets": 1.9521484375
+    },
+    "probe_w8_diverse": {
+      "worst": 0.17138671875,
+      "mean": 0.28466796875,
+      "worst_opponent": "combined_det",
+      "activation_rate": 1.0,
+      "alignment_rate": 0.09326171875,
+      "mean_probes": 3.91650390625,
+      "mean_unique_targets": 3.7646484375
+    },
+    "probe_w8_anchor": {
+      "worst": 0.12890625,
+      "mean": 0.3716796875,
+      "worst_opponent": "origin_det",
+      "activation_rate": 1.0,
+      "alignment_rate": 0.0283203125,
+      "mean_probes": 3.91650390625,
+      "mean_unique_targets": 1.49365234375
+    },
+    "probe_w8_pair": {
+      "worst": 0.11767578125,
+      "mean": 0.31220703125,
+      "worst_opponent": "origin_det",
+      "activation_rate": 1.0,
+      "alignment_rate": 0.05078125,
+      "mean_probes": 3.91650390625,
+      "mean_unique_targets": 2.34521484375
+    }
+  },
+  "probe_paired_comparisons": [
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.05029296875,
+        "ci95_normal": [
+          0.03416626689604113,
+          0.06641967060395887
+        ],
+        "ci95_hoeffding": [
+          -0.009727205707495044,
+          0.11031314320749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 196,
+        "worsened": 93,
+        "unchanged": 1759
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.0712890625,
+        "ci95_normal": [
+          0.053545305268407756,
+          0.08903281973159224
+        ],
+        "ci95_hoeffding": [
+          0.011268888042504956,
+          0.13130923695749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 250,
+        "worsened": 104,
+        "unchanged": 1694
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.23583984375,
+        "ci95_normal": [
+          0.21304430077551004,
+          0.25863538672448994
+        ],
+        "ci95_hoeffding": [
+          0.17581966929250495,
+          0.295860018207495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 582,
+        "worsened": 99,
+        "unchanged": 1367
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.14501953125,
+        "ci95_normal": [
+          0.1247148450119955,
+          0.1653242174880045
+        ],
+        "ci95_hoeffding": [
+          0.08499935679250495,
+          0.20503970570749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 395,
+        "worsened": 98,
+        "unchanged": 1555
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w4_diverse",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.04296875,
+        "ci95_normal": [
+          0.0264935587019177,
+          0.059443941298082295
+        ],
+        "ci95_hoeffding": [
+          -0.017051424457495044,
+          0.10298892445749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 194,
+        "worsened": 106,
+        "unchanged": 1748
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_diverse",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.06396484375,
+        "ci95_normal": [
+          0.04598946553839887,
+          0.08194022196160114
+        ],
+        "ci95_hoeffding": [
+          0.003944669292504956,
+          0.12398501820749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 246,
+        "worsened": 115,
+        "unchanged": 1687
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_anchor",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.228515625,
+        "ci95_normal": [
+          0.20536181713082902,
+          0.251669432869171
+        ],
+        "ci95_hoeffding": [
+          0.16849545054250495,
+          0.288535799457495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 580,
+        "worsened": 112,
+        "unchanged": 1356
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_pair",
+      "mafia": "combined_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.1376953125,
+        "ci95_normal": [
+          0.11696101743630292,
+          0.15842960756369706
+        ],
+        "ci95_hoeffding": [
+          0.07767513804250495,
+          0.19771548695749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 395,
+        "worsened": 113,
+        "unchanged": 1540
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.041015625,
+        "ci95_normal": [
+          0.028011332369566287,
+          0.05401991763043371
+        ],
+        "ci95_hoeffding": [
+          -0.019004549457495044,
+          0.10103579945749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 136,
+        "worsened": 52,
+        "unchanged": 1860
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.1728515625,
+        "ci95_normal": [
+          0.1542698507571843,
+          0.1914332742428157
+        ],
+        "ci95_hoeffding": [
+          0.11283138804250495,
+          0.23287173695749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 396,
+        "worsened": 42,
+        "unchanged": 1610
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.08837890625,
+        "ci95_normal": [
+          0.0723896244993906,
+          0.1043681880006094
+        ],
+        "ci95_hoeffding": [
+          0.028358731792504956,
+          0.14839908070749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 238,
+        "worsened": 57,
+        "unchanged": 1753
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.0771484375,
+        "ci95_normal": [
+          0.06136660805202833,
+          0.09293026694797167
+        ],
+        "ci95_hoeffding": [
+          0.017128263042504956,
+          0.13716861195749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 221,
+        "worsened": 63,
+        "unchanged": 1764
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w4_diverse",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.02978515625,
+        "ci95_normal": [
+          0.016073339742796587,
+          0.04349697275720341
+        ],
+        "ci95_hoeffding": [
+          -0.030235018207495044,
+          0.08980533070749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 134,
+        "worsened": 73,
+        "unchanged": 1841
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_diverse",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.16162109375,
+        "ci95_normal": [
+          0.14258405850019645,
+          0.18065812899980355
+        ],
+        "ci95_hoeffding": [
+          0.10160091929250495,
+          0.22164126820749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 390,
+        "worsened": 59,
+        "unchanged": 1599
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_anchor",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.0771484375,
+        "ci95_normal": [
+          0.06051847003069706,
+          0.09377840496930294
+        ],
+        "ci95_hoeffding": [
+          0.017128263042504956,
+          0.13716861195749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 236,
+        "worsened": 78,
+        "unchanged": 1734
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_pair",
+      "mafia": "origin_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.06591796875,
+        "ci95_normal": [
+          0.04955768730297291,
+          0.08227825019702709
+        ],
+        "ci95_hoeffding": [
+          0.005897794292504956,
+          0.12593814320749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 218,
+        "worsened": 83,
+        "unchanged": 1747
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.1103515625,
+        "ci95_normal": [
+          0.08767751464621093,
+          0.13302561035378907
+        ],
+        "ci95_hoeffding": [
+          0.050331388042504956,
+          0.17037173695749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 406,
+        "worsened": 180,
+        "unchanged": 1462
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.234375,
+        "ci95_normal": [
+          0.20894931263543073,
+          0.2598006873645693
+        ],
+        "ci95_hoeffding": [
+          0.17435482554250495,
+          0.294395174457495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 649,
+        "worsened": 169,
+        "unchanged": 1230
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.3291015625,
+        "ci95_normal": [
+          0.3024325478871823,
+          0.3557705771128177
+        ],
+        "ci95_hoeffding": [
+          0.269081388042505,
+          0.389121736957495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 836,
+        "worsened": 162,
+        "unchanged": 1050
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.30126953125,
+        "ci95_normal": [
+          0.2748259864751788,
+          0.3277130760248212
+        ],
+        "ci95_hoeffding": [
+          0.24124935679250495,
+          0.361289705707495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 783,
+        "worsened": 166,
+        "unchanged": 1099
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w4_diverse",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.17529296875,
+        "ci95_normal": [
+          0.15276062113423733,
+          0.19782531636576267
+        ],
+        "ci95_hoeffding": [
+          0.11527279429250495,
+          0.23531314320749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 488,
+        "worsened": 129,
+        "unchanged": 1431
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_diverse",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.29931640625,
+        "ci95_normal": [
+          0.2746588013534225,
+          0.3239740111465775
+        ],
+        "ci95_hoeffding": [
+          0.23929623179250495,
+          0.359336580707495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 730,
+        "worsened": 117,
+        "unchanged": 1201
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_anchor",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.39404296875,
+        "ci95_normal": [
+          0.368091016890369,
+          0.419994920609631
+        ],
+        "ci95_hoeffding": [
+          0.334022794292505,
+          0.454063143207495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 930,
+        "worsened": 123,
+        "unchanged": 995
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_pair",
+      "mafia": "echo_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.3662109375,
+        "ci95_normal": [
+          0.3406443344115884,
+          0.3917775405884116
+        ],
+        "ci95_hoeffding": [
+          0.306190763042505,
+          0.426231111957495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 869,
+        "worsened": 119,
+        "unchanged": 1060
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.015625,
+        "ci95_normal": [
+          -0.008046317152575842,
+          0.03929631715257584
+        ],
+        "ci95_hoeffding": [
+          -0.044395174457495044,
+          0.07564517445749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 322,
+        "worsened": 290,
+        "unchanged": 1436
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.0849609375,
+        "ci95_normal": [
+          0.05957642593507388,
+          0.11034544906492612
+        ],
+        "ci95_hoeffding": [
+          0.024940763042504956,
+          0.14498111195749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 446,
+        "worsened": 272,
+        "unchanged": 1330
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.1826171875,
+        "ci95_normal": [
+          0.15704414511340806,
+          0.20819022988659194
+        ],
+        "ci95_hoeffding": [
+          0.12259701304250495,
+          0.24263736195749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 578,
+        "worsened": 204,
+        "unchanged": 1266
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.10107421875,
+        "ci95_normal": [
+          0.07528039524389246,
+          0.12686804225610754
+        ],
+        "ci95_hoeffding": [
+          0.041054044292504956,
+          0.16109439320749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 477,
+        "worsened": 270,
+        "unchanged": 1301
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w4_diverse",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.1171875,
+        "ci95_normal": [
+          0.09389912467737732,
+          0.14047587532262268
+        ],
+        "ci95_hoeffding": [
+          0.057167325542504956,
+          0.17720767445749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 430,
+        "worsened": 190,
+        "unchanged": 1428
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_diverse",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.1865234375,
+        "ci95_normal": [
+          0.1621042825763283,
+          0.2109425924236717
+        ],
+        "ci95_hoeffding": [
+          0.12650326304250495,
+          0.24654361195749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 552,
+        "worsened": 170,
+        "unchanged": 1326
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_anchor",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.2841796875,
+        "ci95_normal": [
+          0.2597256711738913,
+          0.3086337038261087
+        ],
+        "ci95_hoeffding": [
+          0.22415951304250495,
+          0.344199861957495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 700,
+        "worsened": 118,
+        "unchanged": 1230
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_pair",
+      "mafia": "echo_mimic_det",
+      "paired": {
+        "n": 2048,
+        "delta": 0.20263671875,
+        "ci95_normal": [
+          0.17813967943571404,
+          0.22713375806428596
+        ],
+        "ci95_hoeffding": [
+          0.14261654429250495,
+          0.262656893207495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 577,
+        "worsened": 162,
+        "unchanged": 1309
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 2048,
+        "delta": 0.0458984375,
+        "ci95_normal": [
+          0.02943808081349629,
+          0.06235879418650371
+        ],
+        "ci95_hoeffding": [
+          -0.014121736957495044,
+          0.10591861195749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 197,
+        "worsened": 103,
+        "unchanged": 1748
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 2048,
+        "delta": 0.06884765625,
+        "ci95_normal": [
+          0.05080430508578719,
+          0.08689100741421281
+        ],
+        "ci95_hoeffding": [
+          0.008827481792504956,
+          0.12886783070749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 253,
+        "worsened": 112,
+        "unchanged": 1683
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 2048,
+        "delta": 0.2314453125,
+        "ci95_normal": [
+          0.20850540398495165,
+          0.25438522101504835
+        ],
+        "ci95_hoeffding": [
+          0.17142513804250495,
+          0.291465486957495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 579,
+        "worsened": 105,
+        "unchanged": 1364
+      }
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 2048,
+        "delta": 0.1455078125,
+        "ci95_normal": [
+          0.12509713687806767,
+          0.16591848812193233
+        ],
+        "ci95_hoeffding": [
+          0.08548763804250495,
+          0.20552798695749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 398,
+        "worsened": 100,
+        "unchanged": 1550
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w4_diverse",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 2048,
+        "delta": 0.03955078125,
+        "ci95_normal": [
+          0.022811362709722924,
+          0.05629019979027708
+        ],
+        "ci95_hoeffding": [
+          -0.020469393207495044,
+          0.09957095570749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 195,
+        "worsened": 114,
+        "unchanged": 1739
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_diverse",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 2048,
+        "delta": 0.0625,
+        "ci95_normal": [
+          0.04428712617909569,
+          0.08071287382090431
+        ],
+        "ci95_hoeffding": [
+          0.0024798255425049556,
+          0.12252017445749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 249,
+        "worsened": 121,
+        "unchanged": 1678
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_anchor",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 2048,
+        "delta": 0.22509765625,
+        "ci95_normal": [
+          0.2018219741072925,
+          0.2483733383927075
+        ],
+        "ci95_hoeffding": [
+          0.16507748179250495,
+          0.285117830707495
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 578,
+        "worsened": 117,
+        "unchanged": 1353
+      }
+    },
+    {
+      "control": "early",
+      "treatment": "probe_w8_pair",
+      "mafia": "combined_live_margin",
+      "paired": {
+        "n": 2048,
+        "delta": 0.13916015625,
+        "ci95_normal": [
+          0.11833393388676182,
+          0.1599863786132382
+        ],
+        "ci95_hoeffding": [
+          0.07913998179250495,
+          0.19918033070749505
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 399,
+        "worsened": 114,
+        "unchanged": 1535
+      }
+    }
+  ],
+  "probe_strata_effects_vs_silent": [
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "combined_det",
+      "stratum": "check_hit",
+      "control_rate": 0.007246376811594203,
+      "treatment_rate": 0.03188405797101449,
+      "delta": 0.024637681159420288
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "combined_det",
+      "stratum": "check_clear",
+      "control_rate": 0.14727540500736377,
+      "treatment_rate": 0.2106038291605302,
+      "delta": 0.06332842415316642
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "origin_det",
+      "stratum": "check_hit",
+      "control_rate": 0.0014492753623188406,
+      "treatment_rate": 0.0391304347826087,
+      "delta": 0.03768115942028986
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "origin_det",
+      "stratum": "check_clear",
+      "control_rate": 0.060382916053019146,
+      "treatment_rate": 0.10309278350515463,
+      "delta": 0.04270986745213549
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "echo_det",
+      "stratum": "check_hit",
+      "control_rate": 0.24782608695652175,
+      "treatment_rate": 0.3,
+      "delta": 0.05217391304347824
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "echo_det",
+      "stratum": "check_clear",
+      "control_rate": 0.2547864506627393,
+      "treatment_rate": 0.3946980854197349,
+      "delta": 0.13991163475699558
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "echo_mimic_det",
+      "stratum": "check_hit",
+      "control_rate": 0.35942028985507246,
+      "treatment_rate": 0.3681159420289855,
+      "delta": 0.008695652173913049
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "echo_mimic_det",
+      "stratum": "check_clear",
+      "control_rate": 0.2606774668630339,
+      "treatment_rate": 0.27982326951399117,
+      "delta": 0.019145802650957278
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "combined_live_margin",
+      "stratum": "check_hit",
+      "control_rate": 0.010144927536231883,
+      "treatment_rate": 0.03188405797101449,
+      "delta": 0.021739130434782608
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w4_diverse",
+      "mafia": "combined_live_margin",
+      "stratum": "check_clear",
+      "control_rate": 0.15169366715758467,
+      "treatment_rate": 0.20986745213549338,
+      "delta": 0.058173784977908705
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "combined_det",
+      "stratum": "check_hit",
+      "control_rate": 0.007246376811594203,
+      "treatment_rate": 0.04927536231884058,
+      "delta": 0.04202898550724638
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "combined_det",
+      "stratum": "check_clear",
+      "control_rate": 0.14727540500736377,
+      "treatment_rate": 0.23343151693667158,
+      "delta": 0.0861561119293078
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "origin_det",
+      "stratum": "check_hit",
+      "control_rate": 0.0014492753623188406,
+      "treatment_rate": 0.1463768115942029,
+      "delta": 0.14492753623188406
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "origin_det",
+      "stratum": "check_clear",
+      "control_rate": 0.060382916053019146,
+      "treatment_rate": 0.24742268041237114,
+      "delta": 0.187039764359352
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "echo_det",
+      "stratum": "check_hit",
+      "control_rate": 0.24782608695652175,
+      "treatment_rate": 0.4072463768115942,
+      "delta": 0.15942028985507245
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "echo_det",
+      "stratum": "check_clear",
+      "control_rate": 0.2547864506627393,
+      "treatment_rate": 0.5272459499263623,
+      "delta": 0.272459499263623
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "echo_mimic_det",
+      "stratum": "check_hit",
+      "control_rate": 0.35942028985507246,
+      "treatment_rate": 0.37971014492753624,
+      "delta": 0.02028985507246378
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "echo_mimic_det",
+      "stratum": "check_clear",
+      "control_rate": 0.2606774668630339,
+      "treatment_rate": 0.3784977908689249,
+      "delta": 0.11782032400589099
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "combined_live_margin",
+      "stratum": "check_hit",
+      "control_rate": 0.010144927536231883,
+      "treatment_rate": 0.04927536231884058,
+      "delta": 0.0391304347826087
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_diverse",
+      "mafia": "combined_live_margin",
+      "stratum": "check_clear",
+      "control_rate": 0.15169366715758467,
+      "treatment_rate": 0.23564064801178203,
+      "delta": 0.08394698085419736
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "combined_det",
+      "stratum": "check_hit",
+      "control_rate": 0.007246376811594203,
+      "treatment_rate": 0.13478260869565217,
+      "delta": 0.12753623188405797
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "combined_det",
+      "stratum": "check_clear",
+      "control_rate": 0.14727540500736377,
+      "treatment_rate": 0.4381443298969072,
+      "delta": 0.2908689248895434
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "origin_det",
+      "stratum": "check_hit",
+      "control_rate": 0.0014492753623188406,
+      "treatment_rate": 0.0391304347826087,
+      "delta": 0.03768115942028986
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "origin_det",
+      "stratum": "check_clear",
+      "control_rate": 0.060382916053019146,
+      "treatment_rate": 0.17452135493372606,
+      "delta": 0.1141384388807069
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "echo_det",
+      "stratum": "check_hit",
+      "control_rate": 0.24782608695652175,
+      "treatment_rate": 0.48695652173913045,
+      "delta": 0.2391304347826087
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "echo_det",
+      "stratum": "check_clear",
+      "control_rate": 0.2547864506627393,
+      "treatment_rate": 0.6296023564064801,
+      "delta": 0.3748159057437408
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "echo_mimic_det",
+      "stratum": "check_hit",
+      "control_rate": 0.35942028985507246,
+      "treatment_rate": 0.45362318840579713,
+      "delta": 0.09420289855072467
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "echo_mimic_det",
+      "stratum": "check_clear",
+      "control_rate": 0.2606774668630339,
+      "treatment_rate": 0.4882179675994109,
+      "delta": 0.227540500736377
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "combined_live_margin",
+      "stratum": "check_hit",
+      "control_rate": 0.010144927536231883,
+      "treatment_rate": 0.13333333333333333,
+      "delta": 0.12318840579710144
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_anchor",
+      "mafia": "combined_live_margin",
+      "stratum": "check_clear",
+      "control_rate": 0.15169366715758467,
+      "treatment_rate": 0.4381443298969072,
+      "delta": 0.2864506627393225
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "combined_det",
+      "stratum": "check_hit",
+      "control_rate": 0.007246376811594203,
+      "treatment_rate": 0.06811594202898551,
+      "delta": 0.06086956521739131
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "combined_det",
+      "stratum": "check_clear",
+      "control_rate": 0.14727540500736377,
+      "treatment_rate": 0.33505154639175255,
+      "delta": 0.18777614138438878
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "origin_det",
+      "stratum": "check_hit",
+      "control_rate": 0.0014492753623188406,
+      "treatment_rate": 0.06231884057971015,
+      "delta": 0.06086956521739131
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "origin_det",
+      "stratum": "check_clear",
+      "control_rate": 0.060382916053019146,
+      "treatment_rate": 0.14580265095729014,
+      "delta": 0.08541973490427099
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "echo_det",
+      "stratum": "check_hit",
+      "control_rate": 0.24782608695652175,
+      "treatment_rate": 0.4652173913043478,
+      "delta": 0.21739130434782605
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "echo_det",
+      "stratum": "check_clear",
+      "control_rate": 0.2547864506627393,
+      "treatment_rate": 0.5986745213549337,
+      "delta": 0.3438880706921944
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "echo_mimic_det",
+      "stratum": "check_hit",
+      "control_rate": 0.35942028985507246,
+      "treatment_rate": 0.38405797101449274,
+      "delta": 0.024637681159420277
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "echo_mimic_det",
+      "stratum": "check_clear",
+      "control_rate": 0.2606774668630339,
+      "treatment_rate": 0.4005891016200295,
+      "delta": 0.13991163475699558
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "combined_live_margin",
+      "stratum": "check_hit",
+      "control_rate": 0.010144927536231883,
+      "treatment_rate": 0.06956521739130435,
+      "delta": 0.059420289855072465
+    },
+    {
+      "control": "silent",
+      "treatment": "probe_w8_pair",
+      "mafia": "combined_live_margin",
+      "stratum": "check_clear",
+      "control_rate": 0.15169366715758467,
+      "treatment_rate": 0.34094256259204714,
+      "delta": 0.18924889543446247
+    }
+  ],
+  "same_window_controls": {
+    "probe_w8_diverse": {
+      "unique_targets": 3.7646484375,
+      "alignment_rate": 0.09326171875,
+      "worst": 0.17138671875,
+      "mean": 0.28466796875
+    },
+    "probe_w8_anchor": {
+      "unique_targets": 1.49365234375,
+      "alignment_rate": 0.0283203125,
+      "worst": 0.12890625,
+      "mean": 0.3716796875
+    },
+    "probe_w8_pair": {
+      "unique_targets": 2.34521484375,
+      "alignment_rate": 0.05078125,
+      "worst": 0.11767578125,
+      "mean": 0.31220703125
+    }
+  },
+  "interpretation": "Clear-check gains show that public probes mostly act as a coordination/search device in this policy model; alignment is not the sole mechanism."
+}

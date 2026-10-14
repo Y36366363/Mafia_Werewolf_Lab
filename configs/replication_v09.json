@@ -1,0 +1,53 @@
+{
+  "version": "20261014-replication-v09",
+  "purpose": "Replicate the v08 table across independent outer blocks and select public probes by natural-opening root value against public echo counters",
+  "rules": {"police": 4, "mafia": 4, "civilians": 8, "last_words_limit": 3, "allow_self_kill": true, "tie_rule": "pass", "direction": 1},
+  "mafia_candidates": [
+    {"name": "combined_det", "inference": "combined", "vote_style": "deterministic"},
+    {"name": "origin_det", "inference": "origin", "vote_style": "deterministic"},
+    {"name": "combined_one_decoy", "inference": "combined", "vote_style": "deterministic_one_decoy"},
+    {"name": "combined_live_margin", "inference": "combined", "vote_style": "deterministic_live_margin"},
+    {"name": "origin_live_margin", "inference": "origin", "vote_style": "deterministic_live_margin"},
+    {"name": "combined_live_final", "inference": "combined", "vote_style": "deterministic_live_final"},
+    {"name": "echo_det", "inference": "echo", "vote_style": "deterministic"},
+    {"name": "echo_mimic_det", "inference": "echo", "vote_style": "deterministic", "bluff": "nominate", "nomination_style": "echo_public", "nomination_probability": 1.0}
+  ],
+  "good_base": {"civilian_cover_probability": 1.0, "hit_nominate_probability": 1.0},
+  "frozen_v08_table": {
+    "cover": [0.25, 0.5, 0.75, 0.0, 1.0, 1.0],
+    "police": [0.5, 0.75, 0.5],
+    "source": "results/v08/table_selection_before_holdout.json"
+  },
+  "replication": {
+    "blocks": [
+      {"name": "outer_a", "n": 768, "seed_start": 70000000},
+      {"name": "outer_b", "n": 768, "seed_start": 71000000},
+      {"name": "outer_c", "n": 768, "seed_start": 72000000},
+      {"name": "outer_d", "n": 768, "seed_start": 73000000}
+    ],
+    "interpretation": "The v08 table is frozen before all four blocks. Report blockwise worst-opponent rank and pooled paired effects; no block may tune the table."
+  },
+  "probe_selection": {
+    "continuation_good": {"cover_mode": "public", "civilian_cover_probability": 1.0, "police_nominate_probability": 1.0},
+    "opponents": ["combined_det", "origin_det", "echo_det", "echo_mimic_det", "combined_live_margin"],
+    "candidates": [
+      {"name": "silent", "timing": "silent"},
+      {"name": "early", "timing": "early"},
+      {"name": "probe_w4_diverse", "timing": "civilian_first", "window": 4, "pattern": ["next", "second", "opposite", "hashed"]},
+      {"name": "probe_w8_diverse", "timing": "civilian_first", "window": 8, "pattern": ["next", "second", "opposite", "hashed"]},
+      {"name": "probe_w8_anchor", "timing": "civilian_first", "window": 8, "pattern": ["anchor_first"]},
+      {"name": "probe_w8_pair", "timing": "civilian_first", "window": 8, "pattern": ["anchor_pair"]}
+    ],
+    "fit_folds": [
+      {"name": "fit_a", "n": 384, "seed_start": 74000000},
+      {"name": "fit_b", "n": 384, "seed_start": 75000000},
+      {"name": "fit_c", "n": 384, "seed_start": 76000000}
+    ],
+    "validate": {"name": "validate", "n": 1024, "seed_start": 77000000},
+    "holdout": {"name": "holdout", "n": 2048, "seed_start": 78000000},
+    "accept_worst_gain": 0.0025,
+    "mean_noninferiority": 0.0025,
+    "selection": "Among civilian probes choose the largest minimum fold-by-fold worst-opponent root win rate. On independent validation compare with the stronger of silent and police-early; accept only with at least 0.25pp worst-opponent gain and at most 0.25pp mean loss. Evaluate the frozen choice and every control on untouched holdout."
+  },
+  "interpretation": "All evaluations use unconditioned natural openings and public sequential ballots. Hit/clear and first-death strata are descriptive partitions. Results are finite-policy strategy evaluation, not a restricted equilibrium or full-game GTO."
+}

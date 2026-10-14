@@ -1,0 +1,15 @@
+{
+  "version": "20261014-replication-v09",
+  "source_sha256": "2d2f29d7258a8238b7ebe9cba8c148f5a3c84b800111571d0e46da8a78e58210",
+  "elapsed_seconds": 304.62183537503006,
+  "executed_games": 209664,
+  "replication_games": 98304,
+  "probe_training_games": 49920,
+  "probe_holdout_games": 61440,
+  "files": {
+    "replication.json": "55a776e730564389f3cec2cb4a2dd80d9717df27b14cf79c24de2c4e40843486",
+    "probe_selection_before_holdout.json": "8a8c7e05940d0b43478fca64caaeede81fa0be783c6386420dae76360201448a",
+    "probe_holdout.json": "27921efbd8962f2d13f8c620d9ff323d1226d754601ff3e9dc8e1082062e7549"
+  },
+  "scope": "4P4M8C multi-block outer replication and natural-opening public-probe evaluation against public echo counters; not full-game GTO"
+}
