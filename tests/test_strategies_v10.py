@@ -1,8 +1,10 @@
 """Information and action contracts for v10 public coordination and counters."""
+from dataclasses import replace
 from random import Random
 import unittest
 
 from mafia_lab.engine import Message, add_message, from_roles, observe, resolve_night
+from mafia_lab import strategies_v09 as v9
 from mafia_lab import strategies_v10 as v10
 
 
@@ -42,6 +44,15 @@ class V10StrategyTests(unittest.TestCase):
         message = v10.message(observe(board, 0), policy, Random(1))
         target = v10.vote(observe(board, 0), policy, Random(2))
         self.assertEqual(target, message.target)
+
+    def test_public_coordination_ballot_is_day_one_only(self):
+        board = resolve_night(from_roles(["civilian", "police", "mafia", "civilian"]), 3, 0)
+        policy = v10.GoodPolicyV10(coordination_mode="anchor")
+        day_one = v10.vote(observe(board, 0), policy, Random(2))
+        obs_two = observe(replace(board, day=2), 0)
+        day_two = v10.vote(obs_two, policy, Random(2))
+        self.assertIsNotNone(day_one)
+        self.assertEqual(day_two, v9.vote(obs_two, policy, Random(2)))
 
     def test_deterministic_counter_target_is_common(self):
         state = from_roles(["mafia"] * 4 + ["police"] * 4 + ["civilian"] * 8)

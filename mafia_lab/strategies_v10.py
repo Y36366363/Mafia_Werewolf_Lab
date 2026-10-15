@@ -179,7 +179,8 @@ def deterministic_mafia_ranking(obs: Observation, policy: MafiaPolicyV10,
 
 def vote(obs: Observation, policy: GoodPolicy | MafiaPolicy, rng: Random,
          candidates: tuple[int, ...] | None = None) -> int | None:
-    if isinstance(policy, GoodPolicyV10) and policy.coordination_mode != "none":
+    if (isinstance(policy, GoodPolicyV10) and policy.coordination_mode != "none" and
+            obs.day == 1):
         pool = [p for p in (obs.alive if candidates is None else candidates)
                 if p in obs.alive and p != obs.player]
         if not pool:
