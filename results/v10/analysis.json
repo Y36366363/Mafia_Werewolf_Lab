@@ -1,0 +1,197 @@
+{
+  "scope": "Frozen train selection evaluated on untouched holdout; post-hoc equilibrium is diagnostic only.",
+  "response_holdout": {
+    "concentrated_target": {
+      "target_good": "probe_w8_anchor",
+      "selected_train": "concentration_w2",
+      "selected_holdout": "concentration_w2",
+      "rates": {
+        "concentration_w2": 0.3642578125,
+        "concentration_w4": 0.3662109375,
+        "concentration_w8": 0.3662109375
+      },
+      "selection_replicated": true
+    },
+    "dispersed_targets": {
+      "target_good": "probe_w8_diverse",
+      "selected_train": "dispersion_w2",
+      "selected_holdout": "dispersion_w2",
+      "rates": {
+        "dispersion_w2": 0.35986328125,
+        "dispersion_w4": 0.37109375,
+        "dispersion_w8": 0.3642578125
+      },
+      "selection_replicated": true
+    },
+    "police_follow_timing": {
+      "target_good": "coord_deliberative_public",
+      "selected_train": "follow_w2",
+      "selected_holdout": "follow_w2",
+      "rates": {
+        "follow_w2": 0.2890625,
+        "follow_w4": 0.30419921875,
+        "follow_w8": 0.31689453125
+      },
+      "selection_replicated": true
+    }
+  },
+  "pure_holdout_scores": {
+    "crossfit_table": {
+      "worst": 0.2685546875,
+      "mean": 0.40320763221153844,
+      "worst_opponent": "concentration_w2"
+    },
+    "coord_deliberative_immediate": {
+      "worst": 0.1083984375,
+      "mean": 0.25289212740384615,
+      "worst_opponent": "origin_det"
+    },
+    "coord_deliberative_public": {
+      "worst": 0.0966796875,
+      "mean": 0.23366135817307693,
+      "worst_opponent": "origin_det"
+    },
+    "coord_deliberative_late": {
+      "worst": 0.08203125,
+      "mean": 0.22089092548076922,
+      "worst_opponent": "origin_det"
+    },
+    "probe_w8_diverse": {
+      "worst": 0.1865234375,
+      "mean": 0.29018930288461536,
+      "worst_opponent": "combined_det"
+    },
+    "probe_w8_anchor": {
+      "worst": 0.16162109375,
+      "mean": 0.4011793870192308,
+      "worst_opponent": "origin_det"
+    },
+    "probe_w8_pair": {
+      "worst": 0.1416015625,
+      "mean": 0.3545673076923077,
+      "worst_opponent": "origin_det"
+    }
+  },
+  "train_restricted_equilibrium": {
+    "value_exact": "421/1536",
+    "value": 0.2740885416666667,
+    "good_mixture": {
+      "crossfit_table": "2/3",
+      "probe_w8_anchor": "1/3"
+    },
+    "mafia_mixture": {
+      "combined_det": "104/147",
+      "origin_det": "43/147"
+    },
+    "lower_exact": "421/1536",
+    "upper_exact": "421/1536",
+    "gap_exact": "0",
+    "simplex_pivots": 2
+  },
+  "frozen_train_mixture_holdout": {
+    "joint": 0.2947059683248299,
+    "joint_exact": "88723/301056",
+    "fixed_good_mixture_lower": 0.2674153645833333,
+    "fixed_good_mixture_lower_exact": "1643/6144",
+    "worst_holdout_mafia": "origin_det",
+    "fixed_mafia_mixture_upper": 0.3063649287840136,
+    "fixed_mafia_mixture_upper_exact": "92233/301056",
+    "best_holdout_good": "probe_w8_anchor",
+    "out_of_sample_gap": 0.03894956420068027,
+    "out_of_sample_gap_exact": "5863/150528",
+    "good_mixture_vs_each_mafia": {
+      "combined_det": 0.3059895833333333,
+      "origin_det": 0.2674153645833333,
+      "echo_det": 0.4847005208333333,
+      "echo_mimic_det": 0.3771158854166667,
+      "concentration_w2": 0.3004557291666667,
+      "concentration_w4": 0.3111979166666667,
+      "concentration_w8": 0.3115234375,
+      "dispersion_w2": 0.42138671875,
+      "dispersion_w4": 0.4324544270833333,
+      "dispersion_w8": 0.4327799479166667,
+      "follow_w2": 0.5157877604166666,
+      "follow_w4": 0.529296875,
+      "follow_w8": 0.5428059895833334
+    },
+    "each_good_vs_mafia_mixture": {
+      "crossfit_table": 0.2888764880952381,
+      "coord_deliberative_immediate": 0.18336123511904762,
+      "coord_deliberative_public": 0.16542437287414966,
+      "coord_deliberative_late": 0.1563031462585034,
+      "probe_w8_diverse": 0.194379118835034,
+      "probe_w8_anchor": 0.3063649287840136,
+      "probe_w8_pair": 0.2435095131802721
+    }
+  },
+  "posthoc_holdout_restricted_equilibrium": {
+    "value_exact": "153663/533504",
+    "value": 0.28802595669385794,
+    "good_mixture": {
+      "crossfit_table": "415/521",
+      "probe_w8_anchor": "106/521"
+    },
+    "mafia_mixture": {
+      "origin_det": "196/521",
+      "concentration_w2": "325/521"
+    },
+    "lower_exact": "153663/533504",
+    "upper_exact": "153663/533504",
+    "gap_exact": "0",
+    "simplex_pivots": 3
+  },
+  "support_comparison": {
+    "train_good": [
+      "crossfit_table",
+      "probe_w8_anchor"
+    ],
+    "holdout_good": [
+      "crossfit_table",
+      "probe_w8_anchor"
+    ],
+    "train_mafia": [
+      "combined_det",
+      "origin_det"
+    ],
+    "holdout_mafia": [
+      "origin_det",
+      "concentration_w2"
+    ]
+  },
+  "mixed_payoffs_recomputed_by_seed": {
+    "good_mixture_vs_mafia": {
+      "combined_det": 0.3059895833333333,
+      "origin_det": 0.2674153645833333,
+      "echo_det": 0.4847005208333333,
+      "echo_mimic_det": 0.37711588541666663,
+      "concentration_w2": 0.30045572916666663,
+      "concentration_w4": 0.31119791666666663,
+      "concentration_w8": 0.3115234375,
+      "dispersion_w2": 0.42138671875,
+      "dispersion_w4": 0.4324544270833333,
+      "dispersion_w8": 0.43277994791666663,
+      "follow_w2": 0.5157877604166666,
+      "follow_w4": 0.529296875,
+      "follow_w8": 0.5428059895833334
+    },
+    "good_vs_mafia_mixture": {
+      "crossfit_table": 0.2888764880952381,
+      "coord_deliberative_immediate": 0.18336123511904762,
+      "coord_deliberative_public": 0.16542437287414966,
+      "coord_deliberative_late": 0.1563031462585034,
+      "probe_w8_diverse": 0.194379118835034,
+      "probe_w8_anchor": 0.3063649287840136,
+      "probe_w8_pair": 0.2435095131802721
+    }
+  },
+  "bounded_mean_half_widths": {
+    "pointwise_95": 0.030010087228747522,
+    "familywise_95_over_20_response_checks": 0.04039783762870455,
+    "note": "Hoeffding bounds for each fixed weighted per-seed payoff; matrix selection uncertainty remains."
+  },
+  "public_coordination_promotion": {
+    "promoted": false,
+    "reason": "All three public-deliberation variants have lower holdout worst rates and zero equilibrium support."
+  },
+  "interpretation": "Train equilibrium has an exact zero gap only for the empirical finite matrix. The nonzero holdout response gap measures sampling/support drift and is not an unrestricted exploitability certificate."
+}

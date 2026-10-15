@@ -1,0 +1,13 @@
+{
+  "version": "20261015-equilibrium-v10",
+  "source_sha256": "934bce61b7da95ccf31ad195996a910898b19019b99ee59c1bf41b1eb2817795",
+  "elapsed_seconds": 416.20100975001696,
+  "executed_games": 232960,
+  "train_games": 46592,
+  "holdout_games": 186368,
+  "files": {
+    "selection_before_holdout.json": "151f172b972a409a60ca31373616a5dfca6a23a327315f7fecf50916f8aec527",
+    "holdout.json": "c3aa7946a2c3fe4bc833fda5f2c5c12937488d3885e6a61a2d92086dca742969"
+  },
+  "scope": "4P4M8C learned finite counter families and restricted empirical matrix equilibrium; fixed-policy evaluation, not full-game GTO"
+}

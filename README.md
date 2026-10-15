@@ -4,7 +4,7 @@
 
 **已实现可运行裁判、观察权限、完整对局、小模型精确求解、16人固定策略实验和反制评估。完整16人GTO与人类教学效果尚未得到验证。**
 
-152项测试通过（含SciPy独立核对）。最新v09新增209,664次16人终局模拟：在四个独立外层区块和新增公开诱饵反制下复验v08条件表，并以自然开局拆分平民探测的目标覆盖、查杀对齐和协调收益。交叉拟合表在三个区块及合并结果中取得最高纯策略最差胜率；8位分散探测通过三折选择、独立验证与最终留出。分层结果表明主要收益来自公开搜索和协调，对齐并非唯一机制。结论限于冻结候选与规则，见[最新实验报告](docs/replication_results_v09.md)。
+163项测试通过（含SciPy独立核对）。最新v10新增232,960次16人终局模拟，加入由全部好人执行的首日公共协调协议，分别训练集中目标、分散目标和警察跟随时点的匪方回应，并对7×13扩展经验矩阵求精确受限混合均衡。三类低权重回应的经验排序均在独立留出复现，但权重差未超出保守误差界；公共协调基线仍过于可预测而不晋级；训练受限值27.41%，冻结混合留出下界26.74%、上界30.64%。结论限于冻结候选和经验矩阵，见[最新实验报告](docs/equilibrium_results_v10.md)。
 
 ## 使用
 
@@ -41,6 +41,10 @@ python3 scripts/run_replication_v09.py --output results/v09_reproduction --worke
 python3 scripts/analyze_replication_v09.py
 python3 scripts/verify_replication_v09.py results/v09 --replay --output results/v09_integrity_audit.json
 python3 scripts/build_replication_report_v09.py
+python3 scripts/run_equilibrium_v10.py --output results/v10_reproduction --workers 4
+python3 scripts/analyze_equilibrium_v10.py
+python3 scripts/verify_equilibrium_v10.py results/v10 --replay --output results/v10_integrity_audit.json
+python3 scripts/build_equilibrium_report_v10.py
 ```
 
 `demo` 输出完整对局的公开发言和票型；其中验人声明不代表裁判认证。最外层结果包含赛后评价标签。`suite` 会完整重算实验并覆盖指定输出目录中的同名结果；使用新目录保留不同版本。
@@ -63,12 +67,15 @@ python3 scripts/build_replication_report_v09.py
 | 16人公开票差与自适应表 | 公开顺序票、票差安全装饰、五种平民首发、训练生成条件表 | 独立留出拦截过拟合；规则变体策略评估，非完整GTO |
 | 16人交叉拟合与覆盖收益 | 公共确定性匪目标、坐标独立拟合/验证、平民多窗口公开首发 | 完全未读留出；候选池纯策略评估，非受限混合或完整GTO |
 | 16人多区块复验与自然开局 | 四组外层复验、公开重复提名追踪/诱饵、同窗口目标覆盖控制 | 三折选择和自然开局留出；机制拆分与候选池反制，非完整GTO |
+| 16人公共协调与受限混合 | 好人公共协议、三类匪方专门回应、7×13经验矩阵精确解 | 冻结混合独立留出；有限候选受限均衡，非完整GTO |
 | 机制比较 | PK、3/4遗言、方向、近远验人、位置刀、自刀 | 固定策略下的开局胜率比较 |
 
 用户确认：匪胜条件为警察全灭；好人胜以匪全灭建模；夜晚共同验一人；不翻身份；允许自刀和假跳警。首夜被刀警察得到当夜验人。遗言包含夜死和白天放逐、前三次死亡可说；四次作为对照。发言从最近死者旁开始；左右固定方向均支持。基线同时投票、唯一最高票出局；PK变体对平票者再发言和复投，仍平则无人出局。
 
 ## 文档与结果
 
+- [v10最新实验报告](docs/equilibrium_results_v10.md)：公共协调、三类专门反制与扩展矩阵受限均衡。
+- [v10冻结协议](docs/equilibrium_protocol_v10.md)、[配置](configs/equilibrium_v10.json)、[结果清单](results/v10/manifest.json)、[独立核验](results/v10_integrity_audit.json)：91个训练单元、91个留出单元、3条回应选择、2个精确矩阵证书和182局归档重放通过。
 - [v09最新实验报告](docs/replication_results_v09.md)：多区块复验、自然开局探测与公开反制。
 - [v09冻结协议](docs/replication_protocol_v09.md)、[配置](configs/replication_v09.json)、[结果清单](results/v09/manifest.json)、[独立核验](results/v09_integrity_audit.json)：128个复验单元、105个选择/验证单元、30个留出单元、9个种子区块和263局归档重放通过。
 - [v08最新实验报告](docs/crossfit_results_v08.md)：公共匪目标、坐标交叉拟合与平民首发覆盖收益。
@@ -91,6 +98,6 @@ python3 scripts/build_replication_report_v09.py
 - [提名信号反制](results/signal_counter_v03.json)：后续公开行动也会泄露信息的针对性测试。
 - [最终产物核验](results/final_integrity_audit.json)：哈希、原始样本分母和报告统计复算。
 
-v01的弱策略基线及补充实验保留；v02修正了警察误信队外验人的问题；v03展示提名信号可被追刀利用；v04加入掩护、局部混合和票型；v05拆分角色动作并加入发言顺序与散票反制；v06加入可执行本地混合、反诱饵确认、受控时点干预与增量扩池；v07加入公开顺序票、实时票差门控、公开平民规则和训练生成条件表；v08统一匪方主目标，并以不复用坐标子批次和未读留出选择条件表与覆盖型首发；v09用多区块复验和自然开局揭示公开探测的协调机制。各代冻结来源与结果分别保留。现有报告共记录1,075,968次终局执行；不同格子的共享种子不构成额外独立开局。
+v01的弱策略基线及补充实验保留；v02修正了警察误信队外验人的问题；v03展示提名信号可被追刀利用；v04加入掩护、局部混合和票型；v05拆分角色动作并加入发言顺序与散票反制；v06加入可执行本地混合、反诱饵确认、受控时点干预与增量扩池；v07加入公开顺序票、实时票差门控、公开平民规则和训练生成条件表；v08统一匪方主目标，并以不复用坐标子批次和未读留出选择条件表与覆盖型首发；v09用多区块复验和自然开局揭示公开探测的协调机制；v10加入好人公共协议、三类专门反制和扩展经验矩阵受限混合。各代冻结来源与结果分别保留。现有报告共记录1,308,928次终局执行；不同格子的共享种子不构成额外独立开局。
 
 沿用 AIP 与 Poker Analysis 的 `GameSpec → AlgorithmSpec → SolverArtifact → IndependentEvaluationReport → PromotionDecision` 思路。当前模块不直接导入其他项目代码。解析概率、固定策略胜率、受限均衡和完整声明游戏均衡分别标注；未经认证的模拟结果不自动成为教学标准答案。
