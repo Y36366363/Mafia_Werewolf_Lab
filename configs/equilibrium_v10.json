@@ -1,0 +1,38 @@
+{
+  "version": "20261015-equilibrium-v10",
+  "purpose": "Add a role-general public coordination baseline, learn three targeted mafia response families, and solve a frozen expanded restricted matrix",
+  "rules": {"police": 4, "mafia": 4, "civilians": 8, "last_words_limit": 3, "allow_self_kill": true, "tie_rule": "pass", "direction": 1},
+  "good_candidates": [
+    {"name": "crossfit_table", "cover_mode": "table", "police_nomination_mode": "table", "conditional_cover_table": [0.25, 0.5, 0.75, 0.0, 1.0, 1.0], "conditional_police_table": [0.5, 0.75, 0.5], "civilian_cover_probability": 1.0, "hit_nominate_probability": 1.0, "inspect_reasoning_probability": 0.25},
+    {"name": "coord_deliberative_immediate", "coordination_mode": "deliberative", "police_follow_timing": "immediate", "civilian_cover_probability": 1.0, "hit_nominate_probability": 1.0},
+    {"name": "coord_deliberative_public", "coordination_mode": "deliberative", "police_follow_timing": "public", "civilian_cover_probability": 1.0, "hit_nominate_probability": 1.0},
+    {"name": "coord_deliberative_late", "coordination_mode": "deliberative", "police_follow_timing": "late", "civilian_cover_probability": 1.0, "hit_nominate_probability": 1.0},
+    {"name": "probe_w8_diverse", "day1_timing": "civilian_first", "probe_window": 8, "probe_pattern": ["next", "second", "opposite", "hashed"], "cover_mode": "public", "civilian_cover_probability": 1.0, "police_nominate_probability": 1.0},
+    {"name": "probe_w8_anchor", "day1_timing": "civilian_first", "probe_window": 8, "probe_pattern": ["anchor_first"], "cover_mode": "public", "civilian_cover_probability": 1.0, "police_nominate_probability": 1.0},
+    {"name": "probe_w8_pair", "day1_timing": "civilian_first", "probe_window": 8, "probe_pattern": ["anchor_pair"], "cover_mode": "public", "civilian_cover_probability": 1.0, "police_nominate_probability": 1.0}
+  ],
+  "mafia_candidates": [
+    {"name": "combined_det", "inference": "combined"},
+    {"name": "origin_det", "inference": "origin"},
+    {"name": "echo_det", "inference": "echo"},
+    {"name": "echo_mimic_det", "inference": "echo", "bluff": "nominate", "nomination_style": "echo_public", "nomination_probability": 1.0},
+    {"name": "concentration_w2", "inference": "combined", "counter_mode": "concentration", "counter_weight": 2.0},
+    {"name": "concentration_w4", "inference": "combined", "counter_mode": "concentration", "counter_weight": 4.0},
+    {"name": "concentration_w8", "inference": "combined", "counter_mode": "concentration", "counter_weight": 8.0},
+    {"name": "dispersion_w2", "inference": "combined", "counter_mode": "dispersion", "counter_weight": 2.0},
+    {"name": "dispersion_w4", "inference": "combined", "counter_mode": "dispersion", "counter_weight": 4.0},
+    {"name": "dispersion_w8", "inference": "combined", "counter_mode": "dispersion", "counter_weight": 8.0},
+    {"name": "follow_w2", "inference": "combined", "counter_mode": "follow", "counter_weight": 2.0},
+    {"name": "follow_w4", "inference": "combined", "counter_mode": "follow", "counter_weight": 4.0},
+    {"name": "follow_w8", "inference": "combined", "counter_mode": "follow", "counter_weight": 8.0}
+  ],
+  "response_learning": {
+    "concentrated_target": {"target_good": "probe_w8_anchor", "candidates": ["concentration_w2", "concentration_w4", "concentration_w8"]},
+    "dispersed_targets": {"target_good": "probe_w8_diverse", "candidates": ["dispersion_w2", "dispersion_w4", "dispersion_w8"]},
+    "police_follow_timing": {"target_good": "coord_deliberative_public", "candidates": ["follow_w2", "follow_w4", "follow_w8"]}
+  },
+  "train": {"n": 512, "seed_start": 80000000},
+  "holdout": {"n": 2048, "seed_start": 81000000},
+  "selection": "Select one response per named family on train only. Solve the exact zero-sum equilibrium of all 7x13 empirical train payoffs with Fraction arithmetic. Freeze both mixtures, then evaluate their lower/upper responses on untouched holdout. A post-hoc holdout restricted solution diagnoses drift and cannot change promotion.",
+  "interpretation": "The public coordination policies are executable role-general protocols based on public speech order and nomination history. The equilibrium is restricted to listed fixed policies and empirical Monte Carlo payoffs; it is not full-game GTO."
+}
