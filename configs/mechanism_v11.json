@@ -1,0 +1,16 @@
+{
+  "version": "20261016-mechanism-v11",
+  "rules": {"police": 4, "mafia": 4, "civilians": 8, "last_words_limit": 3, "allow_self_kill": true, "tie_rule": "pass", "direction": 1},
+  "evaluation": {"n": 4096, "seed_start": 91000000},
+  "good_candidates": [
+    {"name": "anchor", "day1_timing": "civilian_first", "probe_window": 8, "probe_pattern": ["anchor_first"], "cover_mode": "public", "civilian_cover_probability": 1.0, "police_nominate_probability": 1.0},
+    {"name": "diverse", "day1_timing": "civilian_first", "probe_window": 8, "probe_pattern": ["next", "second", "opposite", "hashed"], "cover_mode": "public", "civilian_cover_probability": 1.0, "police_nominate_probability": 1.0}
+  ],
+  "channels": ["none", "vote", "kill", "both"],
+  "counter": {"inference": "combined", "counter_mode": "concentration", "counter_weight": 2.0, "vote_style": "deterministic", "nomination_style": "score", "first_self_kill": 0.0},
+  "primary_family_size": 8,
+  "alpha": 0.05,
+  "practical_effect_pp": 3.0,
+  "selection": "No training, weight search, promotion, equilibrium solve or adaptive sampling. Freeze all eight conditions before reading evaluation. New evaluation seeds are never used for smoke tests.",
+  "scope": "Paired fixed-policy mechanism intervention; not a full-game equilibrium, best-response certificate or proof of identity leakage."
+}
