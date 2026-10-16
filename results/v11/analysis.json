@@ -1,0 +1,304 @@
+{
+  "primary": {
+    "anchor_minus_diverse_none": {
+      "terms": [
+        [
+          "anchor",
+          "none",
+          1
+        ],
+        [
+          "diverse",
+          "none",
+          -1
+        ]
+      ],
+      "delta": 0.177734375,
+      "n": 4096,
+      "se": 0.007853826042296319,
+      "ci95_pointwise_normal": [
+        0.16234115881625646,
+        0.19312759118374354
+      ],
+      "ci95_family_normal_approx": [
+        0.15625911821508356,
+        0.19920963178491644
+      ],
+      "ci95_family_hoeffding": [
+        0.12466307403396537,
+        0.23080567596603463
+      ],
+      "range_width": 2
+    },
+    "anchor_vote_minus_none": {
+      "terms": [
+        [
+          "anchor",
+          "vote",
+          1
+        ],
+        [
+          "anchor",
+          "none",
+          -1
+        ]
+      ],
+      "delta": 0.00244140625,
+      "n": 4096,
+      "se": 0.0009759362976271771,
+      "ci95_pointwise_normal": [
+        0.00052860625544537,
+        0.00435420624455463
+      ],
+      "ci95_family_normal_approx": [
+        -0.00022716349987650505,
+        0.0051099759998765055
+      ],
+      "ci95_family_hoeffding": [
+        -0.05062989471603462,
+        0.05551270721603462
+      ],
+      "range_width": 2
+    },
+    "anchor_kill_minus_none": {
+      "terms": [
+        [
+          "anchor",
+          "kill",
+          1
+        ],
+        [
+          "anchor",
+          "none",
+          -1
+        ]
+      ],
+      "delta": 0.041748046875,
+      "n": 4096,
+      "se": 0.004758887898558172,
+      "ci95_pointwise_normal": [
+        0.032420797987362485,
+        0.051075295762637515
+      ],
+      "ci95_family_normal_approx": [
+        0.02873549234657207,
+        0.05476060140342793
+      ],
+      "ci95_family_hoeffding": [
+        -0.011323254091034622,
+        0.09481934784103463
+      ],
+      "range_width": 2
+    },
+    "anchor_both_minus_none": {
+      "terms": [
+        [
+          "anchor",
+          "both",
+          1
+        ],
+        [
+          "anchor",
+          "none",
+          -1
+        ]
+      ],
+      "delta": 0.044189453125,
+      "n": 4096,
+      "se": 0.004840500757592375,
+      "ci95_pointwise_normal": [
+        0.0347022459729801,
+        0.0536766602770199
+      ],
+      "ci95_family_normal_approx": [
+        0.030953738942249218,
+        0.05742516730775078
+      ],
+      "ci95_family_hoeffding": [
+        -0.008881847841034622,
+        0.09726075409103463
+      ],
+      "range_width": 2
+    },
+    "diverse_vote_minus_none": {
+      "terms": [
+        [
+          "diverse",
+          "vote",
+          1
+        ],
+        [
+          "diverse",
+          "none",
+          -1
+        ]
+      ],
+      "delta": 0.000244140625,
+      "n": 4096,
+      "se": 0.0005459683559989458,
+      "ci95_pointwise_normal": [
+        -0.0008259376894564766,
+        0.0013142189394564766
+      ],
+      "ci95_family_normal_approx": [
+        -0.0012487382060783507,
+        0.0017370194560783507
+      ],
+      "ci95_family_hoeffding": [
+        -0.05282716034103462,
+        0.05331544159103462
+      ],
+      "range_width": 2
+    },
+    "diverse_kill_minus_none": {
+      "terms": [
+        [
+          "diverse",
+          "kill",
+          1
+        ],
+        [
+          "diverse",
+          "none",
+          -1
+        ]
+      ],
+      "delta": 0.063232421875,
+      "n": 4096,
+      "se": 0.004788622337865686,
+      "ci95_pointwise_normal": [
+        0.05384689455721926,
+        0.07261794919278074
+      ],
+      "ci95_family_normal_approx": [
+        0.05013856242384454,
+        0.07632628132615546
+      ],
+      "ci95_family_hoeffding": [
+        0.010161120908965378,
+        0.11630372284103463
+      ],
+      "range_width": 2
+    },
+    "diverse_both_minus_none": {
+      "terms": [
+        [
+          "diverse",
+          "both",
+          1
+        ],
+        [
+          "diverse",
+          "none",
+          -1
+        ]
+      ],
+      "delta": 0.067626953125,
+      "n": 4096,
+      "se": 0.004897229496002309,
+      "ci95_pointwise_normal": [
+        0.05802855968880823,
+        0.07722534656119176
+      ],
+      "ci95_family_normal_approx": [
+        0.05423612165064169,
+        0.08101778459935831
+      ],
+      "ci95_family_hoeffding": [
+        0.014555652158965378,
+        0.12069825409103463
+      ],
+      "range_width": 2
+    },
+    "interaction_both_minus_none": {
+      "terms": [
+        [
+          "anchor",
+          "both",
+          1
+        ],
+        [
+          "anchor",
+          "none",
+          -1
+        ],
+        [
+          "diverse",
+          "both",
+          -1
+        ],
+        [
+          "diverse",
+          "none",
+          1
+        ]
+      ],
+      "delta": -0.0234375,
+      "n": 4096,
+      "se": 0.006468212563867047,
+      "ci95_pointwise_normal": [
+        -0.0361149636695289,
+        -0.010760036330471104
+      ],
+      "ci95_family_normal_approx": [
+        -0.04112397853929978,
+        -0.0057510214607002196
+      ],
+      "ci95_family_hoeffding": [
+        -0.12958010193206926,
+        0.08270510193206924
+      ],
+      "range_width": 4
+    }
+  },
+  "descriptive_anchor_minus_diverse": {
+    "none": {
+      "win": 0.177734375,
+      "day1_good_vote_concentration": 0.08400656960227273,
+      "day1_exile_mafia": 0.12158203125,
+      "day1_exile_police": 0.136962890625,
+      "day1_no_exile": -0.02685546875,
+      "night2_kill_police": -0.31201171875,
+      "day1_civilian_nominations": 0,
+      "day1_civilian_targets": -2.333251953125
+    },
+    "vote": {
+      "win": 0.179931640625,
+      "day1_good_vote_concentration": 0.08400656960227273,
+      "day1_exile_mafia": 0.121337890625,
+      "day1_exile_police": 0.136962890625,
+      "day1_no_exile": -0.02685546875,
+      "night2_kill_police": -0.31201171875,
+      "day1_civilian_nominations": 0,
+      "day1_civilian_targets": -2.333251953125
+    },
+    "kill": {
+      "win": 0.15625,
+      "day1_good_vote_concentration": 0.08400656960227273,
+      "day1_exile_mafia": 0.12158203125,
+      "day1_exile_police": 0.136962890625,
+      "day1_no_exile": -0.02685546875,
+      "night2_kill_police": -0.2578125,
+      "day1_civilian_nominations": 0,
+      "day1_civilian_targets": -2.333251953125
+    },
+    "both": {
+      "win": 0.154296875,
+      "day1_good_vote_concentration": 0.08400656960227273,
+      "day1_exile_mafia": 0.121337890625,
+      "day1_exile_police": 0.136962890625,
+      "day1_no_exile": -0.02685546875,
+      "night2_kill_police": -0.2578125,
+      "day1_civilian_nominations": 0,
+      "day1_civilian_targets": -2.333251953125
+    }
+  },
+  "integrity": {
+    "identical_openings_all_8": true,
+    "identical_prevote_within_good": true,
+    "night_channel_preserves_day1": true,
+    "civilian_budget_matched": true
+  },
+  "scope": "Paired fixed-policy mechanism intervention; not a full-game equilibrium, best-response certificate or proof of identity leakage.",
+  "inference": "Eight prespecified win contrasts; Hoeffding simultaneous bounds are conservative. Normal Bonferroni intervals are approximate. Other metrics are descriptive; no mediation or general identity-leakage claim."
+}

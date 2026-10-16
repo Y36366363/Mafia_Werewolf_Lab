@@ -1,0 +1,12 @@
+{
+  "version": "20261016-mechanism-v11",
+  "executed_games": 32768,
+  "unique_seed_units": 4096,
+  "elapsed_seconds": 58.66041279199999,
+  "files": {
+    "freeze_before_evaluation.json": "e7b04bf4c79a93c84fc26267064a60de6ede2990673d1cc927a1597609f4ce1d",
+    "evaluation.json": "3aa3aabf4e8c17da1c5238c684b67d3bbcc6009cc3856cbdca5bc8a253110a26",
+    "analysis.json": "213141445d597802c2415af4509df0f44615b9534429c17be9ef3a1333fd809c"
+  },
+  "scope": "Paired fixed-policy mechanism intervention; not a full-game equilibrium, best-response certificate or proof of identity leakage."
+}

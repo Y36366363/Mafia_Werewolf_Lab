@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "cells": 8,
+  "seed_units": 4096,
+  "executed_games": 32768,
+  "primary_contrasts": 8,
+  "archived_assets_checked": 28,
+  "archived_full_trace_replays": 24,
+  "integrity": {
+    "identical_openings_all_8": true,
+    "identical_prevote_within_good": true,
+    "night_channel_preserves_day1": true,
+    "civilian_budget_matched": true
+  },
+  "limits": "Sampled archived replays, not an independent simulator or all-game rerun; no full-game GTO claim."
+}
