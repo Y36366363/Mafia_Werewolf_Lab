@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "dead_cells": 5,
+  "selfkill_cells": 40,
+  "archived_assets_checked": 30,
+  "sampled_full_replays": 120,
+  "limits": "Archived sampled replays; not an independent simulator or full-game GTO proof."
+}

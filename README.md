@@ -86,6 +86,7 @@ python3 scripts/build_equilibrium_report_v10.py
 - [v07冻结协议](docs/adaptive_protocol_v07.md)、[配置](configs/adaptive_v07.json)、[结果清单](results/v07/manifest.json)、[独立核验](results/v07_integrity_audit.json)：360个训练候选单元、24个留出单元、21个首发单元、4,096个开局和63局归档重放通过。
 - [v06最新实验报告](docs/local_pool_results_v06.md)：局部混合、反诱饵、有限散票、查杀释放时点与增量反制池。
 - [v06冻结协议](docs/local_pool_protocol_v06.md)、[配置](configs/local_pool_v06.json)、[结果清单](results/v06/manifest.json)、[独立核验](results/v06_integrity_audit.json)：126个矩阵单元、21个时点单元、2,304个固定首夜状态与147局归档重放通过。
+- [v12首夜死亡声明与自刀可信度报告](docs/declaration_results_v12.md)、[冻结协议](docs/declaration_protocol_v12.md)、[配置](configs/declaration_v12.json)、[审计](results/v12_integrity_audit.json)：死警遗言配对干预、4×5自刀可信度训练／留出矩阵及冻结混合评价；不是完整游戏GTO。
 - [v05最新实验报告](docs/refinement_results_v05.md)：反制循环、角色拆分、首夜条件分支、全16人规则敏感性与受限矩阵混合解。
 - [v05冻结协议](docs/refinement_protocol_v05.md)、[配置](configs/refinement_v05.json)、[结果清单](results/v05/manifest.json)、[独立核验](results/v05_integrity_audit.json)：170个实验单元、680个条件摘要、142项配对统计及340局归档重放通过。
 - [v04最新实验报告](docs/large_game_results_v04.md)：完整矩阵、反制链、掩护/混合/票型效果、保留决策与规则敏感性。
