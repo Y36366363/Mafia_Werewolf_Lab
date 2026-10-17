@@ -1,9 +1,9 @@
 {
-  "version": "20261017-declaration-v12b",
+  "version": "20261017-declaration-v12c",
   "rules": {"police": 4, "mafia": 4, "civilians": 8, "last_words_limit": 3, "allow_self_kill": true, "tie_rule": "pass", "direction": 1},
-  "dead_police": {"n": 4096, "seed_start": 114000000, "scan_limit": 1000000},
-  "selfkill_train": {"n": 1024, "seed_start": 115000000},
-  "selfkill_holdout": {"n": 4096, "seed_start": 116000000},
+  "dead_police": {"n": 4096, "seed_start": 117000000, "scan_limit": 1000000},
+  "selfkill_train": {"n": 1024, "seed_start": 118000000},
+  "selfkill_holdout": {"n": 4096, "seed_start": 119000000},
   "dead_police_policies": [
     {"name": "silent", "dead_police_message": "silent"},
     {"name": "truth", "dead_police_message": "truth"},

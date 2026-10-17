@@ -42,6 +42,15 @@ def main():
     assert all(c["root_signatures"] == roots for c in train["cells"])
     roots_h = holdout["cells"][0]["root_signatures"]
     assert all(c["root_signatures"] == roots_h for c in holdout["cells"])
+    for report in (train, holdout):
+        for cell in report["cells"]:
+            labels = set(cell["raw"]["dead_report_target_role"])
+            if cell["mafia"] == "self_fake_hit":
+                assert labels <= {"police", "civilian"}
+            elif cell["mafia"] == "self_ally_clear":
+                assert labels == {"mafia"}
+            elif cell["mafia"] == "self_nonally_clear":
+                assert labels <= {"police", "civilian"}
     replays = 0
     if args.replay:
         gmap, mmap = {p.name:p for p in good}, {p.name:p for p in mafia}

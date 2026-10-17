@@ -61,10 +61,12 @@ def _trace_metrics(initial, outcome):
                  if e["day"] == 1 and e["event"] == "day_death"]
     night2 = [e["payload"]["victim"] for e in outcome.transcript
               if e["day"] == 2 and e["event"] == "night_death"]
+    first_dead = initial.deaths[0].player
     last_reports = [e["payload"] for e in outcome.transcript
                     if e["day"] == 1 and e["event"] == "message"
                     and e["payload"]["context"] == "last_words"
-                    and e["payload"]["kind"] == "report"]
+                    and e["payload"]["kind"] == "report"
+                    and e["payload"]["speaker"] == first_dead]
     live_reports = [e["payload"] for e in outcome.transcript
                     if e["day"] == 1 and e["event"] == "message"
                     and e["payload"]["context"] == "day"
