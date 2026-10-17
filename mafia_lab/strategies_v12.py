@@ -177,7 +177,10 @@ def vote(obs: Observation, policy: GoodPolicyV12 | MafiaPolicyV12, rng: Random,
     # explicit single/full response protocols.
     live_reports = [m for m in obs.messages if m.kind == "report" and
                     m.speaker in obs.alive and m.speaker != obs.player]
-    if policy.live_counter != "hidden" and live_reports:
+    # The live-counter switch is a day-one response only.  From day two onward
+    # every policy accepts the shared continuation spokesperson, so this switch
+    # cannot silently alter the rest of the game.
+    if live_reports and (obs.day > 1 or policy.live_counter != "hidden"):
         hits = [m.target for m in live_reports if m.verdict and m.target in pool]
         if hits:
             return hits[-1]

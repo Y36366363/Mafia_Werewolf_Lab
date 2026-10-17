@@ -28,6 +28,12 @@ class DeclarationExperimentV12Tests(unittest.TestCase):
         self.assertEqual(selfkill["first_death_roles"], ["mafia"]*4)
         self.assertEqual(ordinary["root_signatures"], selfkill["root_signatures"])
 
+    def test_counter_mode_does_not_change_ordinary_claim_continuation(self):
+        rows = [_cell_root(("smoke", self.rules, policy, self.mafia[0], 110020000, 12))
+                for policy in (self.good[0], self.good[2], self.good[3])]
+        self.assertEqual(rows[0]["raw"], rows[1]["raw"])
+        self.assertEqual(rows[0]["raw"], rows[2]["raw"])
+
 
 if __name__ == "__main__":
     unittest.main()
