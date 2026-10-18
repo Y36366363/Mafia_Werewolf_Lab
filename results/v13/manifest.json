@@ -1,0 +1,16 @@
+{
+  "version": "20261018-position-nomination-v13",
+  "source_sha256": "7d7f5feb1f35f629ddf6cb0b485d24429c98c09ba7f8ad62b9c43505d0b94982",
+  "elapsed_seconds": 135.61400587507524,
+  "position_games": 81920,
+  "nomination_games": 122880,
+  "files": {
+    "freeze_before_evaluation.json": "661cbce505550a6c4972474696393ed8ec5b5f4501fe5caf1f386657324f733a",
+    "position_train.json": "e1c1ce4af049d35b3e9f6c815383127c48aa07cf4d6f7eb730799a7236c2410f",
+    "nomination_train.json": "268b1c3b4a8856046f7c7b9d6d2eda756b043bc88a1c4dfe6d5d2ac9c0378138",
+    "selection_before_holdout.json": "f9cc518c156894adee65f01540b8f6b298d78c7240e1d1b07f039c896f5ab700",
+    "position_holdout.json": "1f17038fba3ade286fe16f3125d07e002c0b6944c47145cf108cba4eeeb05f70",
+    "nomination_holdout.json": "e84319a439b0d675e00eae6ceef647345d8a7779d117e81d3b13dfdc99f1330b"
+  },
+  "scope": "4P4M8C fixed-policy position matrix plus a conditional dead-police/check-clear internal-nomination matrix with train/fresh-holdout evaluation; finite empirical restricted equilibria, not full-game GTO or unrestricted best responses."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "cells_checked": 48,
+  "archived_assets_checked": 34,
+  "sampled_full_replays": 144,
+  "limits": "Sampled archived replay and arithmetic audit; not an independent simulator or full-game GTO proof."
+}

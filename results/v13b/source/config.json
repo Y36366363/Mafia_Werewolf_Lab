@@ -1,0 +1,77 @@
+{
+  "version": "20261018-nomination-followup-v13b",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pass",
+    "direction": 1
+  },
+  "train": {
+    "n": 1024,
+    "seed_start": 125000000,
+    "scan_limit": 500000
+  },
+  "holdout": {
+    "n": 4096,
+    "seed_start": 126000000,
+    "scan_limit": 500000
+  },
+  "nomination_good": [
+    {
+      "name": "clear_pass",
+      "inspect_position": "gap",
+      "dead_clear_plan": "pass"
+    },
+    {
+      "name": "true_clear",
+      "inspect_position": "gap",
+      "dead_clear_plan": "truth"
+    },
+    {
+      "name": "short1_clean",
+      "inspect_position": "gap",
+      "dead_clear_plan": "short1"
+    },
+    {
+      "name": "short3_clean",
+      "inspect_position": "gap",
+      "dead_clear_plan": "short3"
+    },
+    {
+      "name": "short3_police_decoy_remove",
+      "inspect_position": "gap",
+      "dead_clear_plan": "decoy_remove"
+    },
+    {
+      "name": "short3_clear_remove",
+      "inspect_position": "gap",
+      "dead_clear_plan": "clear_remove"
+    }
+  ],
+  "nomination_mafia": [
+    {
+      "name": "response_random",
+      "kill_position": "random",
+      "shortlist_response": "random"
+    },
+    {
+      "name": "response_omitted",
+      "kill_position": "random",
+      "shortlist_response": "omitted"
+    },
+    {
+      "name": "response_removed",
+      "kill_position": "random",
+      "shortlist_response": "removed"
+    },
+    {
+      "name": "response_listed",
+      "kill_position": "random",
+      "shortlist_response": "listed"
+    }
+  ],
+  "scope": "Fresh-seed correction of the v13 conditional dead-police/check-clear nomination experiment after diagnosing deterministic frontloaded-kill/first-speaker confounding; fixed finite policies, not full-game GTO or unrestricted best responses."
+}

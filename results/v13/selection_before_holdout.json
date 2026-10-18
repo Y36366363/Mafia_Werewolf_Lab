@@ -1,0 +1,32 @@
+{
+  "holdout_unread": true,
+  "position_train_solution": {
+    "value_exact": "33/512",
+    "value": 0.064453125,
+    "good_mixture": {
+      "inspect_gap": "1"
+    },
+    "mafia_mixture": {
+      "kill_random": "1"
+    },
+    "lower_exact": "33/512",
+    "upper_exact": "33/512",
+    "gap_exact": "0",
+    "simplex_pivots": 1
+  },
+  "nomination_train_solution": {
+    "value_exact": "53/512",
+    "value": 0.103515625,
+    "good_mixture": {
+      "true_clear": "1"
+    },
+    "mafia_mixture": {
+      "response_random": "1"
+    },
+    "lower_exact": "53/512",
+    "upper_exact": "53/512",
+    "gap_exact": "0",
+    "simplex_pivots": 1
+  },
+  "scope": "Exact solutions of two finite empirical train matrices only."
+}

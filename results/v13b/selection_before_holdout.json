@@ -1,0 +1,18 @@
+{
+  "holdout_unread": true,
+  "train_solution": {
+    "value_exact": "9/512",
+    "value": 0.017578125,
+    "good_mixture": {
+      "short1_clean": "1"
+    },
+    "mafia_mixture": {
+      "response_random": "1"
+    },
+    "lower_exact": "9/512",
+    "upper_exact": "9/512",
+    "gap_exact": "0",
+    "simplex_pivots": 1
+  },
+  "scope": "Exact solution of the finite empirical train matrix only."
+}

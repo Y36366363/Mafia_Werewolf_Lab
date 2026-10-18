@@ -1,0 +1,13 @@
+{
+  "version": "20261018-nomination-followup-v13b",
+  "source_sha256": "aed0e4df949bdf60989629d35e0858d41bcdf245c123da7244c3c8d68b97a457",
+  "elapsed_seconds": 77.62098858400714,
+  "games": 122880,
+  "files": {
+    "freeze_before_evaluation.json": "52b486c663a6aba06a71517661fd4cfe054fc033c1a35d1e2898b28c15213f9b",
+    "train.json": "3e7882590bec784b12fe780fc0c14982c0d08360a6bda2b6d9ac30f9a8a72e79",
+    "selection_before_holdout.json": "7a4dc8b60cb943890c5e88a4bf80ab899a72cc8e62de30901491a6bdfe9af12b",
+    "holdout.json": "92fcfeb907368f404e182e970bade2a4c5eab31db6af8016e5268562375c8e3b"
+  },
+  "scope": "Fresh-seed correction of the v13 conditional dead-police/check-clear nomination experiment after diagnosing deterministic frontloaded-kill/first-speaker confounding; fixed finite policies, not full-game GTO or unrestricted best responses."
+}
