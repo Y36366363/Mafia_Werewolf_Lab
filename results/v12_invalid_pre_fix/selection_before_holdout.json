@@ -1,0 +1,20 @@
+{
+  "train_solution": {
+    "value_exact": "931/62464",
+    "value": 0.014904585040983607,
+    "good_mixture": {
+      "skeptic_hidden": "49/61",
+      "trust_single": "12/61"
+    },
+    "mafia_mixture": {
+      "ordinary": "19/61",
+      "self_ally_clear": "42/61"
+    },
+    "lower_exact": "931/62464",
+    "upper_exact": "931/62464",
+    "gap_exact": "0",
+    "simplex_pivots": 4
+  },
+  "holdout_unread": true,
+  "scope": "Exact solution of the finite empirical train matrix only."
+}

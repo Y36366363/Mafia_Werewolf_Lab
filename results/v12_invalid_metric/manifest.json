@@ -1,0 +1,16 @@
+{
+  "version": "20261017-declaration-v12b",
+  "source_sha256": "5b5fb4b76872d3ea172e7108be14a7b52ebba070b0bbc912575ec4b91671376f",
+  "elapsed_seconds": 89.7092908329796,
+  "dead_police_games": 20480,
+  "selfkill_train_games": 20480,
+  "selfkill_holdout_games": 81920,
+  "files": {
+    "freeze_before_evaluation.json": "03b76ac66fa53ac1d456fefd55da3e72384ef717caf20867ccd96072a7ffa64b",
+    "dead_police.json": "0cb9c436ee3c47c905f6f8898be424f7dcfbdc88a1273742e6fd0bac273638ff",
+    "selfkill_train.json": "7e87018b1839127c094137af7f9b5b17062b5019f02dfa7e4a5e3b38dd9ccc8c",
+    "selection_before_holdout.json": "861165e542e7133f7de5a7551be72dd3b6163662e8d787e5c93f72678a69bff4",
+    "selfkill_holdout.json": "17ea532c4bb1779b1edb7318bb85e77c02d5fa52d87378cbf5390bac102e10dc"
+  },
+  "scope": "Paired dead-police declaration interventions plus a train/holdout restricted empirical self-kill credibility matrix; not full-game GTO or an unrestricted best response."
+}

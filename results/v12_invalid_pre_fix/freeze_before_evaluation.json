@@ -1,0 +1,155 @@
+{
+  "version": "20261017-declaration-v12",
+  "source_sha256": "efb75619bc6f07195f9a096b688b327f6f6e9a1aae15bb57411d705235f6e397",
+  "source_assets": {
+    "source/config.json": "ab4006931129ac7c0c8c98a15e795a13efa060ddae66d1d28f50fea8cb98dbe3",
+    "source/docs/declaration_protocol_v12.md": "938a85e6cdb775b5c34ae8e25acb1a42ed2c193d241fcfcff23871a79a2ca2c3",
+    "source/mafia_lab/simulation.py": "4ef0fd94a2834675420446276e8b6b42be733c0edf98f8d39d497ea8aa3f85e7",
+    "source/mafia_lab/tiny.py": "8990b6867ebcacba58ddf24b2747a1e4e4f45955b1f45abbd7b4515ca30c432d",
+    "source/mafia_lab/mechanism_experiment_v11.py": "e4dce2f58ea668a7b979d8fb94bdc9f17dac61b9115f0b0bbf697e6c0830a177",
+    "source/mafia_lab/large_experiment.py": "e631a487d85adfd32f246fff95ee17f7c17096b6184ed45804c08b9c003dc191",
+    "source/mafia_lab/strategies_v08.py": "ef0b082e841a224c595df569cd45ddb9dc64eeb0f8f0fb6cea063d96a5d8ce93",
+    "source/mafia_lab/strategies_v09.py": "f180ff9779c0b7e9e4c91761f0d1cb884aaaef4f701514b025bd4d740689392e",
+    "source/mafia_lab/equilibrium_experiment.py": "8f34053d0a09dd2ba6ccb6c7a7bbc035842f62897f1bd78815cb4b0ec466dcad",
+    "source/mafia_lab/strategies_v06.py": "922dd39843ce740bb7e3856af6967b2c9719540580eb19b0e0c9e795aec89c97",
+    "source/mafia_lab/strategies_v12.py": "ff1e1df22aed4f714dd74895f6fb78c265790a038d599e1c8582b0231ecd7996",
+    "source/mafia_lab/replication_experiment.py": "2aeb2c826415a2ed87429fca73b682a548872027eec3ee313d09644fbb2e194e",
+    "source/mafia_lab/__init__.py": "163e9f77922cd89a4f1ec0d1adfd8df0798fe36b8ebfc68f90d58110443aa7e7",
+    "source/mafia_lab/local_pool_experiment.py": "43880e6d529ef41fb3729bb029a51ef3d74e5c3e164e99ecfb3e0fff122b1682",
+    "source/mafia_lab/strategies_v07.py": "e4ff8fe0aa16150293fb27706370fbc562c83f8d42dc99ffdb4e0378fb214b80",
+    "source/mafia_lab/adaptive_experiment.py": "5a2f149043e7a93f960ded05130bcfaacfcbf74aa0ab898b2a03a9b04688baaa",
+    "source/mafia_lab/strategies_v10.py": "6c353e30007dcd60e3088abfacffec68f2b7de9c26ede029aaf0198c87adcded",
+    "source/mafia_lab/declaration_experiment_v12.py": "b1b19e39a8f73fca0c6a6533965b6d0857eee5c8c585bee638f87c4aa057f109",
+    "source/mafia_lab/engine.py": "277e15458354d851be9223fa629abdce61615793d4f721dedec62533111bd45f",
+    "source/mafia_lab/experiments.py": "e8331a7b766e7bc9b1e663fae7c62a6f262654645764976781805986d4b5b9f9",
+    "source/mafia_lab/strategies_v04.py": "6fa39a2df7f2c72aee65aabb279b01f82e3df7d8d5f5f44cf7353127a484623a",
+    "source/mafia_lab/refinement_experiment.py": "9daf616559622ccf08965aaae6deb754a7d01c000b573e5af9f9b0a9f145a56d",
+    "source/mafia_lab/strategies_v05.py": "0dea71c3617d94329926e92592796a4b8016e5afaba967af179823a13788bff8",
+    "source/mafia_lab/strategies_v11.py": "a8fab6862103c84c302cf8ec2b7e2e35e343b89cc58268e4fc3dd4dc7aad2e07",
+    "source/mafia_lab/statistics.py": "c215b025b8a16ed214608c70a1cb48c2a5b8d6665f909f7b32a0e8c36d0b460a",
+    "source/mafia_lab/policies.py": "8e72e63b0578730de46840e1f2da2d0e4278cc6eb1ed6f026de5172c0923037c",
+    "source/mafia_lab/crossfit_experiment.py": "a19d8787f9b67e45249c053eb29230697a36c9fdb18924d0d9818356ab363304",
+    "source/mafia_lab/__main__.py": "80d349b3e5e19225221de67b14a98e6fda33bebf22cc62b22769f505b33678e4",
+    "source/scripts/verify_declaration_v12.py": "a6c17dedc7819298d5152d554d799bc178f2649b33fe97aecb9bb1f2769b2c67",
+    "source/scripts/run_declaration_v12.py": "ed202334e2fb97d726a7e2bacd34d36ca952675c2cf307c85ff5da47e1b625f8"
+  },
+  "expanded": {
+    "dead_police": [
+      {
+        "name": "silent",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "silent",
+        "dead_claim_response": "trust",
+        "live_counter": "hidden"
+      },
+      {
+        "name": "truth",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "trust",
+        "live_counter": "hidden"
+      },
+      {
+        "name": "teammate_clear",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "teammate_clear",
+        "dead_claim_response": "trust",
+        "live_counter": "hidden"
+      }
+    ],
+    "good": [
+      {
+        "name": "trust_hidden",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "trust",
+        "live_counter": "hidden"
+      },
+      {
+        "name": "skeptic_hidden",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "skeptic",
+        "live_counter": "hidden"
+      },
+      {
+        "name": "trust_single",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "trust",
+        "live_counter": "single"
+      },
+      {
+        "name": "trust_full",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "trust",
+        "live_counter": "full"
+      }
+    ],
+    "mafia": [
+      {
+        "name": "ordinary",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent"
+      },
+      {
+        "name": "self_silent",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "selfkill",
+        "dead_mafia_message": "silent"
+      },
+      {
+        "name": "self_fake_hit",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "selfkill",
+        "dead_mafia_message": "fake_hit"
+      },
+      {
+        "name": "self_ally_clear",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "selfkill",
+        "dead_mafia_message": "ally_clear"
+      },
+      {
+        "name": "self_nonally_clear",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "selfkill",
+        "dead_mafia_message": "nonally_clear"
+      }
+    ]
+  },
+  "scope": "Paired dead-police declaration interventions plus a train/holdout restricted empirical self-kill credibility matrix; not full-game GTO or an unrestricted best response."
+}
