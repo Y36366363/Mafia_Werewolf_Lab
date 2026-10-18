@@ -1,0 +1,35 @@
+{
+  "version": "20261018-position-nomination-v13",
+  "rules": {"police": 4, "mafia": 4, "civilians": 8, "last_words_limit": 3, "allow_self_kill": true, "tie_rule": "pass", "direction": 1},
+  "position_train": {"n": 1024, "seed_start": 121000000},
+  "position_holdout": {"n": 4096, "seed_start": 122000000},
+  "nomination_train": {"n": 1024, "seed_start": 123000000, "scan_limit": 500000},
+  "nomination_holdout": {"n": 4096, "seed_start": 124000000, "scan_limit": 500000},
+  "position_good": [
+    {"name": "inspect_random", "inspect_position": "random", "dead_clear_plan": "truth"},
+    {"name": "inspect_preempt", "inspect_position": "preempt", "dead_clear_plan": "truth"},
+    {"name": "inspect_reply", "inspect_position": "reply", "dead_clear_plan": "truth"},
+    {"name": "inspect_gap", "inspect_position": "gap", "dead_clear_plan": "truth"}
+  ],
+  "position_mafia": [
+    {"name": "kill_random", "kill_position": "random", "shortlist_response": "random"},
+    {"name": "kill_first", "kill_position": "first", "shortlist_response": "random"},
+    {"name": "kill_frontload", "kill_position": "frontload", "shortlist_response": "random"},
+    {"name": "kill_bookend", "kill_position": "bookend", "shortlist_response": "random"}
+  ],
+  "nomination_good": [
+    {"name": "clear_pass", "inspect_position": "gap", "dead_clear_plan": "pass"},
+    {"name": "true_clear", "inspect_position": "gap", "dead_clear_plan": "truth"},
+    {"name": "short1_clean", "inspect_position": "gap", "dead_clear_plan": "short1"},
+    {"name": "short3_clean", "inspect_position": "gap", "dead_clear_plan": "short3"},
+    {"name": "short3_police_decoy_remove", "inspect_position": "gap", "dead_clear_plan": "decoy_remove"},
+    {"name": "short3_clear_remove", "inspect_position": "gap", "dead_clear_plan": "clear_remove"}
+  ],
+  "nomination_mafia": [
+    {"name": "response_random", "kill_position": "frontload", "shortlist_response": "random"},
+    {"name": "response_omitted", "kill_position": "frontload", "shortlist_response": "omitted"},
+    {"name": "response_removed", "kill_position": "frontload", "shortlist_response": "removed"},
+    {"name": "response_listed", "kill_position": "frontload", "shortlist_response": "listed"}
+  ],
+  "scope": "4P4M8C fixed-policy position matrix plus a conditional dead-police/check-clear internal-nomination matrix with train/fresh-holdout evaluation; finite empirical restricted equilibria, not full-game GTO or unrestricted best responses."
+}

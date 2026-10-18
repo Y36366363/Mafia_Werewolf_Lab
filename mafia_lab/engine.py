@@ -56,6 +56,11 @@ class Message:
     verdict: bool | None = None
     context: str = "day"
     day: int = 0
+    # A shortlist is a public ordered tuple.  Its optional ``target`` is the
+    # seat explicitly removed/protected by the speaker before voting.  The
+    # field is appended so archived positional Message constructors retain
+    # their meaning.
+    targets: tuple[int, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -253,7 +258,9 @@ def add_message(state: State, message: Message) -> State:
     _seat(state, message.speaker)
     if message.day != state.day:
         raise ValueError("message day does not match state")
-    if message.kind not in ("pass", "civilian", "police", "report", "accuse", "nominate"):
+    if message.kind not in (
+        "pass", "civilian", "police", "report", "accuse", "nominate", "shortlist"
+    ):
         raise ValueError("unknown message template")
     if message.context not in ("day", "last_words", "pk"):
         raise ValueError("unknown message context")
@@ -269,6 +276,12 @@ def add_message(state: State, message: Message) -> State:
             raise ValueError("ordinary speech cannot interrupt pending PK")
     if message.target is not None:
         _seat(state, message.target)
+    if type(message.targets) is not tuple:
+        raise ValueError("message targets must be a tuple")
+    for target in message.targets:
+        _seat(state, target)
+    if len(set(message.targets)) != len(message.targets):
+        raise ValueError("shortlist targets must be unique")
     if message.kind in ("report", "accuse", "nominate") and message.target is None:
         raise ValueError("this template needs a target")
     if message.kind == "report":
@@ -278,6 +291,15 @@ def add_message(state: State, message: Message) -> State:
         raise ValueError("only report messages carry verdicts")
     if message.kind in ("pass", "civilian", "police") and message.target is not None:
         raise ValueError("this template has no target")
+    if message.kind == "shortlist":
+        if not 1 <= len(message.targets) <= 3:
+            raise ValueError("shortlist needs one to three targets")
+        if message.target is not None and message.target not in message.targets:
+            raise ValueError("removed shortlist target must be listed")
+        if message.speaker in message.targets:
+            raise ValueError("speaker cannot shortlist themselves")
+    elif message.targets:
+        raise ValueError("only shortlist messages carry multiple targets")
     return replace(state, messages=state.messages + (message,))
 
 
