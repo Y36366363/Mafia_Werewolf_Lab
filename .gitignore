@@ -2,3 +2,10 @@ __pycache__/
 *.pyc
 .venv/
 *.egg-info/
+
+# Personal academic goals, application plans, and future-work notes stay local.
+/local_planning/
+/docs/academic_*.md
+/docs/*roadmap*.md
+/research/academic_*.md
+/research/*roadmap*.md
