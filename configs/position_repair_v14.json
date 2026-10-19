@@ -1,0 +1,30 @@
+{
+  "version": "20261019-position-repair-v14",
+  "rules": {"police": 4, "mafia": 4, "civilians": 8, "last_words_limit": 3, "allow_self_kill": true, "tie_rule": "pass", "direction": 1},
+  "train": {"n": 1024, "seed_start": 128000000},
+  "holdout": {"n": 4096, "seed_start": 129000000},
+  "good": [
+    {"name": "inspect_random", "inspect_position": "random", "dead_clear_plan": "truth"},
+    {"name": "inspect_preempt", "inspect_position": "preempt", "dead_clear_plan": "truth"},
+    {"name": "inspect_reply", "inspect_position": "reply", "dead_clear_plan": "truth"},
+    {"name": "inspect_gap", "inspect_position": "gap", "dead_clear_plan": "truth"}
+  ],
+  "mafia": [
+    {"name": "kill_random", "geometry": "random"},
+    {"name": "safe_front", "geometry": "safe_front"},
+    {"name": "safe_middle", "geometry": "safe_middle"},
+    {"name": "safe_late", "geometry": "safe_late"},
+    {"name": "safe_sandwich", "geometry": "safe_sandwich"},
+    {"name": "safe_balanced", "geometry": "safe_balanced"},
+    {"name": "safe_mix", "geometry": "safe_mix"}
+  ],
+  "primary_contrasts": [
+    ["safe_front_minus_random", "kill_random", "safe_front"],
+    ["safe_middle_minus_random", "kill_random", "safe_middle"],
+    ["safe_late_minus_random", "kill_random", "safe_late"],
+    ["safe_sandwich_minus_random", "kill_random", "safe_sandwich"],
+    ["safe_balanced_minus_random", "kill_random", "safe_balanced"],
+    ["safe_mix_minus_random", "kill_random", "safe_mix"]
+  ],
+  "scope": "4P4M8C root fixed-policy position-kill repair matrix with frozen train and fresh holdout; public-order geometry only, finite empirical restricted equilibrium, not full-game GTO or unrestricted best response."
+}
