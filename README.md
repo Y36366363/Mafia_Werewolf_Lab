@@ -2,7 +2,7 @@
 
 研究隐藏身份游戏中的策略与均衡，建立可验证的教学任务，最终检验推理训练向德州扑克的迁移。当前实现警匪游戏；狼人杀技能尚未加入。
 
-**2026-10-18最新更新：** [v13位置与内推完整方法及结果报告](docs/position_nomination_results_v13.md)：位置矩阵发现匪徒抢首发会被当前公共归票规则反制；独立修复验证显示死警单人干净内推提高首日出匪并排除误出警，而确定性“警察入表后摘出”会被刀摘出位完全利用。两阶段共327,680次完整执行，188项测试、384局归档抽样重放通过。结论均为固定候选池和条件分支结果，不是完整游戏GTO。
+**2026-10-19最新更新：** [v14位置刀修复完整方法及结果报告](docs/position_repair_results_v14.md)：不暴露首位匪徒的安全位置刀在全部验人行均优于随机刀；最大空隙验人下，安全末段刀把好人胜率从5.91%降到1.15%，主要机制是把公共首位锚点系统性转移给非匪，而非提高首刀中警。143,360次完整执行、195项测试及168局归档抽样重放通过。冻结训练混合的留出gap为0.579个百分点，结论是有限策略池证据，不是完整游戏GTO。
 
 **已实现可运行裁判、观察权限、完整对局、小模型精确求解、16人固定策略实验和反制评估。完整16人GTO与人类教学效果尚未得到验证。**
 
@@ -71,6 +71,7 @@ python3 scripts/build_equilibrium_report_v10.py
 | 16人多区块复验与自然开局 | 四组外层复验、公开重复提名追踪/诱饵、同窗口目标覆盖控制 | 三折选择和自然开局留出；机制拆分与候选池反制，非完整GTO |
 | 16人公共协调与受限混合 | 好人公共协议、三类匪方专门回应、7×13经验矩阵精确解 | 冻结混合独立留出；有限候选受限均衡，非完整GTO |
 | 16人位置验刀与死警内推 | 4×4位置矩阵、6×4条件内推矩阵、警察/金水摘出及匪方位置回应 | 新seed修复混杂并独立留出；条件受限均衡，非完整GTO |
+| 16人安全位置刀 | 首位非匪约束下的前段、中段、末段、包夹、均衡与混合刀法 | 4×7根节点矩阵和冻结留出；位置机制修复，非完整GTO |
 | 机制比较 | PK、3/4遗言、方向、近远验人、位置刀、自刀 | 固定策略下的开局胜率比较 |
 
 用户确认：匪胜条件为警察全灭；好人胜以匪全灭建模；夜晚共同验一人；不翻身份；允许自刀和假跳警。首夜被刀警察得到当夜验人。遗言包含夜死和白天放逐、前三次死亡可说；四次作为对照。发言从最近死者旁开始；左右固定方向均支持。基线同时投票、唯一最高票出局；PK变体对平票者再发言和复投，仍平则无人出局。
@@ -89,6 +90,7 @@ python3 scripts/build_equilibrium_report_v10.py
 - [v06冻结协议](docs/local_pool_protocol_v06.md)、[配置](configs/local_pool_v06.json)、[结果清单](results/v06/manifest.json)、[独立核验](results/v06_integrity_audit.json)：126个矩阵单元、21个时点单元、2,304个固定首夜状态与147局归档重放通过。
 - [v12首夜死亡声明与自刀可信度报告](docs/declaration_results_v12.md)、[冻结协议](docs/declaration_protocol_v12.md)、[配置](configs/declaration_v12.json)、[审计](results/v12_integrity_audit.json)：死警遗言配对干预、4×5自刀可信度训练／留出矩阵及冻结混合评价；不是完整游戏GTO。
 - [v13位置与内推完整报告](docs/position_nomination_results_v13.md)、[位置冻结协议](docs/position_nomination_protocol_v13.md)、[内推修复协议](docs/nomination_followup_protocol_v13b.md)、[v13审计](results/v13_integrity_audit.json)、[v13b审计](results/v13b_integrity_audit.json)：位置化验刀、死警内推、确定性警察诱饵泄漏及独立seed修复验证。
+- [v14安全位置刀完整报告](docs/position_repair_results_v14.md)、[冻结协议](docs/position_repair_protocol_v14.md)、[配置](configs/position_repair_v14.json)、[审计](results/v14_integrity_audit.json)：修复匪首发暴露，比较前中后段控制与随机刀，并报告冻结混合的独立留出上下界。
 - [v05最新实验报告](docs/refinement_results_v05.md)：反制循环、角色拆分、首夜条件分支、全16人规则敏感性与受限矩阵混合解。
 - [v05冻结协议](docs/refinement_protocol_v05.md)、[配置](configs/refinement_v05.json)、[结果清单](results/v05/manifest.json)、[独立核验](results/v05_integrity_audit.json)：170个实验单元、680个条件摘要、142项配对统计及340局归档重放通过。
 - [v04最新实验报告](docs/large_game_results_v04.md)：完整矩阵、反制链、掩护/混合/票型效果、保留决策与规则敏感性。

@@ -1,0 +1,160 @@
+{
+  "version": "20261019-position-repair-v14",
+  "source_sha256": "909a4d7f9bf412d12f1456d0fc9f873c14bdc176cda85f9b9ef9657200ffa8bd",
+  "source_assets": {
+    "source/config.json": "30f9559424635d95c2d635fba0a5a30f8c0d5bfeceac6937559e68ceca978144",
+    "source/docs/position_repair_protocol_v14.md": "c9a22b93de7a12d26b5d493dae5d0a3b86a6053fd1906728051f1184ff0ca3ea",
+    "source/mafia_lab/simulation.py": "4ef0fd94a2834675420446276e8b6b42be733c0edf98f8d39d497ea8aa3f85e7",
+    "source/mafia_lab/tiny.py": "8990b6867ebcacba58ddf24b2747a1e4e4f45955b1f45abbd7b4515ca30c432d",
+    "source/mafia_lab/mechanism_experiment_v11.py": "e4dce2f58ea668a7b979d8fb94bdc9f17dac61b9115f0b0bbf697e6c0830a177",
+    "source/mafia_lab/large_experiment.py": "e631a487d85adfd32f246fff95ee17f7c17096b6184ed45804c08b9c003dc191",
+    "source/mafia_lab/strategies_v08.py": "ef0b082e841a224c595df569cd45ddb9dc64eeb0f8f0fb6cea063d96a5d8ce93",
+    "source/mafia_lab/strategies_v09.py": "f180ff9779c0b7e9e4c91761f0d1cb884aaaef4f701514b025bd4d740689392e",
+    "source/mafia_lab/position_nomination_experiment_v13.py": "502b1c49ce7cee4591b65f6c090465104b93703e0f476cedcec6061fd7e779f8",
+    "source/mafia_lab/equilibrium_experiment.py": "8f34053d0a09dd2ba6ccb6c7a7bbc035842f62897f1bd78815cb4b0ec466dcad",
+    "source/mafia_lab/strategies_v06.py": "922dd39843ce740bb7e3856af6967b2c9719540580eb19b0e0c9e795aec89c97",
+    "source/mafia_lab/strategies_v12.py": "fce3a92ebc87bf003034145efa6a68fec59dbdc8829bd047a44f61fad4ac551f",
+    "source/mafia_lab/replication_experiment.py": "2aeb2c826415a2ed87429fca73b682a548872027eec3ee313d09644fbb2e194e",
+    "source/mafia_lab/strategies_v13.py": "0476573bda4965dc530e37184a7725d370b9acac1b0f4a4e50b5135db4bcbc2d",
+    "source/mafia_lab/__init__.py": "163e9f77922cd89a4f1ec0d1adfd8df0798fe36b8ebfc68f90d58110443aa7e7",
+    "source/mafia_lab/local_pool_experiment.py": "43880e6d529ef41fb3729bb029a51ef3d74e5c3e164e99ecfb3e0fff122b1682",
+    "source/mafia_lab/strategies_v07.py": "e4ff8fe0aa16150293fb27706370fbc562c83f8d42dc99ffdb4e0378fb214b80",
+    "source/mafia_lab/adaptive_experiment.py": "5a2f149043e7a93f960ded05130bcfaacfcbf74aa0ab898b2a03a9b04688baaa",
+    "source/mafia_lab/strategies_v10.py": "6c353e30007dcd60e3088abfacffec68f2b7de9c26ede029aaf0198c87adcded",
+    "source/mafia_lab/declaration_experiment_v12.py": "b0e7b76d7713efa2083548b1263583a0c34ef28086480a98bbf8793f599dd2e0",
+    "source/mafia_lab/strategies_v14.py": "797242f63e18d733735afacbd990825b1a613686703e5836fab32614ba60f7d8",
+    "source/mafia_lab/engine.py": "6b4dcaac8568e5a7d0acd4fa9089e67527d7ab019a294eaaffe92a571de97838",
+    "source/mafia_lab/experiments.py": "e8331a7b766e7bc9b1e663fae7c62a6f262654645764976781805986d4b5b9f9",
+    "source/mafia_lab/strategies_v04.py": "6fa39a2df7f2c72aee65aabb279b01f82e3df7d8d5f5f44cf7353127a484623a",
+    "source/mafia_lab/refinement_experiment.py": "9daf616559622ccf08965aaae6deb754a7d01c000b573e5af9f9b0a9f145a56d",
+    "source/mafia_lab/strategies_v05.py": "0dea71c3617d94329926e92592796a4b8016e5afaba967af179823a13788bff8",
+    "source/mafia_lab/strategies_v11.py": "a8fab6862103c84c302cf8ec2b7e2e35e343b89cc58268e4fc3dd4dc7aad2e07",
+    "source/mafia_lab/statistics.py": "c215b025b8a16ed214608c70a1cb48c2a5b8d6665f909f7b32a0e8c36d0b460a",
+    "source/mafia_lab/position_repair_experiment_v14.py": "c09eefd824e1be8345abc467a9ab6f9395a745147797170be9621617cd2a1066",
+    "source/mafia_lab/policies.py": "8e72e63b0578730de46840e1f2da2d0e4278cc6eb1ed6f026de5172c0923037c",
+    "source/mafia_lab/crossfit_experiment.py": "a19d8787f9b67e45249c053eb29230697a36c9fdb18924d0d9818356ab363304",
+    "source/mafia_lab/__main__.py": "80d349b3e5e19225221de67b14a98e6fda33bebf22cc62b22769f505b33678e4",
+    "source/mafia_lab/nomination_followup_experiment_v13b.py": "ce91353cadfcfbfe72e73d3bef610a808ea9d4ecfa6bac45f0a8581364197ba0",
+    "source/configs/position_repair_v14.json": "92b4b5751338e146b4521a1a6b7c0f9ff066e36c1ce13b36bda156a89e386900",
+    "source/scripts/verify_position_repair_v14.py": "000175448fa23bc86e1f67b85441dcd97aa9a23cc38477691a50a59c5c32ce27",
+    "source/scripts/run_position_repair_v14.py": "59005037b6add2fa4e9e2ce662cdb5fc646fd88be363d3ece9cdadf340ff686e"
+  },
+  "expanded": {
+    "good": [
+      {
+        "name": "inspect_random",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "trust",
+        "live_counter": "hidden",
+        "inspect_position": "random",
+        "dead_clear_plan": "truth"
+      },
+      {
+        "name": "inspect_preempt",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "trust",
+        "live_counter": "hidden",
+        "inspect_position": "preempt",
+        "dead_clear_plan": "truth"
+      },
+      {
+        "name": "inspect_reply",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "trust",
+        "live_counter": "hidden",
+        "inspect_position": "reply",
+        "dead_clear_plan": "truth"
+      },
+      {
+        "name": "inspect_gap",
+        "reveal": "silent",
+        "trust": "none",
+        "civilian_message": "pass",
+        "inspect": "random",
+        "dead_police_message": "truth",
+        "dead_claim_response": "trust",
+        "live_counter": "hidden",
+        "inspect_position": "gap",
+        "dead_clear_plan": "truth"
+      }
+    ],
+    "mafia": [
+      {
+        "name": "kill_random",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "geometry": "random"
+      },
+      {
+        "name": "safe_front",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "geometry": "safe_front"
+      },
+      {
+        "name": "safe_middle",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "geometry": "safe_middle"
+      },
+      {
+        "name": "safe_late",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "geometry": "safe_late"
+      },
+      {
+        "name": "safe_sandwich",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "geometry": "safe_sandwich"
+      },
+      {
+        "name": "safe_balanced",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "geometry": "safe_balanced"
+      },
+      {
+        "name": "safe_mix",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "geometry": "safe_mix"
+      }
+    ]
+  },
+  "scope": "4P4M8C root fixed-policy position-kill repair matrix with frozen train and fresh holdout; public-order geometry only, finite empirical restricted equilibrium, not full-game GTO or unrestricted best response."
+}

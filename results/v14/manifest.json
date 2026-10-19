@@ -1,0 +1,13 @@
+{
+  "version": "20261019-position-repair-v14",
+  "source_sha256": "909a4d7f9bf412d12f1456d0fc9f873c14bdc176cda85f9b9ef9657200ffa8bd",
+  "elapsed_seconds": 197.59475883300001,
+  "games": 143360,
+  "files": {
+    "freeze_before_evaluation.json": "975f33f942893319b4df62c2b83ba871acec4ea716d78aad928d9296e26442ad",
+    "train.json": "a69b8fb510075d1e1e539669c0ed5a65ef580d1bbbb52f8bc4adec2f8a1f0dab",
+    "selection_before_holdout.json": "173a6ef73f062a3d03d1de1dca9903f29b640c1a2836c8a70e2a156e86e54404",
+    "holdout.json": "6302b0b3d14b7fbef1a26e6be87d6f392c1d9750286169a6feb44991dd3f55e0"
+  },
+  "scope": "4P4M8C root fixed-policy position-kill repair matrix with frozen train and fresh holdout; public-order geometry only, finite empirical restricted equilibrium, not full-game GTO or unrestricted best response."
+}
