@@ -1,0 +1,34 @@
+{
+  "holdout_unread": true,
+  "train_solution": {
+    "value_exact": "29/1024",
+    "value": 0.0283203125,
+    "good_mixture": {
+      "nominate_position": "1"
+    },
+    "mafia_mixture": {
+      "safe_late": "1"
+    },
+    "lower_exact": "29/1024",
+    "upper_exact": "29/1024",
+    "gap_exact": "0",
+    "simplex_pivots": 4
+  },
+  "candidate_pool_frozen": {
+    "good": [
+      "hidden_naive",
+      "report_only",
+      "nominate_naive",
+      "nominate_position",
+      "pk_naive",
+      "pk_position"
+    ],
+    "mafia": [
+      "kill_random",
+      "safe_middle",
+      "safe_late",
+      "safe_mix"
+    ]
+  },
+  "scope": "Finite empirical train matrix only."
+}

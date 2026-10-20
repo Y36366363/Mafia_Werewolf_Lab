@@ -86,6 +86,21 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
         last_words(first_last_words if state.day == 1 else None)
         for player in speech_order(state):
             speak(player, "day")
+        # Some versioned decision APIs expose a public post-speech final call.
+        # Every live player is asked from their own Observation; the referee
+        # does not select a faction or reveal a hidden role to the policy.
+        if hasattr(decision_api, "final_call"):
+            for player in speech_order(state):
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                msg = decision_api.final_call(
+                    obs, policy,
+                    decision_rng(seed, state.day, "final_call", player),
+                )
+                if msg is not None:
+                    state = add_message(state, msg)
+                    if trace:
+                        record("final_call", asdict(msg))
         # Simultaneous mode publishes only the complete result.  In the optional
         # public mode, choices are irrevocably published in speech order.
         ballots = {}

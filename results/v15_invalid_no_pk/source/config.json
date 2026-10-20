@@ -1,0 +1,130 @@
+{
+  "version": "20261020-living-police-leadership-v15",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "confirmation_rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pass",
+    "direction": 1
+  },
+  "train": {
+    "n": 1024,
+    "seed_start": 130000000
+  },
+  "holdout": {
+    "n": 4096,
+    "seed_start": 131000000
+  },
+  "confirmation": {
+    "n": 8192,
+    "seed_start": 132000000
+  },
+  "confirmation_good": [
+    {
+      "name": "hidden_naive",
+      "leadership": "hidden",
+      "position_model": "naive"
+    }
+  ],
+  "good": [
+    {
+      "name": "hidden_naive",
+      "leadership": "hidden",
+      "position_model": "naive"
+    },
+    {
+      "name": "report_only",
+      "leadership": "report",
+      "position_model": "naive"
+    },
+    {
+      "name": "nominate_naive",
+      "leadership": "nominate",
+      "position_model": "naive"
+    },
+    {
+      "name": "nominate_position",
+      "leadership": "nominate",
+      "position_model": "posterior"
+    },
+    {
+      "name": "pk_naive",
+      "leadership": "pk",
+      "position_model": "naive"
+    },
+    {
+      "name": "pk_position",
+      "leadership": "pk",
+      "position_model": "posterior"
+    }
+  ],
+  "mafia": [
+    {
+      "name": "kill_random",
+      "geometry": "random"
+    },
+    {
+      "name": "safe_middle",
+      "geometry": "safe_middle"
+    },
+    {
+      "name": "safe_late",
+      "geometry": "safe_late"
+    },
+    {
+      "name": "safe_mix",
+      "geometry": "safe_mix"
+    }
+  ],
+  "contrast_mafia": [
+    "kill_random",
+    "safe_middle",
+    "safe_late",
+    "safe_mix"
+  ],
+  "primary_contrasts": [
+    [
+      "report_minus_hidden",
+      "hidden_naive",
+      "report_only"
+    ],
+    [
+      "naive_nomination_minus_report",
+      "report_only",
+      "nominate_naive"
+    ],
+    [
+      "position_nomination_minus_naive",
+      "nominate_naive",
+      "nominate_position"
+    ],
+    [
+      "naive_pk_minus_nomination",
+      "nominate_naive",
+      "pk_naive"
+    ],
+    [
+      "position_pk_minus_naive_pk",
+      "pk_naive",
+      "pk_position"
+    ]
+  ],
+  "v14_reference": {
+    "kill_random": "121/2048",
+    "safe_middle": "13/512",
+    "safe_late": "47/4096",
+    "safe_mix": "79/2048"
+  },
+  "scope": "4P4M8C fixed-policy living-police leadership, post-speech nomination, one-round PK, and legal position-posterior ablation with frozen train/fresh holdout; plus an independent fixed-policy v14 kill replication. Finite empirical restricted analysis, not full-game GTO."
+}

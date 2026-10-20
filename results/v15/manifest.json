@@ -1,0 +1,14 @@
+{
+  "version": "20261020-living-police-leadership-v15-pk-repair",
+  "source_sha256": "7fd31b3dd5f3a9c65c193e28edb37a9f752f491d1713116dec98aeaf96e1918f",
+  "elapsed_seconds": 166.23764787500113,
+  "games": 155648,
+  "files": {
+    "freeze_before_evaluation.json": "605ac90e29791add72dbc071dfddad5535eeeb020a784d18564c82cc921a47fe",
+    "train.json": "33fa3e42acc4e2c7d23c241c0052e78a954907c6b77b52a1a2b52f8843ebf0ee",
+    "selection_before_holdout.json": "d60834949f3790f5fc2a647db2d585487370aed274ca038a79de88848e46c2b4",
+    "holdout.json": "ac86f362f30460f66d4a23df0248a4e951225f95a40a002b744d12cd683c4038",
+    "confirmation.json": "41c9a1f2c154df9715794280e53ae979d571ea5dbf798deb038ac0dc39a69637"
+  },
+  "scope": "4P4M8C fixed-policy living-police leadership, post-speech nomination, one-round PK, and legal position-posterior ablation with frozen train/fresh holdout; plus an independent fixed-policy v14 kill replication. Finite empirical restricted analysis, not full-game GTO."
+}
