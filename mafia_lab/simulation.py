@@ -101,6 +101,33 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
                     state = add_message(state, msg)
                     if trace:
                         record("final_call", asdict(msg))
+        # A versioned strategy may use the shortlist for a public, non-binding
+        # preference round and then publish exactly one binding nomination.
+        # These hooks are optional and receive only each actor's Observation.
+        if hasattr(decision_api, "preference"):
+            for player in speech_order(state):
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                msg = decision_api.preference(
+                    obs, policy,
+                    decision_rng(seed, state.day, "preference", player),
+                )
+                if msg is not None:
+                    state = add_message(state, msg)
+                    if trace:
+                        record("preference", asdict(msg))
+        if hasattr(decision_api, "final_selection"):
+            for player in speech_order(state):
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                msg = decision_api.final_selection(
+                    obs, policy,
+                    decision_rng(seed, state.day, "final_selection", player),
+                )
+                if msg is not None:
+                    state = add_message(state, msg)
+                    if trace:
+                        record("final_selection", asdict(msg))
         # Simultaneous mode publishes only the complete result.  In the optional
         # public mode, choices are irrevocably published in speech order.
         ballots = {}

@@ -1,0 +1,14 @@
+{
+  "version": "20261021-robust-shortlist-v16",
+  "source_sha256": "073b60346ca63a111d46a1ff226d32645a1d3fb399b07d431a18002b23afbae4",
+  "elapsed_seconds": 829.4789516659948,
+  "games": 180224,
+  "files": {
+    "freeze_before_evaluation.json": "cae384d8d32330e6c15280c418ee41514e13ace9a5fe43b478280f8b71d0aa53",
+    "train.json": "376ea06457302448f5682fdff59dd246fba68e1c613e5699d03985529f358ef0",
+    "selection_before_holdout.json": "405df5031ad971849c73df06f7342a5c1f86bd143655add46cd292b56bb05c16",
+    "holdout.json": "927871ce859298ffa1a9b7892626b6b8b8524ac6c640e35bd0df5d46780e1cd6",
+    "calibration.json": "087ba54ef71f4ab17b84e9c6a7c67313bd92c8bebff4ed1118ba6932d497ef09"
+  },
+  "scope": "4P4M8C fixed-policy maximin position-belief and one-to-three shortlist experiment with a public non-binding preference round and one final nomination. Random kill is calibration only; finite empirical restricted analysis, not full-game GTO."
+}

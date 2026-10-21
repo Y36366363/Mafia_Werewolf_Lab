@@ -1,0 +1,25 @@
+{
+  "version": "20261021-robust-shortlist-v16",
+  "rules": {"police": 4, "mafia": 4, "civilians": 8, "last_words_limit": 3, "allow_self_kill": true, "tie_rule": "pass", "direction": 1},
+  "train": {"n": 1024, "seed_start": 136000000},
+  "holdout": {"n": 4096, "seed_start": 137000000},
+  "calibration": {"n": 2048, "seed_start": 138000000},
+  "good": [
+    {"name": "equal_hard1", "prior_model": "equal", "shortlist_rule": "hard1"},
+    {"name": "equal_list2", "prior_model": "equal", "shortlist_rule": "list2"},
+    {"name": "equal_list3", "prior_model": "equal", "shortlist_rule": "list3"},
+    {"name": "equal_adaptive", "prior_model": "equal", "shortlist_rule": "adaptive"},
+    {"name": "robust_hard1", "prior_model": "robust", "shortlist_rule": "hard1"},
+    {"name": "robust_list2", "prior_model": "robust", "shortlist_rule": "list2"},
+    {"name": "robust_list3", "prior_model": "robust", "shortlist_rule": "list3"},
+    {"name": "robust_adaptive", "prior_model": "robust", "shortlist_rule": "adaptive"}
+  ],
+  "mafia": [
+    {"name": "safe_middle", "kill_mode": "safe_middle"},
+    {"name": "safe_late", "kill_mode": "safe_late"},
+    {"name": "middle_late_mix", "kill_mode": "middle_late_mix"},
+    {"name": "posterior_decoy", "kill_mode": "posterior_decoy"}
+  ],
+  "calibration_mafia": {"name": "kill_random", "kill_mode": "random"},
+  "scope": "4P4M8C fixed-policy maximin position-belief and one-to-three shortlist experiment with a public non-binding preference round and one final nomination. Random kill is calibration only; finite empirical restricted analysis, not full-game GTO."
+}

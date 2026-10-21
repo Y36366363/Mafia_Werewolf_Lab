@@ -1,0 +1,14 @@
+{
+  "version": "20261021-robust-shortlist-v16-decoy-repair",
+  "source_sha256": "2de2ea8d2bafbd68367cffdb0194f211e0da144e33754b50d70eeee5f2a5ccf1",
+  "elapsed_seconds": 764.418350915992,
+  "games": 180224,
+  "files": {
+    "freeze_before_evaluation.json": "36805de933dd6e319dc4632ecf6d82f744c7778c53ca698552e290b49c206496",
+    "train.json": "8b29e8232ad93f5bc5f8b25b1d8649a067f42ff6e309cf67aeb7e4ee8f42c3d8",
+    "selection_before_holdout.json": "d34b35ff314d845927c6daf7b5732eed6baf16270c065d130d1f18f516acb864",
+    "holdout.json": "1c29670609cbd9ea7b60d615e61e8d538553b688132a211a7c51d5725dc5f707",
+    "calibration.json": "e93d81836930ead080bfc025fa54beeaeae0e8fef39cccf7ec877ccf49412587"
+  },
+  "scope": "4P4M8C fixed-policy maximin position-belief and one-to-three shortlist experiment with a public non-binding preference round and one final nomination. Random kill is calibration only; finite empirical restricted analysis, not full-game GTO."
+}
