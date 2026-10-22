@@ -1,0 +1,110 @@
+{
+  "version": "20261022-timed-nomination-v17",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "train": {
+    "n": 1024,
+    "seed_start": 145000000
+  },
+  "holdout": {
+    "n": 4096,
+    "seed_start": 146000000
+  },
+  "calibration": {
+    "n": 1024,
+    "seed_start": 147000000
+  },
+  "good": [
+    {
+      "name": "legacy1",
+      "flow": "legacy",
+      "shortlist_rule": "hard1",
+      "prior_model": "equal",
+      "source_credit": false,
+      "history": false
+    },
+    {
+      "name": "legacy2",
+      "flow": "legacy",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": false,
+      "history": false
+    },
+    {
+      "name": "timed1",
+      "flow": "timed",
+      "shortlist_rule": "hard1",
+      "prior_model": "equal",
+      "source_credit": false,
+      "history": false
+    },
+    {
+      "name": "timed2",
+      "flow": "timed",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": false,
+      "history": false
+    },
+    {
+      "name": "timed3",
+      "flow": "timed",
+      "shortlist_rule": "list3",
+      "prior_model": "equal",
+      "source_credit": false,
+      "history": false
+    },
+    {
+      "name": "credit2",
+      "flow": "timed",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": true,
+      "history": false
+    },
+    {
+      "name": "history2",
+      "flow": "timed",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": true,
+      "history": true
+    }
+  ],
+  "mafia": [
+    {
+      "name": "safe_late_quiet",
+      "kill_mode": "safe_late",
+      "response": "quiet"
+    },
+    {
+      "name": "safe_late_counter",
+      "kill_mode": "safe_late",
+      "response": "counter"
+    },
+    {
+      "name": "posterior_decoy_quiet",
+      "kill_mode": "posterior_decoy",
+      "response": "quiet"
+    },
+    {
+      "name": "posterior_decoy_counter",
+      "kill_mode": "posterior_decoy",
+      "response": "counter"
+    }
+  ],
+  "calibration_mafia": {
+    "name": "kill_random",
+    "kill_mode": "random",
+    "response": "counter"
+  },
+  "scope": "4P4M8C timed non-binding nomination and public credibility/history heuristic ablations; finite fixed policy evaluation, restricted empirical matrix; not GTO."
+}

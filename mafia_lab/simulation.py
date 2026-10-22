@@ -86,6 +86,15 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
         last_words(first_last_words if state.day == 1 else None)
         for player in speech_order(state):
             speak(player, "day")
+            if hasattr(decision_api, "after_speech") and decision_api.turn_extensions(good):
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                msg = decision_api.after_speech(obs, policy,
+                    decision_rng(seed, state.day, "after_speech", player))
+                if msg is not None:
+                    state = add_message(state, msg)
+                    if trace:
+                        record("speech_extension", asdict(msg))
         # Some versioned decision APIs expose a public post-speech final call.
         # Every live player is asked from their own Observation; the referee
         # does not select a faction or reveal a hidden role to the policy.
@@ -104,7 +113,8 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
         # A versioned strategy may use the shortlist for a public, non-binding
         # preference round and then publish exactly one binding nomination.
         # These hooks are optional and receive only each actor's Observation.
-        if hasattr(decision_api, "preference"):
+        if hasattr(decision_api, "preference") and (
+                not hasattr(decision_api, "post_preferences") or decision_api.post_preferences(good)):
             for player in speech_order(state):
                 obs = observe(state, player)
                 policy = mafia if obs.role == Role.MAFIA else good

@@ -1,0 +1,37 @@
+{
+  "holdout_unread": true,
+  "train_solution": {
+    "value_exact": "5/512",
+    "value": 0.009765625,
+    "good_mixture": {
+      "credit2": "1"
+    },
+    "mafia_mixture": {
+      "posterior_decoy_quiet": "5/26",
+      "posterior_decoy_counter": "21/26"
+    },
+    "lower_exact": "5/512",
+    "upper_exact": "5/512",
+    "gap_exact": "0",
+    "simplex_pivots": 4
+  },
+  "candidate_pool_frozen": {
+    "good": [
+      "legacy1",
+      "legacy2",
+      "timed1",
+      "timed2",
+      "timed3",
+      "credit2",
+      "history2"
+    ],
+    "mafia": [
+      "safe_late_quiet",
+      "safe_late_counter",
+      "posterior_decoy_quiet",
+      "posterior_decoy_counter"
+    ]
+  },
+  "random_kill_role": "calibration only",
+  "scope": "Finite empirical train matrix only."
+}

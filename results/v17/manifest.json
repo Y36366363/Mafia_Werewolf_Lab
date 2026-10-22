@@ -1,0 +1,14 @@
+{
+  "version": "20261022-timed-nomination-v17",
+  "source_sha256": "5a56bca67422eb9827c5381f545bae190b1d04673e372e30c1a168bad424d2ee",
+  "elapsed_seconds": 333.201740125005,
+  "games": 150528,
+  "files": {
+    "freeze_before_evaluation.json": "eed77b8efcf43be3e1c42c3440f953d1f407eccd1e3b98e77686c8c2c2cfc65d",
+    "train.json": "f92b55fb5c8af0bd9d84c8a773891de771e6271d4749df16f50fe68530adaaef",
+    "selection_before_holdout.json": "03041c933dcd6ab4927f93fff6f6b896b561e28580aae7b10312f51844d5da7d",
+    "holdout.json": "c1c8874c77f2531a735e9510fd5a18bf1f148b58f81fecc2f48ea0c7a7022dd7",
+    "calibration.json": "b1f379f29cce93a9b56edc951764dd7980a154f43872ab6e89aff4b4b4176785"
+  },
+  "scope": "4P4M8C timed non-binding nomination and public credibility/history heuristic ablations; finite fixed policy evaluation, restricted empirical matrix; not GTO."
+}
