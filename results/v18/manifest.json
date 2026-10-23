@@ -1,0 +1,14 @@
+{
+  "version": "20261023-police-response-v18",
+  "source_sha256": "8e3ea422921030bb96be131c6ea84e1636a3ed9a0dc75e1db8051d275f34f4d1",
+  "elapsed_seconds": 850.9268150410207,
+  "games": 158720,
+  "files": {
+    "freeze_before_evaluation.json": "5f3ba81ace19159ff4283a38926c63cade21d0044060a7b532dbd9c0e4a4385f",
+    "train.json": "2a9a572d259feffa092179baaab7727f4769f18ae60881c23125c14af9293ced",
+    "selection_before_holdout.json": "be0e99a1a8e7265f8ba7dfee070f4afe0a422e5cd986b38fc28d111f6af6d7b1",
+    "holdout.json": "0baf8eb33fe68941af6b9ce054224c653c03807fabe33bbeb7bf660f44364518",
+    "calibration.json": "a26516647e97bf8964bc88b59899b5f39d660b9feac9b2527ba6a3cce5481109"
+  },
+  "scope": "4P4M8C actual-turn one-police counterclaim ablation and truthful-good clear-order constraints; exact combinatorial reference beliefs omit strategic speech likelihood; restricted empirical evaluation, not GTO."
+}

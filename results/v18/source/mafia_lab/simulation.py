@@ -1,0 +1,184 @@
+"""Complete-game runner with reproducible, decision-keyed randomness."""
+from dataclasses import asdict, dataclass
+from hashlib import sha256
+from random import Random
+from . import policies as default_decisions
+
+from .engine import (Role, Rules, State, add_message, deal, last_words_eligible,
+                     observe, publish_live_ballot, resolve_night, resolve_votes,
+                     speech_order, winner)
+from .policies import GoodPolicy, MafiaPolicy
+
+
+def decision_rng(seed: int, day: int, phase: str, actor: int = -1) -> Random:
+    key = f"{seed}/{day}/{phase}/{actor}".encode()
+    return Random(int.from_bytes(sha256(key).digest()[:8], "big"))
+
+
+@dataclass(frozen=True)
+class Outcome:
+    good_win: int
+    nights: int
+    deaths: int
+    first_death_role: str
+    first_check_mafia: bool
+    transcript: tuple[dict, ...] = ()
+
+
+def night(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
+          decision_api=default_decisions) -> State:
+    # Runner selects a faction representative using referee state. The policy
+    # gets only that representative's observation; no hidden labels are passed.
+    police = next(p for p in state.alive if state.roles[p] == Role.POLICE)
+    killer = next(p for p in state.alive if state.roles[p] == Role.MAFIA)
+    checked = decision_api.choose_inspection(observe(state, police), good,
+                                decision_rng(seed, state.day, "inspection"))
+    killed = decision_api.choose_kill(observe(state, killer), mafia,
+                         decision_rng(seed, state.day, "kill"))
+    # Both actions were chosen from the same pre-night state.
+    return resolve_night(state, killed, checked)
+
+
+def opening(rules: Rules, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
+            decision_api=default_decisions) -> State:
+    state = deal(rules, decision_rng(seed, 0, "deal"))
+    return night(state, good, mafia, seed, decision_api)
+
+
+def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
+                  first_last_words: str | None = None, trace: bool = False,
+                  decision_api=default_decisions, public_ballots: bool = False) -> Outcome:
+    """Resume just after a night; intervention applies ONLY first-night victim.
+
+    first_last_words is pass/water/report, not a referee role or branch label.
+    Experiment selection happens before this call and never enters policies.
+    """
+    if not state.deaths or state.day < 1:
+        raise ValueError("Continuation must start after a night")
+    first_role = state.roles[state.deaths[0].player].value
+    first_check = state.investigations[0].is_mafia
+    trace_rows = []
+
+    def record(event, payload):
+        if trace:
+            trace_rows.append({"day": state.day, "event": event, "payload": payload})
+
+    def speak(player, context, override=None):
+        nonlocal state
+        obs = observe(state, player)
+        policy = mafia if obs.role == Role.MAFIA else good
+        msg = decision_api.message(obs, policy, decision_rng(seed, state.day, context, player),
+                      context=context, override=override)
+        state = add_message(state, msg)
+        if trace:
+            record("message", asdict(msg))
+
+    def last_words(override=None):
+        victim = state.deaths[-1].player
+        if last_words_eligible(state, victim):
+            speak(victim, "last_words", override)
+
+    while winner(state) is None:
+        if state.day > len(state.roles):
+            # At least one mandatory night death: truncation would be a bug.
+            raise RuntimeError("Termination invariant violated")
+        record("night_death", {"victim": state.deaths[-1].player})
+        last_words(first_last_words if state.day == 1 else None)
+        for player in speech_order(state):
+            speak(player, "day")
+            if hasattr(decision_api, "after_speech") and decision_api.turn_extensions(good):
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                msg = decision_api.after_speech(obs, policy,
+                    decision_rng(seed, state.day, "after_speech", player))
+                if msg is not None:
+                    state = add_message(state, msg)
+                    if trace:
+                        record("speech_extension", asdict(msg))
+        # Some versioned decision APIs expose a public post-speech final call.
+        # Every live player is asked from their own Observation; the referee
+        # does not select a faction or reveal a hidden role to the policy.
+        if hasattr(decision_api, "final_call"):
+            for player in speech_order(state):
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                msg = decision_api.final_call(
+                    obs, policy,
+                    decision_rng(seed, state.day, "final_call", player),
+                )
+                if msg is not None:
+                    state = add_message(state, msg)
+                    if trace:
+                        record("final_call", asdict(msg))
+        # A versioned strategy may use the shortlist for a public, non-binding
+        # preference round and then publish exactly one binding nomination.
+        # These hooks are optional and receive only each actor's Observation.
+        if hasattr(decision_api, "preference") and (
+                not hasattr(decision_api, "post_preferences") or decision_api.post_preferences(good)):
+            for player in speech_order(state):
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                msg = decision_api.preference(
+                    obs, policy,
+                    decision_rng(seed, state.day, "preference", player),
+                )
+                if msg is not None:
+                    state = add_message(state, msg)
+                    if trace:
+                        record("preference", asdict(msg))
+        if hasattr(decision_api, "final_selection"):
+            for player in speech_order(state):
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                msg = decision_api.final_selection(
+                    obs, policy,
+                    decision_rng(seed, state.day, "final_selection", player),
+                )
+                if msg is not None:
+                    state = add_message(state, msg)
+                    if trace:
+                        record("final_selection", asdict(msg))
+        # Simultaneous mode publishes only the complete result.  In the optional
+        # public mode, choices are irrevocably published in speech order.
+        ballots = {}
+        voters = speech_order(state) if public_ballots else state.alive
+        for player in voters:
+            obs = observe(state, player)
+            policy = mafia if obs.role == Role.MAFIA else good
+            ballots[player] = decision_api.vote(obs, policy, decision_rng(seed, state.day, "vote", player))
+            if public_ballots:
+                state = publish_live_ballot(state, player, ballots[player])
+        before = len(state.deaths)
+        state = resolve_votes(state, ballots)
+        record("votes", ballots)
+        if state.pending_pk:
+            for player in speech_order(state):
+                if player in state.pending_pk:
+                    speak(player, "pk")
+            ballots = {}
+            voters = speech_order(state) if public_ballots else state.alive
+            for player in voters:
+                obs = observe(state, player)
+                policy = mafia if obs.role == Role.MAFIA else good
+                ballots[player] = decision_api.vote(obs, policy, decision_rng(seed, state.day, "pk_vote", player),
+                                       candidates=state.pending_pk)
+                if public_ballots:
+                    state = publish_live_ballot(state, player, ballots[player], pk=True)
+            state = resolve_votes(state, ballots, pk=True)
+            record("pk_votes", ballots)
+        if len(state.deaths) > before:
+            record("day_death", {"victim": state.deaths[-1].player})
+            if winner(state) is None:
+                last_words()
+        if winner(state) is None:
+            state = night(state, good, mafia, seed, decision_api)
+    record("terminal", {"winner": winner(state)})
+    return Outcome(int(winner(state) == "good"), state.day, len(state.deaths),
+                   first_role, first_check, tuple(trace_rows))
+
+
+def play(rules: Rules, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
+         trace: bool = False, decision_api=default_decisions,
+         public_ballots: bool = False) -> Outcome:
+    return continue_game(opening(rules, good, mafia, seed, decision_api), good, mafia, seed,
+                         trace=trace, decision_api=decision_api, public_ballots=public_ballots)

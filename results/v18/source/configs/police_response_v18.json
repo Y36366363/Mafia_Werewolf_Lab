@@ -1,0 +1,114 @@
+{
+  "version": "20261023-police-response-v18",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "train": {
+    "n": 1024,
+    "seed_start": 149000000
+  },
+  "holdout": {
+    "n": 4096,
+    "seed_start": 150000000
+  },
+  "calibration": {
+    "n": 1024,
+    "seed_start": 151000000
+  },
+  "good": [
+    {
+      "name": "fixed_keep",
+      "flow": "timed",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": true,
+      "history": false,
+      "response_rule": "keep",
+      "claim_model": "fixed"
+    },
+    {
+      "name": "fixed_answer",
+      "flow": "timed",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": true,
+      "history": false,
+      "response_rule": "answer",
+      "claim_model": "fixed"
+    },
+    {
+      "name": "logical_keep",
+      "flow": "timed",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": true,
+      "history": false,
+      "response_rule": "keep",
+      "claim_model": "logical"
+    },
+    {
+      "name": "logical_answer",
+      "flow": "timed",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": true,
+      "history": false,
+      "response_rule": "answer",
+      "claim_model": "logical"
+    },
+    {
+      "name": "logical_self",
+      "flow": "timed",
+      "shortlist_rule": "list2",
+      "prior_model": "equal",
+      "source_credit": true,
+      "history": false,
+      "response_rule": "self",
+      "claim_model": "logical"
+    }
+  ],
+  "mafia": [
+    {
+      "name": "safe_late_quiet",
+      "kill_mode": "safe_late",
+      "response": "quiet"
+    },
+    {
+      "name": "safe_late_counter",
+      "kill_mode": "safe_late",
+      "response": "counter"
+    },
+    {
+      "name": "safe_late_early",
+      "kill_mode": "safe_late",
+      "response": "early"
+    },
+    {
+      "name": "posterior_decoy_quiet",
+      "kill_mode": "posterior_decoy",
+      "response": "quiet"
+    },
+    {
+      "name": "posterior_decoy_counter",
+      "kill_mode": "posterior_decoy",
+      "response": "counter"
+    },
+    {
+      "name": "posterior_decoy_early",
+      "kill_mode": "posterior_decoy",
+      "response": "early"
+    }
+  ],
+  "calibration_mafia": {
+    "name": "kill_random",
+    "kill_mode": "random",
+    "response": "counter"
+  },
+  "scope": "4P4M8C actual-turn one-police counterclaim ablation and truthful-good clear-order constraints; exact combinatorial reference beliefs omit strategic speech likelihood; restricted empirical evaluation, not GTO."
+}
