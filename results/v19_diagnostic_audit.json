@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "partition_checks": 24,
+  "survival_rows_raw_identical": true,
+  "survival_sampled_traces_identical": true,
+  "scope": "Aggregate partition and raw-null audit; timing strata use replayed openings, not newly simulated outcomes."
+}

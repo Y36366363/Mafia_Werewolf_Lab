@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "cells_checked": 8,
+  "sampled_full_replays": 24,
+  "assets_checked": 45,
+  "games_recorded": 32768,
+  "scope": "Fresh exploratory concealment contrast; arithmetic, assets and 3 sampled full replays per cell. Not all games rerun."
+}

@@ -91,10 +91,12 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
                 policy = mafia if obs.role == Role.MAFIA else good
                 msg = decision_api.after_speech(obs, policy,
                     decision_rng(seed, state.day, "after_speech", player))
-                if msg is not None:
-                    state = add_message(state, msg)
-                    if trace:
-                        record("speech_extension", asdict(msg))
+                extensions = msg if isinstance(msg, tuple) else (msg,)
+                for extension in extensions:
+                    if extension is not None:
+                        state = add_message(state, extension)
+                        if trace:
+                            record("speech_extension", asdict(extension))
         # Some versioned decision APIs expose a public post-speech final call.
         # Every live player is asked from their own Observation; the referee
         # does not select a faction or reveal a hidden role to the policy.

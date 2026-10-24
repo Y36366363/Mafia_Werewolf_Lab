@@ -1,0 +1,3746 @@
+{
+  "scope": "Exploratory opening-based stratification added after reading A, before reading B. No policy modification or new outcome simulation. Distinguishes first cop reply from exposing another cop.",
+  "analyzer_sha256": "9de862115199c1effa09e842bc0b8747224e961518af0c15f51d4bc980dc450f",
+  "rows": [
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_forward",
+      "branch": "eligible",
+      "police_already_spoke": false,
+      "n": 671,
+      "policies": {
+        "guard_keep": {
+          "n": 671,
+          "wins": 6,
+          "rate": 0.00894187779433681,
+          "ci95_wilson": [
+            0.004104402858709378,
+            0.01936993857902261
+          ]
+        },
+        "guard_answer": {
+          "n": 671,
+          "wins": 6,
+          "rate": 0.00894187779433681,
+          "ci95_wilson": [
+            0.004104402858709378,
+            0.01936993857902261
+          ]
+        },
+        "guard_selective": {
+          "n": 671,
+          "wins": 6,
+          "rate": 0.00894187779433681,
+          "ci95_wilson": [
+            0.004104402858709378,
+            0.01936993857902261
+          ]
+        }
+      },
+      "win": {
+        "n": 671,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10485785501768048,
+          0.10485785501768048
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 671
+      },
+      "day1_mafia_exile": {
+        "n": 671,
+        "delta": -0.004470938897168405,
+        "ci95_normal": [
+          -0.013233818112697707,
+          0.004291940318360897
+        ],
+        "ci95_hoeffding": [
+          -0.10932879391484888,
+          0.10038691612051208
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 3,
+        "worsened": 6,
+        "unchanged": 662
+      },
+      "day1_police_exile": {
+        "n": 671,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10485785501768048,
+          0.10485785501768048
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 671
+      },
+      "police_claims": {
+        "n": 671,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10485785501768048,
+          0.10485785501768048
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 671
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_forward",
+      "branch": "eligible",
+      "police_already_spoke": true,
+      "n": 1953,
+      "policies": {
+        "guard_keep": {
+          "n": 1953,
+          "wins": 58,
+          "rate": 0.029697900665642603,
+          "ci95_wilson": [
+            0.02304350190788186,
+            0.038198791523961884
+          ]
+        },
+        "guard_answer": {
+          "n": 1953,
+          "wins": 56,
+          "rate": 0.02867383512544803,
+          "ci95_wilson": [
+            0.02214715019923756,
+            0.037051032820917214
+          ]
+        },
+        "guard_selective": {
+          "n": 1953,
+          "wins": 58,
+          "rate": 0.029697900665642603,
+          "ci95_wilson": [
+            0.02304350190788186,
+            0.038198791523961884
+          ]
+        }
+      },
+      "win": {
+        "n": 1953,
+        "delta": -0.0010240655401945725,
+        "ci95_normal": [
+          -0.008799510927433531,
+          0.006751379847044386
+        ],
+        "ci95_hoeffding": [
+          -0.062486691020154736,
+          0.06043855993976559
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 29,
+        "worsened": 31,
+        "unchanged": 1893
+      },
+      "day1_mafia_exile": {
+        "n": 1953,
+        "delta": 0.0015360983102918587,
+        "ci95_normal": [
+          -0.00020123791045075856,
+          0.003273434531034476
+        ],
+        "ci95_hoeffding": [
+          -0.0599265271696683,
+          0.06299872379025202
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 3,
+        "worsened": 0,
+        "unchanged": 1950
+      },
+      "day1_police_exile": {
+        "n": 1953,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.06146262547996016,
+          0.06146262547996016
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 1953
+      },
+      "police_claims": {
+        "n": 1953,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9385373745200398,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1953,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_forward",
+      "branch": "civilian_target",
+      "police_already_spoke": false,
+      "n": 355,
+      "policies": {
+        "guard_keep": {
+          "n": 355,
+          "wins": 1,
+          "rate": 0.0028169014084507044,
+          "ci95_wilson": [
+            0.0004974254525252127,
+            0.015781236550164356
+          ]
+        },
+        "guard_answer": {
+          "n": 355,
+          "wins": 1,
+          "rate": 0.0028169014084507044,
+          "ci95_wilson": [
+            0.0004974254525252127,
+            0.015781236550164356
+          ]
+        },
+        "guard_selective": {
+          "n": 355,
+          "wins": 1,
+          "rate": 0.0028169014084507044,
+          "ci95_wilson": [
+            0.0004974254525252127,
+            0.015781236550164356
+          ]
+        }
+      },
+      "win": {
+        "n": 355,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.14416108857731627,
+          0.14416108857731627
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 355
+      },
+      "day1_mafia_exile": {
+        "n": 355,
+        "delta": 0.0,
+        "ci95_normal": [
+          -0.013542782656329811,
+          0.013542782656329811
+        ],
+        "ci95_hoeffding": [
+          -0.14416108857731627,
+          0.14416108857731627
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 3,
+        "worsened": 3,
+        "unchanged": 349
+      },
+      "day1_police_exile": {
+        "n": 355,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.14416108857731627,
+          0.14416108857731627
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 355
+      },
+      "police_claims": {
+        "n": 355,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.14416108857731627,
+          0.14416108857731627
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 355
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_forward",
+      "branch": "civilian_target",
+      "police_already_spoke": true,
+      "n": 1257,
+      "policies": {
+        "guard_keep": {
+          "n": 1257,
+          "wins": 38,
+          "rate": 0.030230708035003977,
+          "ci95_wilson": [
+            0.02210324546746613,
+            0.041220702410463286
+          ]
+        },
+        "guard_answer": {
+          "n": 1257,
+          "wins": 36,
+          "rate": 0.028639618138424822,
+          "ci95_wilson": [
+            0.020757956651054458,
+            0.039393506715030516
+          ]
+        },
+        "guard_selective": {
+          "n": 1257,
+          "wins": 38,
+          "rate": 0.030230708035003977,
+          "ci95_wilson": [
+            0.02210324546746613,
+            0.041220702410463286
+          ]
+        }
+      },
+      "win": {
+        "n": 1257,
+        "delta": -0.0015910898965791568,
+        "ci95_normal": [
+          -0.011699755369563422,
+          0.008517575576405109
+        ],
+        "ci95_hoeffding": [
+          -0.07820270017295385,
+          0.07502052037979552
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 20,
+        "worsened": 22,
+        "unchanged": 1215
+      },
+      "day1_mafia_exile": {
+        "n": 1257,
+        "delta": 0.002386634844868735,
+        "ci95_normal": [
+          -0.00031189601689371503,
+          0.005085165706631185
+        ],
+        "ci95_hoeffding": [
+          -0.07422497543150595,
+          0.07899824512124341
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 3,
+        "worsened": 0,
+        "unchanged": 1254
+      },
+      "day1_police_exile": {
+        "n": 1257,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.07661161027637468,
+          0.07661161027637468
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 1257
+      },
+      "police_claims": {
+        "n": 1257,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9233883897236254,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1257,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_forward",
+      "branch": "police_target",
+      "police_already_spoke": false,
+      "n": 316,
+      "policies": {
+        "guard_keep": {
+          "n": 316,
+          "wins": 5,
+          "rate": 0.015822784810126583,
+          "ci95_wilson": [
+            0.006776994684222732,
+            0.03649900484294853
+          ]
+        },
+        "guard_answer": {
+          "n": 316,
+          "wins": 5,
+          "rate": 0.015822784810126583,
+          "ci95_wilson": [
+            0.006776994684222732,
+            0.03649900484294853
+          ]
+        },
+        "guard_selective": {
+          "n": 316,
+          "wins": 5,
+          "rate": 0.015822784810126583,
+          "ci95_wilson": [
+            0.006776994684222732,
+            0.03649900484294853
+          ]
+        }
+      },
+      "win": {
+        "n": 316,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.1527983583589065,
+          0.1527983583589065
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 316
+      },
+      "day1_mafia_exile": {
+        "n": 316,
+        "delta": -0.00949367088607595,
+        "ci95_normal": [
+          -0.02020241466567925,
+          0.0012150728935273487
+        ],
+        "ci95_hoeffding": [
+          -0.16229202924498246,
+          0.14330468747283057
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 3,
+        "unchanged": 313
+      },
+      "day1_police_exile": {
+        "n": 316,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.1527983583589065,
+          0.1527983583589065
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 316
+      },
+      "police_claims": {
+        "n": 316,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.1527983583589065,
+          0.1527983583589065
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 316
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_forward",
+      "branch": "police_target",
+      "police_already_spoke": true,
+      "n": 696,
+      "policies": {
+        "guard_keep": {
+          "n": 696,
+          "wins": 20,
+          "rate": 0.028735632183908046,
+          "ci95_wilson": [
+            0.01867765786389075,
+            0.04396718586196047
+          ]
+        },
+        "guard_answer": {
+          "n": 696,
+          "wins": 20,
+          "rate": 0.028735632183908046,
+          "ci95_wilson": [
+            0.01867765786389075,
+            0.04396718586196047
+          ]
+        },
+        "guard_selective": {
+          "n": 696,
+          "wins": 20,
+          "rate": 0.028735632183908046,
+          "ci95_wilson": [
+            0.01867765786389075,
+            0.04396718586196047
+          ]
+        }
+      },
+      "win": {
+        "n": 696,
+        "delta": 0.0,
+        "ci95_normal": [
+          -0.011956038957468223,
+          0.011956038957468223
+        ],
+        "ci95_hoeffding": [
+          -0.10295741020645069,
+          0.10295741020645069
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 9,
+        "worsened": 9,
+        "unchanged": 678
+      },
+      "day1_mafia_exile": {
+        "n": 696,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10295741020645069,
+          0.10295741020645069
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 696
+      },
+      "day1_police_exile": {
+        "n": 696,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10295741020645069,
+          0.10295741020645069
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 696
+      },
+      "police_claims": {
+        "n": 696,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.8970425897935493,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 696,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_last",
+      "branch": "eligible",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_last",
+      "branch": "eligible",
+      "police_already_spoke": true,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_last",
+      "branch": "civilian_target",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_last",
+      "branch": "civilian_target",
+      "police_already_spoke": true,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_last",
+      "branch": "police_target",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "safe_late_last",
+      "branch": "police_target",
+      "police_already_spoke": true,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_forward",
+      "branch": "eligible",
+      "police_already_spoke": false,
+      "n": 968,
+      "policies": {
+        "guard_keep": {
+          "n": 968,
+          "wins": 12,
+          "rate": 0.012396694214876033,
+          "ci95_wilson": [
+            0.007105450329048166,
+            0.02154269857219243
+          ]
+        },
+        "guard_answer": {
+          "n": 968,
+          "wins": 13,
+          "rate": 0.013429752066115703,
+          "ci95_wilson": [
+            0.007865006242709228,
+            0.022841091495605013
+          ]
+        },
+        "guard_selective": {
+          "n": 968,
+          "wins": 13,
+          "rate": 0.013429752066115703,
+          "ci95_wilson": [
+            0.007865006242709228,
+            0.022841091495605013
+          ]
+        }
+      },
+      "win": {
+        "n": 968,
+        "delta": 0.0010330578512396695,
+        "ci95_normal": [
+          -0.0009916983311364196,
+          0.0030578140336157585
+        ],
+        "ci95_hoeffding": [
+          -0.08626901408693495,
+          0.08833512978941428
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1,
+        "worsened": 0,
+        "unchanged": 967
+      },
+      "day1_mafia_exile": {
+        "n": 968,
+        "delta": 0.025826446280991736,
+        "ci95_normal": [
+          0.014665331762502743,
+          0.03698756079948073
+        ],
+        "ci95_hoeffding": [
+          -0.061475625657182884,
+          0.11312851821916635
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 28,
+        "worsened": 3,
+        "unchanged": 937
+      },
+      "day1_police_exile": {
+        "n": 968,
+        "delta": -0.002066115702479339,
+        "ci95_normal": [
+          -0.00492807239522282,
+          0.0007958409902641427
+        ],
+        "ci95_hoeffding": [
+          -0.08936818764065396,
+          0.08523595623569527
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 2,
+        "unchanged": 966
+      },
+      "police_claims": {
+        "n": 968,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.08730207193817462,
+          0.08730207193817462
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 968
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_forward",
+      "branch": "eligible",
+      "police_already_spoke": true,
+      "n": 1745,
+      "policies": {
+        "guard_keep": {
+          "n": 1745,
+          "wins": 33,
+          "rate": 0.018911174785100286,
+          "ci95_wilson": [
+            0.013497146408356421,
+            0.026438697100174477
+          ]
+        },
+        "guard_answer": {
+          "n": 1745,
+          "wins": 22,
+          "rate": 0.012607449856733524,
+          "ci95_wilson": [
+            0.008340420312609889,
+            0.019015666529564657
+          ]
+        },
+        "guard_selective": {
+          "n": 1745,
+          "wins": 31,
+          "rate": 0.017765042979942695,
+          "ci95_wilson": [
+            0.012543301805177088,
+            0.025105313218561746
+          ]
+        }
+      },
+      "win": {
+        "n": 1745,
+        "delta": -0.006303724928366762,
+        "ci95_normal": [
+          -0.012134155466862848,
+          -0.00047329438987067565
+        ],
+        "ci95_hoeffding": [
+          -0.07132635228033066,
+          0.058718902423597126
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 8,
+        "worsened": 19,
+        "unchanged": 1718
+      },
+      "day1_mafia_exile": {
+        "n": 1745,
+        "delta": 0.04756446991404011,
+        "ci95_normal": [
+          0.03757519477317432,
+          0.0575537450549059
+        ],
+        "ci95_hoeffding": [
+          -0.017458157437923776,
+          0.112587097266004
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 83,
+        "worsened": 0,
+        "unchanged": 1662
+      },
+      "day1_police_exile": {
+        "n": 1745,
+        "delta": 0.022349570200573064,
+        "ci95_normal": [
+          0.01335247688818367,
+          0.03134666351296246
+        ],
+        "ci95_hoeffding": [
+          -0.042673057151390824,
+          0.08737219755253695
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 52,
+        "worsened": 13,
+        "unchanged": 1680
+      },
+      "police_claims": {
+        "n": 1745,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9349773726480362,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1745,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_forward",
+      "branch": "civilian_target",
+      "police_already_spoke": false,
+      "n": 567,
+      "policies": {
+        "guard_keep": {
+          "n": 567,
+          "wins": 6,
+          "rate": 0.010582010582010581,
+          "ci95_wilson": [
+            0.004858603078823687,
+            0.02289246260834823
+          ]
+        },
+        "guard_answer": {
+          "n": 567,
+          "wins": 6,
+          "rate": 0.010582010582010581,
+          "ci95_wilson": [
+            0.004858603078823687,
+            0.02289246260834823
+          ]
+        },
+        "guard_selective": {
+          "n": 567,
+          "wins": 6,
+          "rate": 0.010582010582010581,
+          "ci95_wilson": [
+            0.004858603078823687,
+            0.02289246260834823
+          ]
+        }
+      },
+      "win": {
+        "n": 567,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.11406980526443021,
+          0.11406980526443021
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 567
+      },
+      "day1_mafia_exile": {
+        "n": 567,
+        "delta": 0.04056437389770723,
+        "ci95_normal": [
+          0.024311873535474985,
+          0.056816874259939476
+        ],
+        "ci95_hoeffding": [
+          -0.07350543136672298,
+          0.15463417916213745
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 23,
+        "worsened": 0,
+        "unchanged": 544
+      },
+      "day1_police_exile": {
+        "n": 567,
+        "delta": -0.003527336860670194,
+        "ci95_normal": [
+          -0.008411566089734542,
+          0.001356892368394153
+        ],
+        "ci95_hoeffding": [
+          -0.1175971421251004,
+          0.11054246840376002
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 2,
+        "unchanged": 565
+      },
+      "police_claims": {
+        "n": 567,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.11406980526443021,
+          0.11406980526443021
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 567
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_forward",
+      "branch": "civilian_target",
+      "police_already_spoke": true,
+      "n": 1170,
+      "policies": {
+        "guard_keep": {
+          "n": 1170,
+          "wins": 25,
+          "rate": 0.021367521367521368,
+          "ci95_wilson": [
+            0.01451450981410937,
+            0.03135323358182267
+          ]
+        },
+        "guard_answer": {
+          "n": 1170,
+          "wins": 16,
+          "rate": 0.013675213675213675,
+          "ci95_wilson": [
+            0.008434914190804242,
+            0.022098560795419563
+          ]
+        },
+        "guard_selective": {
+          "n": 1170,
+          "wins": 25,
+          "rate": 0.021367521367521368,
+          "ci95_wilson": [
+            0.01451450981410937,
+            0.03135323358182267
+          ]
+        }
+      },
+      "win": {
+        "n": 1170,
+        "delta": -0.007692307692307693,
+        "ci95_normal": [
+          -0.014588132979969432,
+          -0.0007964824046459524
+        ],
+        "ci95_hoeffding": [
+          -0.08710122938653049,
+          0.0717166140019151
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 4,
+        "worsened": 13,
+        "unchanged": 1153
+      },
+      "day1_mafia_exile": {
+        "n": 1170,
+        "delta": 0.07094017094017094,
+        "ci95_normal": [
+          0.05622352668152128,
+          0.0856568151988206
+        ],
+        "ci95_hoeffding": [
+          -0.00846875075405186,
+          0.15034909263439372
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 83,
+        "worsened": 0,
+        "unchanged": 1087
+      },
+      "day1_police_exile": {
+        "n": 1170,
+        "delta": 0.03333333333333333,
+        "ci95_normal": [
+          0.019957599417637632,
+          0.04670906724902903
+        ],
+        "ci95_hoeffding": [
+          -0.046075588360889465,
+          0.11274225502755614
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 52,
+        "worsened": 13,
+        "unchanged": 1105
+      },
+      "police_claims": {
+        "n": 1170,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9205910783057772,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1170,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_forward",
+      "branch": "police_target",
+      "police_already_spoke": false,
+      "n": 401,
+      "policies": {
+        "guard_keep": {
+          "n": 401,
+          "wins": 6,
+          "rate": 0.014962593516209476,
+          "ci95_wilson": [
+            0.006875059979580055,
+            0.032254970988197795
+          ]
+        },
+        "guard_answer": {
+          "n": 401,
+          "wins": 7,
+          "rate": 0.017456359102244388,
+          "ci95_wilson": [
+            0.008481025441984771,
+            0.035589211022102704
+          ]
+        },
+        "guard_selective": {
+          "n": 401,
+          "wins": 7,
+          "rate": 0.017456359102244388,
+          "ci95_wilson": [
+            0.008481025441984771,
+            0.035589211022102704
+          ]
+        }
+      },
+      "win": {
+        "n": 401,
+        "delta": 0.0024937655860349127,
+        "ci95_normal": [
+          -0.0023939251484789374,
+          0.007381456320548763
+        ],
+        "ci95_hoeffding": [
+          -0.13314694094191404,
+          0.13813447211398389
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1,
+        "worsened": 0,
+        "unchanged": 400
+      },
+      "day1_mafia_exile": {
+        "n": 401,
+        "delta": 0.004987531172069825,
+        "ci95_normal": [
+          -0.008845583478549638,
+          0.01882064582268929
+        ],
+        "ci95_hoeffding": [
+          -0.13065317535587914,
+          0.14062823770001878
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 5,
+        "worsened": 3,
+        "unchanged": 393
+      },
+      "day1_police_exile": {
+        "n": 401,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.13564070652794896,
+          0.13564070652794896
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 401
+      },
+      "police_claims": {
+        "n": 401,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.13564070652794896,
+          0.13564070652794896
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 401
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_forward",
+      "branch": "police_target",
+      "police_already_spoke": true,
+      "n": 575,
+      "policies": {
+        "guard_keep": {
+          "n": 575,
+          "wins": 8,
+          "rate": 0.01391304347826087,
+          "ci95_wilson": [
+            0.007066446120982841,
+            0.027211435185442986
+          ]
+        },
+        "guard_answer": {
+          "n": 575,
+          "wins": 6,
+          "rate": 0.010434782608695653,
+          "ci95_wilson": [
+            0.004790884278321552,
+            0.022576641974840772
+          ]
+        },
+        "guard_selective": {
+          "n": 575,
+          "wins": 6,
+          "rate": 0.010434782608695653,
+          "ci95_wilson": [
+            0.004790884278321552,
+            0.022576641974840772
+          ]
+        }
+      },
+      "win": {
+        "n": 575,
+        "delta": -0.0034782608695652175,
+        "ci95_normal": [
+          -0.014262937084917007,
+          0.007306415345786573
+        ],
+        "ci95_hoeffding": [
+          -0.11675175758343737,
+          0.10979523584430692
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 4,
+        "worsened": 6,
+        "unchanged": 565
+      },
+      "day1_mafia_exile": {
+        "n": 575,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.11327349671387214,
+          0.11327349671387214
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 575
+      },
+      "day1_police_exile": {
+        "n": 575,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.11327349671387214,
+          0.11327349671387214
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 575
+      },
+      "police_claims": {
+        "n": 575,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.8867265032861279,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 575,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_last",
+      "branch": "eligible",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_last",
+      "branch": "eligible",
+      "police_already_spoke": true,
+      "n": 1825,
+      "policies": {
+        "guard_keep": {
+          "n": 1825,
+          "wins": 42,
+          "rate": 0.023013698630136987,
+          "ci95_wilson": [
+            0.01707072533319351,
+            0.030960479557217056
+          ]
+        },
+        "guard_answer": {
+          "n": 1825,
+          "wins": 13,
+          "rate": 0.007123287671232876,
+          "ci95_wilson": [
+            0.004167628883537621,
+            0.012149509311665488
+          ]
+        },
+        "guard_selective": {
+          "n": 1825,
+          "wins": 13,
+          "rate": 0.007123287671232876,
+          "ci95_wilson": [
+            0.004167628883537621,
+            0.012149509311665488
+          ]
+        }
+      },
+      "win": {
+        "n": 1825,
+        "delta": -0.01589041095890411,
+        "ci95_normal": [
+          -0.023059687599581283,
+          -0.008721134318226936
+        ],
+        "ci95_hoeffding": [
+          -0.07947191472333845,
+          0.04769109280553024
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 8,
+        "worsened": 37,
+        "unchanged": 1780
+      },
+      "day1_mafia_exile": {
+        "n": 1825,
+        "delta": -0.002191780821917808,
+        "ci95_normal": [
+          -0.00648759229488231,
+          0.0021040306510466938
+        ],
+        "ci95_hoeffding": [
+          -0.06577328458635215,
+          0.06138972294251654
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 6,
+        "worsened": 10,
+        "unchanged": 1809
+      },
+      "day1_police_exile": {
+        "n": 1825,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.06358150376443435,
+          0.06358150376443435
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 1825
+      },
+      "police_claims": {
+        "n": 1825,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9364184962355656,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1825,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_last",
+      "branch": "civilian_target",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_last",
+      "branch": "civilian_target",
+      "police_already_spoke": true,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_last",
+      "branch": "police_target",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "posterior_decoy_last",
+      "branch": "police_target",
+      "police_already_spoke": true,
+      "n": 1825,
+      "policies": {
+        "guard_keep": {
+          "n": 1825,
+          "wins": 42,
+          "rate": 0.023013698630136987,
+          "ci95_wilson": [
+            0.01707072533319351,
+            0.030960479557217056
+          ]
+        },
+        "guard_answer": {
+          "n": 1825,
+          "wins": 13,
+          "rate": 0.007123287671232876,
+          "ci95_wilson": [
+            0.004167628883537621,
+            0.012149509311665488
+          ]
+        },
+        "guard_selective": {
+          "n": 1825,
+          "wins": 13,
+          "rate": 0.007123287671232876,
+          "ci95_wilson": [
+            0.004167628883537621,
+            0.012149509311665488
+          ]
+        }
+      },
+      "win": {
+        "n": 1825,
+        "delta": -0.01589041095890411,
+        "ci95_normal": [
+          -0.023059687599581283,
+          -0.008721134318226936
+        ],
+        "ci95_hoeffding": [
+          -0.07947191472333845,
+          0.04769109280553024
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 8,
+        "worsened": 37,
+        "unchanged": 1780
+      },
+      "day1_mafia_exile": {
+        "n": 1825,
+        "delta": -0.002191780821917808,
+        "ci95_normal": [
+          -0.00648759229488231,
+          0.0021040306510466938
+        ],
+        "ci95_hoeffding": [
+          -0.06577328458635215,
+          0.06138972294251654
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 6,
+        "worsened": 10,
+        "unchanged": 1809
+      },
+      "day1_police_exile": {
+        "n": 1825,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.06358150376443435,
+          0.06358150376443435
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 1825
+      },
+      "police_claims": {
+        "n": 1825,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9364184962355656,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1825,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_forward",
+      "branch": "eligible",
+      "police_already_spoke": false,
+      "n": 611,
+      "policies": {
+        "guard_keep": {
+          "n": 611,
+          "wins": 14,
+          "rate": 0.022913256955810146,
+          "ci95_wilson": [
+            0.013697146341324917,
+            0.03809093392536385
+          ]
+        },
+        "guard_answer": {
+          "n": 611,
+          "wins": 14,
+          "rate": 0.022913256955810146,
+          "ci95_wilson": [
+            0.013697146341324917,
+            0.03809093392536385
+          ]
+        },
+        "guard_selective": {
+          "n": 611,
+          "wins": 14,
+          "rate": 0.022913256955810146,
+          "ci95_wilson": [
+            0.013697146341324917,
+            0.03809093392536385
+          ]
+        }
+      },
+      "win": {
+        "n": 611,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10988581268826374,
+          0.10988581268826374
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 611
+      },
+      "day1_mafia_exile": {
+        "n": 611,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10988581268826374,
+          0.10988581268826374
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 611
+      },
+      "day1_police_exile": {
+        "n": 611,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10988581268826374,
+          0.10988581268826374
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 611
+      },
+      "police_claims": {
+        "n": 611,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10988581268826374,
+          0.10988581268826374
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 611
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_forward",
+      "branch": "eligible",
+      "police_already_spoke": true,
+      "n": 1904,
+      "policies": {
+        "guard_keep": {
+          "n": 1904,
+          "wins": 51,
+          "rate": 0.026785714285714284,
+          "ci95_wilson": [
+            0.0204312423080369,
+            0.035045830134931476
+          ]
+        },
+        "guard_answer": {
+          "n": 1904,
+          "wins": 68,
+          "rate": 0.03571428571428571,
+          "ci95_wilson": [
+            0.028269585146269066,
+            0.045028674609096125
+          ]
+        },
+        "guard_selective": {
+          "n": 1904,
+          "wins": 60,
+          "rate": 0.031512605042016806,
+          "ci95_wilson": [
+            0.02456025994803989,
+            0.04035155871913857
+          ]
+        }
+      },
+      "win": {
+        "n": 1904,
+        "delta": 0.008928571428571428,
+        "ci95_normal": [
+          0.0008966556921166328,
+          0.016960487165026225
+        ],
+        "ci95_hoeffding": [
+          -0.05331990948598665,
+          0.0711770523431295
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 39,
+        "worsened": 22,
+        "unchanged": 1843
+      },
+      "day1_mafia_exile": {
+        "n": 1904,
+        "delta": 0.0005252100840336134,
+        "ci95_normal": [
+          -0.0005041827649895242,
+          0.0015546029330567512
+        ],
+        "ci95_hoeffding": [
+          -0.061723270830524465,
+          0.06277369099859169
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1,
+        "worsened": 0,
+        "unchanged": 1903
+      },
+      "day1_police_exile": {
+        "n": 1904,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.06224848091455808,
+          0.06224848091455808
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 1904
+      },
+      "police_claims": {
+        "n": 1904,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.937751519085442,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1904,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_forward",
+      "branch": "civilian_target",
+      "police_already_spoke": false,
+      "n": 326,
+      "policies": {
+        "guard_keep": {
+          "n": 326,
+          "wins": 6,
+          "rate": 0.018404907975460124,
+          "ci95_wilson": [
+            0.00846175314313342,
+            0.039565741269889224
+          ]
+        },
+        "guard_answer": {
+          "n": 326,
+          "wins": 6,
+          "rate": 0.018404907975460124,
+          "ci95_wilson": [
+            0.00846175314313342,
+            0.039565741269889224
+          ]
+        },
+        "guard_selective": {
+          "n": 326,
+          "wins": 6,
+          "rate": 0.018404907975460124,
+          "ci95_wilson": [
+            0.00846175314313342,
+            0.039565741269889224
+          ]
+        }
+      },
+      "win": {
+        "n": 326,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.15043657233258648,
+          0.15043657233258648
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 326
+      },
+      "day1_mafia_exile": {
+        "n": 326,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.15043657233258648,
+          0.15043657233258648
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 326
+      },
+      "day1_police_exile": {
+        "n": 326,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.15043657233258648,
+          0.15043657233258648
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 326
+      },
+      "police_claims": {
+        "n": 326,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.15043657233258648,
+          0.15043657233258648
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 326
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_forward",
+      "branch": "civilian_target",
+      "police_already_spoke": true,
+      "n": 1216,
+      "policies": {
+        "guard_keep": {
+          "n": 1216,
+          "wins": 34,
+          "rate": 0.027960526315789474,
+          "ci95_wilson": [
+            0.020076906109396296,
+            0.03881718893976548
+          ]
+        },
+        "guard_answer": {
+          "n": 1216,
+          "wins": 42,
+          "rate": 0.03453947368421053,
+          "ci95_wilson": [
+            0.02565338954935094,
+            0.04635716410539743
+          ]
+        },
+        "guard_selective": {
+          "n": 1216,
+          "wins": 34,
+          "rate": 0.027960526315789474,
+          "ci95_wilson": [
+            0.020076906109396296,
+            0.03881718893976548
+          ]
+        }
+      },
+      "win": {
+        "n": 1216,
+        "delta": 0.006578947368421052,
+        "ci95_normal": [
+          -0.003088831672269742,
+          0.016246726409111845
+        ],
+        "ci95_hoeffding": [
+          -0.07131351660766808,
+          0.0844714113445102
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 22,
+        "worsened": 14,
+        "unchanged": 1180
+      },
+      "day1_mafia_exile": {
+        "n": 1216,
+        "delta": 0.0008223684210526315,
+        "ci95_normal": [
+          -0.000789444066233597,
+          0.00243418090833886
+        ],
+        "ci95_hoeffding": [
+          -0.07707009555503651,
+          0.07871483239714176
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1,
+        "worsened": 0,
+        "unchanged": 1215
+      },
+      "day1_police_exile": {
+        "n": 1216,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.07789246397608914,
+          0.07789246397608914
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 1216
+      },
+      "police_claims": {
+        "n": 1216,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9221075360239108,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1216,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_forward",
+      "branch": "police_target",
+      "police_already_spoke": false,
+      "n": 285,
+      "policies": {
+        "guard_keep": {
+          "n": 285,
+          "wins": 8,
+          "rate": 0.028070175438596492,
+          "ci95_wilson": [
+            0.014290825737415937,
+            0.05440242523044886
+          ]
+        },
+        "guard_answer": {
+          "n": 285,
+          "wins": 8,
+          "rate": 0.028070175438596492,
+          "ci95_wilson": [
+            0.014290825737415937,
+            0.05440242523044886
+          ]
+        },
+        "guard_selective": {
+          "n": 285,
+          "wins": 8,
+          "rate": 0.028070175438596492,
+          "ci95_wilson": [
+            0.014290825737415937,
+            0.05440242523044886
+          ]
+        }
+      },
+      "win": {
+        "n": 285,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.16089398174637565,
+          0.16089398174637565
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 285
+      },
+      "day1_mafia_exile": {
+        "n": 285,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.16089398174637565,
+          0.16089398174637565
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 285
+      },
+      "day1_police_exile": {
+        "n": 285,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.16089398174637565,
+          0.16089398174637565
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 285
+      },
+      "police_claims": {
+        "n": 285,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.16089398174637565,
+          0.16089398174637565
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 285
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_forward",
+      "branch": "police_target",
+      "police_already_spoke": true,
+      "n": 688,
+      "policies": {
+        "guard_keep": {
+          "n": 688,
+          "wins": 17,
+          "rate": 0.024709302325581394,
+          "ci95_wilson": [
+            0.015483569062750455,
+            0.03921315131766487
+          ]
+        },
+        "guard_answer": {
+          "n": 688,
+          "wins": 26,
+          "rate": 0.0377906976744186,
+          "ci95_wilson": [
+            0.02591793372833731,
+            0.054796308109497774
+          ]
+        },
+        "guard_selective": {
+          "n": 688,
+          "wins": 26,
+          "rate": 0.0377906976744186,
+          "ci95_wilson": [
+            0.02591793372833731,
+            0.054796308109497774
+          ]
+        }
+      },
+      "win": {
+        "n": 688,
+        "delta": 0.01308139534883721,
+        "ci95_normal": [
+          -0.0011392884617411753,
+          0.027302079159415595
+        ],
+        "ci95_hoeffding": [
+          -0.09047287440965672,
+          0.11663566510733113
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 17,
+        "worsened": 8,
+        "unchanged": 663
+      },
+      "day1_mafia_exile": {
+        "n": 688,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10355426975849392,
+          0.10355426975849392
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 688
+      },
+      "day1_police_exile": {
+        "n": 688,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.10355426975849392,
+          0.10355426975849392
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 688
+      },
+      "police_claims": {
+        "n": 688,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.8964457302415061,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 688,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_last",
+      "branch": "eligible",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_last",
+      "branch": "eligible",
+      "police_already_spoke": true,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_last",
+      "branch": "civilian_target",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_last",
+      "branch": "civilian_target",
+      "police_already_spoke": true,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_last",
+      "branch": "police_target",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "safe_late_last",
+      "branch": "police_target",
+      "police_already_spoke": true,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_forward",
+      "branch": "eligible",
+      "police_already_spoke": false,
+      "n": 962,
+      "policies": {
+        "guard_keep": {
+          "n": 962,
+          "wins": 11,
+          "rate": 0.011434511434511435,
+          "ci95_wilson": [
+            0.006396673724263594,
+            0.020358709972194113
+          ]
+        },
+        "guard_answer": {
+          "n": 962,
+          "wins": 11,
+          "rate": 0.011434511434511435,
+          "ci95_wilson": [
+            0.006396673724263594,
+            0.020358709972194113
+          ]
+        },
+        "guard_selective": {
+          "n": 962,
+          "wins": 11,
+          "rate": 0.011434511434511435,
+          "ci95_wilson": [
+            0.006396673724263594,
+            0.020358709972194113
+          ]
+        }
+      },
+      "win": {
+        "n": 962,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.08757390053144218,
+          0.08757390053144218
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 962
+      },
+      "day1_mafia_exile": {
+        "n": 962,
+        "delta": 0.01975051975051975,
+        "ci95_normal": [
+          0.006442000618613683,
+          0.03305903888242582
+        ],
+        "ci95_hoeffding": [
+          -0.06782338078092243,
+          0.10732442028196193
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 31,
+        "worsened": 12,
+        "unchanged": 919
+      },
+      "day1_police_exile": {
+        "n": 962,
+        "delta": 0.0010395010395010396,
+        "ci95_normal": [
+          -0.00351812527216941,
+          0.005597127351171489
+        ],
+        "ci95_hoeffding": [
+          -0.08653439949194114,
+          0.08861340157094322
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 3,
+        "worsened": 2,
+        "unchanged": 957
+      },
+      "police_claims": {
+        "n": 962,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.08757390053144218,
+          0.08757390053144218
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 962
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_forward",
+      "branch": "eligible",
+      "police_already_spoke": true,
+      "n": 1741,
+      "policies": {
+        "guard_keep": {
+          "n": 1741,
+          "wins": 34,
+          "rate": 0.019529006318207927,
+          "ci95_wilson": [
+            0.014008476615991094,
+            0.027165154637160367
+          ]
+        },
+        "guard_answer": {
+          "n": 1741,
+          "wins": 41,
+          "rate": 0.023549684089603676,
+          "ci95_wilson": [
+            0.017406525963622382,
+            0.03179075691084162
+          ]
+        },
+        "guard_selective": {
+          "n": 1741,
+          "wins": 36,
+          "rate": 0.02067777139574957,
+          "ci95_wilson": [
+            0.014973122337426056,
+            0.02849298080752899
+          ]
+        }
+      },
+      "win": {
+        "n": 1741,
+        "delta": 0.00402067777139575,
+        "ci95_normal": [
+          -0.0024454722078606885,
+          0.010486827750652187
+        ],
+        "ci95_hoeffding": [
+          -0.06107660244941661,
+          0.06911795799220811
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 20,
+        "worsened": 13,
+        "unchanged": 1708
+      },
+      "day1_mafia_exile": {
+        "n": 1741,
+        "delta": 0.04709936817920735,
+        "ci95_normal": [
+          0.03701861620456196,
+          0.057180120153852744
+        ],
+        "ci95_hoeffding": [
+          -0.01799791204160501,
+          0.11219664840001972
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 83,
+        "worsened": 1,
+        "unchanged": 1657
+      },
+      "day1_police_exile": {
+        "n": 1741,
+        "delta": 0.02125215393452039,
+        "ci95_normal": [
+          0.011951579128135003,
+          0.03055272874090578
+        ],
+        "ci95_hoeffding": [
+          -0.043845126286291974,
+          0.08634943415533275
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 53,
+        "worsened": 16,
+        "unchanged": 1672
+      },
+      "police_claims": {
+        "n": 1741,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9349027197791876,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1741,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_forward",
+      "branch": "civilian_target",
+      "police_already_spoke": false,
+      "n": 552,
+      "policies": {
+        "guard_keep": {
+          "n": 552,
+          "wins": 7,
+          "rate": 0.012681159420289856,
+          "ci95_wilson": [
+            0.006156040928484445,
+            0.025942066432106496
+          ]
+        },
+        "guard_answer": {
+          "n": 552,
+          "wins": 7,
+          "rate": 0.012681159420289856,
+          "ci95_wilson": [
+            0.006156040928484445,
+            0.025942066432106496
+          ]
+        },
+        "guard_selective": {
+          "n": 552,
+          "wins": 7,
+          "rate": 0.012681159420289856,
+          "ci95_wilson": [
+            0.006156040928484445,
+            0.025942066432106496
+          ]
+        }
+      },
+      "win": {
+        "n": 552,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.11560927847075578,
+          0.11560927847075578
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 552
+      },
+      "day1_mafia_exile": {
+        "n": 552,
+        "delta": 0.03985507246376811,
+        "ci95_normal": [
+          0.022765680471759395,
+          0.05694446445577683
+        ],
+        "ci95_hoeffding": [
+          -0.07575420600698766,
+          0.15546435093452388
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 23,
+        "worsened": 1,
+        "unchanged": 528
+      },
+      "day1_police_exile": {
+        "n": 552,
+        "delta": 0.0018115942028985507,
+        "ci95_normal": [
+          -0.006133683186423717,
+          0.009756871592220818
+        ],
+        "ci95_hoeffding": [
+          -0.11379768426785723,
+          0.11742087267365432
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 3,
+        "worsened": 2,
+        "unchanged": 547
+      },
+      "police_claims": {
+        "n": 552,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.11560927847075578,
+          0.11560927847075578
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 552
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_forward",
+      "branch": "civilian_target",
+      "police_already_spoke": true,
+      "n": 1170,
+      "policies": {
+        "guard_keep": {
+          "n": 1170,
+          "wins": 22,
+          "rate": 0.018803418803418803,
+          "ci95_wilson": [
+            0.012449860961382602,
+            0.028306459631313365
+          ]
+        },
+        "guard_answer": {
+          "n": 1170,
+          "wins": 27,
+          "rate": 0.023076923076923078,
+          "ci95_wilson": [
+            0.01590763677652607,
+            0.033367721821563355
+          ]
+        },
+        "guard_selective": {
+          "n": 1170,
+          "wins": 22,
+          "rate": 0.018803418803418803,
+          "ci95_wilson": [
+            0.012449860961382602,
+            0.028306459631313365
+          ]
+        }
+      },
+      "win": {
+        "n": 1170,
+        "delta": 0.004273504273504274,
+        "ci95_normal": [
+          -0.004102410190342111,
+          0.012649418737350659
+        ],
+        "ci95_hoeffding": [
+          -0.07513541742071853,
+          0.08368242596772707
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 15,
+        "worsened": 10,
+        "unchanged": 1145
+      },
+      "day1_mafia_exile": {
+        "n": 1170,
+        "delta": 0.07094017094017094,
+        "ci95_normal": [
+          0.05622352668152128,
+          0.0856568151988206
+        ],
+        "ci95_hoeffding": [
+          -0.00846875075405186,
+          0.15034909263439372
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 83,
+        "worsened": 0,
+        "unchanged": 1087
+      },
+      "day1_police_exile": {
+        "n": 1170,
+        "delta": 0.03162393162393162,
+        "ci95_normal": [
+          0.017821406717848903,
+          0.04542645653001434
+        ],
+        "ci95_hoeffding": [
+          -0.047784990070291175,
+          0.11103285331815442
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 53,
+        "worsened": 16,
+        "unchanged": 1101
+      },
+      "police_claims": {
+        "n": 1170,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9205910783057772,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1170,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_forward",
+      "branch": "police_target",
+      "police_already_spoke": false,
+      "n": 410,
+      "policies": {
+        "guard_keep": {
+          "n": 410,
+          "wins": 4,
+          "rate": 0.00975609756097561,
+          "ci95_wilson": [
+            0.0038003124825935035,
+            0.0248132025925713
+          ]
+        },
+        "guard_answer": {
+          "n": 410,
+          "wins": 4,
+          "rate": 0.00975609756097561,
+          "ci95_wilson": [
+            0.0038003124825935035,
+            0.0248132025925713
+          ]
+        },
+        "guard_selective": {
+          "n": 410,
+          "wins": 4,
+          "rate": 0.00975609756097561,
+          "ci95_wilson": [
+            0.0038003124825935035,
+            0.0248132025925713
+          ]
+        }
+      },
+      "win": {
+        "n": 410,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.13414370623516783,
+          0.13414370623516783
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 410
+      },
+      "day1_mafia_exile": {
+        "n": 410,
+        "delta": -0.007317073170731708,
+        "ci95_normal": [
+          -0.02816775628348657,
+          0.013533609942023156
+        ],
+        "ci95_hoeffding": [
+          -0.14146077940589954,
+          0.12682663306443612
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 8,
+        "worsened": 11,
+        "unchanged": 391
+      },
+      "day1_police_exile": {
+        "n": 410,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.13414370623516783,
+          0.13414370623516783
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 410
+      },
+      "police_claims": {
+        "n": 410,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.13414370623516783,
+          0.13414370623516783
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 410
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_forward",
+      "branch": "police_target",
+      "police_already_spoke": true,
+      "n": 571,
+      "policies": {
+        "guard_keep": {
+          "n": 571,
+          "wins": 12,
+          "rate": 0.021015761821366025,
+          "ci95_wilson": [
+            0.012062014985904493,
+            0.0363712676061545
+          ]
+        },
+        "guard_answer": {
+          "n": 571,
+          "wins": 14,
+          "rate": 0.024518388791593695,
+          "ci95_wilson": [
+            0.014660270488510641,
+            0.040731452450224345
+          ]
+        },
+        "guard_selective": {
+          "n": 571,
+          "wins": 14,
+          "rate": 0.024518388791593695,
+          "ci95_wilson": [
+            0.014660270488510641,
+            0.040731452450224345
+          ]
+        }
+      },
+      "win": {
+        "n": 571,
+        "delta": 0.0035026269702276708,
+        "ci95_normal": [
+          -0.006210238484494932,
+          0.013215492424950273
+        ],
+        "ci95_hoeffding": [
+          -0.1101669321293756,
+          0.11717218606983094
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 5,
+        "worsened": 3,
+        "unchanged": 563
+      },
+      "day1_mafia_exile": {
+        "n": 571,
+        "delta": -0.0017513134851138354,
+        "ci95_normal": [
+          -0.005183824841576277,
+          0.0016811978713486058
+        ],
+        "ci95_hoeffding": [
+          -0.11542087258471712,
+          0.11191824561448943
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 1,
+        "unchanged": 570
+      },
+      "day1_police_exile": {
+        "n": 571,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.11366955909960327,
+          0.11366955909960327
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 571
+      },
+      "police_claims": {
+        "n": 571,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.8863304409003967,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 571,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_last",
+      "branch": "eligible",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_last",
+      "branch": "eligible",
+      "police_already_spoke": true,
+      "n": 1858,
+      "policies": {
+        "guard_keep": {
+          "n": 1858,
+          "wins": 40,
+          "rate": 0.021528525296017224,
+          "ci95_wilson": [
+            0.01584961144737195,
+            0.02918185910211297
+          ]
+        },
+        "guard_answer": {
+          "n": 1858,
+          "wins": 18,
+          "rate": 0.00968783638320775,
+          "ci95_wilson": [
+            0.006136772031284907,
+            0.015262181478929673
+          ]
+        },
+        "guard_selective": {
+          "n": 1858,
+          "wins": 18,
+          "rate": 0.00968783638320775,
+          "ci95_wilson": [
+            0.006136772031284907,
+            0.015262181478929673
+          ]
+        }
+      },
+      "win": {
+        "n": 1858,
+        "delta": -0.011840688912809472,
+        "ci95_normal": [
+          -0.01865768320993369,
+          -0.005023694615685256
+        ],
+        "ci95_hoeffding": [
+          -0.07485502642493844,
+          0.0511736485993195
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 10,
+        "worsened": 32,
+        "unchanged": 1816
+      },
+      "day1_mafia_exile": {
+        "n": 1858,
+        "delta": -0.005382131324004306,
+        "ci95_normal": [
+          -0.010545550624280897,
+          -0.00021871202372771535
+        ],
+        "ci95_hoeffding": [
+          -0.06839646883613328,
+          0.05763220618812466
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 7,
+        "worsened": 17,
+        "unchanged": 1834
+      },
+      "day1_police_exile": {
+        "n": 1858,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.06301433751212897,
+          0.06301433751212897
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 1858
+      },
+      "police_claims": {
+        "n": 1858,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9369856624878711,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1858,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_last",
+      "branch": "civilian_target",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_last",
+      "branch": "civilian_target",
+      "police_already_spoke": true,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_last",
+      "branch": "police_target",
+      "police_already_spoke": false,
+      "n": 0,
+      "policies": {
+        "guard_keep": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_answer": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "guard_selective": {
+          "n": 0,
+          "wins": 0,
+          "rate": null,
+          "ci95_wilson": null
+        }
+      },
+      "win": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_mafia_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "day1_police_exile": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      },
+      "police_claims": {
+        "n": 0,
+        "delta": null,
+        "ci95_normal": null
+      }
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "posterior_decoy_last",
+      "branch": "police_target",
+      "police_already_spoke": true,
+      "n": 1858,
+      "policies": {
+        "guard_keep": {
+          "n": 1858,
+          "wins": 40,
+          "rate": 0.021528525296017224,
+          "ci95_wilson": [
+            0.01584961144737195,
+            0.02918185910211297
+          ]
+        },
+        "guard_answer": {
+          "n": 1858,
+          "wins": 18,
+          "rate": 0.00968783638320775,
+          "ci95_wilson": [
+            0.006136772031284907,
+            0.015262181478929673
+          ]
+        },
+        "guard_selective": {
+          "n": 1858,
+          "wins": 18,
+          "rate": 0.00968783638320775,
+          "ci95_wilson": [
+            0.006136772031284907,
+            0.015262181478929673
+          ]
+        }
+      },
+      "win": {
+        "n": 1858,
+        "delta": -0.011840688912809472,
+        "ci95_normal": [
+          -0.01865768320993369,
+          -0.005023694615685256
+        ],
+        "ci95_hoeffding": [
+          -0.07485502642493844,
+          0.0511736485993195
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 10,
+        "worsened": 32,
+        "unchanged": 1816
+      },
+      "day1_mafia_exile": {
+        "n": 1858,
+        "delta": -0.005382131324004306,
+        "ci95_normal": [
+          -0.010545550624280897,
+          -0.00021871202372771535
+        ],
+        "ci95_hoeffding": [
+          -0.06839646883613328,
+          0.05763220618812466
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 7,
+        "worsened": 17,
+        "unchanged": 1834
+      },
+      "day1_police_exile": {
+        "n": 1858,
+        "delta": 0.0,
+        "ci95_normal": [
+          0.0,
+          0.0
+        ],
+        "ci95_hoeffding": [
+          -0.06301433751212897,
+          0.06301433751212897
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 0,
+        "worsened": 0,
+        "unchanged": 1858
+      },
+      "police_claims": {
+        "n": 1858,
+        "delta": 1.0,
+        "ci95_normal": [
+          1.0,
+          1
+        ],
+        "ci95_hoeffding": [
+          0.9369856624878711,
+          1
+        ],
+        "normal_interval_warning": "Exploratory Wald interval; zero sample variance does not prove equality.",
+        "improved": 1858,
+        "worsened": 0,
+        "unchanged": 0
+      }
+    }
+  ]
+}

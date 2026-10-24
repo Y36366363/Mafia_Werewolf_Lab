@@ -1,0 +1,17 @@
+{
+ "version":"20261024-fixed-credit-reply-v19",
+ "rules":{"police":4,"mafia":4,"civilians":8,"last_words_limit":3,"allow_self_kill":true,"tie_rule":"pk","direction":1},
+ "blocks":[{"name":"evaluation_A","seed_start":156000000,"n":4096},{"name":"replication_B","seed_start":157000000,"n":4096}],
+ "good":[
+ {"name":"old_keep","clear_guard":false,"reply":"keep"},
+ {"name":"guard_keep","reply":"keep"},
+ {"name":"guard_answer","reply":"answer"},
+ {"name":"guard_selective","reply":"police_target"},
+ {"name":"guard_bait","reply":"police_target","survival_guard":true},
+ {"name":"answer_no_denial","reply":"answer","civilian_denial":false}],
+ "mafia":[
+ {"name":"safe_late_forward","kill_mode":"safe_late","response":"forward"},
+ {"name":"safe_late_last","kill_mode":"safe_late","response":"last"},
+ {"name":"posterior_decoy_forward","kill_mode":"posterior_decoy","response":"forward"},
+ {"name":"posterior_decoy_last","kill_mode":"posterior_decoy","response":"last"}]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "cells_checked": 48,
+  "sampled_full_replays": 144,
+  "assets_checked": 46,
+  "games_recorded": 196608,
+  "scope": "Arithmetic, hash integrity, common branch masks, and 3 sampled archived full replays per cell. Not all games independently rerun."
+}

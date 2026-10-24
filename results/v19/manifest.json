@@ -1,0 +1,9 @@
+{
+  "games": 196608,
+  "elapsed_seconds": 461.854744250013,
+  "files": {
+    "freeze.json": "bf53b834df76fde4ee9adca75f129cd27fcaaf0590a98940005534ab1a8cd6fd",
+    "evaluation_A.json": "942d91fa03acad7db445cfda21585aa93c62364d1150c61199f500d196850768",
+    "replication_B.json": "eaefed8bcd281523e57f7422010781243b1c623cc0f726f5ad403e13bffdde89"
+  }
+}
