@@ -1,0 +1,46 @@
+{
+  "holdout_unread": true,
+  "source": "two endpoint empirical TRAIN matrix only",
+  "q_exact": "0",
+  "policy": {
+    "name": "trained_local_q",
+    "reveal": "silent",
+    "trust": "none",
+    "civilian_message": "pass",
+    "inspect": "random",
+    "dead_police_message": "truth",
+    "dead_claim_response": "trust",
+    "live_counter": "hidden",
+    "inspect_position": "gap",
+    "dead_clear_plan": "truth",
+    "leadership": "nominate",
+    "position_model": "posterior",
+    "prior_model": "equal",
+    "shortlist_rule": "list2",
+    "flow": "timed",
+    "source_credit": true,
+    "history": false,
+    "clear_guard": true,
+    "reply": "keep",
+    "civilian_denial": true,
+    "survival_guard": false,
+    "routing": "evidence",
+    "remember": true,
+    "response_probability": "0"
+  },
+  "certificate": {
+    "value_exact": "9/2048",
+    "value": 0.00439453125,
+    "good_mixture": {
+      "evidence_q0": "1"
+    },
+    "mafia_mixture": {
+      "late_far": "1"
+    },
+    "lower_exact": "9/2048",
+    "upper_exact": "9/2048",
+    "gap_exact": "0",
+    "simplex_pivots": 2
+  },
+  "realization": "One designated first live police samples privately at its own eligible turn. No team secret random signal; no second claimant."
+}

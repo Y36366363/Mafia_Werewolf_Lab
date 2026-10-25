@@ -1,0 +1,22 @@
+{
+ "version":"20261025-evidence-memory-v20",
+ "rules":{"police":4,"mafia":4,"civilians":8,"last_words_limit":3,"allow_self_kill":true,"tie_rule":"pk","direction":1},
+ "train":{"seed_start":160000000,"n":2048},
+ "holdout":{"seed_start":161000000,"n":4096},
+ "good":[
+  {"name":"credit_today","routing":"credit","remember":false,"response_probability":"1/2"},
+  {"name":"credit_memory","routing":"credit","remember":true,"response_probability":"1/2"},
+  {"name":"evidence_today","routing":"evidence","remember":false,"response_probability":"1/2"},
+  {"name":"evidence_q50","routing":"evidence","remember":true,"response_probability":"1/2"},
+  {"name":"evidence_q0","routing":"evidence","remember":true,"response_probability":"0"},
+  {"name":"evidence_q25","routing":"evidence","remember":true,"response_probability":"1/4"},
+  {"name":"evidence_q75","routing":"evidence","remember":true,"response_probability":"3/4"},
+  {"name":"evidence_q100","routing":"evidence","remember":true,"response_probability":"1"}
+ ],
+ "mafia":[
+  {"name":"late_near","kill_mode":"safe_late","response":"forward","target_rule":"near"},
+  {"name":"late_far","kill_mode":"safe_late","response":"forward","target_rule":"far"},
+  {"name":"decoy_near","kill_mode":"posterior_decoy","response":"forward","target_rule":"near"},
+  {"name":"decoy_far","kill_mode":"posterior_decoy","response":"forward","target_rule":"far"}
+ ]
+}

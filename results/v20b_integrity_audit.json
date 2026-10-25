@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "cells_checked": 8,
+  "sampled_full_replays": 24,
+  "assets_checked": 49,
+  "games_recorded": 16384,
+  "scope": "Fresh exploratory constraint probe; no independent replication, no q retuning; sampled full replay only."
+}

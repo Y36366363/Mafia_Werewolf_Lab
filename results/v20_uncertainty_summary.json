@@ -1,0 +1,10 @@
+{
+  "cell_family": 8,
+  "confidence": 0.95,
+  "hoeffding_radius": 0.02653565048301731,
+  "frozen_pair_restricted_gap_interval": [
+    0,
+    0.05307130096603462
+  ],
+  "scope": "Assumes independent Monte Carlo games per cell; simultaneous bounds for 2x4 held-out means, arbitrary fixed train mixtures. Not full-game exploitability."
+}
