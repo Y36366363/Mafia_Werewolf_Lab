@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "historical_full_replays": 16384,
+  "fresh_games": 4096,
+  "sampled_uninstrumented_full_replays": 48,
+  "blocks_checked": 8,
+  "examples_checked": 10,
+  "scope": "All historical raw metrics checked in instrumented run; independent uninstrumented trace samples and aggregate arithmetic verified. Explanatory audit, not strategy optimization."
+}

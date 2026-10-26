@@ -1,0 +1,12 @@
+{
+  "archived_package": "results/v20b/source",
+  "archive_freeze_sha256": "c50e92ab86f7b744ca9dd6221b9b50b1247cd257b6000099913ea89108ab61b6",
+  "old_seed_start": 163000000,
+  "old_n": 2048,
+  "new_seed_start": 164000000,
+  "new_n": 512,
+  "assets": {
+    "source/docs/continuation_audit_protocol_v21.md": "a264617fed02294f61a679907c84ec99de28d6e4f23543a719dd2bdd943abf81",
+    "source/scripts/audit_continuations_v21.py": "bbfacdae59edad172278fdf816c8737b070bd503dd0a79206ce9943f804b28d9"
+  }
+}

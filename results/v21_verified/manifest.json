@@ -1,0 +1,9 @@
+{
+  "historical_full_replays": 16384,
+  "fresh_games": 4096,
+  "files": {
+    "freeze.json": "0fe654a4ca8109dfbb9233898f555505d1d5ec24723090dbb505a0507e76880b",
+    "audit.json": "e22bbf6b66a201ce32eb18d565afbceea83d26fa1c91a710895d64a28879227c",
+    "examples.json": "0d58d0a09c803399b591717f22066558818df3f6a0fe431e4535ff5e9aa86a15"
+  }
+}
