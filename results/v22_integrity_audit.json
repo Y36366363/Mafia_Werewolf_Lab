@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "games_recorded": 131072,
+  "cells_checked": 32,
+  "sampled_full_replays": 96,
+  "additional_legacy_api_comparisons": 24,
+  "source_assets_checked": 53,
+  "scope": "All stored prefix hashes invariant, full raw arithmetic checked; 3 sampled full independent traces per cell plus instrumented metrics replay. Not all games independently rerun. No equilibrium claims."
+}

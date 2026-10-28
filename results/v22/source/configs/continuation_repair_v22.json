@@ -1,0 +1,17 @@
+{
+ "version":"20261027-continuation-repair-v22",
+ "rules":{"police":4,"mafia":4,"civilians":8,"last_words_limit":3,"allow_self_kill":true,"tie_rule":"pk","direction":1},
+ "blocks":[{"name":"evaluation_A","seed_start":166000000,"n":4096},{"name":"replication_B","seed_start":167000000,"n":4096}],
+ "good":[
+  {"name":"legacy","live_conflicts_only":false,"current_advice_only":false},
+  {"name":"live_pair","live_conflicts_only":true,"current_advice_only":false},
+  {"name":"current_day","live_conflicts_only":false,"current_advice_only":true},
+  {"name":"both","live_conflicts_only":true,"current_advice_only":true}
+ ],
+ "mafia":[
+  {"name":"late_near","kill_mode":"safe_late","response":"forward","target_rule":"near"},
+  {"name":"late_far","kill_mode":"safe_late","response":"forward","target_rule":"far"},
+  {"name":"decoy_near","kill_mode":"posterior_decoy","response":"forward","target_rule":"near"},
+  {"name":"decoy_far","kill_mode":"posterior_decoy","response":"forward","target_rule":"far"}
+ ]
+}

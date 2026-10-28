@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "regression_games": 6,
+  "actor_observations_checked": 222,
+  "scope": "Known development cases only, no independent win-rate evidence."
+}
