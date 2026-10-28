@@ -1,0 +1,71 @@
+{
+  "scope": "Secondary procedure specified after viewing train but before viewing holdout. Simultaneous 95% bound for 8 frozen paired comparisons under independent-seed game sampling per comparison; union bound needs no independence across columns. Bounds overall terminal win effect only, not local harm or exploitability against other policies.",
+  "family": 8,
+  "alpha": 0.05,
+  "rows": [
+    {
+      "good": "legacy_q50",
+      "base": "late_near",
+      "n": 4096,
+      "win_flips": 0,
+      "absolute_population_win_effect_bound": 0.0012382887941637523,
+      "method": "If K=0: 1-(alpha/8)^(1/n); otherwise trivial bound 1. |E[D]| <= P(D != 0)."
+    },
+    {
+      "good": "legacy_q50",
+      "base": "late_far",
+      "n": 4096,
+      "win_flips": 0,
+      "absolute_population_win_effect_bound": 0.0012382887941637523,
+      "method": "If K=0: 1-(alpha/8)^(1/n); otherwise trivial bound 1. |E[D]| <= P(D != 0)."
+    },
+    {
+      "good": "legacy_q50",
+      "base": "decoy_near",
+      "n": 4096,
+      "win_flips": 0,
+      "absolute_population_win_effect_bound": 0.0012382887941637523,
+      "method": "If K=0: 1-(alpha/8)^(1/n); otherwise trivial bound 1. |E[D]| <= P(D != 0)."
+    },
+    {
+      "good": "legacy_q50",
+      "base": "decoy_far",
+      "n": 4096,
+      "win_flips": 0,
+      "absolute_population_win_effect_bound": 0.0012382887941637523,
+      "method": "If K=0: 1-(alpha/8)^(1/n); otherwise trivial bound 1. |E[D]| <= P(D != 0)."
+    },
+    {
+      "good": "repair_q50",
+      "base": "late_near",
+      "n": 4096,
+      "win_flips": 0,
+      "absolute_population_win_effect_bound": 0.0012382887941637523,
+      "method": "If K=0: 1-(alpha/8)^(1/n); otherwise trivial bound 1. |E[D]| <= P(D != 0)."
+    },
+    {
+      "good": "repair_q50",
+      "base": "late_far",
+      "n": 4096,
+      "win_flips": 0,
+      "absolute_population_win_effect_bound": 0.0012382887941637523,
+      "method": "If K=0: 1-(alpha/8)^(1/n); otherwise trivial bound 1. |E[D]| <= P(D != 0)."
+    },
+    {
+      "good": "repair_q50",
+      "base": "decoy_near",
+      "n": 4096,
+      "win_flips": 0,
+      "absolute_population_win_effect_bound": 0.0012382887941637523,
+      "method": "If K=0: 1-(alpha/8)^(1/n); otherwise trivial bound 1. |E[D]| <= P(D != 0)."
+    },
+    {
+      "good": "repair_q50",
+      "base": "decoy_far",
+      "n": 4096,
+      "win_flips": 0,
+      "absolute_population_win_effect_bound": 0.0012382887941637523,
+      "method": "If K=0: 1-(alpha/8)^(1/n); otherwise trivial bound 1. |E[D]| <= P(D != 0)."
+    }
+  ]
+}

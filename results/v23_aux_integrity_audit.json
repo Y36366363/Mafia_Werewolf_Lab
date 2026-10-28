@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "coverage_pairs": 32768,
+  "bootstrap_replicates_bookkept": 500,
+  "independent_rational_bootstrap_checks": 10,
+  "training_diagnostic_instrumented_replays": 902,
+  "independent_example_full_replays": 14,
+  "scope": "Auxiliary post-train/old-data diagnostics only; no added independent performance evidence or new q selection."
+}

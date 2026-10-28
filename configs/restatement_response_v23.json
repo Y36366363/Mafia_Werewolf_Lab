@@ -1,0 +1,24 @@
+{
+ "version":"20261028-restatement-response-v23",
+ "rules":{"police":4,"mafia":4,"civilians":8,"last_words_limit":3,"allow_self_kill":true,"tie_rule":"pk","direction":1},
+ "train":{"seed_start":169000000,"n":1024},
+ "holdout":{"seed_start":170000000,"n":4096},
+ "good":[
+  {"name":"legacy_q50","live_conflicts_only":false,"current_advice_only":false,"response_probability":"1/2"},
+  {"name":"repair_q0","response_probability":"0"},
+  {"name":"repair_q25","response_probability":"1/4"},
+  {"name":"repair_q50","response_probability":"1/2"},
+  {"name":"repair_q75","response_probability":"3/4"},
+  {"name":"repair_q100","response_probability":"1"}
+ ],
+ "mafia":[
+  {"name":"late_near_quiet","kill_mode":"safe_late","response":"forward","target_rule":"near","restate":false},
+  {"name":"late_near_restate","kill_mode":"safe_late","response":"forward","target_rule":"near","restate":true},
+  {"name":"late_far_quiet","kill_mode":"safe_late","response":"forward","target_rule":"far","restate":false},
+  {"name":"late_far_restate","kill_mode":"safe_late","response":"forward","target_rule":"far","restate":true},
+  {"name":"decoy_near_quiet","kill_mode":"posterior_decoy","response":"forward","target_rule":"near","restate":false},
+  {"name":"decoy_near_restate","kill_mode":"posterior_decoy","response":"forward","target_rule":"near","restate":true},
+  {"name":"decoy_far_quiet","kill_mode":"posterior_decoy","response":"forward","target_rule":"far","restate":false},
+  {"name":"decoy_far_restate","kill_mode":"posterior_decoy","response":"forward","target_rule":"far","restate":true}
+ ]
+}

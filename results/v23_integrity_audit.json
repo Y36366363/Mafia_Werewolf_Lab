@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "actual_games": 245760,
+  "cells_checked": 96,
+  "sampled_full_traces": 288,
+  "assets_checked": 55,
+  "alias_reused": "repair_q50",
+  "scope": "Frozen-source hashes, all arithmetic, paired prefix/branch consistency, flags and 3 sampled unwrapped full traces per cell. Not all games independently rerun."
+}

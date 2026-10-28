@@ -1,0 +1,11 @@
+{
+  "games": 245760,
+  "alias_reused": "repair_q50",
+  "elapsed_seconds": 1100.1383281250019,
+  "files": {
+    "freeze.json": "7a3ab851083d66e4ca8395eac0057801e7de7faf8c7b9870525e8b692de1dcd3",
+    "train.json": "4db7758814ef1216616ecb1be38a89dd5880344602dd9d75fe71686faf660e71",
+    "selection_before_holdout.json": "6bca4ad9886420b87fc9cb9346da3b58c3380a188e7f850c89c3edb542ef0b7d",
+    "holdout.json": "0a9707efb617717c323ddc5b08ba7ef82bf05cdab0ce9978b3a0c7929016c079"
+  }
+}

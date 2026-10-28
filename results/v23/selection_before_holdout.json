@@ -1,0 +1,50 @@
+{
+  "q_exact": "1/2",
+  "policy": {
+    "name": "trained_local_q",
+    "reveal": "silent",
+    "trust": "none",
+    "civilian_message": "pass",
+    "inspect": "random",
+    "dead_police_message": "truth",
+    "dead_claim_response": "trust",
+    "live_counter": "hidden",
+    "inspect_position": "gap",
+    "dead_clear_plan": "truth",
+    "leadership": "nominate",
+    "position_model": "posterior",
+    "prior_model": "equal",
+    "shortlist_rule": "list2",
+    "flow": "timed",
+    "source_credit": true,
+    "history": false,
+    "clear_guard": true,
+    "reply": "keep",
+    "civilian_denial": true,
+    "survival_guard": false,
+    "routing": "evidence",
+    "remember": true,
+    "response_probability": "1/2",
+    "live_conflicts_only": true,
+    "current_advice_only": true
+  },
+  "alias_of": "repair_q50",
+  "certificate": {
+    "value_exact": "61/1024",
+    "value": 0.0595703125,
+    "good_mixture": {
+      "repair_q0": "1/2",
+      "repair_q100": "1/2"
+    },
+    "mafia_mixture": {
+      "decoy_near_quiet": "2/3",
+      "decoy_far_quiet": "1/3"
+    },
+    "lower_exact": "61/1024",
+    "upper_exact": "61/1024",
+    "gap_exact": "0",
+    "simplex_pivots": 3
+  },
+  "holdout_unread": true,
+  "scope": "2 endpoint x 8 frozen mafia TRAIN empirical game; local single actor randomization, no team secret signal."
+}

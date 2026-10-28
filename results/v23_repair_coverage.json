@@ -1,0 +1,260 @@
+{
+  "scope": "Posthoc read-only coverage audit of all v22 paired records; repeated seeds across mafia columns, not new independent data. Flags identify target paths, not every irrational move or a causal mediator.",
+  "blocks": [
+    {
+      "phase": "evaluation_A",
+      "mafia": "late_near",
+      "n": 4096,
+      "groups": {
+        "old_path_removed_loss": 3253,
+        "no_old_target_path_loss": 536,
+        "old_path_removed_win": 290,
+        "no_old_target_path_win": 17
+      },
+      "source_file": "results/v22/evaluation_A.json",
+      "source_sha256": "249e755eed7c420465ebac106a5b8f7014551cc32bcf2e4d81627469437ec51a"
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "late_far",
+      "n": 4096,
+      "groups": {
+        "old_path_removed_loss": 3401,
+        "no_old_target_path_win": 12,
+        "no_old_target_path_loss": 361,
+        "old_path_removed_win": 322
+      },
+      "source_file": "results/v22/evaluation_A.json",
+      "source_sha256": "249e755eed7c420465ebac106a5b8f7014551cc32bcf2e4d81627469437ec51a"
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "decoy_near",
+      "n": 4096,
+      "groups": {
+        "old_path_removed_loss": 3257,
+        "old_path_removed_win": 216,
+        "no_old_target_path_loss": 607,
+        "no_old_target_path_win": 16
+      },
+      "source_file": "results/v22/evaluation_A.json",
+      "source_sha256": "249e755eed7c420465ebac106a5b8f7014551cc32bcf2e4d81627469437ec51a"
+    },
+    {
+      "phase": "evaluation_A",
+      "mafia": "decoy_far",
+      "n": 4096,
+      "groups": {
+        "no_old_target_path_loss": 977,
+        "old_path_removed_win": 178,
+        "old_path_removed_loss": 2883,
+        "no_old_target_path_win": 58
+      },
+      "source_file": "results/v22/evaluation_A.json",
+      "source_sha256": "249e755eed7c420465ebac106a5b8f7014551cc32bcf2e4d81627469437ec51a"
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "late_near",
+      "n": 4096,
+      "groups": {
+        "old_path_removed_loss": 3232,
+        "old_path_removed_win": 338,
+        "no_old_target_path_loss": 509,
+        "no_old_target_path_win": 17
+      },
+      "source_file": "results/v22/replication_B.json",
+      "source_sha256": "7b8023a106929c1d9c904ef3513097bac41f632c3828491cfff714a50b9ae3f0"
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "late_far",
+      "n": 4096,
+      "groups": {
+        "old_path_removed_loss": 3341,
+        "old_path_removed_win": 367,
+        "no_old_target_path_win": 16,
+        "no_old_target_path_loss": 372
+      },
+      "source_file": "results/v22/replication_B.json",
+      "source_sha256": "7b8023a106929c1d9c904ef3513097bac41f632c3828491cfff714a50b9ae3f0"
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "decoy_near",
+      "n": 4096,
+      "groups": {
+        "old_path_removed_loss": 3309,
+        "no_old_target_path_loss": 585,
+        "old_path_removed_win": 188,
+        "no_old_target_path_win": 14
+      },
+      "source_file": "results/v22/replication_B.json",
+      "source_sha256": "7b8023a106929c1d9c904ef3513097bac41f632c3828491cfff714a50b9ae3f0"
+    },
+    {
+      "phase": "replication_B",
+      "mafia": "decoy_far",
+      "n": 4096,
+      "groups": {
+        "old_path_removed_loss": 2947,
+        "no_old_target_path_loss": 941,
+        "old_path_removed_win": 170,
+        "no_old_target_path_win": 38
+      },
+      "source_file": "results/v22/replication_B.json",
+      "source_sha256": "7b8023a106929c1d9c904ef3513097bac41f632c3828491cfff714a50b9ae3f0"
+    }
+  ],
+  "aggregate": {
+    "old_path_removed_loss": 25623,
+    "no_old_target_path_loss": 4888,
+    "old_path_removed_win": 2069,
+    "no_old_target_path_win": 188
+  },
+  "pairs": 32768,
+  "third_regression": {
+    "seed": 163000001,
+    "roles_evaluation_only": [
+      "police",
+      "police",
+      "civilian",
+      "civilian",
+      "civilian",
+      "police",
+      "police",
+      "mafia",
+      "mafia",
+      "civilian",
+      "civilian",
+      "mafia",
+      "mafia",
+      "civilian",
+      "civilian",
+      "civilian"
+    ],
+    "win": 0,
+    "days": [
+      {
+        "day": 1,
+        "checked": [
+          11
+        ],
+        "night_deaths": [
+          9
+        ],
+        "day_exile": 11,
+        "day_exile_role": "mafia",
+        "police_votes": [
+          {
+            "player": 0,
+            "target": 11,
+            "known_bad": [
+              11
+            ]
+          },
+          {
+            "player": 1,
+            "target": 11,
+            "known_bad": [
+              11
+            ]
+          },
+          {
+            "player": 5,
+            "target": 11,
+            "known_bad": [
+              11
+            ]
+          },
+          {
+            "player": 6,
+            "target": 11,
+            "known_bad": [
+              11
+            ]
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "checked": [
+          10
+        ],
+        "night_deaths": [
+          0
+        ],
+        "day_exile": 2,
+        "day_exile_role": "civilian",
+        "police_votes": [
+          {
+            "player": 1,
+            "target": 2,
+            "known_bad": []
+          },
+          {
+            "player": 5,
+            "target": 2,
+            "known_bad": []
+          },
+          {
+            "player": 6,
+            "target": 2,
+            "known_bad": []
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "checked": [
+          12
+        ],
+        "night_deaths": [
+          1
+        ],
+        "day_exile": 12,
+        "day_exile_role": "mafia",
+        "police_votes": [
+          {
+            "player": 5,
+            "target": 12,
+            "known_bad": [
+              12
+            ]
+          },
+          {
+            "player": 6,
+            "target": 12,
+            "known_bad": [
+              12
+            ]
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "checked": [
+          13
+        ],
+        "night_deaths": [
+          5
+        ],
+        "day_exile": 7,
+        "day_exile_role": "mafia",
+        "police_votes": [
+          {
+            "player": 6,
+            "target": 7,
+            "known_bad": []
+          }
+        ]
+      }
+    ],
+    "final_night": {
+      "night": 5,
+      "kind": "kill",
+      "target": 6
+    },
+    "interpretation": "Target bug removed; one civilian day-exile spent tempo, three mafia exiled before fourth police was killed. Other strategies may improve this, but present loss is not evidence of surviving orphan-conflict bug."
+  }
+}
