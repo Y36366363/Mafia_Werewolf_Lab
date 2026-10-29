@@ -1,0 +1,48 @@
+{
+  "q_exact": "0",
+  "policy": {
+    "name": "trained_local_q",
+    "reveal": "silent",
+    "trust": "none",
+    "civilian_message": "pass",
+    "inspect": "random",
+    "dead_police_message": "truth",
+    "dead_claim_response": "trust",
+    "live_counter": "hidden",
+    "inspect_position": "gap",
+    "dead_clear_plan": "truth",
+    "leadership": "nominate",
+    "position_model": "posterior",
+    "prior_model": "equal",
+    "shortlist_rule": "list2",
+    "flow": "timed",
+    "source_credit": true,
+    "history": false,
+    "clear_guard": true,
+    "reply": "keep",
+    "civilian_denial": true,
+    "survival_guard": false,
+    "routing": "evidence",
+    "remember": true,
+    "response_probability": "0",
+    "live_conflicts_only": true,
+    "current_advice_only": true
+  },
+  "alias_of": "repair_q0",
+  "certificate": {
+    "value_exact": "1/128",
+    "value": 0.0078125,
+    "good_mixture": {
+      "repair_q0": "1"
+    },
+    "mafia_mixture": {
+      "late_far_claim": "1"
+    },
+    "lower_exact": "1/128",
+    "upper_exact": "1/128",
+    "gap_exact": "0",
+    "simplex_pivots": 3
+  },
+  "holdout_unread": true,
+  "scope": "2 endpoints x 16 fixed adversary columns TRAIN empirical matrix; no full-game GTO."
+}

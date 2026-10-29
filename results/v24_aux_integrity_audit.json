@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "scipy_version": "1.16.3",
+  "precision_record_utc": "2026-10-29T14:59:03.037859+00:00",
+  "precision_record_says_holdout_absent": true,
+  "precision_record_hashes_checked": 3,
+  "primary_paired_comparisons_checked": 4,
+  "independently_inverted_binomial_intervals": 8,
+  "family_tail_alpha": 0.003125,
+  "union_bound_error": 0.05,
+  "category_slots_checked": 12,
+  "selected_first_seed_cases": 7,
+  "archived_case_runs_checked": 28,
+  "archived_case_raw_fields_checked": 1204,
+  "archived_v23_hash_matches": 2,
+  "new_simulations": 0,
+  "new_full_replays": 0,
+  "input_sha256": {
+    "precision_record": "55dbdc44b34e80cc12eb201fff9b5570d23f21920e1d1d1f7dc3e021f579aedb",
+    "precision_result": "0a8206e0c7106c4e6d2bf88d644a006cc334647383e538e6aebf85f43534cc3f",
+    "examples": "14dd6ff3fbc8c55bbb92c27c68c2b5fab1b4e10ab0813adeb38db5bc5d9bbd97",
+    "holdout": "db12960c3c933d38a39cc48ad61a2a52f34b033b8a05a6a2b444b39ae4508e48"
+  },
+  "scope": "Auxiliary bookkeeping and independent finite-sample interval inversion only. Uses archived held outcomes; no new performance evidence or strategy selection. Verifies recorded pre-held provenance claims, not an independent wall-clock proof."
+}

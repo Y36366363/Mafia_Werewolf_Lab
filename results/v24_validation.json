@@ -1,0 +1,27 @@
+{
+  "python": "3.12.3 | packaged by conda-forge | (main, Apr 15 2024, 18:35:20) [Clang 16.0.6 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 293,
+    "elapsed_seconds": 68.78,
+    "status": "pass",
+    "scope": "Actually executed this update; no historical counts reported as newly run."
+  },
+  "targeted_tests": {
+    "command": "python -m pytest tests/test_succession_v24.py -q",
+    "passed": 7,
+    "status": "pass"
+  },
+  "formal_strategy_package_unchanged": true,
+  "frozen_package_sha256": "633acf66fa1d1bc1bfbaf4b06502d12994b9c4ab07b0f57ce20adc0d27987bc6",
+  "checker_scope": "Post-freeze root checker adds cross-q opening and no-effect-outside-response-node invariants. Frozen original checker and strategies remain archived unchanged.",
+  "whitespace_check": {
+    "new_edits_excluding_frozen_snapshot": "pass",
+    "snapshot_warnings": "Two pre-existing extra EOF blank lines preserved byte-for-byte in historical v12 modules; not edited to avoid changing frozen source hashes.",
+    "historical_paths": [
+      "mafia_lab/declaration_experiment_v12.py",
+      "mafia_lab/strategies_v12.py"
+    ]
+  }
+}

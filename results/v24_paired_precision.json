@@ -1,0 +1,83 @@
+{
+  "scope": "Training-informed method specified before held reading; marginal exact binomial CP plus union bound, 4 fixed q50 contrasts simultaneous 95% under iid simulation seeds.",
+  "tail_alpha": 0.003125,
+  "input_sha256": "db12960c3c933d38a39cc48ad61a2a52f34b033b8a05a6a2b444b39ae4508e48",
+  "rows": [
+    {
+      "base": "late_near",
+      "n": 4096,
+      "improved": 0,
+      "worsened": 306,
+      "delta": -0.07470703125,
+      "p_plus": [
+        0.0,
+        0.001407290330065245
+      ],
+      "p_minus": [
+        0.06391041097238594,
+        0.08662380661631877
+      ],
+      "simultaneous_ci": [
+        -0.08662380661631877,
+        -0.06250312064232069
+      ]
+    },
+    {
+      "base": "late_far",
+      "n": 4096,
+      "improved": 0,
+      "worsened": 351,
+      "delta": -0.085693359375,
+      "p_plus": [
+        0.0,
+        0.001407290330065245
+      ],
+      "p_minus": [
+        0.07415698619990466,
+        0.09831999922119918
+      ],
+      "simultaneous_ci": [
+        -0.09831999922119918,
+        -0.07274969586983941
+      ]
+    },
+    {
+      "base": "decoy_near",
+      "n": 4096,
+      "improved": 0,
+      "worsened": 189,
+      "delta": -0.046142578125,
+      "p_plus": [
+        0.0,
+        0.001407290330065245
+      ],
+      "p_minus": [
+        0.037651040552843476,
+        0.05583382037794882
+      ],
+      "simultaneous_ci": [
+        -0.05583382037794882,
+        -0.03624375022277823
+      ]
+    },
+    {
+      "base": "decoy_far",
+      "n": 4096,
+      "improved": 0,
+      "worsened": 131,
+      "delta": -0.031982421875,
+      "p_plus": [
+        0.0,
+        0.001407290330065245
+      ],
+      "p_minus": [
+        0.0249538772960884,
+        0.04025228129124228
+      ],
+      "simultaneous_ci": [
+        -0.04025228129124228,
+        -0.023546586966023155
+      ]
+    }
+  ]
+}

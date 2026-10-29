@@ -1,0 +1,20 @@
+{
+  "scope": "Post-run report/diagnostic provenance; does not replace the pre-run frozen policy package or claim all analysis was predeclared.",
+  "files": {
+    "scripts/build_succession_report_v24.py": "92ed52fc8265a17e6cbb53b8c61471ecb5471026a460942eb9bd9175ba031bcb",
+    "scripts/verify_succession_counter_v24.py": "10c8db8c9c89a900f0c580b9246bfee428d7e2eb583d159861fab99a65fa7077",
+    "scripts/verify_succession_aux_v24.py": "57b2043220be7ad72f2d515660c9f0167bd2734a424443143530f311cf0dd0f1",
+    "scripts/run_succession_counter_v24.py": "844bbb9918c55a92812babefc1af00acf6a9235c30fa3dac741c1804d16ce52c",
+    "scripts/paired_precision_v24.py": "0cfb4f5bc2259299fe4e6874a5c9f96d545e25a572824d97351b2ac98c9d7290",
+    "scripts/diagnose_succession_counter_v24.py": "7a1f14817bf8e47e33a77767447718183233cdb3c1164196b87180ae448df747",
+    "docs/succession_counter_results_v24.md": "dfc055eca783673cfafceab8d457e4d35443a895d0960e28b60d56bb1807e2b1",
+    "docs/succession_precision_scope_v24.md": "44731ca0b052921ef903906fa4c2ae77a533dcb10a84079f69febbb12adba6b2",
+    "docs/succession_counter_protocol_v24.md": "154b8a3107e182441804515e63a1d7a2771daa5aab4380cca86d625789279599",
+    "results/v24_examples.json": "14dd6ff3fbc8c55bbb92c27c68c2b5fab1b4e10ab0813adeb38db5bc5d9bbd97",
+    "results/v24_precision_before_holdout.json": "55dbdc44b34e80cc12eb201fff9b5570d23f21920e1d1d1f7dc3e021f579aedb",
+    "results/v24_paired_precision.json": "0a8206e0c7106c4e6d2bf88d644a006cc334647383e538e6aebf85f43534cc3f",
+    "results/v24_aux_integrity_audit.json": "e5915c44cd478338e715a92101c6161b6260e299cf16eb66dffcc3c194e4651a",
+    "results/v24_integrity_audit.json": "e6bf94a0c5e0a811d88f598342eb65b4043ffe854422003d027a965bb59bd454",
+    "results/v24_validation.json": "2cd444e0944d32eec68d77c6e66fa570e36ba47cb038f95c7e68e400bdac5bd2"
+  }
+}

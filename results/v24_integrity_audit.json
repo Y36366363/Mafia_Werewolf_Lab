@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "actual_games": 245760,
+  "cells_checked": 96,
+  "sampled_full_traces": 288,
+  "assets_checked": 57,
+  "alias_reused": "repair_q0",
+  "scope": "All hashes/arithmetic/paired prefixes and mechanism flags; 3 sampled independent unwrapped traces per cell, not all games rerun."
+}
