@@ -9,3 +9,6 @@ __pycache__/
 /docs/*roadmap*.md
 /research/academic_*.md
 /research/*roadmap*.md
+
+# Local agent collaboration instructions are not part of the public repository.
+/AGENTS.md

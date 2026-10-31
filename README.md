@@ -1,126 +1,39 @@
 # Mafia / Werewolf Lab
 
-研究隐藏身份游戏中的策略与均衡，建立可验证的教学任务，最终检验推理训练向德州扑克的迁移。当前实现警匪游戏；狼人杀技能尚未加入。
+[中文文档与实验记录](README.zh.md)
 
-**2026-10-31最新更新：** [v26警方明确执行归票与来源条件票型完整报告](docs/police_execution_results_v26.md)：保留验人/内推并补明确执行目标，在固定接续跳警四条件下提高14—19个百分点；原人重申条件未分辨稳定增量，最差条件仍约6%，不能外推整体胜率。票型小试验在伪装刀下约增1.27个百分点，后置刀尚未分辨；有限倒钩确能洗掉局部信号。138,240局正式模拟、307项测试、324条抽样轨迹与144条v25兼容通过。金水接力另待验证；LLM暂未接入主模拟，后续可先做冻结信息集的影子语言任务。
+## Research question
 
-**2026-10-30历史更新：** [v25来源资格消融、票型与警方目标审计完整报告](docs/source_advice_results_v25.md)：先重放4096条旧轨迹，区分新来源打散共同建议与警队公开目标/投票不同。新留出仅改一项建议资格后，q50接续反制下好人胜率回升3.0—8.6个百分点；支持反制对接收协议敏感，非已击败完善最佳应对。假验人仍可绕过，不能把资格开关当最终稳健规则。透明票型有潜力，但大量集中组为纯好人，未部署任意怀疑分。122,880局新模拟、299项测试、288条抽样完整重放通过；跳藏三档保留，不选新最佳q、不新求均衡。
+How do public coordination protocols and adversarial responses change team outcomes in a hidden-role game, and how can those effects be evaluated without giving agents information they should not have?
 
-**2026-10-29历史更新：** [v24接续反制覆盖与跳藏完整报告](docs/succession_counter_results_v24.md)：队友仅提旧目标未改变q50留出终局；自己接续跳警则覆盖约89%—95%的原赢局，好人胜率下降3.2—8.6个百分点。新来源可打散共同建议，旧两项目标漏洞未复发；不能恢复机械轮出或把结果当真人胜率。训练选该窄回应节点q0，留出仅支持冻结池内端点表现，非完整GTO。245,760局正式模拟、293项测试、288条抽样无包装器完整重放及30条案例夜行动审计通过。
+The current model is a 16-player police–mafia game: **4 police, 4 mafia, and 8 civilians**. Police recognize their teammates and share one private investigation per night; mafia recognize their own team. Mafia win when all police are eliminated; the police–civilian team wins when all mafia are eliminated. Deaths do not reveal roles. Werewolf-specific roles are not implemented.
 
-**2026-10-28历史更新：** [v23修复覆盖、匪方重申与局部跳藏完整报告](docs/restatement_response_results_v23.md)：旧32,768个配对局面未见目标路径残留；新测试中重申确能改变出人顺序，但未改变所测终局胜负，不能据此称全面抗反制。修复收益保留；跳藏训练选出50%混合候选，留出未确认该精确比例优于端点。245,760局正式模拟、286项测试及288个抽样完整轨迹核验通过。仅2×8受限经验矩阵分析，不是完整GTO。
+## Agents and evaluation
 
-**2026-10-27历史更新：** [v22续局修复完整报告](docs/continuation_repair_results_v22.md)：将历史不相容与今日出人指令分开，比较取消死—活冲突轮出、建议时效及双修复。两批全新种子下双修复对四个冻结匪条件均提高胜率，增量约3.8—9.3个百分点；首日及第二天投票前轨迹逐局相同。131,072局正式模拟、279项测试、96个抽样完整轨迹与24个旧API兼容比较通过。匪方未针对新规则重新学习，不是完整GTO，信用与q均保持冻结。
+Agents use **hand-written policies with controlled randomization**, not LLMs or unrestricted natural-language reasoning. Each policy receives only its player's permitted observations. Public actions use structured declarations, suspect lists, execution recommendations, and votes. The implemented voting variant publishes ballots sequentially and allows one tied-candidate speech and revote round.
 
-**2026-10-26历史更新：** [v21完整续局审计报告](docs/continuation_audit_results_v21.md)：不改策略，完整重放16,384局旧实验并逐局核对原记录，另用4,096局新种子核查异常路径。已定位历史声明冲突仅剩活来源时机械出人的风险；未发现合法已知匪被忽略、警投私有好人或已知匪时警队分票。270项测试通过，48局无包装器抽样完整重放一致。结论为续局审计，不是策略改进或GTO。
+Experiments compare frozen policies on matched deals and decision-keyed random streams, with separate development and held-out seeds. Source snapshots, configurations, per-game measurements, and replay checks are archived. Small restricted games and selected empirical payoff matrices also have exact rational equilibrium checks; those certificates do not certify the full game.
 
-**2026-10-25历史更新：** [v20私人记忆、信息采纳与单警局部混合完整报告](docs/evidence_memory_results_v20.md)：修复跨日私人假警证据，冻结旧信用仅作对照，测试不按数值门槛采纳信息的协议。新协议未普遍改善终局；首验一致性补测显著改善首日出匪却未普遍改善整局，下一步应审计固定续局。229,376次正式终局模拟、265项测试与228局归档抽样重放通过。训练与留出端点矩阵的经验gap为0，仅限2×4子博弈，有限样本不确定性仍在。
+## Main result: explicit execution recommendations
 
-**2026-10-24历史更新：** [v19／v19b真警回应与暂缓跳警完整报告](docs/reply_results_v19.md)：保留固定信用、金水保护、真实验人与内推，区分首个真警回应和额外暴露队友；早跳回应尚无稳定整局收益，真正隐藏的补充比较显示刀法条件下明显不同的收益权衡。229,376次正式终局模拟、247项测试及168局归档抽样重放通过。条件分支样本有限，仅固定策略评估，未求均衡。
+A police officer may know several mafia players but publicly report only one investigation. We compare the existing protocol with one that **retains the investigation and suspect list, adds an explicit “eliminate X today” recommendation at the same speaking turn, and aligns police votes with that recommendation when legally and privately justified**.
 
-**2026-10-19历史更新：** [v14位置刀修复完整方法及结果报告](docs/position_repair_results_v14.md)：不暴露首位匪徒的安全位置刀在全部验人行均优于随机刀；最大空隙验人下，安全末段刀把好人胜率从5.91%降到1.15%，主要机制是把公共首位锚点系统性转移给非匪，而非提高首刀中警。143,360次完整执行、195项测试及168局归档抽样重放通过。冻结训练混合的留出gap为0.579个百分点，结论是有限策略池证据，不是完整游戏GTO。
+The table reports held-out police–civilian team win rates, **before → after** the intervention. Each rate uses 2,048 simulations, with a fixed 50% local police response probability in a predefined first-day counterclaim window. The false-accusation target is the nearest or farthest eligible non-teammate later in the public speaking order. The two kill policies are frozen positional heuristics, not optimized best responses.
 
-**已实现可运行裁判、观察权限、完整对局、小模型精确求解、16人固定策略实验和反制评估。完整16人GTO与人类教学效果尚未得到验证。**
+| Mafia kill policy | False-accusation target | Original liar repeats its claim | Teammate takes over after the liar dies |
+| --- | --- | ---: | ---: |
+| Late-position heuristic (`safe_late`) | Near | 7.86% → 8.15% | 7.86% → 25.15% |
+| Late-position heuristic (`safe_late`) | Far | 8.54% → 8.74% | 8.54% → 27.20% |
+| Positional decoy (`posterior_decoy`) | Near | 5.42% → 5.76% | 5.42% → 19.53% |
+| Positional decoy (`posterior_decoy`) | Far | 5.66% → 6.01% | 5.66% → 22.12% |
 
-v10历史阶段执行232,960次16人终局模拟，并对7×13经验矩阵求受限混合。训练矩阵值27.41%，冻结混合在评估矩阵的下界26.74%、上界30.64%。评估种子与训练分离，但开发中曾被旧试跑使用；公共协调失败的机制尚未确认，不能把权重排序复现当作稳定最优的证明。数值与历史说明见[v10报告](docs/equilibrium_results_v10.md)，解释限制以[证据更正](docs/evidence_corrections_20261016.md)为准。
+All four takeover-condition improvements have simultaneous 95% paired binomial bounds above zero across the eight comparisons; the repeat-only differences remain inconclusive. The adversary can choose not to take over, so the 19–27% rates are **conditional results, not an overall robust win rate**. The lowest observed win rate across these eight conditions after the intervention is 5.76%.
 
-## 使用
+See the [detailed methods and results (Chinese)](docs/police_execution_results_v26.md), [frozen configuration](results/v26/source/configs/police_execution_v26.json), and [held-out results](results/v26/holdout.json).
 
-Python 3.10+，运行和有理数求解不依赖第三方包。在项目根目录执行：
+## Limitations
 
-```sh
-python3 -m mafia_lab demo --seed 20261010 --pk
-python3 -m mafia_lab tiny
-python3 -m mafia_lab controls
-python3 -m unittest discover -s tests -v
-python3 -m mafia_lab suite --config configs/experiment_v02.json --output results/reproduction_current
-python3 scripts/run_signal_counter.py
-python3 scripts/verify_results.py
-python3 scripts/run_large_game_v04.py --output results/v04_reproduction --workers 4
-python3 scripts/verify_large_game_v04.py results/v04 --replay --output results/v04_integrity_audit.json
-python3 scripts/build_large_game_report_v04.py
-python3 scripts/run_refinement_v05.py --output results/v05_reproduction --workers 4
-python3 scripts/analyze_restricted_matrix_v05.py
-python3 scripts/verify_refinement_v05.py results/v05 --replay --output results/v05_integrity_audit.json
-python3 scripts/build_refinement_report_v05.py
-python3 scripts/run_local_pool_v06.py --output results/v06_reproduction --workers 4
-python3 scripts/analyze_local_pool_v06.py
-python3 scripts/verify_local_pool_v06.py results/v06 --replay --output results/v06_integrity_audit.json
-python3 scripts/build_local_pool_report_v06.py
-python3 scripts/run_adaptive_v07.py --output results/v07_reproduction --workers 4
-python3 scripts/analyze_adaptive_v07.py
-python3 scripts/verify_adaptive_v07.py results/v07 --replay --output results/v07_integrity_audit.json
-python3 scripts/build_adaptive_report_v07.py
-python3 scripts/run_crossfit_v08.py --output results/v08_reproduction --workers 4
-python3 scripts/analyze_crossfit_v08.py
-python3 scripts/verify_crossfit_v08.py results/v08 --replay --output results/v08_integrity_audit.json
-python3 scripts/build_crossfit_report_v08.py
-python3 scripts/run_replication_v09.py --output results/v09_reproduction --workers 4
-python3 scripts/analyze_replication_v09.py
-python3 scripts/verify_replication_v09.py results/v09 --replay --output results/v09_integrity_audit.json
-python3 scripts/build_replication_report_v09.py
-python3 scripts/run_equilibrium_v10.py --output results/v10_reproduction --workers 4
-python3 scripts/analyze_equilibrium_v10.py
-python3 scripts/verify_equilibrium_v10.py results/v10 --replay --output results/v10_integrity_audit.json
-python3 scripts/build_equilibrium_report_v10.py
-```
-
-`demo` 输出完整对局的公开发言和票型；其中验人声明不代表裁判认证。最外层结果包含赛后评价标签。`suite` 会完整重算实验并覆盖指定输出目录中的同名结果；使用新目录保留不同版本。
-
-精确复现已冻结v02时，先 `cd results/v02/source`，再运行 `python3 -m mafia_lab suite --config configs/experiment_v02.json --output ../reproduction`。v03脚本重跑会覆盖其输出路径中的同名结果；当时源码、脚本和配置已单独保存在 `results/v03_source/`。v04拒绝覆盖已完成的结果目录，精确复现命令见最新报告；其 `source/` 保留完整源码、入口脚本和规范化配置。
-
-可选安装 `analysis` 依赖用于 SciPy/HiGHS 独立交叉验证；没有 SciPy 时仅跳过这一项，仍执行有理数证书和跨裁判逐项核对。
-
-## 当前范围
-
-| 层次 | 实现 | 证据含义 |
-| --- | --- | --- |
-| 1警1匪2民 | 全部机会分支、18×8策略池、有理数矩阵解 | 明确受限模型的精确结果，非全动作GTO |
-| 2警1匪3民、2警2匪4民 | 完整到终局的模拟与合法性测试 | 死警遗言、自刀机制的过渡模型 |
-| 4警4匪8民首日 | 同一首夜状态配对改变遗言 | 固定后续策略下的条件胜率差 |
-| 16人反制 | 7×7策略池，训练选回应、独立种子评估；另测追刀提名者 | 候选池内找到的利用和反利用 |
-| 16人掩护与票型 | 11×6策略池，局部角色条件随机化、公开历史推理、匪方同步反制 | 独立留出验证，115项预声明配对比较，非均衡混合频率 |
-| 16人策略拆分与顺序反制 | 11×7策略池，警/民票型拆分、验人单独开关、发起者识别、匪方散票 | 139项预声明比较、首夜条件分支、训练矩阵受限混合解 |
-| 16人局部混合与信息时点 | 9×7候选池、独立本地抽样、双发起确认、有限3+1散票、固定首夜配对干预 | 新种子留出与增量扩池；非完整CFR/GTO |
-| 16人公开票差与自适应表 | 公开顺序票、票差安全装饰、五种平民首发、训练生成条件表 | 独立留出拦截过拟合；规则变体策略评估，非完整GTO |
-| 16人交叉拟合与覆盖收益 | 公共确定性匪目标、坐标独立拟合/验证、平民多窗口公开首发 | 完全未读留出；候选池纯策略评估，非受限混合或完整GTO |
-| 16人多区块复验与自然开局 | 四组外层复验、公开重复提名追踪/诱饵、同窗口目标覆盖控制 | 三折选择和自然开局留出；机制拆分与候选池反制，非完整GTO |
-| 16人公共协调与受限混合 | 好人公共协议、三类匪方专门回应、7×13经验矩阵精确解 | 冻结混合独立留出；有限候选受限均衡，非完整GTO |
-| 16人位置验刀与死警内推 | 4×4位置矩阵、6×4条件内推矩阵、警察/金水摘出及匪方位置回应 | 新seed修复混杂并独立留出；条件受限均衡，非完整GTO |
-| 16人安全位置刀 | 首位非匪约束下的前段、中段、末段、包夹、均衡与混合刀法 | 4×7根节点矩阵和冻结留出；位置机制修复，非完整GTO |
-| 机制比较 | PK、3/4遗言、方向、近远验人、位置刀、自刀 | 固定策略下的开局胜率比较 |
-
-用户确认：匪胜条件为警察全灭；好人胜以匪全灭建模；夜晚共同验一人；不翻身份；允许自刀和假跳警。首夜被刀警察得到当夜验人。遗言包含夜死和白天放逐、前三次死亡可说；四次作为对照。发言从最近死者旁开始；左右固定方向均支持。基线同时投票、唯一最高票出局；PK变体对平票者再发言和复投，仍平则无人出局。
-
-## 文档与结果
-
-- [v10最新实验报告](docs/equilibrium_results_v10.md)：公共协调、三类专门反制与扩展矩阵受限均衡。
-- [v10冻结协议](docs/equilibrium_protocol_v10.md)、[配置](configs/equilibrium_v10.json)、[结果清单](results/v10/manifest.json)、[独立核验](results/v10_integrity_audit.json)：91个训练单元、91个留出单元、3条回应选择、2个精确矩阵证书和182局归档重放通过。
-- [v09最新实验报告](docs/replication_results_v09.md)：多区块复验、自然开局探测与公开反制。
-- [v09冻结协议](docs/replication_protocol_v09.md)、[配置](configs/replication_v09.json)、[结果清单](results/v09/manifest.json)、[独立核验](results/v09_integrity_audit.json)：128个复验单元、105个选择/验证单元、30个留出单元、9个种子区块和263局归档重放通过。
-- [v08最新实验报告](docs/crossfit_results_v08.md)：公共匪目标、坐标交叉拟合与平民首发覆盖收益。
-- [v08冻结协议](docs/crossfit_protocol_v08.md)、[配置](configs/crossfit_v08.json)、[结果清单](results/v08/manifest.json)、[独立核验](results/v08_integrity_audit.json)：476个训练单元、24个矩阵单元、21个首发单元、7,168个开局和81局归档重放通过。
-- [v07最新实验报告](docs/adaptive_results_v07.md)：实时票差装饰、公开平民首发与训练生成条件表。
-- [v07冻结协议](docs/adaptive_protocol_v07.md)、[配置](configs/adaptive_v07.json)、[结果清单](results/v07/manifest.json)、[独立核验](results/v07_integrity_audit.json)：360个训练候选单元、24个留出单元、21个首发单元、4,096个开局和63局归档重放通过。
-- [v06最新实验报告](docs/local_pool_results_v06.md)：局部混合、反诱饵、有限散票、查杀释放时点与增量反制池。
-- [v06冻结协议](docs/local_pool_protocol_v06.md)、[配置](configs/local_pool_v06.json)、[结果清单](results/v06/manifest.json)、[独立核验](results/v06_integrity_audit.json)：126个矩阵单元、21个时点单元、2,304个固定首夜状态与147局归档重放通过。
-- [v12首夜死亡声明与自刀可信度报告](docs/declaration_results_v12.md)、[冻结协议](docs/declaration_protocol_v12.md)、[配置](configs/declaration_v12.json)、[审计](results/v12_integrity_audit.json)：死警遗言配对干预、4×5自刀可信度训练／留出矩阵及冻结混合评价；不是完整游戏GTO。
-- [v13位置与内推完整报告](docs/position_nomination_results_v13.md)、[位置冻结协议](docs/position_nomination_protocol_v13.md)、[内推修复协议](docs/nomination_followup_protocol_v13b.md)、[v13审计](results/v13_integrity_audit.json)、[v13b审计](results/v13b_integrity_audit.json)：位置化验刀、死警内推、确定性警察诱饵泄漏及独立seed修复验证。
-- [v14安全位置刀完整报告](docs/position_repair_results_v14.md)、[冻结协议](docs/position_repair_protocol_v14.md)、[配置](configs/position_repair_v14.json)、[审计](results/v14_integrity_audit.json)：修复匪首发暴露，比较前中后段控制与随机刀，并报告冻结混合的独立留出上下界。
-- [v05最新实验报告](docs/refinement_results_v05.md)：反制循环、角色拆分、首夜条件分支、全16人规则敏感性与受限矩阵混合解。
-- [v05冻结协议](docs/refinement_protocol_v05.md)、[配置](configs/refinement_v05.json)、[结果清单](results/v05/manifest.json)、[独立核验](results/v05_integrity_audit.json)：170个实验单元、680个条件摘要、142项配对统计及340局归档重放通过。
-- [v04最新实验报告](docs/large_game_results_v04.md)：完整矩阵、反制链、掩护/混合/票型效果、保留决策与规则敏感性。
-- [v04实验协议](docs/large_game_protocol_v04.md)、[配置](configs/large_game_v04.json)、[结果清单](results/v04/manifest.json)、[独立核验](results/v04_integrity_audit.json)：148个实验单元、118项配对统计和296条归档重放通过。
-- [首轮实验报告](docs/experiment_report_v02.md)：实测结果、样本数、误差与下一步。
-- [框架与策略目录](docs/framework_v01.md)：模块边界、完整回合、策略的具体决策规则。
-- [规则合同](docs/rules_and_first_experiments_20261010.md)：用户确认、实验假设及未实现变体。
-- [精确小模型](docs/tiny_model.md)：限制条件、18×8矩阵及证书解释。
-- [方法审计](docs/methodology_audit_20261010.md)：独立验证与结论边界。
-- [原始研究设计](docs/mafia_research_design_20261010.md)：长期路线与教学目标。
-- [实验配置](configs/experiment_v02.json) 与 [结果清单](results/v02/manifest.json)：固定预算、随机种子、源码及结果哈希。
-- [提名信号反制](results/signal_counter_v03.json)：后续公开行动也会泄露信息的针对性测试。
-- [最终产物核验](results/final_integrity_audit.json)：哈希、原始样本分母和报告统计复算。
-
-v01的弱策略基线及补充实验保留；v02修正了警察误信队外验人的问题；v03展示提名信号可被追刀利用；v04加入掩护、局部混合和票型；v05拆分角色动作并加入发言顺序与散票反制；v06加入可执行本地混合、反诱饵确认、受控时点干预与增量扩池；v07加入公开顺序票、实时票差门控、公开平民规则和训练生成条件表；v08统一匪方主目标，并以不复用坐标子批次和未读留出选择条件表与覆盖型首发；v09用多区块复验和自然开局揭示公开探测的协调机制；v10加入好人公共协议、三类专门反制和扩展经验矩阵受限混合。各代冻结来源与结果分别保留。现有报告共记录1,341,696次终局执行；不同格子的共享种子不构成额外独立开局。
-
-沿用 AIP 与 Poker Analysis 的 `GameSpec → AlgorithmSpec → SolverArtifact → IndependentEvaluationReport → PromotionDecision` 思路。当前模块不直接导入其他项目代码。解析概率、固定策略胜率、受限均衡和完整声明游戏均衡分别标注；未经认证的模拟结果不自动成为教学标准答案。
+- These are fixed-policy simulations in an explicitly restricted ruleset, not estimates of human play or a solution to the full game. The coordination intervention adds public statement content and changes team vote-following together; their separate contributions have not been isolated.
+- Both teams have limited candidate policies. Opponents have not been optimized against every new protocol. Information-source handling, vote-history heuristics, and timing remain incomplete; apparent gains can depend strongly on the receiving policy.
+- An exact equilibrium certificate for a finite empirical matrix establishes correctness for that matrix. It does not remove Monte Carlo uncertainty, establish population exploitability, or imply full-game GTO. Earlier held-out results inspected during development are no longer untouched final validation data.
+- Werewolf mechanics, LLM agents, human teaching outcomes, and transfer to poker have not been validated.
