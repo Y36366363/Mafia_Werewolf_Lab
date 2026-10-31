@@ -20,6 +20,8 @@ A police officer may know several mafia players but publicly report only one inv
 
 The table reports held-out police–civilian team win rates, **before → after** the intervention. Each rate uses 2,048 simulations, with a fixed 50% local police response probability in a predefined first-day counterclaim window. The false-accusation target is the nearest or farthest eligible non-teammate later in the public speaking order. The two kill policies are frozen positional heuristics, not optimized best responses.
 
+Mafia can win without eliminating civilians and, under the fixed continuation policies, prioritize publicly exposed police for night kills. These asymmetric objectives and restricted policies provide context for the low baseline rates; the experiments do not establish the full game’s equilibrium balance.
+
 | Mafia kill policy | False-accusation target | Original liar repeats its claim | Teammate takes over after the liar dies |
 | --- | --- | ---: | ---: |
 | Late-position heuristic (`safe_late`) | Near | 7.86% → 8.15% | 7.86% → 25.15% |
