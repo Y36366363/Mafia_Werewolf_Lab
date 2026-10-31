@@ -1,0 +1,4311 @@
+{
+  "scope": "Post-held explanation, selected from the already prespecified first history-change example; same held seed replayed under declared bus counterpart. Not a new statistical comparison or policy change.",
+  "seed": 180000002,
+  "runs": {
+    "team": {
+      "raw": {
+        "win": 0,
+        "eligible": 0,
+        "civilian_target": 0,
+        "police_target": 0,
+        "dead_police": 1,
+        "no_opportunity": 0,
+        "opportunity": 1,
+        "false_claim": 1,
+        "first_dead": 13,
+        "first_check": 3,
+        "first_check_mafia": 0,
+        "fake_speaker": 0,
+        "fake_target": 12,
+        "reply": 0,
+        "police_claims": 0,
+        "day1_fake_exile": 1,
+        "day1_mafia_exile": 1,
+        "day1_police_exile": 0,
+        "day1_no_exile": 0,
+        "day1_shortlist": 0,
+        "day1_pk": 0,
+        "narrow_civilian": 0,
+        "orphan_ballots": 0,
+        "orphan_game": 0,
+        "stale_ballots": 0,
+        "stale_game": 0,
+        "ignored_known_ballots": 0,
+        "ignored_known_game": 0,
+        "voted_good_ballots": 0,
+        "voted_good_game": 0,
+        "illegal_ballots": 0,
+        "illegal_game": 0,
+        "call_mismatch_ballots": 0,
+        "call_mismatch_game": 0,
+        "report_vote_mismatch_ballots": 0,
+        "report_vote_mismatch_game": 0,
+        "history_available_ballots": 1,
+        "history_available_game": 1,
+        "history_changed_ballots": 1,
+        "history_changed_game": 1,
+        "call_count": 1,
+        "bus_count": 0,
+        "day1_hash": "acd6dec7b8be9cb1b8ad293a938f726224f2cf7aa3a7e701494e7688c1fbe6d9",
+        "pre_day2_speech_hash": "22a2943f37df46d239d4238647b9dfed45a789a398c05268d6e3305fc8a746a4",
+        "pre_day2_vote_hash": "f23d6be81e27f3732be3a0bcf625304da530ccd7d58b50ceebd4ef5b633b129e",
+        "police_split_rounds": 0
+      },
+      "trace_hash": "1059e70ab05788631aaf1000094f36419997be05fe7a40db09a7563a79a9972c",
+      "seed": 180000002,
+      "roles_evaluation_only": [
+        "mafia",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "mafia",
+        "mafia",
+        "police",
+        "civilian",
+        "police",
+        "mafia",
+        "civilian",
+        "police",
+        "police",
+        "civilian"
+      ],
+      "transcript": [
+        {
+          "day": 1,
+          "event": "night_death",
+          "payload": {
+            "victim": 13
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 13,
+            "kind": "report",
+            "target": 3,
+            "verdict": false,
+            "context": "last_words",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 14,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 14,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 15,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 15,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 0,
+            "kind": "report",
+            "target": 12,
+            "verdict": true,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 1,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 1,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 2,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 2,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 3,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 3,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 4,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 4,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 5,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 5,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 6,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 7,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 8,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 8,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 9,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 9,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 10,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 10,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 11,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 12,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 12,
+            "kind": "nominate",
+            "target": 0,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "votes",
+          "payload": {
+            "14": 0,
+            "15": 0,
+            "0": 12,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 12,
+            "7": 12,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 12,
+            "12": 0
+          }
+        },
+        {
+          "day": 1,
+          "event": "day_death",
+          "payload": {
+            "victim": 0
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 0,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "last_words",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "night_death",
+          "payload": {
+            "victim": 8
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 8,
+            "kind": "report",
+            "target": 4,
+            "verdict": false,
+            "context": "last_words",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 9,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 9,
+            "kind": "nominate",
+            "target": 10,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 10,
+            "kind": "report",
+            "target": 4,
+            "verdict": false,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 10,
+            "kind": "shortlist",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": [
+              9,
+              11
+            ]
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 11,
+            "kind": "police",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 11,
+            "kind": "accuse",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 12,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 12,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 14,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 14,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 15,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 15,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 1,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 1,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 2,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 2,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 3,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 3,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 4,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 4,
+            "kind": "accuse",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 5,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 5,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 6,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 6,
+            "kind": "nominate",
+            "target": 10,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 7,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 7,
+            "kind": "nominate",
+            "target": 10,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "votes",
+          "payload": {
+            "9": 11,
+            "10": 11,
+            "11": 12,
+            "12": 11,
+            "14": 11,
+            "15": 9,
+            "1": 9,
+            "2": 9,
+            "3": 9,
+            "4": 9,
+            "5": 9,
+            "6": 12,
+            "7": 12
+          }
+        },
+        {
+          "day": 2,
+          "event": "day_death",
+          "payload": {
+            "victim": 9
+          }
+        },
+        {
+          "day": 3,
+          "event": "night_death",
+          "payload": {
+            "victim": 10
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 11,
+            "kind": "police",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 11,
+            "kind": "accuse",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 12,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 12,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 14,
+            "kind": "report",
+            "target": 5,
+            "verdict": false,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 14,
+            "kind": "shortlist",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": [
+              11,
+              12
+            ]
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 14,
+            "kind": "accuse",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 15,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 15,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 1,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 1,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 2,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 2,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 3,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 3,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 4,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 4,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 5,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 5,
+            "kind": "accuse",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 6,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 6,
+            "kind": "nominate",
+            "target": 14,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 7,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 7,
+            "kind": "nominate",
+            "target": 14,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "votes",
+          "payload": {
+            "11": 12,
+            "12": 11,
+            "14": 11,
+            "15": 11,
+            "1": 11,
+            "2": 11,
+            "3": 11,
+            "4": 11,
+            "5": 11,
+            "6": 12,
+            "7": 12
+          }
+        },
+        {
+          "day": 3,
+          "event": "day_death",
+          "payload": {
+            "victim": 11
+          }
+        },
+        {
+          "day": 4,
+          "event": "terminal",
+          "payload": {
+            "winner": "mafia"
+          }
+        }
+      ],
+      "votes": [
+        {
+          "day": 1,
+          "player": 14,
+          "role": "police",
+          "target": 0,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            0
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 15,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 1,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 2,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 3,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 4,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 5,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 8,
+          "role": "police",
+          "target": 0,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            0
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 9,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 10,
+          "role": "police",
+          "target": 0,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            0
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 12,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            0
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 9,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 10,
+          "role": "police",
+          "target": 11,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            11
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 12,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": true,
+          "history_changed": true,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 1,
+            "1": -1,
+            "2": -1,
+            "3": -1,
+            "4": -1,
+            "5": -1,
+            "6": 1,
+            "7": 1,
+            "8": -1,
+            "9": -1,
+            "10": -1,
+            "11": 1,
+            "12": -1,
+            "14": -1,
+            "15": -1
+          },
+          "history_evidence": [
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 0,
+              "target": 12,
+              "value": 1,
+              "reason": "voted_private_good"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 1,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 2,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 3,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 4,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 5,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 6,
+              "target": 12,
+              "value": 1,
+              "reason": "voted_private_good"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 7,
+              "target": 12,
+              "value": 1,
+              "reason": "voted_private_good"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 8,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 9,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 10,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 11,
+              "target": 12,
+              "value": 1,
+              "reason": "voted_private_good"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 12,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 14,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 15,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "player": 14,
+          "role": "police",
+          "target": 11,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            11
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 15,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 1,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 2,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 3,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 4,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 5,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 12,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 14,
+          "role": "police",
+          "target": 11,
+          "round": "first",
+          "reason": "private_bad_team_execution_call",
+          "known_bad": [
+            11
+          ],
+          "call_target": 11,
+          "call_applicable": true,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 15,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 1,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 2,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 3,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 4,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 5,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        }
+      ],
+      "calls": [
+        {
+          "day": 3,
+          "speaker": 14,
+          "target": 11
+        }
+      ],
+      "buses": []
+    },
+    "bus": {
+      "raw": {
+        "win": 0,
+        "eligible": 0,
+        "civilian_target": 0,
+        "police_target": 0,
+        "dead_police": 1,
+        "no_opportunity": 0,
+        "opportunity": 1,
+        "false_claim": 1,
+        "first_dead": 13,
+        "first_check": 3,
+        "first_check_mafia": 0,
+        "fake_speaker": 0,
+        "fake_target": 12,
+        "reply": 0,
+        "police_claims": 0,
+        "day1_fake_exile": 1,
+        "day1_mafia_exile": 1,
+        "day1_police_exile": 0,
+        "day1_no_exile": 0,
+        "day1_shortlist": 0,
+        "day1_pk": 0,
+        "narrow_civilian": 0,
+        "orphan_ballots": 0,
+        "orphan_game": 0,
+        "stale_ballots": 0,
+        "stale_game": 0,
+        "ignored_known_ballots": 0,
+        "ignored_known_game": 0,
+        "voted_good_ballots": 0,
+        "voted_good_game": 0,
+        "illegal_ballots": 0,
+        "illegal_game": 0,
+        "call_mismatch_ballots": 0,
+        "call_mismatch_game": 0,
+        "report_vote_mismatch_ballots": 0,
+        "report_vote_mismatch_game": 0,
+        "history_available_ballots": 1,
+        "history_available_game": 1,
+        "history_changed_ballots": 0,
+        "history_changed_game": 0,
+        "call_count": 1,
+        "bus_count": 2,
+        "day1_hash": "5c114f0190516bbf845e3fcaf685e9e6a7e2b990018fd233c5a035d19f040fc4",
+        "pre_day2_speech_hash": "9872d9236bfc6f46647cd9fe9b80b5fe5f5565e6672829abcbe34f5c70505a21",
+        "pre_day2_vote_hash": "6b93bf78917b31e79364dc0677e90a38cc96f842c4c2d0708d784511dadfed01",
+        "police_split_rounds": 0
+      },
+      "trace_hash": "8e7e6389cf3e3a7f066cfc3de19ad855cb86009a1ee3daa5a1a711a96cf46419",
+      "seed": 180000002,
+      "roles_evaluation_only": [
+        "mafia",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "mafia",
+        "mafia",
+        "police",
+        "civilian",
+        "police",
+        "mafia",
+        "civilian",
+        "police",
+        "police",
+        "civilian"
+      ],
+      "transcript": [
+        {
+          "day": 1,
+          "event": "night_death",
+          "payload": {
+            "victim": 13
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 13,
+            "kind": "report",
+            "target": 3,
+            "verdict": false,
+            "context": "last_words",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 14,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 14,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 15,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 15,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 0,
+            "kind": "report",
+            "target": 12,
+            "verdict": true,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 1,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 1,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 2,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 2,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 3,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 3,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 4,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 4,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 5,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 5,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 6,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 7,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 8,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 8,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 9,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 9,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 10,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 10,
+            "kind": "nominate",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 11,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 12,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 12,
+            "kind": "nominate",
+            "target": 0,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 1,
+          "event": "votes",
+          "payload": {
+            "14": 0,
+            "15": 0,
+            "0": 12,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 12,
+            "7": 12,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          }
+        },
+        {
+          "day": 1,
+          "event": "day_death",
+          "payload": {
+            "victim": 0
+          }
+        },
+        {
+          "day": 1,
+          "event": "message",
+          "payload": {
+            "speaker": 0,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "last_words",
+            "day": 1,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "night_death",
+          "payload": {
+            "victim": 8
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 8,
+            "kind": "report",
+            "target": 4,
+            "verdict": false,
+            "context": "last_words",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 9,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 9,
+            "kind": "nominate",
+            "target": 10,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 10,
+            "kind": "report",
+            "target": 4,
+            "verdict": false,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 10,
+            "kind": "shortlist",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": [
+              9,
+              11
+            ]
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 11,
+            "kind": "police",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 11,
+            "kind": "accuse",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 12,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 12,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 14,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 14,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 15,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 15,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 1,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 1,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 2,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 2,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 3,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 3,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 4,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 4,
+            "kind": "accuse",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 5,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 5,
+            "kind": "nominate",
+            "target": 9,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 6,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 6,
+            "kind": "nominate",
+            "target": 10,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "message",
+          "payload": {
+            "speaker": 7,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 7,
+            "kind": "nominate",
+            "target": 10,
+            "verdict": null,
+            "context": "day",
+            "day": 2,
+            "targets": []
+          }
+        },
+        {
+          "day": 2,
+          "event": "votes",
+          "payload": {
+            "9": 11,
+            "10": 11,
+            "11": 12,
+            "12": 9,
+            "14": 11,
+            "15": 9,
+            "1": 9,
+            "2": 9,
+            "3": 9,
+            "4": 9,
+            "5": 9,
+            "6": 12,
+            "7": 12
+          }
+        },
+        {
+          "day": 2,
+          "event": "day_death",
+          "payload": {
+            "victim": 9
+          }
+        },
+        {
+          "day": 3,
+          "event": "night_death",
+          "payload": {
+            "victim": 10
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 11,
+            "kind": "police",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 11,
+            "kind": "accuse",
+            "target": 12,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 12,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 12,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 14,
+            "kind": "report",
+            "target": 5,
+            "verdict": false,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 14,
+            "kind": "shortlist",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": [
+              11,
+              12
+            ]
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 14,
+            "kind": "accuse",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 15,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 15,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 1,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 1,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 2,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 2,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 3,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 3,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 4,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 4,
+            "kind": "nominate",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 5,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 5,
+            "kind": "accuse",
+            "target": 11,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 6,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 6,
+            "kind": "nominate",
+            "target": 14,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "message",
+          "payload": {
+            "speaker": 7,
+            "kind": "civilian",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "speech_extension",
+          "payload": {
+            "speaker": 7,
+            "kind": "nominate",
+            "target": 14,
+            "verdict": null,
+            "context": "day",
+            "day": 3,
+            "targets": []
+          }
+        },
+        {
+          "day": 3,
+          "event": "votes",
+          "payload": {
+            "11": 12,
+            "12": 11,
+            "14": 11,
+            "15": 11,
+            "1": 11,
+            "2": 11,
+            "3": 11,
+            "4": 11,
+            "5": 11,
+            "6": 12,
+            "7": 11
+          }
+        },
+        {
+          "day": 3,
+          "event": "day_death",
+          "payload": {
+            "victim": 11
+          }
+        },
+        {
+          "day": 4,
+          "event": "terminal",
+          "payload": {
+            "winner": "mafia"
+          }
+        }
+      ],
+      "votes": [
+        {
+          "day": 1,
+          "player": 14,
+          "role": "police",
+          "target": 0,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            0
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 15,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 1,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 2,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 3,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 4,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 5,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 8,
+          "role": "police",
+          "target": 0,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            0
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 9,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "compare_conflicting_sources",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": true,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 10,
+          "role": "police",
+          "target": 0,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            0
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 1,
+          "player": 12,
+          "role": "civilian",
+          "target": 0,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            0
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 9,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 10,
+          "role": "police",
+          "target": 11,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            11
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 12,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": true,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 1,
+            "1": -1,
+            "2": -1,
+            "3": -1,
+            "4": -1,
+            "5": -1,
+            "6": 1,
+            "7": 1,
+            "8": -1,
+            "9": -1,
+            "10": -1,
+            "11": -1,
+            "12": -1,
+            "14": -1,
+            "15": -1
+          },
+          "history_evidence": [
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 0,
+              "target": 12,
+              "value": 1,
+              "reason": "voted_private_good"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 1,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 2,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 3,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 4,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 5,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 6,
+              "target": 12,
+              "value": 1,
+              "reason": "voted_private_good"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 7,
+              "target": 12,
+              "value": 1,
+              "reason": "voted_private_good"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 8,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 9,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 10,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 11,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 12,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 14,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            },
+            {
+              "day": 1,
+              "round": "vote",
+              "voter": 15,
+              "target": 0,
+              "value": -1,
+              "reason": "voted_private_bad"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "player": 14,
+          "role": "police",
+          "target": 11,
+          "round": "first",
+          "reason": "private_refutation_or_check",
+          "known_bad": [
+            11
+          ],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 15,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 1,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 2,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 3,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 4,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 2,
+          "player": 5,
+          "role": "civilian",
+          "target": 9,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [
+            9,
+            11
+          ],
+          "history_scores": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0
+          },
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 12,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 14,
+          "role": "police",
+          "target": 11,
+          "round": "first",
+          "reason": "private_bad_team_execution_call",
+          "known_bad": [
+            11
+          ],
+          "call_target": 11,
+          "call_applicable": true,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 15,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 1,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 2,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 3,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 4,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        },
+        {
+          "day": 3,
+          "player": 5,
+          "role": "civilian",
+          "target": 11,
+          "round": "first",
+          "reason": "single_source_protocol",
+          "known_bad": [],
+          "call_target": null,
+          "call_applicable": false,
+          "call_mismatch": false,
+          "orphan": false,
+          "stale": false,
+          "ignored_known": false,
+          "voted_good": false,
+          "illegal": false,
+          "report_vote_mismatch": false,
+          "history_available": false,
+          "history_changed": false,
+          "history_pool": [],
+          "history_scores": {},
+          "history_evidence": []
+        }
+      ],
+      "calls": [
+        {
+          "day": 3,
+          "speaker": 14,
+          "target": 11
+        }
+      ],
+      "buses": [
+        {
+          "day": 1,
+          "player": 11,
+          "target": 0,
+          "round": "first"
+        },
+        {
+          "day": 3,
+          "player": 7,
+          "target": 11,
+          "round": "first"
+        }
+      ]
+    }
+  },
+  "detailed_replays": 2,
+  "unwrapped_replays": 2,
+  "input_sha256": {
+    "holdout": "a700360d5fccea3a05cf2b72862768e539ef5f1fe5a61cb12a2d51844521d2c2",
+    "selected_examples": "7f067dea6cce72332f97b1fa3a1282e6f5ee368ddc0a8080c66dee502509ef1f"
+  }
+}

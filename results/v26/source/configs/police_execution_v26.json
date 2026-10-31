@@ -1,0 +1,385 @@
+{
+  "version": "20261031-police-execution-and-history-v26",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "train": {
+    "seed_start": 179000000,
+    "n": 512
+  },
+  "holdout": {
+    "seed_start": 180000000,
+    "n": 2048
+  },
+  "smoke": {
+    "seed_start": 181000000,
+    "n": 4
+  },
+  "good": [
+    {
+      "name": "legacy_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": false,
+      "vote_history": false
+    },
+    {
+      "name": "legacy_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": false,
+      "vote_history": false
+    },
+    {
+      "name": "legacy_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": false,
+      "vote_history": false
+    },
+    {
+      "name": "aligned_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false
+    },
+    {
+      "name": "aligned_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false
+    },
+    {
+      "name": "aligned_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false
+    },
+    {
+      "name": "history_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": true
+    }
+  ],
+  "mafia": [
+    {
+      "name": "late_near_restate_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_near_claim_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_restate_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_claim_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_near_restate_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_near_claim_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_far_restate_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_far_claim_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_claim_bus",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "costless_bus"
+    },
+    {
+      "name": "decoy_far_claim_bus",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "costless_bus"
+    }
+  ],
+  "cells": [
+    [
+      "legacy_q0",
+      "late_near_restate_team"
+    ],
+    [
+      "legacy_q0",
+      "late_near_claim_team"
+    ],
+    [
+      "legacy_q0",
+      "late_far_restate_team"
+    ],
+    [
+      "legacy_q0",
+      "late_far_claim_team"
+    ],
+    [
+      "legacy_q0",
+      "decoy_near_restate_team"
+    ],
+    [
+      "legacy_q0",
+      "decoy_near_claim_team"
+    ],
+    [
+      "legacy_q0",
+      "decoy_far_restate_team"
+    ],
+    [
+      "legacy_q0",
+      "decoy_far_claim_team"
+    ],
+    [
+      "legacy_q50",
+      "late_near_restate_team"
+    ],
+    [
+      "legacy_q50",
+      "late_near_claim_team"
+    ],
+    [
+      "legacy_q50",
+      "late_far_restate_team"
+    ],
+    [
+      "legacy_q50",
+      "late_far_claim_team"
+    ],
+    [
+      "legacy_q50",
+      "decoy_near_restate_team"
+    ],
+    [
+      "legacy_q50",
+      "decoy_near_claim_team"
+    ],
+    [
+      "legacy_q50",
+      "decoy_far_restate_team"
+    ],
+    [
+      "legacy_q50",
+      "decoy_far_claim_team"
+    ],
+    [
+      "legacy_q100",
+      "late_near_restate_team"
+    ],
+    [
+      "legacy_q100",
+      "late_near_claim_team"
+    ],
+    [
+      "legacy_q100",
+      "late_far_restate_team"
+    ],
+    [
+      "legacy_q100",
+      "late_far_claim_team"
+    ],
+    [
+      "legacy_q100",
+      "decoy_near_restate_team"
+    ],
+    [
+      "legacy_q100",
+      "decoy_near_claim_team"
+    ],
+    [
+      "legacy_q100",
+      "decoy_far_restate_team"
+    ],
+    [
+      "legacy_q100",
+      "decoy_far_claim_team"
+    ],
+    [
+      "aligned_q0",
+      "late_near_restate_team"
+    ],
+    [
+      "aligned_q0",
+      "late_near_claim_team"
+    ],
+    [
+      "aligned_q0",
+      "late_far_restate_team"
+    ],
+    [
+      "aligned_q0",
+      "late_far_claim_team"
+    ],
+    [
+      "aligned_q0",
+      "decoy_near_restate_team"
+    ],
+    [
+      "aligned_q0",
+      "decoy_near_claim_team"
+    ],
+    [
+      "aligned_q0",
+      "decoy_far_restate_team"
+    ],
+    [
+      "aligned_q0",
+      "decoy_far_claim_team"
+    ],
+    [
+      "aligned_q50",
+      "late_near_restate_team"
+    ],
+    [
+      "aligned_q50",
+      "late_near_claim_team"
+    ],
+    [
+      "aligned_q50",
+      "late_far_restate_team"
+    ],
+    [
+      "aligned_q50",
+      "late_far_claim_team"
+    ],
+    [
+      "aligned_q50",
+      "decoy_near_restate_team"
+    ],
+    [
+      "aligned_q50",
+      "decoy_near_claim_team"
+    ],
+    [
+      "aligned_q50",
+      "decoy_far_restate_team"
+    ],
+    [
+      "aligned_q50",
+      "decoy_far_claim_team"
+    ],
+    [
+      "aligned_q50",
+      "late_far_claim_bus"
+    ],
+    [
+      "aligned_q50",
+      "decoy_far_claim_bus"
+    ],
+    [
+      "aligned_q100",
+      "late_near_restate_team"
+    ],
+    [
+      "aligned_q100",
+      "late_near_claim_team"
+    ],
+    [
+      "aligned_q100",
+      "late_far_restate_team"
+    ],
+    [
+      "aligned_q100",
+      "late_far_claim_team"
+    ],
+    [
+      "aligned_q100",
+      "decoy_near_restate_team"
+    ],
+    [
+      "aligned_q100",
+      "decoy_near_claim_team"
+    ],
+    [
+      "aligned_q100",
+      "decoy_far_restate_team"
+    ],
+    [
+      "aligned_q100",
+      "decoy_far_claim_team"
+    ],
+    [
+      "history_q50",
+      "late_far_claim_team"
+    ],
+    [
+      "history_q50",
+      "decoy_far_claim_team"
+    ],
+    [
+      "history_q50",
+      "late_far_claim_bus"
+    ],
+    [
+      "history_q50",
+      "decoy_far_claim_bus"
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "case_replays_checked": 20,
+  "history_evidence_ballots_checked": 12,
+  "bus_witnesses_checked": 6,
+  "posthoc_bus_runs_checked": 2,
+  "scope": "Checks stored provenance, first-seed selection, raw equality, count bounds and bus winner witnesses. No additional simulations or general robustness claim."
+}

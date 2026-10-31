@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "formal_games": 138240,
+  "cells_checked": 108,
+  "sampled_unwrapped_replays": 324,
+  "legacy_v25_compatible_replays": 144,
+  "independent_binomial_intervals": 48,
+  "assets_checked": 61,
+  "scope": "All archived arithmetic/hash/invariants and three sampled unwrapped trajectories per cell; not all games independently rerun."
+}

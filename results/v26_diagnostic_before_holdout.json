@@ -1,0 +1,9 @@
+{
+  "utc_recorded": "2026-10-31T05:39:48.190736+00:00",
+  "train_numbers_read": false,
+  "holdout_exists": false,
+  "files": {
+    "docs/police_execution_diagnostic_scope_v26.md": "5392aca59d4f12e74c0958835c2eb5ea85dc6eda3b4fde951f02fe3706660f27",
+    "scripts/diagnose_police_execution_v26.py": "61befd278607c73e3032b58e812376eba389a28e474b4c77d29ffa1338115578"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "Post-run analysis/diagnostic provenance, separate from pre-run frozen package. Some explanatory helpers were added after freezing and one bus case is explicitly post-held.",
+  "files": {
+    "scripts/diagnose_police_execution_v26.py": "61befd278607c73e3032b58e812376eba389a28e474b4c77d29ffa1338115578",
+    "scripts/diagnose_bus_signal_v26.py": "1c3153b0e908343b33aac08679f819f1cee83a0ce462162fbd9f891c8db0b3ef",
+    "scripts/verify_police_execution_v26.py": "b777c26b573da5f178df9e72c3603aaf20d680d1e3476d4f0de046fbe94659b1",
+    "scripts/build_police_execution_report_v26.py": "5e29814dd2ad12e5020fbcf1f596314efdab843e8060c1feaa67d191f1ff4691",
+    "scripts/verify_police_execution_aux_v26.py": "18ac5b8ea67d7de1554fada6b882734dd5bb896cf359f1ba864f9d8ec7f98278",
+    "scripts/run_police_execution_v26.py": "9c85e3c878a8ac79ed4bbcfd1b09a9ffe3586ece2a24f7d3b6193d8330855870",
+    "docs/police_execution_results_v26.md": "a4adf4b3f8997c0c64a5a5a4aaf115473a18c2189ba6d107676823bc0697aa23",
+    "docs/police_execution_diagnostic_scope_v26.md": "5392aca59d4f12e74c0958835c2eb5ea85dc6eda3b4fde951f02fe3706660f27",
+    "docs/police_execution_protocol_v26.md": "1f938a47b05f31640d652a936b2d45d30f3443b872914909440e0688552b15c7",
+    "results/v26_validation.json": "75aa621f7062842a0b5328e0203565fcc0430fbde0028a7c3a59d3570c18437a",
+    "results/v26_diagnostic_before_holdout.json": "0556943a18321eebf01caac5e13b1073af59b69ad5b5520cf358e2c14f7f824e",
+    "results/v26_integrity_audit.json": "c6ca5689d7206b7d69b1ee3a65e8f6975333ec564ad25072fa809e47e8fc500e",
+    "results/v26_aux_integrity_audit.json": "6ae117d5a32893e68c5a19cbfc051a5a17d324bf090c06a0907fabf6f1ac30c9",
+    "results/v26_examples.json": "7f067dea6cce72332f97b1fa3a1282e6f5ee368ddc0a8080c66dee502509ef1f",
+    "results/v26_bus_signal_example.json": "7ce066a856c3831b883d8b495fc27dd7559e1deafe602d9e2eaf0cea18627892"
+  }
+}

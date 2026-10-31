@@ -1,0 +1,6 @@
+{
+  "holdout_unread": true,
+  "policy_selection": false,
+  "q_selection": false,
+  "rule": "All declared mechanisms and pairs unchanged; history pilot is not promoted from train."
+}
