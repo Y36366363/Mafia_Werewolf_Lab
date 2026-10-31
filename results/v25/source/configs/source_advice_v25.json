@@ -1,0 +1,122 @@
+{
+  "version": "20261030-source-advice-ablation-v25",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "train": {
+    "seed_start": 176000000,
+    "n": 512
+  },
+  "holdout": {
+    "seed_start": 177000000,
+    "n": 2048
+  },
+  "smoke": {
+    "seed_start": 178000000,
+    "n": 4
+  },
+  "good": [
+    {
+      "name": "base_q0",
+      "response_probability": "0",
+      "report_advice_gate": false
+    },
+    {
+      "name": "base_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": false
+    },
+    {
+      "name": "base_q100",
+      "response_probability": "1",
+      "report_advice_gate": false
+    },
+    {
+      "name": "gate_q0",
+      "response_probability": "0",
+      "report_advice_gate": true
+    },
+    {
+      "name": "gate_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true
+    },
+    {
+      "name": "gate_q100",
+      "response_probability": "1",
+      "report_advice_gate": true
+    }
+  ],
+  "mafia": [
+    {
+      "name": "late_near_restate",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none"
+    },
+    {
+      "name": "late_near_claim",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim"
+    },
+    {
+      "name": "late_far_restate",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none"
+    },
+    {
+      "name": "late_far_claim",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim"
+    },
+    {
+      "name": "decoy_near_restate",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none"
+    },
+    {
+      "name": "decoy_near_claim",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim"
+    },
+    {
+      "name": "decoy_far_restate",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none"
+    },
+    {
+      "name": "decoy_far_claim",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim"
+    }
+  ]
+}

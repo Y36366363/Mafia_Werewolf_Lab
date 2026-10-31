@@ -1,0 +1,23 @@
+{
+  "scope": "Post-run analysis/report provenance; independent of pre-run frozen policy assets. Not all analysis helpers were frozen before training.",
+  "files": {
+    "scripts/diagnose_source_advice_v25.py": "6f6cf1ab1014454901431b1ccd8d525f5b56246576b3cf16f6b77521b17c9fd6",
+    "scripts/audit_source_routing_v25.py": "8796ec5c4933badadf964f0b70fd20e7dec0b4e79d32e16621973c2f0812c818",
+    "scripts/run_source_advice_v25.py": "00902a38014dd2c58619c2718e19743209b0421ac0ad5526bf2999ac5b08d786",
+    "scripts/build_source_advice_report_v25.py": "4c46249ecc295e6387fce41f2cdb05a0f840f9073abaefa71e22b6e7f0033e7c",
+    "scripts/verify_source_audit_v25.py": "a1031ce615eb0b057f7c445cd220a078fe98770b92e7d2834c59d8d495076fa4",
+    "scripts/verify_source_advice_v25.py": "b24760c927335e863a9b4284d93029a5fa202d1a6e2c5108013bf96921c6c258",
+    "docs/source_diagnostic_scope_v25.md": "c8c3425b0a0763412f6446161ce28685614d08bb7c7d6c76134abee934dc9e1e",
+    "docs/source_audit_scope_v25.md": "a93cd7a92e806a4114eb0cde5f31debde511cb8dedfb2eb31f392cc03562b57c",
+    "docs/source_advice_results_v25.md": "8407438bd3a9968c346d8bca8614db7cdda19ffc5c24d0fd3ccf3f558ac23a52",
+    "docs/source_advice_protocol_v25.md": "e8f0fa35ffc523d6841cc605c6cb25ccfdbf08bd099ee23f54c089ebd1bc1376",
+    "results/v25_source_audit.json": "e0107294e96be6c3fc605dcae799a587034cbe8db50f006da67b536d85220c6c",
+    "results/v25_ablation_decision.json": "5c2511c3b8f49db680847a34930b71ed940202bce95d93f647bf3118f4226bc1",
+    "results/v25_reference_terminal_comparison.json": "b779cd7be7a7dff309f60b6121a3df54618b9932322c7d4832c6a14bc5ce473f",
+    "results/v25_validation.json": "900f5713ecfe48dbfcc214ba081d3c2a6817f7e58444dce0d554995f1cd5c2b7",
+    "results/v25_diagnostic_before_holdout.json": "7a4e3333cbad6652db0c10f7c056c6d9fbf577f09d3e1f51ebe014cc75ff9a13",
+    "results/v25_integrity_audit.json": "53a816dd563b0f2dbcd2d803c42218c0added8dea061f2bfc33b2ea074ca224e",
+    "results/v25_examples.json": "33346b285e9cb5d1d9106fecccdd1bbab105c6dd1320126c20efa8286428fa90",
+    "results/v25_aux_integrity_audit.json": "35659d32b785a384b981a3f91aa42210fdeb46071ea9bc78e19a75aa72195230"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "scope": "Supplementary descriptive comparison, not an additional primary test, trajectory equality or population equivalence proof.",
+  "rows": [
+    {
+      "phase": "train",
+      "q": "0",
+      "base": "late_near",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "0",
+      "base": "late_far",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "0",
+      "base": "decoy_near",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "0",
+      "base": "decoy_far",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "50",
+      "base": "late_near",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "50",
+      "base": "late_far",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "50",
+      "base": "decoy_near",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "50",
+      "base": "decoy_far",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "100",
+      "base": "late_near",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "100",
+      "base": "late_far",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "100",
+      "base": "decoy_near",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "train",
+      "q": "100",
+      "base": "decoy_far",
+      "n": 512,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "0",
+      "base": "late_near",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "0",
+      "base": "late_far",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "0",
+      "base": "decoy_near",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "0",
+      "base": "decoy_far",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "50",
+      "base": "late_near",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "50",
+      "base": "late_far",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "50",
+      "base": "decoy_near",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "50",
+      "base": "decoy_far",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "100",
+      "base": "late_near",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "100",
+      "base": "late_far",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "100",
+      "base": "decoy_near",
+      "n": 2048,
+      "terminal_flips": 0
+    },
+    {
+      "phase": "holdout",
+      "q": "100",
+      "base": "decoy_far",
+      "n": 2048,
+      "terminal_flips": 0
+    }
+  ]
+}

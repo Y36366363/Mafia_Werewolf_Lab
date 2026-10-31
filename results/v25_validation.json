@@ -1,0 +1,28 @@
+{
+  "python": "3.12.3 | packaged by conda-forge | (main, Apr 15 2024, 18:35:20) [Clang 16.0.6 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 299,
+    "elapsed_seconds": 38.97,
+    "status": "pass"
+  },
+  "targeted_tests": {
+    "command": "python -m pytest tests/test_source_advice_v25.py -q",
+    "passed": 6,
+    "elapsed_seconds": 7.17,
+    "status": "pass"
+  },
+  "frozen_strategy_package_unchanged": true,
+  "frozen_package_sha256": "9113df3a55f558cd3dcf28baa4a76543ea51f617fd58baf800435a8417629545",
+  "snapshot_whitespace": {
+    "scope": "Two existing EOF blank-line warnings preserved byte-for-byte in old v12 modules; not edited after freezing.",
+    "historical_paths": [
+      "mafia_lab/declaration_experiment_v12.py",
+      "mafia_lab/strategies_v12.py"
+    ]
+  },
+  "fresh_confirmation_games": 122880,
+  "old_unique_audited_episodes": 4096,
+  "old_audit_passes": 2
+}

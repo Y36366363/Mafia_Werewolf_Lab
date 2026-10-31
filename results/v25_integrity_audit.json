@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "formal_games": 122880,
+  "cells_checked": 96,
+  "sampled_unwrapped_replays": 288,
+  "baseline_v24_compatible_replays": 144,
+  "independent_binomial_intervals": 16,
+  "assets_checked": 61,
+  "scope": "All hashes/arithmetic/invariants; three sampled full traces per cell plus archived API compatibility for base. Not all formal games independently rerun."
+}

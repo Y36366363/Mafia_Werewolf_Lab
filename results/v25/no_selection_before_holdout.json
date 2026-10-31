@@ -1,0 +1,4 @@
+{
+  "holdout_unread": true,
+  "rule": "All mechanisms, q values, adversary columns and primary comparisons unchanged; no policy or q selected from train."
+}

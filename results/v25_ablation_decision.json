@@ -1,0 +1,8 @@
+{
+  "utc_recorded": "2026-10-31T01:48:16.415304+00:00",
+  "new_experiment_output_absent": true,
+  "audit_sha256": "e0107294e96be6c3fc605dcae799a587034cbe8db50f006da67b536d85220c6c",
+  "decision": "Test one report-advice admission ablation; do not modify police public-target alignment or add voting scores.",
+  "rationale": "All four claim groups contain bare-source dilution actions; corresponding restate groups contain none. Police public-hit mismatch exists independently and all flagged targets here are both privately known bad; preserve as separate issue.",
+  "scope": "Mechanism ablation only: unverified fake report can bypass, not a certified robust improvement."
+}

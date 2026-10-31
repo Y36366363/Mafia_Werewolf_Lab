@@ -1,0 +1,10 @@
+{
+  "utc_recorded": "2026-10-31T01:50:04.477616+00:00",
+  "train_file_exists": true,
+  "train_numbers_read_for_case_selection": false,
+  "holdout_file_exists": false,
+  "files": {
+    "docs/source_diagnostic_scope_v25.md": "c8c3425b0a0763412f6446161ce28685614d08bb7c7d6c76134abee934dc9e1e",
+    "scripts/diagnose_source_advice_v25.py": "6f6cf1ab1014454901431b1ccd8d525f5b56246576b3cf16f6b77521b17c9fd6"
+  }
+}

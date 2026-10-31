@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "archived_unique_episodes": 4096,
+  "old_audit_passes": 2,
+  "old_audit_replay_runs": 8192,
+  "paired_raw_labels_checked": 4096,
+  "examples_checked": 16,
+  "scope": "Independent bookkeeping; does not newly rerun all old or new trajectories."
+}
