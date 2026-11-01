@@ -1,0 +1,172 @@
+{
+  "version": "20261101-gold-relay-v27",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "train": {
+    "seed_start": 182000000,
+    "n": 256
+  },
+  "holdout": {
+    "seed_start": 183000000,
+    "n": 2048
+  },
+  "smoke": {
+    "seed_start": 184000000,
+    "n": 4
+  },
+  "good": [
+    {
+      "name": "base_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "none"
+    },
+    {
+      "name": "base_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "none"
+    },
+    {
+      "name": "base_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "none"
+    },
+    {
+      "name": "fixed_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "fixed"
+    },
+    {
+      "name": "fixed_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "fixed"
+    },
+    {
+      "name": "fixed_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "fixed"
+    },
+    {
+      "name": "local_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local"
+    },
+    {
+      "name": "local_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local"
+    },
+    {
+      "name": "local_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local"
+    }
+  ],
+  "mafia": [
+    {
+      "name": "late_near_restate_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_near_claim_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_restate_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_claim_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_near_restate_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_near_claim_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_far_restate_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_far_claim_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    }
+  ]
+}

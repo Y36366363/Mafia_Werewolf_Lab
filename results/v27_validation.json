@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-01",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 315,
+    "elapsed_seconds": 34.09,
+    "scope": "Entire current tests directory; not full historical simulation reruns."
+  },
+  "formal_freeze": {
+    "package_sha256": "4c5c83ff9045c5676285486eb28cb326f90c9c28faa66445f114dc654b00db6c",
+    "assets": 64,
+    "python": "3.12.3",
+    "scipy": "1.16.3"
+  },
+  "credit": "frozen; no numeric-credit routing",
+  "q_selection": false,
+  "full_game_gto": false,
+  "derived_checks": {
+    "win_summaries": 144,
+    "report_links_valid": true,
+    "analysis_hashes_valid": true
+  },
+  "whitespace": {
+    "current_changes_passed": true,
+    "frozen_snapshot_exceptions": [
+      "declaration_experiment_v12.py: pre-existing blank line at EOF",
+      "strategies_v12.py: pre-existing blank line at EOF"
+    ],
+    "reason": "Archived byte-for-byte; removing old whitespace would invalidate frozen source hashes."
+  }
+}

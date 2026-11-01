@@ -1,0 +1,10 @@
+{
+  "formal_games": 165888,
+  "cells_checked": 144,
+  "direct_sample_replays": 432,
+  "v26_compatibility_replays": 48,
+  "independently_checked_intervals": 48,
+  "frozen_assets": 64,
+  "all_checks_passed": true,
+  "limitation": "All records checked for structure/invariants; only the declared sample seeds independently replayed, not all formal games."
+}

@@ -259,7 +259,8 @@ def add_message(state: State, message: Message) -> State:
     if message.day != state.day:
         raise ValueError("message day does not match state")
     if message.kind not in (
-        "pass", "civilian", "police", "report", "accuse", "nominate", "shortlist"
+        "pass", "civilian", "police", "report", "accuse", "nominate", "shortlist",
+        "delegate", "relay"
     ):
         raise ValueError("unknown message template")
     if message.context not in ("day", "last_words", "pk"):
@@ -282,7 +283,7 @@ def add_message(state: State, message: Message) -> State:
         _seat(state, target)
     if len(set(message.targets)) != len(message.targets):
         raise ValueError("shortlist targets must be unique")
-    if message.kind in ("report", "accuse", "nominate") and message.target is None:
+    if message.kind in ("report", "accuse", "nominate", "delegate", "relay") and message.target is None:
         raise ValueError("this template needs a target")
     if message.kind == "report":
         if type(message.verdict) is not bool:
@@ -298,6 +299,20 @@ def add_message(state: State, message: Message) -> State:
             raise ValueError("removed shortlist target must be listed")
         if message.speaker in message.targets:
             raise ValueError("speaker cannot shortlist themselves")
+    elif message.kind == "delegate":
+        if message.context != "day" or not 1 <= len(message.targets) <= 3:
+            raise ValueError("delegation needs an ordinary-turn candidate list")
+        if message.target == message.speaker or message.target in message.targets:
+            raise ValueError("delegate must differ from source and candidates")
+        if message.speaker in message.targets:
+            raise ValueError("source cannot delegate their own exile")
+        if message.target not in state.alive or any(p not in state.alive for p in message.targets):
+            raise ValueError("delegation recipient and candidates must be alive")
+    elif message.kind == "relay":
+        if message.context != "day" or len(message.targets) != 1:
+            raise ValueError("relay needs exactly one named delegating source")
+        if message.target == message.speaker or message.target not in state.alive:
+            raise ValueError("relay target must be another living player")
     elif message.targets:
         raise ValueError("only shortlist messages carry multiple targets")
     return replace(state, messages=state.messages + (message,))

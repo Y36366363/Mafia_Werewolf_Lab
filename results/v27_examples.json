@@ -1,0 +1,69 @@
+{
+  "selection": "first ascending seed then mafia name, each knife × succession mode × gain/loss/vote-change; no filtering",
+  "selected": [
+    {
+      "kind": "gain",
+      "seed": null,
+      "mafia": "late_restate"
+    },
+    {
+      "kind": "loss",
+      "seed": null,
+      "mafia": "late_restate"
+    },
+    {
+      "kind": "changed",
+      "seed": null,
+      "mafia": "late_restate"
+    },
+    {
+      "kind": "gain",
+      "seed": null,
+      "mafia": "late_claim"
+    },
+    {
+      "kind": "loss",
+      "seed": null,
+      "mafia": "late_claim"
+    },
+    {
+      "kind": "changed",
+      "seed": null,
+      "mafia": "late_claim"
+    },
+    {
+      "kind": "gain",
+      "seed": null,
+      "mafia": "decoy_restate"
+    },
+    {
+      "kind": "loss",
+      "seed": null,
+      "mafia": "decoy_restate"
+    },
+    {
+      "kind": "changed",
+      "seed": null,
+      "mafia": "decoy_restate"
+    },
+    {
+      "kind": "gain",
+      "seed": null,
+      "mafia": "decoy_claim"
+    },
+    {
+      "kind": "loss",
+      "seed": null,
+      "mafia": "decoy_claim"
+    },
+    {
+      "kind": "changed",
+      "seed": null,
+      "mafia": "decoy_claim"
+    }
+  ],
+  "cases": [],
+  "audited_detail_runs": 0,
+  "independent_direct_replays": 0,
+  "limitations": "Examples reused from already evaluated holdout; descriptive only, not new validation data."
+}

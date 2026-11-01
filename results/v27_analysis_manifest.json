@@ -1,0 +1,12 @@
+{
+  "files": {
+    "docs/gold_relay_results_v27.md": "7aedc5b054f4ba65833adcc2fc592cf20ee762362aed97f094efd3e42f72ef87",
+    "scripts/build_gold_relay_report_v27.py": "891d4fcd50170ff8771cf4c56823f33ee1d42847bd2ddd468c410eb915e5d682",
+    "results/v27_integrity_audit.json": "93155ee9dcf05620a791967b05516e220e2412a385e6b33ce36d9a6dde5d04c7",
+    "results/v27_examples.json": "2e32c3a70158f77bfe79acb88586ae7114f5a19b8f37dab7ab39869fbbdca903",
+    "results/v27_redundancy_audit.json": "a3ece08a2031e1e8a69f4672cafad0f74100320157c6ce93960a1c9a7c42b131",
+    "scripts/audit_gold_relay_redundancy_v27.py": "d1f041e641cc67bd652b0cfe17ee3cc41c9cbe9d57dd6f3597003cdfb333967a",
+    "results/v27_validation.json": "9100845d169d64cdef7ba95bce351b6488a46ace28e17e76fa42694d9d019a98"
+  },
+  "note": "Derived report and read-only analysis assets; policies unchanged after formal freeze."
+}
