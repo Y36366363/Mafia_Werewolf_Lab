@@ -4,7 +4,7 @@ from hashlib import sha256
 from random import Random
 from . import policies as default_decisions
 
-from .engine import (Role, Rules, State, add_message, deal, last_words_eligible,
+from .engine import (add_last_words_component, Role, Rules, State, add_message, deal, last_words_eligible,
                      observe, publish_live_ballot, resolve_night, resolve_votes,
                      speech_order, winner)
 from .policies import GoodPolicy, MafiaPolicy
@@ -74,9 +74,20 @@ def continue_game(state: State, good: GoodPolicy, mafia: MafiaPolicy, seed: int,
             record("message", asdict(msg))
 
     def last_words(override=None):
+        nonlocal state
         victim = state.deaths[-1].player
         if last_words_eligible(state, victim):
             speak(victim, "last_words", override)
+            if hasattr(decision_api, "after_last_words"):
+                obs = observe(state, victim)
+                policy = mafia if obs.role == Role.MAFIA else good
+                result = decision_api.after_last_words(
+                    obs, policy, decision_rng(seed, state.day, "after_last_words", victim))
+                extensions = result if isinstance(result, tuple) else (result,)
+                for extension in extensions:
+                    if extension is not None:
+                        state = add_last_words_component(state, extension)
+                        record("last_words_extension", asdict(extension))
 
     while winner(state) is None:
         if state.day > len(state.roles):

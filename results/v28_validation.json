@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-02",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 326,
+    "elapsed_seconds": 60.58
+  },
+  "smoke": {
+    "games": 192,
+    "cells": 96,
+    "contrasts": 144,
+    "seed_start": 187000000
+  },
+  "evidence": "Frozen-policy evaluation, no GTO or new equilibrium certificate.",
+  "initial_test_issues": "Before freeze: added same-turn last-words component validator to respect original one-message guard; fixed local variable shadowing opening().",
+  "final_derived_checks": {
+    "report_links": true,
+    "pre_holdout_scope_clarification_verified": true,
+    "old_audit_source_matches_v27": true,
+    "raw_summary_checks": 192
+  },
+  "whitespace": {
+    "current_changes_passed": true,
+    "frozen_snapshot_exceptions": [
+      "declaration_experiment_v12.py: pre-existing blank line at EOF",
+      "strategies_v12.py: pre-existing blank line at EOF"
+    ],
+    "reason": "Kept byte-for-byte in the archived old modules; decision-source hashes verified."
+  }
+}

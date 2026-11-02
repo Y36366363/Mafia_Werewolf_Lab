@@ -1,0 +1,19 @@
+{
+  "files": {
+    "docs/dead_gold_results_v28.md": "c4b7d76a253e8dde1a9231851ba9589cf31a610c77637caab1894028a3692629",
+    "scripts/build_dead_gold_report_v28.py": "3a34ee92d9ba010e7899444aaa68440725b0095aca12794c52ebbcde232e776d",
+    "results/v28_integrity_audit.json": "08b9578c83f7dfe619e03825f0c01062d695627ff7f0b044413679b9d8abb038",
+    "results/v28_examples.json": "1190e79b8972eea4245c004033f553fdb4777f7845796856c5b459ddf238f2a0",
+    "results/v28_validation.json": "c1ca20e68f4b9eb3e5a1347726d4ec7bacd66f8cf2c89fe4dd0659cc5a74220d",
+    "docs/dead_gold_scope_clarification_v28.md": "32c8bca6273bc067820b12e0d0fc185cdf551d915b0b07e0b460006696672f93",
+    "results/v28_scope_clarification_checkpoint.json": "e86f3f5518f2794a4f24461f256dfc99186b35c95f5cad3758fd6d7650dc084a",
+    "scripts/explain_dead_gold_cases_v28.py": "4a10e86d3e94370b5d26df0e9a45a5fa8c588711d39e22dad24323aae0d77569",
+    "results/v28_case_explanations.json": "2504bc76b2870290577d89b76d43a66c51aff9f00df2142989e73e2cb352208d"
+  },
+  "significant_branch_comparisons": [],
+  "net_process_equal": {
+    "train": true,
+    "holdout": true
+  },
+  "note": "Derived presentation only, frozen decision package unchanged."
+}

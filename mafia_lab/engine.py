@@ -300,8 +300,8 @@ def add_message(state: State, message: Message) -> State:
         if message.speaker in message.targets:
             raise ValueError("speaker cannot shortlist themselves")
     elif message.kind == "delegate":
-        if message.context != "day" or not 1 <= len(message.targets) <= 3:
-            raise ValueError("delegation needs an ordinary-turn candidate list")
+        if message.context not in {"day", "last_words"} or not 1 <= len(message.targets) <= 3:
+            raise ValueError("delegation needs an ordinary-turn or last-words candidate list")
         if message.target == message.speaker or message.target in message.targets:
             raise ValueError("delegate must differ from source and candidates")
         if message.speaker in message.targets:
@@ -315,6 +315,29 @@ def add_message(state: State, message: Message) -> State:
             raise ValueError("relay target must be another living player")
     elif message.targets:
         raise ValueError("only shortlist messages carry multiple targets")
+    return replace(state, messages=state.messages + (message,))
+
+
+def add_last_words_component(state: State, message: Message) -> State:
+    """Append list/grant fields to the same contiguous report, not another turn.
+
+    Preserve the one-last-words budget: exactly report -> shortlist -> delegate,
+    no extension after another speaker, and all original eligibility checks.
+    Truth and faction are deliberately not authenticated by this validator.
+    """
+    if message.context != "last_words" or message.kind not in {"shortlist", "delegate"}:
+        raise ValueError("only list and delegation fields extend last words")
+    block = []
+    for row in reversed(state.messages):
+        if (row.speaker, row.context, row.day) != (message.speaker, "last_words", message.day):
+            break
+        block.append(row)
+    kinds = [m.kind for m in reversed(block)]
+    expected = ["report"] if message.kind == "shortlist" else ["report", "shortlist"]
+    if kinds != expected:
+        raise ValueError("last-words fields must immediately follow report then list")
+    shadow = replace(state, messages=state.messages[:-len(block)])
+    add_message(shadow, message)  # validate eligibility and message fields
     return replace(state, messages=state.messages + (message,))
 
 

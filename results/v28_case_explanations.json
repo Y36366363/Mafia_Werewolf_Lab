@@ -1,0 +1,807 @@
+{
+  "posthoc_explanation": true,
+  "extra_simulations": 0,
+  "source": "Only the frozen-rule preselected v28_examples.json cases.",
+  "seat_numbering": "Story seats 1-based; raw ballot keys/targets and night_actions remain engine 0-based.",
+  "stories": [
+    {
+      "kind": "loss",
+      "seed": 186000016,
+      "mafia": "late_far_claim_team",
+      "source": 13,
+      "gold": 7,
+      "shortlist": [
+        12,
+        11
+      ],
+      "fake": 5,
+      "false_hit": 11,
+      "common_recommendation_receivers": [
+        15,
+        16,
+        3,
+        4,
+        6,
+        7,
+        10
+      ],
+      "variants": {
+        "reference": {
+          "win": 1,
+          "first_day_exile": 5,
+          "first_day_exile_role": "mafia",
+          "day_exiles": [
+            {
+              "day": 1,
+              "seat": 5,
+              "role": "mafia"
+            },
+            {
+              "day": 2,
+              "seat": 8,
+              "role": "mafia"
+            },
+            {
+              "day": 3,
+              "seat": 9,
+              "role": "mafia"
+            },
+            {
+              "day": 4,
+              "seat": 12,
+              "role": "mafia"
+            }
+          ],
+          "gold_call": null,
+          "first_votes": {
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 10,
+            "5": 4,
+            "6": 4,
+            "7": 10,
+            "8": 10,
+            "9": 4,
+            "10": 4,
+            "11": 10
+          },
+          "night_actions": [
+            [
+              "check",
+              0,
+              6
+            ],
+            [
+              "kill",
+              0,
+              12
+            ],
+            [
+              "check",
+              1,
+              7
+            ],
+            [
+              "kill",
+              1,
+              9
+            ],
+            [
+              "check",
+              2,
+              8
+            ],
+            [
+              "kill",
+              2,
+              13
+            ],
+            [
+              "check",
+              3,
+              10
+            ],
+            [
+              "kill",
+              3,
+              0
+            ]
+          ]
+        },
+        "notice": {
+          "win": 0,
+          "first_day_exile": 11,
+          "first_day_exile_role": "civilian",
+          "day_exiles": [
+            {
+              "day": 1,
+              "seat": 11,
+              "role": "civilian"
+            },
+            {
+              "day": 2,
+              "seat": 8,
+              "role": "mafia"
+            },
+            {
+              "day": 3,
+              "seat": 9,
+              "role": "mafia"
+            }
+          ],
+          "gold_call": null,
+          "first_votes": {
+            "13": 4,
+            "14": 10,
+            "15": 10,
+            "0": 4,
+            "1": 4,
+            "2": 10,
+            "3": 10,
+            "4": 10,
+            "5": 10,
+            "6": 10,
+            "7": 10,
+            "8": 10,
+            "9": 10,
+            "10": 4,
+            "11": 10
+          },
+          "night_actions": [
+            [
+              "check",
+              0,
+              6
+            ],
+            [
+              "kill",
+              0,
+              12
+            ],
+            [
+              "check",
+              1,
+              7
+            ],
+            [
+              "kill",
+              1,
+              13
+            ],
+            [
+              "check",
+              2,
+              8
+            ],
+            [
+              "kill",
+              2,
+              0
+            ],
+            [
+              "check",
+              3,
+              9
+            ],
+            [
+              "kill",
+              3,
+              1
+            ]
+          ]
+        },
+        "list": {
+          "win": 0,
+          "first_day_exile": 11,
+          "first_day_exile_role": "civilian",
+          "day_exiles": [
+            {
+              "day": 1,
+              "seat": 11,
+              "role": "civilian"
+            },
+            {
+              "day": 2,
+              "seat": 8,
+              "role": "mafia"
+            },
+            {
+              "day": 3,
+              "seat": 9,
+              "role": "mafia"
+            }
+          ],
+          "gold_call": {
+            "target": 11,
+            "outside": false,
+            "witness": null
+          },
+          "first_votes": {
+            "13": 4,
+            "14": 10,
+            "15": 10,
+            "0": 4,
+            "1": 4,
+            "2": 10,
+            "3": 10,
+            "4": 10,
+            "5": 10,
+            "6": 10,
+            "7": 10,
+            "8": 10,
+            "9": 10,
+            "10": 4,
+            "11": 10
+          },
+          "night_actions": [
+            [
+              "check",
+              0,
+              6
+            ],
+            [
+              "kill",
+              0,
+              12
+            ],
+            [
+              "check",
+              1,
+              7
+            ],
+            [
+              "kill",
+              1,
+              13
+            ],
+            [
+              "check",
+              2,
+              8
+            ],
+            [
+              "kill",
+              2,
+              0
+            ],
+            [
+              "check",
+              3,
+              9
+            ],
+            [
+              "kill",
+              3,
+              1
+            ]
+          ]
+        },
+        "evidence": {
+          "win": 1,
+          "first_day_exile": 5,
+          "first_day_exile_role": "mafia",
+          "day_exiles": [
+            {
+              "day": 1,
+              "seat": 5,
+              "role": "mafia"
+            },
+            {
+              "day": 2,
+              "seat": 8,
+              "role": "mafia"
+            },
+            {
+              "day": 3,
+              "seat": 9,
+              "role": "mafia"
+            },
+            {
+              "day": 4,
+              "seat": 12,
+              "role": "mafia"
+            }
+          ],
+          "gold_call": {
+            "target": 5,
+            "outside": true,
+            "witness": {
+              "reason": "shared_check_conflict_if_origin_true",
+              "index": 17,
+              "conditional": true
+            }
+          },
+          "first_votes": {
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "0": 4,
+            "1": 4,
+            "2": 4,
+            "3": 4,
+            "4": 10,
+            "5": 4,
+            "6": 4,
+            "7": 10,
+            "8": 10,
+            "9": 4,
+            "10": 4,
+            "11": 10
+          },
+          "night_actions": [
+            [
+              "check",
+              0,
+              6
+            ],
+            [
+              "kill",
+              0,
+              12
+            ],
+            [
+              "check",
+              1,
+              7
+            ],
+            [
+              "kill",
+              1,
+              9
+            ],
+            [
+              "check",
+              2,
+              8
+            ],
+            [
+              "kill",
+              2,
+              13
+            ],
+            [
+              "check",
+              3,
+              10
+            ],
+            [
+              "kill",
+              3,
+              0
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "kind": "same_win_different_process",
+      "seed": 186000006,
+      "mafia": "decoy_far_claim_team",
+      "source": 13,
+      "gold": 10,
+      "shortlist": [
+        12,
+        1
+      ],
+      "fake": 15,
+      "false_hit": 12,
+      "common_recommendation_receivers": [
+        16,
+        1,
+        5,
+        7,
+        9,
+        10,
+        11
+      ],
+      "variants": {
+        "reference": {
+          "win": 0,
+          "first_day_exile": 15,
+          "first_day_exile_role": "mafia",
+          "day_exiles": [
+            {
+              "day": 1,
+              "seat": 15,
+              "role": "mafia"
+            },
+            {
+              "day": 2,
+              "seat": 7,
+              "role": "civilian"
+            },
+            {
+              "day": 3,
+              "seat": 8,
+              "role": "mafia"
+            },
+            {
+              "day": 4,
+              "seat": 2,
+              "role": "mafia"
+            }
+          ],
+          "gold_call": null,
+          "first_votes": {
+            "13": 14,
+            "14": 11,
+            "15": 14,
+            "0": 14,
+            "1": 11,
+            "2": 14,
+            "3": 11,
+            "4": 14,
+            "5": 14,
+            "6": 14,
+            "7": 11,
+            "8": 14,
+            "9": 14,
+            "10": 14,
+            "11": 14
+          },
+          "night_actions": [
+            [
+              "check",
+              0,
+              9
+            ],
+            [
+              "kill",
+              0,
+              12
+            ],
+            [
+              "check",
+              1,
+              10
+            ],
+            [
+              "kill",
+              1,
+              4
+            ],
+            [
+              "check",
+              2,
+              8
+            ],
+            [
+              "kill",
+              2,
+              5
+            ],
+            [
+              "check",
+              3,
+              11
+            ],
+            [
+              "kill",
+              3,
+              13
+            ],
+            [
+              "check",
+              4,
+              15
+            ],
+            [
+              "kill",
+              4,
+              2
+            ]
+          ]
+        },
+        "notice": {
+          "win": 0,
+          "first_day_exile": 12,
+          "first_day_exile_role": "civilian",
+          "day_exiles": [
+            {
+              "day": 1,
+              "seat": 12,
+              "role": "civilian"
+            },
+            {
+              "day": 2,
+              "seat": 15,
+              "role": "mafia"
+            },
+            {
+              "day": 3,
+              "seat": 7,
+              "role": "civilian"
+            },
+            {
+              "day": 4,
+              "seat": 8,
+              "role": "mafia"
+            }
+          ],
+          "gold_call": null,
+          "first_votes": {
+            "13": 14,
+            "14": 11,
+            "15": 11,
+            "0": 11,
+            "1": 11,
+            "2": 14,
+            "3": 11,
+            "4": 11,
+            "5": 14,
+            "6": 11,
+            "7": 11,
+            "8": 11,
+            "9": 11,
+            "10": 11,
+            "11": 14
+          },
+          "night_actions": [
+            [
+              "check",
+              0,
+              9
+            ],
+            [
+              "kill",
+              0,
+              12
+            ],
+            [
+              "check",
+              1,
+              10
+            ],
+            [
+              "kill",
+              1,
+              4
+            ],
+            [
+              "check",
+              2,
+              8
+            ],
+            [
+              "kill",
+              2,
+              5
+            ],
+            [
+              "check",
+              3,
+              7
+            ],
+            [
+              "kill",
+              3,
+              13
+            ],
+            [
+              "check",
+              4,
+              15
+            ],
+            [
+              "kill",
+              4,
+              2
+            ]
+          ]
+        },
+        "list": {
+          "win": 0,
+          "first_day_exile": 12,
+          "first_day_exile_role": "civilian",
+          "day_exiles": [
+            {
+              "day": 1,
+              "seat": 12,
+              "role": "civilian"
+            },
+            {
+              "day": 2,
+              "seat": 15,
+              "role": "mafia"
+            },
+            {
+              "day": 3,
+              "seat": 7,
+              "role": "civilian"
+            },
+            {
+              "day": 4,
+              "seat": 8,
+              "role": "mafia"
+            }
+          ],
+          "gold_call": {
+            "target": 12,
+            "outside": false,
+            "witness": null
+          },
+          "first_votes": {
+            "13": 14,
+            "14": 11,
+            "15": 11,
+            "0": 11,
+            "1": 11,
+            "2": 14,
+            "3": 11,
+            "4": 11,
+            "5": 14,
+            "6": 11,
+            "7": 11,
+            "8": 11,
+            "9": 11,
+            "10": 11,
+            "11": 14
+          },
+          "night_actions": [
+            [
+              "check",
+              0,
+              9
+            ],
+            [
+              "kill",
+              0,
+              12
+            ],
+            [
+              "check",
+              1,
+              10
+            ],
+            [
+              "kill",
+              1,
+              4
+            ],
+            [
+              "check",
+              2,
+              8
+            ],
+            [
+              "kill",
+              2,
+              5
+            ],
+            [
+              "check",
+              3,
+              7
+            ],
+            [
+              "kill",
+              3,
+              13
+            ],
+            [
+              "check",
+              4,
+              15
+            ],
+            [
+              "kill",
+              4,
+              2
+            ]
+          ]
+        },
+        "evidence": {
+          "win": 0,
+          "first_day_exile": 15,
+          "first_day_exile_role": "mafia",
+          "day_exiles": [
+            {
+              "day": 1,
+              "seat": 15,
+              "role": "mafia"
+            },
+            {
+              "day": 2,
+              "seat": 7,
+              "role": "civilian"
+            },
+            {
+              "day": 3,
+              "seat": 8,
+              "role": "mafia"
+            },
+            {
+              "day": 4,
+              "seat": 2,
+              "role": "mafia"
+            }
+          ],
+          "gold_call": {
+            "target": 15,
+            "outside": true,
+            "witness": {
+              "reason": "shared_check_conflict_if_origin_true",
+              "index": 5,
+              "conditional": true
+            }
+          },
+          "first_votes": {
+            "13": 14,
+            "14": 11,
+            "15": 14,
+            "0": 14,
+            "1": 11,
+            "2": 14,
+            "3": 11,
+            "4": 14,
+            "5": 14,
+            "6": 14,
+            "7": 11,
+            "8": 14,
+            "9": 14,
+            "10": 14,
+            "11": 14
+          },
+          "night_actions": [
+            [
+              "check",
+              0,
+              9
+            ],
+            [
+              "kill",
+              0,
+              12
+            ],
+            [
+              "check",
+              1,
+              10
+            ],
+            [
+              "kill",
+              1,
+              4
+            ],
+            [
+              "check",
+              2,
+              8
+            ],
+            [
+              "kill",
+              2,
+              5
+            ],
+            [
+              "check",
+              3,
+              11
+            ],
+            [
+              "kill",
+              3,
+              13
+            ],
+            [
+              "check",
+              4,
+              15
+            ],
+            [
+              "kill",
+              4,
+              2
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "limitation": "Explains a receiver policy mechanism in selected traces, not proof of a generally optimal priority rule."
+}

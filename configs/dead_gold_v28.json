@@ -1,0 +1,208 @@
+{
+  "version": "20261102-deceased-source-gold-v28",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "train": {
+    "seed_start": 185000000,
+    "n": 128
+  },
+  "holdout": {
+    "seed_start": 186000000,
+    "n": 2048
+  },
+  "smoke": {
+    "seed_start": 187000000,
+    "n": 4
+  },
+  "mafia": [
+    {
+      "name": "late_near_restate_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_near_claim_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_restate_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_claim_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_near_restate_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_near_claim_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_far_restate_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_far_claim_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    }
+  ],
+  "good": [
+    {
+      "name": "reference_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "reference"
+    },
+    {
+      "name": "reference_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "reference"
+    },
+    {
+      "name": "reference_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "reference"
+    },
+    {
+      "name": "notice_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "notice"
+    },
+    {
+      "name": "notice_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "notice"
+    },
+    {
+      "name": "notice_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "notice"
+    },
+    {
+      "name": "list_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "list"
+    },
+    {
+      "name": "list_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "list"
+    },
+    {
+      "name": "list_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "list"
+    },
+    {
+      "name": "evidence_q0",
+      "response_probability": "0",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "evidence"
+    },
+    {
+      "name": "evidence_q50",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "evidence"
+    },
+    {
+      "name": "evidence_q100",
+      "response_probability": "1",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "evidence"
+    }
+  ]
+}

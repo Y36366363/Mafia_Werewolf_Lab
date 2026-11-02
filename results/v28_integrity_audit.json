@@ -1,0 +1,10 @@
+{
+  "formal_games": 208896,
+  "cells_checked": 192,
+  "direct_sample_replays": 576,
+  "v27_compatibility_replays": 48,
+  "independently_checked_intervals": 96,
+  "frozen_assets": 69,
+  "all_checks_passed": true,
+  "limitation": "All records structurally/statistically checked, sampled runs independently replayed, not all formal games rerun."
+}
