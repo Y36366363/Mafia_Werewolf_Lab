@@ -1,0 +1,249 @@
+{
+  "files": {
+    "docs/advice_semantics_results_v29.md": "d6967fa398345934c3f455603263fc710ff68af22019fda671d9abf21e6c768e",
+    "scripts/build_advice_semantics_report_v29.py": "83cb61d447d7e39cd14a65f968d0d0a8f5a2a5962603dfab88d7af6262897ac6",
+    "results/v29_integrity_audit.json": "1737b530db806a838789cc02c3cbaa8c3c5377b1b36208fb62205fac5e1e0fb9",
+    "results/v29_validation.json": "cdd808a9fbfc5ecc9d3960fe8cf5005830613f36ba146d205aedcbb30bfc24d2",
+    "results/v29_examples.json": "a8b8f997fc6159320a88afb559d59ae7d363f625628adb3dc0b5b961cb6e8732"
+  },
+  "empirical_process_equal_to_anchor": {
+    "typed": true,
+    "guard": true,
+    "both": true
+  },
+  "significant": {
+    "win": [
+      {
+        "comparison": "plain->typed",
+        "mafia": "decoy_far_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "decoy_far_claim_team",
+        "direction": "positive"
+      }
+    ],
+    "day1_mafia_exile": [
+      {
+        "comparison": "plain->typed",
+        "mafia": "decoy_far_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "decoy_far_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->typed",
+        "mafia": "decoy_far_restate_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "decoy_far_restate_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->typed",
+        "mafia": "decoy_near_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "decoy_near_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->typed",
+        "mafia": "decoy_near_restate_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "decoy_near_restate_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->typed",
+        "mafia": "late_far_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "late_far_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->typed",
+        "mafia": "late_far_restate_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "late_far_restate_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->typed",
+        "mafia": "late_near_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "late_near_claim_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->typed",
+        "mafia": "late_near_restate_team",
+        "direction": "positive"
+      },
+      {
+        "comparison": "plain->guard",
+        "mafia": "late_near_restate_team",
+        "direction": "positive"
+      }
+    ]
+  },
+  "interactions": [
+    {
+      "mafia": "decoy_far_claim_team",
+      "win": {
+        "delta": -0.07768924302788845,
+        "derived_ci": [
+          -0.1468218230468602,
+          -0.0067006385931684675
+        ]
+      },
+      "day1_mafia_exile": {
+        "delta": -0.6254980079681275,
+        "derived_ci": [
+          -0.7188588158088034,
+          -0.5102903442106171
+        ]
+      }
+    },
+    {
+      "mafia": "decoy_far_restate_team",
+      "win": {
+        "delta": -0.017928286852589643,
+        "derived_ci": [
+          -0.06732509489143813,
+          0.030828747339274057
+        ]
+      },
+      "day1_mafia_exile": {
+        "delta": -0.6254980079681275,
+        "derived_ci": [
+          -0.7188588158088034,
+          -0.5102903442106171
+        ]
+      }
+    },
+    {
+      "mafia": "decoy_near_claim_team",
+      "win": {
+        "delta": -0.029880478087649404,
+        "derived_ci": [
+          -0.0847571754700048,
+          0.02490927679781732
+        ]
+      },
+      "day1_mafia_exile": {
+        "delta": -0.23904382470119523,
+        "derived_ci": [
+          -0.330286030447143,
+          -0.13995453473025696
+        ]
+      }
+    },
+    {
+      "mafia": "decoy_near_restate_team",
+      "win": {
+        "delta": -0.00597609561752988,
+        "derived_ci": [
+          -0.04755015511628634,
+          0.03441323836801932
+        ]
+      },
+      "day1_mafia_exile": {
+        "delta": -0.23904382470119523,
+        "derived_ci": [
+          -0.330286030447143,
+          -0.13995453473025696
+        ]
+      }
+    },
+    {
+      "mafia": "late_far_claim_team",
+      "win": {
+        "delta": -0.02636916835699797,
+        "derived_ci": [
+          -0.08051905299419464,
+          0.0275276676729167
+        ]
+      },
+      "day1_mafia_exile": {
+        "delta": -0.13995943204868155,
+        "derived_ci": [
+          -0.22137769209046376,
+          -0.05426139646433216
+        ]
+      }
+    },
+    {
+      "mafia": "late_far_restate_team",
+      "win": {
+        "delta": 0.0,
+        "derived_ci": [
+          -0.03523981180836839,
+          0.03523981180836839
+        ]
+      },
+      "day1_mafia_exile": {
+        "delta": -0.13995943204868155,
+        "derived_ci": [
+          -0.22137769209046376,
+          -0.05426139646433216
+        ]
+      }
+    },
+    {
+      "mafia": "late_near_claim_team",
+      "win": {
+        "delta": -0.010141987829614604,
+        "derived_ci": [
+          -0.05557084485770113,
+          0.03424319306299098
+        ]
+      },
+      "day1_mafia_exile": {
+        "delta": -0.07707910750507099,
+        "derived_ci": [
+          -0.14693562259552098,
+          -0.005360577043651747
+        ]
+      }
+    },
+    {
+      "mafia": "late_near_restate_team",
+      "win": {
+        "delta": -0.004056795131845842,
+        "derived_ci": [
+          -0.044511635797839004,
+          0.03520370546071615
+        ]
+      },
+      "day1_mafia_exile": {
+        "delta": -0.07707910750507099,
+        "derived_ci": [
+          -0.14693562259552098,
+          -0.005360577043651747
+        ]
+      }
+    }
+  ],
+  "note": "Read-only derived analysis; frozen policies and seeds unchanged."
+}

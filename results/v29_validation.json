@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-03",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 338,
+    "elapsed_seconds": 60.7
+  },
+  "smoke": {
+    "games": 80,
+    "cells": 40,
+    "seed_start": 190000000,
+    "contrasts": 80
+  },
+  "q": "0/50/100 retained; no optional q node in treated branch, unit checked; main new sample q50 only",
+  "evidence": "Fixed-policy factorial evaluation; no new equilibrium or GTO result.",
+  "derived_checks": {
+    "report_links": true,
+    "illustrative_counts_verified": true,
+    "decision_package_unchanged": true,
+    "formal_records_checked": 80,
+    "first_day_succession_alias_verified": true
+  },
+  "whitespace": {
+    "current_changes_passed": true,
+    "frozen_snapshot_exceptions": [
+      "declaration_experiment_v12.py: pre-existing blank line at EOF",
+      "strategies_v12.py: pre-existing blank line at EOF"
+    ],
+    "reason": "Old modules archived byte-for-byte, source hashes preserved."
+  }
+}

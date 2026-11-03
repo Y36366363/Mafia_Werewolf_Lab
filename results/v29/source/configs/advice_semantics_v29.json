@@ -1,0 +1,155 @@
+{
+  "version": "20261103-advice-semantics-conflict-v29",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "train": {
+    "seed_start": 188000000,
+    "n": 128
+  },
+  "holdout": {
+    "seed_start": 189000000,
+    "n": 2048
+  },
+  "smoke": {
+    "seed_start": 190000000,
+    "n": 4
+  },
+  "mafia": [
+    {
+      "name": "late_near_restate_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_near_claim_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_restate_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "late_far_claim_team",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_near_restate_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_near_claim_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "near",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_far_restate_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "none",
+      "vote_mode": "team"
+    },
+    {
+      "name": "decoy_far_claim_team",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team"
+    }
+  ],
+  "good": [
+    {
+      "name": "anchor",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "reference",
+      "typed_advice": false,
+      "conflict_guard": false
+    },
+    {
+      "name": "plain",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "notice",
+      "typed_advice": false,
+      "conflict_guard": false
+    },
+    {
+      "name": "typed",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "notice",
+      "typed_advice": true,
+      "conflict_guard": false
+    },
+    {
+      "name": "guard",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "notice",
+      "typed_advice": false,
+      "conflict_guard": true
+    },
+    {
+      "name": "both",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "notice",
+      "typed_advice": true,
+      "conflict_guard": true
+    }
+  ]
+}
