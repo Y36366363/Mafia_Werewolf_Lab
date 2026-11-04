@@ -1,0 +1,24 @@
+{
+  "version": "20261104-relay-receiver-v30",
+  "test_command": "python -m pytest tests -q",
+  "tests_passed": 347,
+  "test_seconds": 95.11,
+  "focused_tests": 9,
+  "formal_games": 67584,
+  "smoke_games": 64,
+  "direct_sample_replays": 192,
+  "case_replays": 25,
+  "old_case_records_reused": 4,
+  "frozen_package_sha256": "8217de91a65e80fb796af32eb0a9c9d8f6e302dd61d82f3a0022129cc739fa42",
+  "frozen_assets_unchanged": true,
+  "false_authority_example": {
+    "seed": 192000016,
+    "prefix_equal_after_removing_authorization": true,
+    "no_gold_final_calls_in_both": true
+  },
+  "interpretation": "Frozen strategy evaluation; no new equilibrium, no repair after holdout, no seed search.",
+  "all_checks_passed": true,
+  "whitespace_exceptions": [
+    "Frozen unchanged v12 declaration_experiment_v12.py and strategies_v12.py retain original blank EOF; snapshot bytes deliberately preserved."
+  ]
+}

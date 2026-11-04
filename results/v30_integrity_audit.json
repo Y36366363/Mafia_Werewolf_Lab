@@ -1,0 +1,656 @@
+{
+  "all_checks_passed": true,
+  "formal_games": 67584,
+  "cells_checked": 64,
+  "direct_sample_replays": 192,
+  "v29_compatibility_replays": 4,
+  "independently_checked_intervals": 176,
+  "frozen_assets": 68,
+  "counts": {
+    "train": {
+      "('evidence_guard', 'decoy_copy')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 5,
+        "relay_own_mismatch_ballots": 5,
+        "police_own_first_mismatch_ballots": 3,
+        "team_call_applicable_ballots": 275
+      },
+      "('evidence_guard', 'decoy_old')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 3,
+        "team_call_applicable_ballots": 267
+      },
+      "('evidence_guard', 'decoy_quiet')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 130
+      },
+      "('evidence_guard', 'false_grant')": {
+        "relay_count": 41,
+        "relay_false_source_count": 41,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 3,
+        "relay_own_mismatch_ballots": 3,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 191
+      },
+      "('evidence_guard', 'false_notice')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 190
+      },
+      "('evidence_guard', 'late_copy')": {
+        "relay_count": 13,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 281
+      },
+      "('evidence_guard', 'late_old')": {
+        "relay_count": 13,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 280
+      },
+      "('evidence_guard', 'late_quiet')": {
+        "relay_count": 13,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 118
+      },
+      "('notice', 'decoy_copy')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 3,
+        "team_call_applicable_ballots": 275
+      },
+      "('notice', 'decoy_old')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 3,
+        "team_call_applicable_ballots": 267
+      },
+      "('notice', 'decoy_quiet')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 130
+      },
+      "('notice', 'false_grant')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 191
+      },
+      "('notice', 'false_notice')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 190
+      },
+      "('notice', 'late_copy')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 281
+      },
+      "('notice', 'late_old')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 280
+      },
+      "('notice', 'late_quiet')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 118
+      },
+      "('relay_guard', 'decoy_copy')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 5,
+        "relay_own_mismatch_ballots": 5,
+        "police_own_first_mismatch_ballots": 3,
+        "team_call_applicable_ballots": 275
+      },
+      "('relay_guard', 'decoy_old')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 11,
+        "relay_own_mismatch_ballots": 11,
+        "police_own_first_mismatch_ballots": 3,
+        "team_call_applicable_ballots": 267
+      },
+      "('relay_guard', 'decoy_quiet')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 130
+      },
+      "('relay_guard', 'false_grant')": {
+        "relay_count": 41,
+        "relay_false_source_count": 41,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 19,
+        "relay_own_mismatch_ballots": 19,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 191
+      },
+      "('relay_guard', 'false_notice')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 190
+      },
+      "('relay_guard', 'late_copy')": {
+        "relay_count": 13,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 281
+      },
+      "('relay_guard', 'late_old')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 11,
+        "relay_own_mismatch_ballots": 11,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 280
+      },
+      "('relay_guard', 'late_quiet')": {
+        "relay_count": 13,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 118
+      },
+      "('relay_typed', 'decoy_copy')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 5,
+        "relay_own_mismatch_ballots": 5,
+        "police_own_first_mismatch_ballots": 3,
+        "team_call_applicable_ballots": 275
+      },
+      "('relay_typed', 'decoy_old')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 42,
+        "explicit_conflict_common_ballots": 42,
+        "relay_own_first_mismatch_ballots": 5,
+        "relay_own_mismatch_ballots": 5,
+        "police_own_first_mismatch_ballots": 3,
+        "team_call_applicable_ballots": 274
+      },
+      "('relay_typed', 'decoy_quiet')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 130
+      },
+      "('relay_typed', 'false_grant')": {
+        "relay_count": 41,
+        "relay_false_source_count": 41,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 19,
+        "relay_own_mismatch_ballots": 19,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 191
+      },
+      "('relay_typed', 'false_notice')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 190
+      },
+      "('relay_typed', 'late_copy')": {
+        "relay_count": 13,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 281
+      },
+      "('relay_typed', 'late_old')": {
+        "relay_count": 11,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 21,
+        "explicit_conflict_common_ballots": 21,
+        "relay_own_first_mismatch_ballots": 8,
+        "relay_own_mismatch_ballots": 8,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 281
+      },
+      "('relay_typed', 'late_quiet')": {
+        "relay_count": 13,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 118
+      }
+    },
+    "holdout": {
+      "('evidence_guard', 'decoy_copy')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 172,
+        "relay_own_mismatch_ballots": 172,
+        "police_own_first_mismatch_ballots": 79,
+        "team_call_applicable_ballots": 8579
+      },
+      "('evidence_guard', 'decoy_old')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 29,
+        "relay_own_mismatch_ballots": 29,
+        "police_own_first_mismatch_ballots": 79,
+        "team_call_applicable_ballots": 8299
+      },
+      "('evidence_guard', 'decoy_quiet')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 3965
+      },
+      "('evidence_guard', 'false_grant')": {
+        "relay_count": 1368,
+        "relay_false_source_count": 1368,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 111,
+        "relay_own_mismatch_ballots": 111,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 5036
+      },
+      "('evidence_guard', 'false_notice')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 5098
+      },
+      "('evidence_guard', 'late_copy')": {
+        "relay_count": 472,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 2,
+        "relay_own_mismatch_ballots": 4,
+        "police_own_first_mismatch_ballots": 32,
+        "team_call_applicable_ballots": 8919
+      },
+      "('evidence_guard', 'late_old')": {
+        "relay_count": 472,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 25,
+        "relay_own_mismatch_ballots": 25,
+        "police_own_first_mismatch_ballots": 32,
+        "team_call_applicable_ballots": 8615
+      },
+      "('evidence_guard', 'late_quiet')": {
+        "relay_count": 472,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 3800
+      },
+      "('notice', 'decoy_copy')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 79,
+        "team_call_applicable_ballots": 8579
+      },
+      "('notice', 'decoy_old')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 79,
+        "team_call_applicable_ballots": 8299
+      },
+      "('notice', 'decoy_quiet')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 3965
+      },
+      "('notice', 'false_grant')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 5036
+      },
+      "('notice', 'false_notice')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 5098
+      },
+      "('notice', 'late_copy')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 32,
+        "team_call_applicable_ballots": 8918
+      },
+      "('notice', 'late_old')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 32,
+        "team_call_applicable_ballots": 8615
+      },
+      "('notice', 'late_quiet')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 3800
+      },
+      "('relay_guard', 'decoy_copy')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 172,
+        "relay_own_mismatch_ballots": 172,
+        "police_own_first_mismatch_ballots": 79,
+        "team_call_applicable_ballots": 8579
+      },
+      "('relay_guard', 'decoy_old')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 394,
+        "relay_own_mismatch_ballots": 394,
+        "police_own_first_mismatch_ballots": 79,
+        "team_call_applicable_ballots": 8299
+      },
+      "('relay_guard', 'decoy_quiet')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 3965
+      },
+      "('relay_guard', 'false_grant')": {
+        "relay_count": 1368,
+        "relay_false_source_count": 1368,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 687,
+        "relay_own_mismatch_ballots": 687,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 5036
+      },
+      "('relay_guard', 'false_notice')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 5098
+      },
+      "('relay_guard', 'late_copy')": {
+        "relay_count": 472,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 2,
+        "relay_own_mismatch_ballots": 4,
+        "police_own_first_mismatch_ballots": 32,
+        "team_call_applicable_ballots": 8919
+      },
+      "('relay_guard', 'late_old')": {
+        "relay_count": 436,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 358,
+        "relay_own_mismatch_ballots": 358,
+        "police_own_first_mismatch_ballots": 32,
+        "team_call_applicable_ballots": 8615
+      },
+      "('relay_guard', 'late_quiet')": {
+        "relay_count": 472,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 3800
+      },
+      "('relay_typed', 'decoy_copy')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 172,
+        "relay_own_mismatch_ballots": 172,
+        "police_own_first_mismatch_ballots": 79,
+        "team_call_applicable_ballots": 8579
+      },
+      "('relay_typed', 'decoy_old')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 1869,
+        "explicit_conflict_common_ballots": 1869,
+        "relay_own_first_mismatch_ballots": 127,
+        "relay_own_mismatch_ballots": 127,
+        "police_own_first_mismatch_ballots": 79,
+        "team_call_applicable_ballots": 8603
+      },
+      "('relay_typed', 'decoy_quiet')": {
+        "relay_count": 439,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 3965
+      },
+      "('relay_typed', 'false_grant')": {
+        "relay_count": 1368,
+        "relay_false_source_count": 1368,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 687,
+        "relay_own_mismatch_ballots": 687,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 5036
+      },
+      "('relay_typed', 'false_notice')": {
+        "relay_count": 0,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 5098
+      },
+      "('relay_typed', 'late_copy')": {
+        "relay_count": 472,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 2,
+        "relay_own_mismatch_ballots": 4,
+        "police_own_first_mismatch_ballots": 32,
+        "team_call_applicable_ballots": 8919
+      },
+      "('relay_typed', 'late_old')": {
+        "relay_count": 436,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 385,
+        "explicit_conflict_common_ballots": 385,
+        "relay_own_first_mismatch_ballots": 303,
+        "relay_own_mismatch_ballots": 303,
+        "police_own_first_mismatch_ballots": 32,
+        "team_call_applicable_ballots": 8655
+      },
+      "('relay_typed', 'late_quiet')": {
+        "relay_count": 472,
+        "relay_false_source_count": 0,
+        "incompatible_early_common_ballots": 0,
+        "explicit_conflict_common_ballots": 0,
+        "relay_own_first_mismatch_ballots": 0,
+        "relay_own_mismatch_ballots": 0,
+        "police_own_first_mismatch_ballots": 0,
+        "team_call_applicable_ballots": 3800
+      }
+    }
+  },
+  "limitation": "All saved raw arrays checked; only declared first/middle/last complete games independently replayed, not all simulations rerun."
+}

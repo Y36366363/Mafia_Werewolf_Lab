@@ -1,0 +1,152 @@
+{
+  "version": "20261104-relay-receiver-v30",
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "train": {
+    "seed_start": 191000000,
+    "n": 64
+  },
+  "holdout": {
+    "seed_start": 192000000,
+    "n": 2048
+  },
+  "smoke": {
+    "seed_start": 193000000,
+    "n": 2
+  },
+  "mafia": [
+    {
+      "name": "late_old",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team",
+      "opening_control": "old"
+    },
+    {
+      "name": "late_copy",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team",
+      "opening_control": "copy"
+    },
+    {
+      "name": "late_quiet",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team",
+      "opening_control": "quiet"
+    },
+    {
+      "name": "decoy_old",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team",
+      "opening_control": "old"
+    },
+    {
+      "name": "decoy_copy",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team",
+      "opening_control": "copy"
+    },
+    {
+      "name": "decoy_quiet",
+      "kill_mode": "posterior_decoy",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team",
+      "opening_control": "quiet"
+    },
+    {
+      "name": "false_notice",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team",
+      "opening_control": "false_notice"
+    },
+    {
+      "name": "false_grant",
+      "kill_mode": "safe_late",
+      "response": "forward",
+      "target_rule": "far",
+      "restate": true,
+      "succession": "claim",
+      "vote_mode": "team",
+      "opening_control": "false_grant"
+    }
+  ],
+  "good": [
+    {
+      "name": "notice",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "notice",
+      "typed_advice": true,
+      "conflict_guard": true
+    },
+    {
+      "name": "relay_typed",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "list",
+      "typed_advice": true,
+      "conflict_guard": false
+    },
+    {
+      "name": "relay_guard",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "list",
+      "typed_advice": true,
+      "conflict_guard": true
+    },
+    {
+      "name": "evidence_guard",
+      "response_probability": "1/2",
+      "report_advice_gate": true,
+      "execution_call": true,
+      "vote_history": false,
+      "relay_mode": "local",
+      "dead_gold": "evidence",
+      "typed_advice": true,
+      "conflict_guard": true
+    }
+  ]
+}

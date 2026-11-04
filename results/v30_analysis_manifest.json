@@ -1,0 +1,17 @@
+{
+  "files": {
+    "scripts/build_relay_receiver_report_v30.py": "db1183d939c8a7e3ebd88d954839e1d837fb78a94ab31ea6241218e6f3db7ea8",
+    "scripts/diagnose_relay_receiver_v30.py": "bdfcffabc364f97b591ca81295a0664ea42f2c73500086405938a562504d0ee2",
+    "scripts/verify_relay_receiver_v30.py": "605751f42127d4b5d84b64e31fe3954d4615f62dce6cba4eac7fb1ec57bfbbfc",
+    "scripts/smoke_relay_receiver_v30.py": "1096567d8764615e1bb5a6f94c738cfc7851790758eed9e85fcef5a3757112af",
+    "scripts/run_relay_receiver_v30.py": "9863812fde7d0db1a6a79d8b6c4002fea3175c367a882c164598ee912c9197f2",
+    "docs/relay_receiver_results_v30.md": "8100f052adc0b954597f8ebe8b03d4389d78be2d3b8edd1f79b7085754e5ba5f",
+    "docs/relay_receiver_cases_v30.md": "953dcfbc6575f49f4a0cd15f7065893554692fd23a2dc59a8dfca8a7c48ae2ec",
+    "results/v30_integrity_audit.json": "7b4ec594565d39b71851f81a3ac99c1b8ffc6c799d1a5cd0c9fddedd29bf9ccc",
+    "results/v30_examples.json": "106fa3d76be42b2a6bb915c42f6d6688e9e9ed474ec8879f2f4f20f4fbae6e05",
+    "results/v30_smoke.json": "16ce7e7c20f78f10c143cc8e9822c694da0a17a9241f712d4e735aceb14f94a5",
+    "results/v30_validation.json": "6f7c9ed1ea2752b9af0d0f58729aa950b3df9cb81fdc740f139ad9453fb832e8",
+    "README.zh.md": "a51345afa45fc8362cabbbaf689b18a7fa26d8db420e030022fd1d12622d3d42"
+  },
+  "note": "Derived after fixed evaluation, no policy changes."
+}
