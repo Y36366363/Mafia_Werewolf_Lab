@@ -1,0 +1,17 @@
+{
+  "files": {
+    "scripts/build_unresolved_conflict_report_v31.py": "da3def8f004fec6174c1b1035cc0a3d29354bfff851f6e785d8a857c1f5b0bd2",
+    "scripts/run_unresolved_conflict_v31.py": "f5d1a71bd540d8b3d5940becc6d76fed6ba286d37fa74635244c6321057017a0",
+    "scripts/smoke_unresolved_conflict_v31.py": "6a65f41b9a7e507864b3611cf145359fc79c8495fe262b7c0fd5c94182ae127f",
+    "scripts/diagnose_unresolved_conflict_v31.py": "4287c80011f6937accb35201c6a94033b4a1ad90ba76da7f0829d566bfe86bea",
+    "scripts/verify_unresolved_conflict_v31.py": "8c62823b0cd4a17e068eb269dd4a61f345af458878f363fce631a8b241e1cda6",
+    "docs/unresolved_conflict_results_v31.md": "1c4fc6ba108936034ae24ddfbd3f3dea2b153e5978524cd6296f92c3ccbb0a4a",
+    "docs/unresolved_conflict_cases_v31.md": "09ece2dfb23e50e50b0a04f9ba89b4c1dbd70d09242d471321eb0fc453986b61",
+    "results/v31_examples.json": "b0f887789a89835e0410a377f83814e3185c2461969bd861cdc2774548ff4858",
+    "results/v31_integrity_audit.json": "85adf7eddc3ea173fda2d5e8638119a4e1c613ec04aa60143b3c658a9738db1a",
+    "results/v31_smoke.json": "e7120a08405ec15f666c016f345ab02774df7f3ace936993bc61f9585d9985ae",
+    "results/v31_validation.json": "1281fc598bdc097548e8cc91bc3da417054316a8ad3a6ea5aa0a9bcc845d741a",
+    "README.zh.md": "78edb5234b7cb1127688957695d77d968e91e71a07784384164b3c47995daf0e"
+  },
+  "note": "Derived analysis after fixed evaluation, no policy change."
+}

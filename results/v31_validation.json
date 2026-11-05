@@ -1,0 +1,28 @@
+{
+  "version": "20261105-unresolved-conflict-intent-v31",
+  "formal_games": 50688,
+  "tests_passed": 359,
+  "test_command": "python -m pytest tests -q",
+  "test_seconds": 35.06,
+  "focused_tests": 12,
+  "focused_seconds": 5.49,
+  "smoke_games": 48,
+  "direct_sample_replays": 144,
+  "detail_case_replays": 41,
+  "grant_audit_games": 48,
+  "grant_prefix_checks": 24,
+  "historical_runs": 12,
+  "legacy_historical_direct_replays": 4,
+  "source_sha256": "ad130ff21111e6c0f1a72036547b62fe408ea2000caec7358ab14f0e94717ed5",
+  "source_unchanged": true,
+  "police_day1_report_arrays_unchanged_across_rows": true,
+  "aligned_observed_first_round_intent_mismatch": 0,
+  "audit_caveat": "orphan_directive_ballots frozen field misses day1 filter; preserved raw bytes, not used as scope invariant. Derived audit checks scoped observations.",
+  "inherited_scope_clarification": "Unmodified v30 false modes affect all mafia day1 last words, including day1 exiles, not just first victim; report discloses after code inspection.",
+  "whitespace_exceptions": [
+    "Frozen v12 declaration_experiment_v12.py and strategies_v12.py preserve pre-existing blank EOF."
+  ],
+  "evidence": "Fixed candidate evaluation; no training/q/seed selection, no new equilibrium; stage policies unchanged after holdout.",
+  "all_checks_passed": true,
+  "inherited_position_model_caveat": "seat_scores uses ordinary nonteammate-kill likelihood and excludes first victim; no joint selfkill/source posterior. Selfkill costs are frozen-agent evaluation, not fully adjusted Bayesian response."
+}
