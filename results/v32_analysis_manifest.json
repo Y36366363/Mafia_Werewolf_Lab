@@ -1,0 +1,17 @@
+{
+  "sha256": {
+    "README.zh.md": "e3e8b014032aea6cb39572bd4f9969f391c1fbae27e9431ecdb92a61d96e1207",
+    "docs/source_hypotheses_cases_v32.md": "559417cf39c76506487bd39ea028c07801c2189a134c0c7f9bb13ee880741fbc",
+    "docs/source_hypotheses_protocol_v32.md": "3bbcf07e932a334dc2778d3a7715d15307b4483f41d6f72e045a349a26baf7b4",
+    "docs/source_hypotheses_results_v32.md": "1fa3be27e3644c4c95e112f7d3a0bda7f13202c38aea1e63cc7f0eeed0447655",
+    "results/v32_cases.json": "9def4594a63fbef859c8bb96be05bcc8c24513f06ed7178f2c10265310129835",
+    "results/v32_diagnostics.json": "42b3162b4a3464732974252f0537941a8252da8067b49a3c9dced8dfba44f4b4",
+    "results/v32_same_history_witness.json": "182cd8bba907cd00a50ca5d71c544819a0b35e4f661fc37e92b8068a53da435c",
+    "results/v32_validation.json": "dd0b1c117645f862d564bbc37e11341418903a9a608eba356a649ca3f59d994c",
+    "scripts/analyze_source_hypotheses_v32.py": "3195a133acf94b2633c62cf25cb3a7e86f5150a2bd799ad396651fafed75a41d",
+    "scripts/build_source_hypotheses_report_v32.py": "b9abb2fb42735f2e6929bd5c169d8cd3f78a8212e0517c3230f290f3c3c834e9",
+    "scripts/run_source_hypotheses_v32.py": "fba88314de06791698e886429d78f1b3a5305eb8f3596e4026f653d68565383b",
+    "scripts/source_hypotheses_cases_v32.py": "d71b6c0adda83010623e9b7c0548d6b4f1da91d23d2494604f7f2f6ee2d19452"
+  },
+  "note": "Derived analysis artifacts; frozen simulation assets are separately hashed in results/v32/freeze.json."
+}

@@ -1,0 +1,12 @@
+{
+  "version": "20261106-source-hypotheses-v32",
+  "base_config": "configs/unresolved_conflict_v31.json",
+  "good": "aligned",
+  "responses": ["inherited", "restrained"],
+  "train": {"seed_start": 197000000, "n": 256},
+  "holdout": {"seed_start": 198000000, "n": 2048},
+  "smoke": {"seed_start": 199000000, "n": 2},
+  "selfkill_shares": [0.02, 0.10, 0.25],
+  "family": 16,
+  "logic_samples_per_cell": 8
+}

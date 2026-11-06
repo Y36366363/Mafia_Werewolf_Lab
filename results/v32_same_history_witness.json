@@ -1,0 +1,249 @@
+{
+  "worlds": [
+    {
+      "source_roles": "P/M",
+      "roles": [
+        "police",
+        "police",
+        "police",
+        "police",
+        "mafia",
+        "mafia",
+        "mafia",
+        "mafia",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian"
+      ],
+      "observation": {
+        "player": 15,
+        "role": "civilian",
+        "teammates": [],
+        "alive": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "day": 1,
+        "messages": [
+          {
+            "speaker": 0,
+            "kind": "report",
+            "target": 8,
+            "verdict": false,
+            "context": "last_words",
+            "day": 1,
+            "targets": []
+          },
+          {
+            "speaker": 1,
+            "kind": "pass",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          },
+          {
+            "speaker": 2,
+            "kind": "pass",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          },
+          {
+            "speaker": 3,
+            "kind": "pass",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          },
+          {
+            "speaker": 4,
+            "kind": "report",
+            "target": 8,
+            "verdict": false,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        ],
+        "investigations": [],
+        "deaths": [
+          {
+            "player": 0,
+            "day": 1,
+            "cause": "night",
+            "ordinal": 1
+          }
+        ],
+        "public_events": [
+          {
+            "kind": "death",
+            "day": 1,
+            "player": 0,
+            "ballots": [],
+            "candidates": [],
+            "outcome": "night"
+          }
+        ],
+        "pending_pk": [],
+        "last_anchor": 0,
+        "rules": {
+          "police": 4,
+          "mafia": 4,
+          "civilians": 8,
+          "last_words_limit": 3,
+          "allow_self_kill": true,
+          "tie_rule": "pk",
+          "direction": 1
+        },
+        "winner": null
+      }
+    },
+    {
+      "source_roles": "M/P",
+      "roles": [
+        "mafia",
+        "police",
+        "police",
+        "police",
+        "police",
+        "mafia",
+        "mafia",
+        "mafia",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian",
+        "civilian"
+      ],
+      "observation": {
+        "player": 15,
+        "role": "civilian",
+        "teammates": [],
+        "alive": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "day": 1,
+        "messages": [
+          {
+            "speaker": 0,
+            "kind": "report",
+            "target": 8,
+            "verdict": false,
+            "context": "last_words",
+            "day": 1,
+            "targets": []
+          },
+          {
+            "speaker": 1,
+            "kind": "pass",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          },
+          {
+            "speaker": 2,
+            "kind": "pass",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          },
+          {
+            "speaker": 3,
+            "kind": "pass",
+            "target": null,
+            "verdict": null,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          },
+          {
+            "speaker": 4,
+            "kind": "report",
+            "target": 8,
+            "verdict": false,
+            "context": "day",
+            "day": 1,
+            "targets": []
+          }
+        ],
+        "investigations": [],
+        "deaths": [
+          {
+            "player": 0,
+            "day": 1,
+            "cause": "night",
+            "ordinal": 1
+          }
+        ],
+        "public_events": [
+          {
+            "kind": "death",
+            "day": 1,
+            "player": 0,
+            "ballots": [],
+            "candidates": [],
+            "outcome": "night"
+          }
+        ],
+        "pending_pk": [],
+        "last_anchor": 0,
+        "rules": {
+          "police": 4,
+          "mafia": 4,
+          "civilians": 8,
+          "last_words_limit": 3,
+          "allow_self_kill": true,
+          "tie_rule": "pk",
+          "direction": 1
+        },
+        "winner": null
+      }
+    }
+  ],
+  "scope": "Full legal ordinary-turn prefix including passes; not claimed equally likely under frozen policies."
+}

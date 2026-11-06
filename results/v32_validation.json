@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-06",
+  "base_commit": "ff68c52",
+  "python": "3.12.3",
+  "scipy": "1.16.3",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 369,
+    "seconds": 48.93
+  },
+  "new_tests": 10,
+  "formal_games": 36864,
+  "smoke_games": 32,
+  "independent_base_seeds": 2304,
+  "interval_crosschecks": 48,
+  "direct_replays": 96,
+  "baseline_replays": 48,
+  "case_replays": 4,
+  "limitations": [
+    "Not all formal games independently rerun.",
+    "First-source diagnostic is not all-time inference.",
+    "No receiver or probability model fitted after acceptance.",
+    "Role support is a necessary-constraint superset, not strategy likelihood."
+  ],
+  "legal_same_history_worlds": 2,
+  "whitespace": "Live stage files clean; archived byte-identical v12 files retain their existing trailing blank lines in both source snapshots."
+}

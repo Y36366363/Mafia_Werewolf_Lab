@@ -1,0 +1,5251 @@
+{
+  "replays": 96,
+  "baseline_direct_replays": 48,
+  "ballot_checks": 3504,
+  "logic_prefix_checks": 256,
+  "both_dead_hypotheses_supported": 256,
+  "examples": [
+    {
+      "seed": 198000006,
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "copy_early",
+      "diagnostic": {
+        "event": "copy_early",
+        "dead_police": 1,
+        "live_role": "mafia",
+        "observer": 0,
+        "dead_source": 11,
+        "live_source": 13,
+        "observation": {
+          "player": 0,
+          "role": "civilian",
+          "teammates": [],
+          "alive": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "day": 1,
+          "messages": [
+            {
+              "speaker": 11,
+              "kind": "report",
+              "target": 2,
+              "verdict": false,
+              "context": "last_words",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 11,
+              "kind": "shortlist",
+              "target": null,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                10,
+                9
+              ]
+            },
+            {
+              "speaker": 11,
+              "kind": "delegate",
+              "target": 2,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                10,
+                9
+              ]
+            },
+            {
+              "speaker": 12,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 12,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 13,
+              "kind": "report",
+              "target": 2,
+              "verdict": false,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            }
+          ],
+          "investigations": [],
+          "deaths": [
+            {
+              "player": 11,
+              "day": 1,
+              "cause": "night",
+              "ordinal": 1
+            }
+          ],
+          "public_events": [],
+          "pending_pk": [],
+          "last_anchor": 11,
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pk",
+            "direction": 1
+          },
+          "winner": null
+        },
+        "support": {
+          "counts": {
+            "M/M": 25740,
+            "P/M": 26400,
+            "M/P": 26400,
+            "P/P": 17820
+          },
+          "witnesses": {
+            "M/M": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "mafia",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian"
+            ],
+            "P/M": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "police",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian"
+            ],
+            "M/P": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "mafia",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian"
+            ],
+            "P/P": [
+              "civilian",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "police",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian"
+            ]
+          },
+          "interpretation": "logical role compatibility superset; NOT posterior probabilities"
+        }
+      }
+    },
+    {
+      "seed": 198000006,
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "hit_early",
+      "diagnostic": {
+        "event": "hit_early",
+        "dead_police": 1,
+        "live_role": "mafia",
+        "observer": 0,
+        "dead_source": 11,
+        "live_source": 13,
+        "observation": {
+          "player": 0,
+          "role": "civilian",
+          "teammates": [],
+          "alive": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "day": 1,
+          "messages": [
+            {
+              "speaker": 11,
+              "kind": "report",
+              "target": 2,
+              "verdict": false,
+              "context": "last_words",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 11,
+              "kind": "shortlist",
+              "target": null,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                10,
+                9
+              ]
+            },
+            {
+              "speaker": 11,
+              "kind": "delegate",
+              "target": 2,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                10,
+                9
+              ]
+            },
+            {
+              "speaker": 12,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 12,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 13,
+              "kind": "report",
+              "target": 10,
+              "verdict": true,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            }
+          ],
+          "investigations": [],
+          "deaths": [
+            {
+              "player": 11,
+              "day": 1,
+              "cause": "night",
+              "ordinal": 1
+            }
+          ],
+          "public_events": [],
+          "pending_pk": [],
+          "last_anchor": 11,
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pk",
+            "direction": 1
+          },
+          "winner": null
+        },
+        "support": {
+          "counts": {
+            "M/M": 25740,
+            "P/M": 26400,
+            "M/P": 7920,
+            "P/P": 5940
+          },
+          "witnesses": {
+            "M/M": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "mafia",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian"
+            ],
+            "P/M": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "police",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian"
+            ],
+            "M/P": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "mafia",
+              "mafia",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian"
+            ],
+            "P/P": [
+              "civilian",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "mafia",
+              "police",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian"
+            ]
+          },
+          "interpretation": "logical role compatibility superset; NOT posterior probabilities"
+        }
+      }
+    },
+    {
+      "seed": 198000006,
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "no_live_at_end",
+      "diagnostic": {
+        "event": "no_live_at_end",
+        "dead_police": 1,
+        "live_role": null,
+        "observer": 0,
+        "dead_source": 11,
+        "live_source": null,
+        "observation": {
+          "player": 0,
+          "role": "civilian",
+          "teammates": [],
+          "alive": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15
+          ],
+          "day": 1,
+          "messages": [
+            {
+              "speaker": 11,
+              "kind": "report",
+              "target": 2,
+              "verdict": false,
+              "context": "last_words",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 11,
+              "kind": "shortlist",
+              "target": null,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                10,
+                9
+              ]
+            },
+            {
+              "speaker": 11,
+              "kind": "delegate",
+              "target": 2,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                10,
+                9
+              ]
+            },
+            {
+              "speaker": 12,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 12,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 13,
+              "kind": "pass",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 14,
+              "kind": "pass",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 15,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 15,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 0,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 0,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 1,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 1,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 2,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 2,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 3,
+              "kind": "pass",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 4,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 4,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 5,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 5,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 6,
+              "kind": "pass",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 7,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 7,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 8,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 8,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 9,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 9,
+              "kind": "nominate",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 10,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 10,
+              "kind": "nominate",
+              "target": 15,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 2,
+              "kind": "relay",
+              "target": 10,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": [
+                11
+              ]
+            }
+          ],
+          "investigations": [],
+          "deaths": [
+            {
+              "player": 11,
+              "day": 1,
+              "cause": "night",
+              "ordinal": 1
+            }
+          ],
+          "public_events": [],
+          "pending_pk": [],
+          "last_anchor": 11,
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pk",
+            "direction": 1
+          },
+          "winner": null
+        },
+        "support": {
+          "counts": {
+            "M/-": 120120,
+            "P/-": 85800
+          },
+          "witnesses": {
+            "M/-": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "P/-": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ]
+          },
+          "interpretation": "logical role compatibility superset; NOT posterior probabilities"
+        }
+      }
+    },
+    {
+      "seed": 198000006,
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "other_clear_early",
+      "diagnostic": {
+        "event": "other_clear_early",
+        "dead_police": 0,
+        "live_role": "police",
+        "observer": 0,
+        "dead_source": 3,
+        "live_source": 5,
+        "observation": {
+          "player": 0,
+          "role": "civilian",
+          "teammates": [],
+          "alive": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "day": 1,
+          "messages": [
+            {
+              "speaker": 3,
+              "kind": "report",
+              "target": 4,
+              "verdict": false,
+              "context": "last_words",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 3,
+              "kind": "shortlist",
+              "target": null,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                5,
+                7
+              ]
+            },
+            {
+              "speaker": 3,
+              "kind": "delegate",
+              "target": 4,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                5,
+                7
+              ]
+            },
+            {
+              "speaker": 4,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 4,
+              "kind": "nominate",
+              "target": 2,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 5,
+              "kind": "report",
+              "target": 2,
+              "verdict": false,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            }
+          ],
+          "investigations": [],
+          "deaths": [
+            {
+              "player": 3,
+              "day": 1,
+              "cause": "night",
+              "ordinal": 1
+            }
+          ],
+          "public_events": [],
+          "pending_pk": [],
+          "last_anchor": 3,
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pk",
+            "direction": 1
+          },
+          "winner": null
+        },
+        "support": {
+          "counts": {
+            "P/M": 26400,
+            "P/P": 11880,
+            "M/P": 26400,
+            "M/M": 25740
+          },
+          "witnesses": {
+            "P/M": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "P/P": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "civilian",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "M/P": [
+              "civilian",
+              "police",
+              "police",
+              "mafia",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "M/M": [
+              "civilian",
+              "police",
+              "police",
+              "mafia",
+              "police",
+              "mafia",
+              "police",
+              "mafia",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ]
+          },
+          "interpretation": "logical role compatibility superset; NOT posterior probabilities"
+        }
+      }
+    },
+    {
+      "seed": 198000012,
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "other_clear_late",
+      "diagnostic": {
+        "event": "other_clear_late",
+        "dead_police": 0,
+        "live_role": "police",
+        "observer": 0,
+        "dead_source": 1,
+        "live_source": 9,
+        "observation": {
+          "player": 0,
+          "role": "civilian",
+          "teammates": [],
+          "alive": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "day": 1,
+          "messages": [
+            {
+              "speaker": 1,
+              "kind": "report",
+              "target": 2,
+              "verdict": false,
+              "context": "last_words",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 1,
+              "kind": "shortlist",
+              "target": null,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                3,
+                5
+              ]
+            },
+            {
+              "speaker": 1,
+              "kind": "delegate",
+              "target": 2,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                3,
+                5
+              ]
+            },
+            {
+              "speaker": 2,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 2,
+              "kind": "nominate",
+              "target": 0,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 3,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 3,
+              "kind": "nominate",
+              "target": 0,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 4,
+              "kind": "pass",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 5,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 5,
+              "kind": "nominate",
+              "target": 0,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 6,
+              "kind": "pass",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 7,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 7,
+              "kind": "nominate",
+              "target": 0,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 8,
+              "kind": "pass",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 9,
+              "kind": "report",
+              "target": 3,
+              "verdict": false,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            }
+          ],
+          "investigations": [],
+          "deaths": [
+            {
+              "player": 1,
+              "day": 1,
+              "cause": "night",
+              "ordinal": 1
+            }
+          ],
+          "public_events": [],
+          "pending_pk": [],
+          "last_anchor": 1,
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pk",
+            "direction": 1
+          },
+          "winner": null
+        },
+        "support": {
+          "counts": {
+            "P/M": 26400,
+            "P/P": 11880,
+            "M/M": 25740,
+            "M/P": 26400
+          },
+          "witnesses": {
+            "P/M": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "P/P": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "M/M": [
+              "civilian",
+              "mafia",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "M/P": [
+              "civilian",
+              "mafia",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ]
+          },
+          "interpretation": "logical role compatibility superset; NOT posterior probabilities"
+        }
+      }
+    },
+    {
+      "seed": 198000012,
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "copy_late",
+      "diagnostic": {
+        "event": "copy_late",
+        "dead_police": 1,
+        "live_role": "mafia",
+        "observer": 0,
+        "dead_source": 9,
+        "live_source": 1,
+        "observation": {
+          "player": 0,
+          "role": "civilian",
+          "teammates": [],
+          "alive": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "day": 1,
+          "messages": [
+            {
+              "speaker": 9,
+              "kind": "report",
+              "target": 3,
+              "verdict": false,
+              "context": "last_words",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 9,
+              "kind": "shortlist",
+              "target": null,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                8,
+                11
+              ]
+            },
+            {
+              "speaker": 9,
+              "kind": "delegate",
+              "target": 3,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                8,
+                11
+              ]
+            },
+            {
+              "speaker": 10,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 10,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 11,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 11,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 12,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 12,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 13,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 13,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 14,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 14,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 15,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 15,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 0,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 0,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 1,
+              "kind": "report",
+              "target": 3,
+              "verdict": false,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            }
+          ],
+          "investigations": [],
+          "deaths": [
+            {
+              "player": 9,
+              "day": 1,
+              "cause": "night",
+              "ordinal": 1
+            }
+          ],
+          "public_events": [],
+          "pending_pk": [],
+          "last_anchor": 9,
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pk",
+            "direction": 1
+          },
+          "winner": null
+        },
+        "support": {
+          "counts": {
+            "M/P": 26400,
+            "P/P": 17820,
+            "M/M": 25740,
+            "P/M": 26400
+          },
+          "witnesses": {
+            "M/P": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "P/P": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "M/M": [
+              "civilian",
+              "mafia",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "P/M": [
+              "civilian",
+              "mafia",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ]
+          },
+          "interpretation": "logical role compatibility superset; NOT posterior probabilities"
+        }
+      }
+    },
+    {
+      "seed": 198000012,
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "hit_late",
+      "diagnostic": {
+        "event": "hit_late",
+        "dead_police": 1,
+        "live_role": "mafia",
+        "observer": 0,
+        "dead_source": 9,
+        "live_source": 1,
+        "observation": {
+          "player": 0,
+          "role": "civilian",
+          "teammates": [],
+          "alive": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "day": 1,
+          "messages": [
+            {
+              "speaker": 9,
+              "kind": "report",
+              "target": 3,
+              "verdict": false,
+              "context": "last_words",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 9,
+              "kind": "shortlist",
+              "target": null,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                8,
+                11
+              ]
+            },
+            {
+              "speaker": 9,
+              "kind": "delegate",
+              "target": 3,
+              "verdict": null,
+              "context": "last_words",
+              "day": 1,
+              "targets": [
+                8,
+                11
+              ]
+            },
+            {
+              "speaker": 10,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 10,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 11,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 11,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 12,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 12,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 13,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 13,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 14,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 14,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 15,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 15,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 0,
+              "kind": "civilian",
+              "target": null,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 0,
+              "kind": "nominate",
+              "target": 8,
+              "verdict": null,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            },
+            {
+              "speaker": 1,
+              "kind": "report",
+              "target": 7,
+              "verdict": true,
+              "context": "day",
+              "day": 1,
+              "targets": []
+            }
+          ],
+          "investigations": [],
+          "deaths": [
+            {
+              "player": 9,
+              "day": 1,
+              "cause": "night",
+              "ordinal": 1
+            }
+          ],
+          "public_events": [],
+          "pending_pk": [],
+          "last_anchor": 9,
+          "rules": {
+            "police": 4,
+            "mafia": 4,
+            "civilians": 8,
+            "last_words_limit": 3,
+            "allow_self_kill": true,
+            "tie_rule": "pk",
+            "direction": 1
+          },
+          "winner": null
+        },
+        "support": {
+          "counts": {
+            "M/P": 7920,
+            "P/P": 5940,
+            "M/M": 25740,
+            "P/M": 26400
+          },
+          "witnesses": {
+            "M/P": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "P/P": [
+              "civilian",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "M/M": [
+              "civilian",
+              "mafia",
+              "police",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "civilian",
+              "mafia",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ],
+            "P/M": [
+              "civilian",
+              "mafia",
+              "police",
+              "police",
+              "police",
+              "mafia",
+              "mafia",
+              "mafia",
+              "civilian",
+              "police",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian",
+              "civilian"
+            ]
+          },
+          "interpretation": "logical role compatibility superset; NOT posterior probabilities"
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "copy_early",
+      "n": 22,
+      "dead_police": 22,
+      "live_police": 0,
+      "live_mafia": 22
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "hit_early",
+      "n": 22,
+      "dead_police": 22,
+      "live_police": 0,
+      "live_mafia": 22
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "no_live_at_end",
+      "n": 22,
+      "dead_police": 22,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "hit_early",
+      "n": 24,
+      "dead_police": 0,
+      "live_police": 24,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "hit_late",
+      "n": 8,
+      "dead_police": 0,
+      "live_police": 8,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "copy_early",
+      "n": 8,
+      "dead_police": 0,
+      "live_police": 8,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "other_clear_early",
+      "n": 74,
+      "dead_police": 0,
+      "live_police": 74,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "other_clear_late",
+      "n": 4,
+      "dead_police": 0,
+      "live_police": 4,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "hit_early",
+      "n": 24,
+      "dead_police": 0,
+      "live_police": 24,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "hit_late",
+      "n": 8,
+      "dead_police": 0,
+      "live_police": 8,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "copy_early",
+      "n": 8,
+      "dead_police": 0,
+      "live_police": 8,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "other_clear_early",
+      "n": 74,
+      "dead_police": 0,
+      "live_police": 74,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "other_clear_late",
+      "n": 4,
+      "dead_police": 0,
+      "live_police": 4,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "copy_early",
+      "n": 25,
+      "dead_police": 25,
+      "live_police": 0,
+      "live_mafia": 25
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "copy_late",
+      "n": 8,
+      "dead_police": 8,
+      "live_police": 0,
+      "live_mafia": 8
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "hit_early",
+      "n": 25,
+      "dead_police": 25,
+      "live_police": 0,
+      "live_mafia": 25
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "hit_late",
+      "n": 8,
+      "dead_police": 8,
+      "live_police": 0,
+      "live_mafia": 8
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "no_live_at_end",
+      "n": 33,
+      "dead_police": 33,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "copy_early",
+      "n": 22,
+      "dead_police": 22,
+      "live_police": 0,
+      "live_mafia": 22
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "hit_early",
+      "n": 22,
+      "dead_police": 22,
+      "live_police": 0,
+      "live_mafia": 22
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "no_live_at_end",
+      "n": 22,
+      "dead_police": 22,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "hit_early",
+      "n": 24,
+      "dead_police": 0,
+      "live_police": 24,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "hit_late",
+      "n": 8,
+      "dead_police": 0,
+      "live_police": 8,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "copy_early",
+      "n": 8,
+      "dead_police": 0,
+      "live_police": 8,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "other_clear_early",
+      "n": 74,
+      "dead_police": 0,
+      "live_police": 74,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "other_clear_late",
+      "n": 4,
+      "dead_police": 0,
+      "live_police": 4,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "hit_early",
+      "n": 24,
+      "dead_police": 0,
+      "live_police": 24,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "hit_late",
+      "n": 8,
+      "dead_police": 0,
+      "live_police": 8,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "copy_early",
+      "n": 8,
+      "dead_police": 0,
+      "live_police": 8,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "other_clear_early",
+      "n": 74,
+      "dead_police": 0,
+      "live_police": 74,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "other_clear_late",
+      "n": 4,
+      "dead_police": 0,
+      "live_police": 4,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "copy_early",
+      "n": 25,
+      "dead_police": 25,
+      "live_police": 0,
+      "live_mafia": 25
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "copy_late",
+      "n": 8,
+      "dead_police": 8,
+      "live_police": 0,
+      "live_mafia": 8
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "hit_early",
+      "n": 25,
+      "dead_police": 25,
+      "live_police": 0,
+      "live_mafia": 25
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "hit_late",
+      "n": 8,
+      "dead_police": 8,
+      "live_police": 0,
+      "live_mafia": 8
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "no_live_at_end",
+      "n": 33,
+      "dead_police": 33,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "copy_early",
+      "n": 187,
+      "dead_police": 187,
+      "live_police": 0,
+      "live_mafia": 187
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "copy_late",
+      "n": 9,
+      "dead_police": 9,
+      "live_police": 0,
+      "live_mafia": 9
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_copy",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "hit_early",
+      "n": 187,
+      "dead_police": 187,
+      "live_police": 0,
+      "live_mafia": 187
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "hit_late",
+      "n": 9,
+      "dead_police": 9,
+      "live_police": 0,
+      "live_mafia": 9
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_old",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "no_live_at_end",
+      "n": 196,
+      "dead_police": 196,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "decoy_quiet",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "hit_early",
+      "n": 304,
+      "dead_police": 0,
+      "live_police": 304,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "hit_late",
+      "n": 15,
+      "dead_police": 0,
+      "live_police": 15,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "copy_early",
+      "n": 79,
+      "dead_police": 0,
+      "live_police": 79,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "copy_late",
+      "n": 2,
+      "dead_police": 0,
+      "live_police": 2,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "other_clear_early",
+      "n": 533,
+      "dead_police": 0,
+      "live_police": 533,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_grant",
+      "event": "other_clear_late",
+      "n": 29,
+      "dead_police": 0,
+      "live_police": 29,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "hit_early",
+      "n": 304,
+      "dead_police": 0,
+      "live_police": 304,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "hit_late",
+      "n": 15,
+      "dead_police": 0,
+      "live_police": 15,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "copy_early",
+      "n": 79,
+      "dead_police": 0,
+      "live_police": 79,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "copy_late",
+      "n": 2,
+      "dead_police": 0,
+      "live_police": 2,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "other_clear_early",
+      "n": 533,
+      "dead_police": 0,
+      "live_police": 533,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "false_notice",
+      "event": "other_clear_late",
+      "n": 29,
+      "dead_police": 0,
+      "live_police": 29,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "copy_early",
+      "n": 194,
+      "dead_police": 194,
+      "live_police": 0,
+      "live_mafia": 194
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "copy_late",
+      "n": 33,
+      "dead_police": 33,
+      "live_police": 0,
+      "live_mafia": 33
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_copy",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "hit_early",
+      "n": 194,
+      "dead_police": 194,
+      "live_police": 0,
+      "live_mafia": 194
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "hit_late",
+      "n": 33,
+      "dead_police": 33,
+      "live_police": 0,
+      "live_mafia": 33
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_old",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "no_live_at_end",
+      "n": 227,
+      "dead_police": 227,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "mafia": "late_quiet",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "copy_early",
+      "n": 187,
+      "dead_police": 187,
+      "live_police": 0,
+      "live_mafia": 187
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "copy_late",
+      "n": 9,
+      "dead_police": 9,
+      "live_police": 0,
+      "live_mafia": 9
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_copy",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "hit_early",
+      "n": 187,
+      "dead_police": 187,
+      "live_police": 0,
+      "live_mafia": 187
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "hit_late",
+      "n": 9,
+      "dead_police": 9,
+      "live_police": 0,
+      "live_mafia": 9
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_old",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "no_live_at_end",
+      "n": 196,
+      "dead_police": 196,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "decoy_quiet",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "hit_early",
+      "n": 304,
+      "dead_police": 0,
+      "live_police": 304,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "hit_late",
+      "n": 15,
+      "dead_police": 0,
+      "live_police": 15,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "copy_early",
+      "n": 79,
+      "dead_police": 0,
+      "live_police": 79,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "copy_late",
+      "n": 2,
+      "dead_police": 0,
+      "live_police": 2,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "other_clear_early",
+      "n": 533,
+      "dead_police": 0,
+      "live_police": 533,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_grant",
+      "event": "other_clear_late",
+      "n": 29,
+      "dead_police": 0,
+      "live_police": 29,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "hit_early",
+      "n": 304,
+      "dead_police": 0,
+      "live_police": 304,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "hit_late",
+      "n": 15,
+      "dead_police": 0,
+      "live_police": 15,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "copy_early",
+      "n": 79,
+      "dead_police": 0,
+      "live_police": 79,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "copy_late",
+      "n": 2,
+      "dead_police": 0,
+      "live_police": 2,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "other_clear_early",
+      "n": 533,
+      "dead_police": 0,
+      "live_police": 533,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "false_notice",
+      "event": "other_clear_late",
+      "n": 29,
+      "dead_police": 0,
+      "live_police": 29,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "copy_early",
+      "n": 194,
+      "dead_police": 194,
+      "live_police": 0,
+      "live_mafia": 194
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "copy_late",
+      "n": 33,
+      "dead_police": 33,
+      "live_police": 0,
+      "live_mafia": 33
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_copy",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "no_live_at_end",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "hit_early",
+      "n": 194,
+      "dead_police": 194,
+      "live_police": 0,
+      "live_mafia": 194
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "hit_late",
+      "n": 33,
+      "dead_police": 33,
+      "live_police": 0,
+      "live_mafia": 33
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_old",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "no_live_at_end",
+      "n": 227,
+      "dead_police": 227,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "hit_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "hit_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "copy_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "copy_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "other_clear_early",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "mafia": "late_quiet",
+      "event": "other_clear_late",
+      "n": 0,
+      "dead_police": 0,
+      "live_police": 0,
+      "live_mafia": 0
+    }
+  ],
+  "sensitivity": [
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        55
+      ],
+      "event_mass": 0.035091145833333316,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        48,
+        47
+      ],
+      "event_mass": 0.03186197916666664,
+      "conditional_dead_police": 0.9411524315488352,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        16,
+        8
+      ],
+      "event_mass": 0.005729166666666666,
+      "conditional_dead_police": 0.890909090909091,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        16,
+        47
+      ],
+      "event_mass": 0.030611979166666636,
+      "conditional_dead_police": 0.9795831561037855,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        0,
+        8
+      ],
+      "event_mass": 0.005104166666666667,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        148,
+        0
+      ],
+      "event_mass": 0.005781250000000004,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        8,
+        0
+      ],
+      "event_mass": 0.0003125,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        55
+      ],
+      "event_mass": 0.032226562500000035,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        48,
+        47
+      ],
+      "event_mass": 0.036914062500000025,
+      "conditional_dead_police": 0.7460317460317462,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        16,
+        8
+      ],
+      "event_mass": 0.0078125,
+      "conditional_dead_police": 0.6,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        16,
+        47
+      ],
+      "event_mass": 0.030664062500000023,
+      "conditional_dead_police": 0.8980891719745224,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        0,
+        8
+      ],
+      "event_mass": 0.0046875,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        148,
+        0
+      ],
+      "event_mass": 0.02890624999999993,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        8,
+        0
+      ],
+      "event_mass": 0.0015624999999999999,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        55
+      ],
+      "event_mass": 0.02685546875,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        48,
+        47
+      ],
+      "event_mass": 0.04638671875,
+      "conditional_dead_police": 0.49473684210526314,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        16,
+        8
+      ],
+      "event_mass": 0.01171875,
+      "conditional_dead_police": 0.3333333333333333,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        16,
+        47
+      ],
+      "event_mass": 0.03076171875,
+      "conditional_dead_police": 0.746031746031746,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        0,
+        8
+      ],
+      "event_mass": 0.00390625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        148,
+        0
+      ],
+      "event_mass": 0.072265625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        8,
+        0
+      ],
+      "event_mass": 0.00390625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        55
+      ],
+      "event_mass": 0.035091145833333316,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        48,
+        47
+      ],
+      "event_mass": 0.03186197916666664,
+      "conditional_dead_police": 0.9411524315488352,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        16,
+        8
+      ],
+      "event_mass": 0.005729166666666666,
+      "conditional_dead_police": 0.890909090909091,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        16,
+        47
+      ],
+      "event_mass": 0.030611979166666636,
+      "conditional_dead_police": 0.9795831561037855,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        0,
+        8
+      ],
+      "event_mass": 0.005104166666666667,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        148,
+        0
+      ],
+      "event_mass": 0.005781250000000004,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        8,
+        0
+      ],
+      "event_mass": 0.0003125,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        55
+      ],
+      "event_mass": 0.032226562500000035,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        48,
+        47
+      ],
+      "event_mass": 0.036914062500000025,
+      "conditional_dead_police": 0.7460317460317462,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        16,
+        8
+      ],
+      "event_mass": 0.0078125,
+      "conditional_dead_police": 0.6,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        16,
+        47
+      ],
+      "event_mass": 0.030664062500000023,
+      "conditional_dead_police": 0.8980891719745224,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        0,
+        8
+      ],
+      "event_mass": 0.0046875,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        148,
+        0
+      ],
+      "event_mass": 0.02890624999999993,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        8,
+        0
+      ],
+      "event_mass": 0.0015624999999999999,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        55
+      ],
+      "event_mass": 0.02685546875,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        48,
+        47
+      ],
+      "event_mass": 0.04638671875,
+      "conditional_dead_police": 0.49473684210526314,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        16,
+        8
+      ],
+      "event_mass": 0.01171875,
+      "conditional_dead_police": 0.3333333333333333,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        16,
+        47
+      ],
+      "event_mass": 0.03076171875,
+      "conditional_dead_police": 0.746031746031746,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        0,
+        8
+      ],
+      "event_mass": 0.00390625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        148,
+        0
+      ],
+      "event_mass": 0.072265625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "train",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        8,
+        0
+      ],
+      "event_mass": 0.00390625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        423
+      ],
+      "event_mass": 0.03373535156250001,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        608,
+        381
+      ],
+      "event_mass": 0.033354492187500064,
+      "conditional_dead_police": 0.910993997950521,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        30,
+        42
+      ],
+      "event_mass": 0.0034960937499999966,
+      "conditional_dead_police": 0.9581005586592178,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        158,
+        381
+      ],
+      "event_mass": 0.0311572265625001,
+      "conditional_dead_police": 0.9752389907538005,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        4,
+        42
+      ],
+      "event_mass": 0.0033691406249999967,
+      "conditional_dead_police": 0.9942028985507246,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        1066,
+        0
+      ],
+      "event_mass": 0.005205078124999911,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.02,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        58,
+        0
+      ],
+      "event_mass": 0.00028320312500000014,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        423
+      ],
+      "event_mass": 0.030981445312499793,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        608,
+        381
+      ],
+      "event_mass": 0.042749023437499964,
+      "conditional_dead_police": 0.652769845802395,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        30,
+        42
+      ],
+      "event_mass": 0.0038085937500000025,
+      "conditional_dead_police": 0.8076923076923077,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        158,
+        381
+      ],
+      "event_mass": 0.03176269531249981,
+      "conditional_dead_police": 0.8785549577248267,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        4,
+        42
+      ],
+      "event_mass": 0.003173828125000002,
+      "conditional_dead_police": 0.9692307692307692,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        1066,
+        0
+      ],
+      "event_mass": 0.026025390624999565,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.1,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        58,
+        0
+      ],
+      "event_mass": 0.0014160156249999989,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        423
+      ],
+      "event_mass": 0.02581787109375,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        608,
+        381
+      ],
+      "event_mass": 0.06036376953125,
+      "conditional_dead_police": 0.3852376137512639,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        30,
+        42
+      ],
+      "event_mass": 0.00439453125,
+      "conditional_dead_police": 0.5833333333333334,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        158,
+        381
+      ],
+      "event_mass": 0.03289794921875,
+      "conditional_dead_police": 0.7068645640074211,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        4,
+        42
+      ],
+      "event_mass": 0.0028076171875,
+      "conditional_dead_police": 0.9130434782608695,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        1066,
+        0
+      ],
+      "event_mass": 0.0650634765625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "inherited",
+      "selfkill_share": 0.25,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        58,
+        0
+      ],
+      "event_mass": 0.0035400390625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        423
+      ],
+      "event_mass": 0.03373535156250001,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        608,
+        381
+      ],
+      "event_mass": 0.033354492187500064,
+      "conditional_dead_police": 0.910993997950521,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        30,
+        42
+      ],
+      "event_mass": 0.0034960937499999966,
+      "conditional_dead_police": 0.9581005586592178,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        158,
+        381
+      ],
+      "event_mass": 0.0311572265625001,
+      "conditional_dead_police": 0.9752389907538005,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        4,
+        42
+      ],
+      "event_mass": 0.0033691406249999967,
+      "conditional_dead_police": 0.9942028985507246,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        1066,
+        0
+      ],
+      "event_mass": 0.005205078124999911,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.02,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        58,
+        0
+      ],
+      "event_mass": 0.00028320312500000014,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        423
+      ],
+      "event_mass": 0.030981445312499793,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        608,
+        381
+      ],
+      "event_mass": 0.042749023437499964,
+      "conditional_dead_police": 0.652769845802395,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        30,
+        42
+      ],
+      "event_mass": 0.0038085937500000025,
+      "conditional_dead_police": 0.8076923076923077,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        158,
+        381
+      ],
+      "event_mass": 0.03176269531249981,
+      "conditional_dead_police": 0.8785549577248267,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        4,
+        42
+      ],
+      "event_mass": 0.003173828125000002,
+      "conditional_dead_police": 0.9692307692307692,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        1066,
+        0
+      ],
+      "event_mass": 0.026025390624999565,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.1,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        58,
+        0
+      ],
+      "event_mass": 0.0014160156249999989,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "no_live_at_end",
+      "raw_counts_false_true": [
+        0,
+        423
+      ],
+      "event_mass": 0.02581787109375,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "hit_early",
+      "raw_counts_false_true": [
+        608,
+        381
+      ],
+      "event_mass": 0.06036376953125,
+      "conditional_dead_police": 0.3852376137512639,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "hit_late",
+      "raw_counts_false_true": [
+        30,
+        42
+      ],
+      "event_mass": 0.00439453125,
+      "conditional_dead_police": 0.5833333333333334,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "copy_early",
+      "raw_counts_false_true": [
+        158,
+        381
+      ],
+      "event_mass": 0.03289794921875,
+      "conditional_dead_police": 0.7068645640074211,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "copy_late",
+      "raw_counts_false_true": [
+        4,
+        42
+      ],
+      "event_mass": 0.0028076171875,
+      "conditional_dead_police": 0.9130434782608695,
+      "status": "both_labels_observed_not_calibrated"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "other_clear_early",
+      "raw_counts_false_true": [
+        1066,
+        0
+      ],
+      "event_mass": 0.0650634765625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    },
+    {
+      "phase": "holdout",
+      "response": "restrained",
+      "selfkill_share": 0.25,
+      "event": "other_clear_late",
+      "raw_counts_false_true": [
+        58,
+        0
+      ],
+      "event_mass": 0.0035400390625,
+      "conditional_dead_police": null,
+      "status": "missing_generator_support_or_sample_coverage"
+    }
+  ],
+  "limitation": "Role-compatible worlds are not strategy likelihoods; diagnostic tables are not action posteriors; no new validation seeds."
+}
