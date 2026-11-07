@@ -1,0 +1,99 @@
+"""Render all frozen comparisons with a plain-language strategy dictionary."""
+import json
+from analyze_source_generation_v33 import result_bytes
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+NAMES={'late_old':'普通后置刀＋远位假查杀','late_copy':'普通后置刀＋复制金水','late_quiet':'普通后置刀＋首日静默',
+'self_quiet':'自刀＋活匪静默','self_copy_early':'自刀＋前一个活匪复制金水','self_copy_late':'自刀＋后一个活匪复制金水',
+'self_hit_early':'自刀＋前一个活匪假查杀','self_hit_late':'自刀＋后一个活匪假查杀','self_copy_team':'自刀＋两匪共同给第三匪金水'}
+
+def main():
+ f=json.loads((ROOT/'results/v33/freeze.json').read_text());d=json.loads((ROOT/'results/v33_diagnostics.json').read_text());h=json.loads(result_bytes(ROOT/'results/v33','holdout.json'));manifest=json.loads((ROOT/'results/v33/manifest.json').read_text())
+ S={(x['mode'],x['mafia']):x for x in d['summaries'] if x['phase']=='holdout'};modes=['hide','self','available'];names=list(NAMES)
+ lines=['# v33：兼容谎言的来源生成与条件回应（2026-11-07）','',
+ '本轮优先补策略生成范围，完整模拟到终局，同时审计公开特征的来源支持。不会用当天出匪替代长期胜率，也不会用首日“打平衡”自动决定次日继续轮出。','',
+ '## 1. 策略／参数字典','',
+ '- **hide：死警报告后隐藏**。沿用v32 restrained。自己已知的警察队友留过遗言报告后，不再普通轮补跳；无该私人条件时保留原规则。',
+ '- **self：死警报告后的本人防御**。已有活警队友公开时不新增普通轮警察；自己此前被外部来源查杀、仍有普通轮机会时，报告真实验人；已有死警报告但未被查杀时隐藏。其余继承原规则。它可使非首位警察在自己的合法发言轮次防御。',
+ '- **available：第一名有机会者回应**。已有活警不再新增；此前听到外部来源跳警时，第一名仍有普通发言机会的警察报告真实验人。没有外部声明时按self的规则。不允许额外插话，不改PK发言。',
+ '- hide保留原隐藏声明，self／available在已有代表等分支用pass；当前接收器对这些未跳警声明不分来源权重，因此轨迹哈希变化本身不表示归票或胜负改变。三者的接收器、投票均用v31 aligned：授权不认证来源，死者不翻身份；警方保留真实验人、内推和明确归票，私人反证与PK限制不变。**信用分没有启用**；没有把下列频率用于实际投票。',
+ '- **q=50%**继承原适用局面的局部回应抽样，并非每名警察各自50%起跳，也不控制所有首日行为。跳藏0/50/100仍为未来变量，本轮未重新找最佳q。',
+ '- **early / late**在自刀方案名中表示匪队内部第一／最后活匪；在公开事件名中表示全场普通发言顺位1–7／8–15。两者不同，均为事先固定分类，不是信用等级。',
+ '- **copy / hit / other_clear / no_live_at_end**：首个活来源复制死者金水／报查杀／报其他金水／整轮讲完仍无活报告。前缀分析不读取随后声明；没有报告只能在轮次结束确认。',
+ '- 自刀方案的死者通常报第一个合法非匪为金水；**copy_team**特意报活匪队友，另一活匪再复制。匪只用自己的团队信息，不知道非匪中谁是警察。全部自刀方案继承假名单和授权，以及原先同日匪遗言扩展的作用范围。','',
+ '| 方案代码 | 实际首日行为 |','|---|---|']
+ for name in names:lines.append(f'| {name} | {NAMES[name]} |')
+ lines+=['','所有方案在首日之后继承原刀法、重申和接续计划。普通刀固定safe_late，避免本轮同时改刀法；伪装刀仍是迁移待办。9个完整匪计划×3种警方回应的数量只是实验覆盖，**不表示真实自刀率为2/3**。本轮没有选混合权重或求均衡。','',
+ '## 2. 方法、样本与证据边界','',
+ f'事前冻结协议、源码和参数后，运行训练诊断256局／单元、独立验收2048局／单元，共27单元、**{manifest["games"]:,}局完整终局模拟**，耗时{manifest["elapsed_seconds"]:.1f}秒。发牌种子共2,304个跨条件配对；62,208不是独立发牌数量。另54局smoke。',
+ '训练从200000000、验收从201000000、smoke从202000000开始。未拟合行动器、未根据训练选策略、未在验收后调规则或换种子。规则仍为4警4匪8民、前三死有遗言、不翻身份、允许自刀、一轮PK后再平票平安日。',
+ '预设比较hide→self与self→available。9个匪条件×2比较×最终胜率／首日出匪=36项，同时95%区间使用配对正负翻转Clopper–Pearson加联合界。主比较全部发牌，首死真警验好人另作描述。暴露、次夜死警、第二日存活警是过程指标，不作中介因果证明。',
+ '来源审计只在固定1号存活平民的消息中进行，剔除逐票事件；角色标签只作离线评估。每单元每阶段前4个合格前缀另检查身份必要约束，不把相容世界数量当概率。来源先验、各匪方案混合及发言似然仍未估计。','',
+ '## 3. 先看长期结果','',
+ '| 匪方案 | hide 好人胜 | self 好人胜 | available 好人胜 |','|---|---:|---:|---:|']
+ for name in names:lines.append('| '+NAMES[name]+' | '+' | '.join(f'{S[mode,name]["wins"]}/2048 ({S[mode,name]["wins"]/2048:.2%})' for mode in modes)+' |')
+ lines+=['','完整预设比较（单位：百分点；区间包含0时不能确认提升／下降）：','',
+ '| 匪方案 | 比较 | 终局增量 [同时95%区间] | 首日出匪增量 [同时95%区间] |','|---|---|---:|---:|']
+ for c in h['contrasts']:
+  vals=[]
+  for metric in ('win','day1_mafia_exile'):
+   v=c[metric];a,b=v['counts'];lo,hi=v['precision']['ci_simultaneous'];vals.append(f'{(b-a)/2048*100:+.2f} [{lo*100:+.2f}, {hi*100:+.2f}]')
+  lines.append(f'| {c["mafia"]} | {c["control"]}→{c["treatment"]} | {vals[0]} | {vals[1]} |')
+ lines+=['','**主要结果：**self→available在普通复制金水、普通假查杀、自刀前位假查杀三个条件中，首日出匪都提升、终局好人胜率都下降，两个指标的预设同时区间均支持各自方向。这是对长期权衡的直接策略评估证据。不能只看首日出匪宣布收益。hide→self的终局增量在全部条件中尚无同时区间支持。\n\n## 4. 暴露与后续成本','',
+ '**一个具体的长期反例（seed=201000069）：**两套策略首日都出1号匪，第二日都出12号匪。克制版15号警察没跳，第二夜匪刀到4号平民，最后15号警察活着等到第四个匪出局；积极版15号公开，第二夜就被刀，第四夜最后一警死亡，仍有匪存活。首日出人完全相同，后续生存轮次改变了胜负。这个配对例解释机制可能如何发生，不代替总体统计，也不证明暴露是全部中介原因。\n\n下表每个数字均为每局平均量：公开警察是人数、次夜死警是0/1事件率、第二日警察是人数。它们可能同时变化，不能只从其中一个推导胜率原因。完整政策比较已经包含所有后续夜晚和投票。','',
+ '| 匪方案 | 警方规则 | 首日活警公开数 | 次夜死警率 | 第二日开始存活警数 |','|---|---|---:|---:|---:|']
+ for name in names:
+  for mode in modes:
+   x=S[mode,name];lines.append(f'| {name} | {mode} | {x["day1_police_reports"]:.3f} | {x["night2_cop_deaths"]:.2%} | {x["cops_at_day2"]:.3f} |')
+ lines+=['','这里“次夜”指首日之后的第二夜，含在夜间直接终局的刀。它不是“已公开警察被刀概率”；后者需要额外条件分层。未凭此声称独立识别了暴露的因果中介效应。','',
+ '## 5. 同样的公开声明，现在能由什么来源生成？','',
+ '下表合并三种警方规则，仅显示首个活来源复制死者金水的合格平民前缀。跨条件共享发牌，合计不是独立样本；也不是现实先验下的身份概率。','',
+ '| 匪方案 | 复制金水前缀数 | 死警／活匪 P/M | 死匪／活警 M/P | 死匪／活匪 M/M | 共同金水实际为匪 |','|---|---:|---:|---:|---:|---:|']
+ for name in names:
+  es=[x for x in d['events'] if x['phase']=='holdout' and x['mafia']==name and x['event'].startswith('copy_')]
+  n=sum(x['n'] for x in es)
+  if n:
+   get=lambda k:sum(x['source_types'].get(k,0) for x in es)
+   lines.append(f'| {name} | {n} | {get("P/M")} | {get("M/P")} | {get("M/M")} | {sum(x["mafia_gold"] for x in es)} |')
+ lines+=['','**解释：**新增真实策略已经覆盖“死匪＋活匪共同保一个匪”。因此，“两人都说B好”本身不证明B是好人。若能额外保证至少一人是真警，且真警报告真实，B才获得逻辑保证。当前未推导出可校准的“大概率”；一个方案被列入实验，不表示它在均衡中应占高概率。',
+ '本轮copy_team未新增假金水自己的接力发言能力，仍由原匪投票器行动；它证明共同背书的生成可能性，不是已经完整评估假金水接管归票。该后续能力如需研究，应单独加入。','',
+ '## 6. 发言机会覆盖与首日“打平衡”','',
+ '下列机会统计只读警方自己发言时已经听到的消息。自刀后位假查杀即使没有新增回应，也可能是警队已经有人在此前公开，而非全队选择隐藏。样本中的无后续机会例子，确实所有警察都已发言，但已有一名真警先前报告；它不能用来证明无人代表警队的残局。self在自刀条件仍继承原本的先发警察／团队防御规则，不是所有首日分支都只允许本人防御。\n\n你的长期风险考虑成立：应看终局，不能因当天更容易出匪就认定补跳更优。首日优先处理活来源可以作为明确的风险控制候选，但需要指定到底处理哪位活来源、什么证据足以触发、是否有私人反证和PK限制。',
+ '完整发言历史有时还出现第二个活来源；首次前缀的分类不能替代整轮更新。以下只列available规则下的公开时点事件，合并不同匪计划用于支持检查，绝不当作现实混合频率：','',
+ '| 公开事件 | P/M | M/P | M/M | 其他／无活来源 |','|---|---:|---:|---:|---:|']
+ for event in sorted({x['event'] for x in d['events'] if x['phase']=='holdout' and x['mode']=='available'}):
+  es=[x for x in d['events'] if x['phase']=='holdout' and x['mode']=='available' and x['event']==event]
+  get=lambda k:sum(x['source_types'].get(k,0) for x in es)
+  total=sum(x['n'] for x in es);lines.append(f'| {event} | {get("P/M")} | {get("M/P")} | {get("M/M")} | {total-get("P/M")-get("M/P")-get("M/M")} |')
+ lines += ['',
+ 'other_clear当前只生成M/P，是因为活匪计划没有加入与死者不同的任意金水声明；它仍是策略范围造成的零支持，不能当作身份认证。相同copy／hit公开事件则已经同时出现P/M、M/P、M/M，早晚顺位本身没有排除这些解释。\n\n本轮没有执行“打平衡”投票干预，因此不能给出其胜率。关于保证，需区分：死／活来源一真一假时，出活者确实形成一警一匪；若两者均匪，则是两匪出局，反而更好；若两者均真且没被策略或信息排除，就会损失两警。复制同一个金水并不构成来源之间互斥。',
+ '当前三种警方规则在已有死警报告时，都要求先有外部声明才允许真警补跳，因此对“第一位活报告者”施加了特殊生成限制。在这个受限模型里某些来源组合不出现，首先是政策假设的结果，不能升格为所有桌游的逻辑定理。即使将来测试首日平衡，第二日仍不得因死过一方就自动处置另一方。','',
+ '实际例子见 [逐局阅读版](source_generation_cases_v33.md)，包括两匪共同给匪金水、末位假查杀时警察已发言、本人防御和两边首日都出匪但最终胜负翻转的配对例。\n\n## 7. 验证与复现','',
+ f'- {d["replays"]}次预定完整重放、{d["baseline_replays"]}次v32普通刀基线兼容、{d["ballot_checks"]}次样本投票合法性／私人反证检查、{d["logic_prefixes"]}个身份支持前缀与{d["interval_crosschecks"]}项独立区间交叉检查通过。另{d["case_replays"]}个验收内案例重放用于解释，没有独立重跑全部62,208局。',
+ '- 本次实际测试：`python -m pytest tests -q`，378项通过（42.37秒），含9项新测试。\n- 命令：`python -m pytest tests -q`；`python scripts/run_source_generation_v33.py --smoke`；`python scripts/run_source_generation_v33.py`；`python scripts/analyze_source_generation_v33.py`。测试实际结果见results/v33_validation.json。',
+ '- 冻结素材见results/v33/source、freeze.json；逐局原始结果无损压缩为train.json.gz、holdout.json.gz；解压字节与原manifest哈希逐一相同，分析脚本直接支持读取；来源事件、完整例子与过程汇总见results/v33_diagnostics.json。',
+ '- 当前位置先验仍继承普通非匪刀模型，未构建联合普通刀／自刀的完整后验。民方未基于新生成范围重学接收规则，匪方也未训练最佳回应；所有收益仅为固定计划评估。没有新均衡证书，没有GTO结论。','',
+ '## 8. 下一步由这些证据决定','',
+ '建议优先审计首日限定的风险控制规则：只在信息前提明确时比较“原接收器／首日处理第一活来源／交由有条件金水归票”，第二日统一回到正常信息更新。先补假金水可模仿接力的对应能力，再设计同预算对照，避免把B真实身份交给平民。是否进入该实验由用户决定。',
+ '跳藏条件与混合仍持续保留；数值信用、复杂来源条件票型、跨日委托、金水假跳挡刀、公开怀疑、遗言制度和白天报匪继续分开。','']
+ (ROOT/'docs/source_generation_results_v33.md').write_text('\n'.join(lines))
+ # Selected cases: human-readable first-day messages plus complete fate.
+ case=['# v33 来源生成的实际例子','', '按预先声明类型选验收种子中第一个符合者；是事后解释，角色仅供复盘。座位从1开始。','']
+ for e in d['examples']:
+  case += [f'## {e["label"]}：{e["mafia"]} / {e["mode"]}，seed={e["seed"]}','',f'终局：'+('好人胜' if e['win'] else '匪胜')+'。','']
+  for t in e['transcript']:
+   p=t['payload'];event=t['event']
+   if t['day']==1 and event in ('message','speech_extension','last_words_extension','final_call') and p['kind'] in ('report','accuse','relay','delegate'):
+    target='—' if p['target'] is None else str(p['target']+1);act={'report':'报查杀' if p['verdict'] else '报金水','accuse':'正式归票','relay':'接力归票','delegate':'授权'}[p['kind']]
+    case.append(f'- {p["speaker"]+1}号（实际{e["roles_evaluation_only"][p["speaker"]]}，{p["context"]}）{act}{target}。')
+   if event=='day_death':case.append(f'- 第{t["day"]}日放逐{p["victim"]+1}号（实际{e["roles_evaluation_only"][p["victim"]]}）。')
+  recorded={t['day'] for t in e['transcript'] if t['event']=='night_death'}
+  for night in e['nights']:
+   seat=night['target'];case.append(f'- 第{night["day"]}夜刀{seat+1}号（实际{e["roles_evaluation_only"][seat]}）'+('，夜间直接终局。' if night['day'] not in recorded else '。'))
+  case += ['','警方普通轮机会记录：','']
+  for opp in e['opportunities']:case.append(f'- {opp["player"]+1}号，第{opp["position"]}个发言；已听到外部跳警={opp["prior_outsider"]}；本人被查杀={opp["self_hit"]}；已有人代表警队={opp["prior_live_team"]}；本轮报验={opp["reported"]}。')
+  case.append('')
+ (ROOT/'docs/source_generation_cases_v33.md').write_text('\n'.join(case))
+ print('reports written')
+
+if __name__=='__main__':main()

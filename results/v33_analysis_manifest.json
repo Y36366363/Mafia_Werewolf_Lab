@@ -1,0 +1,15 @@
+{
+  "sha256": {
+    "README.zh.md": "2850be02aeb337be5885727abd4bf2cc6637c5bcc152a314fd6d5785551e4d5a",
+    "docs/source_generation_cases_v33.md": "9d6439bfbf72c864405ad44f55ca14d6c1c1380060f46646772e33ce1cec66a2",
+    "docs/source_generation_protocol_v33.md": "acd4036ee89a2f5e59fa5c812792903b691e738cf1c791af79a578985220831b",
+    "docs/source_generation_results_v33.md": "6d2c91d8678c3f3901aca411d487eddb5f51b9383e086f1aee9be76bf2f9087b",
+    "results/v33_diagnostics.json": "c6e6d005eb6a68c407d23c55a015bd09f62eff2638b9b5d11545ae10151efba7",
+    "results/v33_storage_manifest.json": "63955ed3fbcad5f8cfb12fcb1d89f28e4f166edf5f8c26fd83cbf89ef5e81bc2",
+    "results/v33_validation.json": "e355e72c905f3496236fde26f7c2f68782dd33bd68e905c0a11ebc85aa9e1e14",
+    "scripts/analyze_source_generation_v33.py": "70663cd1d15ba33609934b3f4aa88535fe0380af90afbe3a65abcfc956982f9a",
+    "scripts/build_source_generation_report_v33.py": "e5f0dba7c21653adf9e88201a731a6e035a09b00c9cfeda4b690e0763e230446",
+    "scripts/run_source_generation_v33.py": "21482c633d76c10e25b5eac3b1475222a4cf123a913993cdd68b4f28123d9bad"
+  },
+  "note": "Derived artifacts; simulation sources and raw decoded bytes separately hashed in results/v33."
+}

@@ -1,0 +1,13 @@
+{
+ "version":"20261107-source-generation-v33",
+ "base_config":"configs/unresolved_conflict_v31.json",
+ "good":"aligned",
+ "police_modes":["hide","self","available"],
+ "ordinary":["late_old","late_copy","late_quiet"],
+ "self_plans":["quiet","copy_early","copy_late","hit_early","hit_late","copy_team"],
+ "train":{"seed_start":200000000,"n":256},
+ "holdout":{"seed_start":201000000,"n":2048},
+ "smoke":{"seed_start":202000000,"n":2},
+ "family":36,
+ "logic_samples_per_cell":4
+}

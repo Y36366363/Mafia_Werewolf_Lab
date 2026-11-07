@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-07",
+  "base_commit": "a1ac357",
+  "python": "3.12.3",
+  "scipy": "1.16.3",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 378,
+    "seconds": 42.37,
+    "new_tests": 9
+  },
+  "formal_games": 62208,
+  "smoke_games": 54,
+  "independent_base_seeds": 2304,
+  "replays": 162,
+  "baseline_replays": 18,
+  "ballot_checks": 6042,
+  "logic_prefixes": 216,
+  "interval_crosschecks": 144,
+  "case_replays": 5,
+  "encoding": "Lossless gzip; decoded bytes match original frozen outcome manifest",
+  "limitations": [
+    "Not all formal games independently replayed.",
+    "No new source posterior, credit or balancing intervention.",
+    "Only safe_late ordinary knife in this stage.",
+    "Fixed-agent evaluation, not equilibrium."
+  ],
+  "whitespace": "New live files checked; unchanged archived v12 source retains its existing trailing blank lines."
+}

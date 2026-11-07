@@ -1,0 +1,19 @@
+{
+  "encoding": "gzip, lossless, original outcome manifests unchanged",
+  "files": {
+    "train.json": {
+      "archive": "train.json.gz",
+      "archive_sha256": "5eda6017b024fe817eea8546cd6b3a06df765744ed7373cb302e61371278c3b7",
+      "decoded_sha256": "9395a1186a9580684fea4b82c5bfce43f848032ff83ca2120ff76266eee43e10",
+      "raw_bytes": 7214520,
+      "archive_bytes": 784294
+    },
+    "holdout.json": {
+      "archive": "holdout.json.gz",
+      "archive_sha256": "83602c97bc89b10c359670a8f447a2cdcb5eae4c45784c0f35ab984c90638ad0",
+      "decoded_sha256": "292144111cb9e38f5b4262040931a60332ef38f233c26912b1bcc06969ad8346",
+      "raw_bytes": 55841591,
+      "archive_bytes": 6019966
+    }
+  }
+}
