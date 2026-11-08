@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-08",
+  "base_commit": "fd5138c",
+  "python": "3.12.3",
+  "scipy": "1.16.3",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 390,
+    "seconds": 43.95,
+    "new_tests": 12
+  },
+  "formal_games": 91392,
+  "independent_base_seeds": 2176,
+  "smoke_games": 84,
+  "pre_pk_development_smoke_games": 84,
+  "development_smoke_note": "Same smoke seeds reused after PK gate fix, both before formal freeze; not independent acceptance evidence.",
+  "replays": 252,
+  "baseline_replays": 72,
+  "ballot_checks": 9156,
+  "next_day_checks": 6192,
+  "logic_prefixes": 168,
+  "interval_crosschecks": 272,
+  "case_replays": 18,
+  "all_day_own_relay_first_mismatches": 0,
+  "day2_risk_overrides": 0,
+  "raw_encoding": "Lossless gzip from initial formal write; manifests hash archived bytes.",
+  "limitations": [
+    "Not all formal games independently replayed.",
+    "No role truth in public gate.",
+    "First-day controls only for civilians, first-night clear context.",
+    "Gate is a conservative uncalibrated authority design, not authentication.",
+    "Fixed plans, no best-response training, no equilibrium certificate.",
+    "Case types chosen after outcome review; illustrations only, no new acceptance seeds."
+  ],
+  "whitespace": "Live stage files clean; archived byte-identical v12 sources retain their prior trailing blank lines."
+}

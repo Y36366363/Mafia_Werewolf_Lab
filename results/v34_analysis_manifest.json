@@ -1,0 +1,14 @@
+{
+  "sha256": {
+    "README.zh.md": "b0a031724cd1c927da669626f81eb524a24ad71faab1ae8fa51ebecf14cb8bf2",
+    "docs/day1_risk_cases_v34.md": "766f6a8713db8cf82b31bb35aa78515185c049bceb0693e3c46eb732e0765c6a",
+    "docs/day1_risk_protocol_v34.md": "00c8ef22b5d281287d82797af776d5c0a258bb333b64cc08bffe8935636c94a4",
+    "docs/day1_risk_results_v34.md": "31a453691c15471a709d7ca8f2a1656847c1679f154ee31b6c594236eb74a225",
+    "results/v34_diagnostics.json": "04fc0ff6fe7cc2cde9bddb49db08d5bbe406798bc44a2cc1cf1f47724f7fb593",
+    "results/v34_validation.json": "3c7723a7d2289b09ae6acd9be31d17a45e4f11d455fff8b747ab34d937fff08b",
+    "scripts/analyze_day1_risk_v34.py": "73758213fdf430ad9eeb74baabeb6db75abdf46416d709fc83e4b90448ce81ec",
+    "scripts/build_day1_risk_report_v34.py": "9406669a2e46e0f9de637cc6addd50ec1c7220100575267200c2f5644cfc28de",
+    "scripts/run_day1_risk_v34.py": "cc0d9bd37d2bd7446c3acae0a732d4ed2a6f6c5d395c07beb4e464eb859241a1"
+  },
+  "note": "Derived artifacts; frozen simulation sources and gzip outcomes separately hashed in results/v34."
+}

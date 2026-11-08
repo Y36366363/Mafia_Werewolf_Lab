@@ -1,0 +1,13 @@
+{
+ "version":"20261108-day1-risk-v34",
+ "base_config":"configs/unresolved_conflict_v31.json",
+ "police_modes":["self","available"],
+ "receivers":["original","first_live","conditional_gold"],
+ "ordinary":["late_old","late_copy","late_quiet"],
+ "self_plans":["quiet","copy_early","copy_team_pass","copy_team_relay"],
+ "train":{"seed_start":203000000,"n":128},
+ "holdout":{"seed_start":204000000,"n":2048},
+ "smoke":{"seed_start":205000000,"n":2},
+ "family":68,
+ "logic_samples_per_cell":2
+}
