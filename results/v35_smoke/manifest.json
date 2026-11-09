@@ -1,0 +1,8 @@
+{
+  "games": 70,
+  "elapsed_seconds": 10.599411334027536,
+  "files": {
+    "smoke.json.gz": "d84824cf07e8afeaf89f944dacfbc8388224a12d5f1a0543134cd02e602eeb6b",
+    "freeze.json": "dbc4311f4648a55a8734d9ffadcd4cc4aee2de0b5c0c7274bd805431cd7e9087"
+  }
+}

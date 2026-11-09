@@ -1,0 +1,14 @@
+{
+  "sha256": {
+    "README.zh.md": "71cf66f248bf2cd328c85626228e6f5d5ef19ed6805b5b2b0b9a068905568162",
+    "docs/private_response_cases_v35.md": "6a9c28a4e986bef764f01b48356ac4f2e288abfb2d072fc86bb0d14c274276fb",
+    "docs/private_response_protocol_v35.md": "746f1b06b06271cd27212f860597ffb20923bbd8909563db6995731e896e63d6",
+    "docs/private_response_results_v35.md": "e905c8a3200197dd1763c3158c3a5004f51160d7c44afbaf9c6eee3bfa844c57",
+    "results/v35_diagnostics.json": "5b393562409ecbefebfa6291b9894abed1390e378202c6ce41ef090760d39c16",
+    "results/v35_validation.json": "91527e4ff5104e71afc602e6a9122a8dae5b838c22ee9546f96ee6fbb33bd2a0",
+    "scripts/analyze_private_response_v35.py": "7088c8645c2c1e31afa9c47bcdfb0145cf32d53b6d673fd7bec99522c91ceb3c",
+    "scripts/build_private_response_report_v35.py": "85af9768817969b4d9063704a9eb16e1fd5554e9e6d17677b3ac454d7c150920",
+    "scripts/run_private_response_v35.py": "5bd8ae1fdacc0031637943092184a4bd43b106aa235252c99e274d90fa2801d1"
+  },
+  "note": "Derived artifacts; frozen package, protocol, runner and gzip outcomes separately hashed in results/v35."
+}

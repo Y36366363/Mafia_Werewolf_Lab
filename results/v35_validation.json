@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-09",
+  "base_commit": "6ae31e3",
+  "python": "3.12.3",
+  "scipy": "1.16.3",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 401,
+    "seconds": 50.03,
+    "new_tests": 11
+  },
+  "formal_games": 76160,
+  "independent_base_seeds": 2176,
+  "smoke_games": 70,
+  "replays": 210,
+  "baseline_replays": 42,
+  "ballot_checks": 7951,
+  "next_day_checks": 5521,
+  "logic_prefixes": 70,
+  "interval_crosschecks": 224,
+  "ordinary_trace_equalities": 19584,
+  "case_replays": 16,
+  "limitations": [
+    "Not all formal games independently replayed.",
+    "Case types are post-hoc illustrations from existing acceptance seeds.",
+    "No calibrated source posterior or civilian relearning.",
+    "Fixed opponent plans, no optimized q or equilibrium certificate.",
+    "Balance only a small q50 control, not a main research expansion."
+  ],
+  "whitespace": "Live stage files clean; byte-identical archived v12 files retain prior trailing blank lines."
+}
