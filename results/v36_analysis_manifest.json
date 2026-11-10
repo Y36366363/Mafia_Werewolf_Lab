@@ -1,0 +1,14 @@
+{
+  "sha256": {
+    "README.zh.md": "cc5c2e48b04d0da8ffbde69244b9706888cd1288dbdae63f6882a0f25f1b4171",
+    "docs/continuation_audit_cases_v36.md": "06ff22c17251353645b06b18cb73d1be5fc4dbed35685c4935728c025942fcce",
+    "docs/continuation_audit_protocol_v36.md": "f51974897d56da98d64d1e2e94256c2d89fa73826171667dd124e366af1dc9d7",
+    "docs/continuation_audit_results_v36.md": "ee138bf4bfa8aa136337658b3e582f3a6fd33547a57c4039f2097a506a8d1a70",
+    "results/v36_diagnostics.json": "495bca1a774a6b239476bf1c37bdecb66caa26a08d797e3b1df347916eda34a5",
+    "results/v36_validation.json": "05b6a85a2b9e8171a374fdf3dbeae73938282e730dbfa7ba3059aac958a76bde",
+    "scripts/analyze_continuation_audit_v36.py": "54df735c7cf51c72debccb2303ee1e85170b74778f3f562960e01f2b26ee6a04",
+    "scripts/build_continuation_audit_report_v36.py": "a3f7a45d73d01991044fc244e1b38b86232bd8c66710af73a8ec6d7f37a050cb",
+    "scripts/run_continuation_audit_v36.py": "effaa874ad426a94f0a6468e32522de831e6f8f017dcef9a13bf5266cbd1d107"
+  },
+  "note": "Derived artifacts; historical inputs, frozen sources and main gzip outcomes separately hashed in results/v36."
+}

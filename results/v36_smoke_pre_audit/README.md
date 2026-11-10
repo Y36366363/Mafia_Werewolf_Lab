@@ -1,0 +1,1 @@
+Development audit rejected before formal freeze: the initial validator incorrectly required every truthful report to equal the latest inspection; the existing policy may legitimately restate an older live hit. No strategy was changed. This folder has no completed result batch and is excluded from outcome counts.

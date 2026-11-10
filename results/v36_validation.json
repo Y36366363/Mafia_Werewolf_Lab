@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-10",
+  "base_commit": "862c8e7",
+  "python": "3.12.3",
+  "scipy": "1.16.3",
+  "tests": {
+    "command": "python -m pytest tests -q",
+    "passed": 410,
+    "seconds": 63.95,
+    "new_tests": 9
+  },
+  "completed_main_games": 12288,
+  "historical_complete_replays": 8192,
+  "fresh_games": 4096,
+  "historical_unique_deals": 2048,
+  "fresh_unique_deals": 1024,
+  "final_smoke_games": 8,
+  "earlier_completed_development_smoke_games": 8,
+  "rejected_development_audit": "Latest-inspection-only truth validator rejected before formal freeze; no completed batch, no policy change.",
+  "fresh_baseline_replays": 12,
+  "ballot_checks": 482719,
+  "existing_q50_q100_hash_matches": 2014,
+  "existing_true_hit_hash_matches": 526,
+  "interval_crosschecks": 8,
+  "case_replays": 8,
+  "numeric_credit_guard_replays": 2,
+  "limitations": [
+    "Historical viewed data are diagnostic, not new confirmation.",
+    "No strategy changes, q expansion, balance expansion or fitted dynamic q.",
+    "Repeated votes and episodes are not independent samples.",
+    "Truth labels used only after decisions for auditing.",
+    "Fresh terminal differences have simultaneous intervals covering zero.",
+    "No equilibrium certificate."
+  ],
+  "whitespace": "Live stage files clean; archived byte-identical v12 sources retain prior trailing blank lines."
+}
