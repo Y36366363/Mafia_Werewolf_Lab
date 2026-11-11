@@ -1,0 +1,34 @@
+{
+  "source_hashes": 80,
+  "paired_opening_and_prefix_checks": 8192,
+  "sampled_full_replays": 24,
+  "original_v35_full_replays": 12,
+  "case_full_replays": 8,
+  "numeric_credit_blocked_replays": 2,
+  "interval_marginal_crosschecks": 16,
+  "ballot_assertions": 606362,
+  "source_hashes_verified": true,
+  "raw_hashes_verified": true,
+  "cases": [
+    {
+      "mafia": "self_copy_early",
+      "kind": "gain",
+      "seed": 211000739
+    },
+    {
+      "mafia": "self_copy_early",
+      "kind": "loss",
+      "seed": 211001258
+    },
+    {
+      "mafia": "late_copy",
+      "kind": "gain",
+      "seed": 211000079
+    },
+    {
+      "mafia": "late_copy",
+      "kind": "loss",
+      "seed": 211000017
+    }
+  ]
+}

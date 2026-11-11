@@ -1,0 +1,11 @@
+{
+  "files": {
+    "scripts/analyze_hit_candidates_v37.py": "ae99b97fccc28ef2585efe1f09970278884ea8a94e38738a0b7444607d625fd3",
+    "scripts/build_hit_candidates_report_v37.py": "ae9e9772a220aaebab462280422cb605187ad639ed6aa2eec1a00277d7113d64",
+    "docs/hit_candidates_results_v37.md": "338b1b9c8b445632ce90fad4bbf7b2180ef0d9a85ff3aff0751993510dc70887",
+    "docs/hit_candidates_cases_v37.md": "c83ffc415f4f8dff88c24ab1d9f3689d89bc70de76f65e9a097a7513918bc09d",
+    "results/v37/cases.json.gz": "1c567ccd749ecfec4e53786a81cc89ca821e25c4df75eeb5aea4b90f9482145c",
+    "results/v37_diagnostics.json": "29efe0dcadb62b5c25ce6b24fa64b6ec20fa96bce7709b1c9cd9d8dd4845339a",
+    "results/v37_validation.json": "49cb2b847fcefeeff893399667ac6a78fe9472d42319242ba0ff1e4bb90c8bc3"
+  }
+}
