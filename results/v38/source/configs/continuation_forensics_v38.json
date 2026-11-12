@@ -1,0 +1,12 @@
+{
+ "version":"20261112-both-mafia-exile-continuation-audit-v38",
+ "source_freeze":"results/v37/freeze.json",
+ "source_results":"results/v37/holdout.json.gz",
+ "mafia":"late_copy",
+ "receivers":["original","retain_hits"],
+ "historical":{"seed_start":211000000,"n":2048},
+ "fresh":{"seed_start":213000000,"n":1024},
+ "smoke":{"seed_start":214000000,"n":2},
+ "family":2,
+ "case_limit":4
+}

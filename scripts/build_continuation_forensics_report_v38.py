@@ -1,0 +1,147 @@
+"""Build v38 audit reports, with dictionaries before all results."""
+import json,gzip
+from pathlib import Path
+from hashlib import sha256
+ROOT=Path(__file__).resolve().parents[1]
+D=json.loads((ROOT/'results/v38_diagnostics.json').read_text())
+V=json.loads((ROOT/'results/v38_validation.json').read_text())
+M=json.loads((ROOT/'results/v38/manifest.json').read_text())
+C=json.loads(gzip.decompress((ROOT/'results/v38/cases.json.gz').read_bytes()))
+S=D['historical']['slices']['both_lost'];A=S['original']['counts'];B=S['retain_hits']['counts']
+F=D['fresh']['slices']['both_lost'];FRESH=D['fresh']['contrasts']
+R=D['historical']['selected_loss_receiver_audit'];G=D['historical']['selected_loss_advice_gate']
+lines=['# v38 完整方法与结果报告：同样首日出匪的91场续局审计','',
+'日期：2026-11-12。本轮仅记录、重放、固定策略新批确认，没有修行动、调q、加信用或移除查杀候选。','',
+'主要发现：警察已知匪的投票优先级和团队归票没有出现本轮核查的硬性违规；平民接收端却明显依赖“活假警是否曾报验人”和其后的声明时点。不能把91场败局全部归为留下悍跳者的不可避免代价，也不能认定都是代码错误。','',
+'## 1. 参数和指标字典','',
+'| 名称 | 实际含义、继承与边界 |','|---|---|',
+'| `original`／旧支 | v37原首日接收器，活来源冲突时先在来源之间选人。其他策略不变。 |',
+'| `retain_hits`／新支 | v37保留查杀目标的候选分支，和来源一起按旧位置排序；不强制出查杀。本轮没有取消它。 |',
+'| `late_copy`／普通位置刀复制方案 | 本轮唯一固定匪条件：不自刀，安全后位刀；若死者报金水可复制，否则可假查杀；原来源死亡后继承`succession=claim`接续。不是新训练的反制。 |',
+'| `succession=claim`／接续跳警 | 另一匪在既定条件下接续声明“我是警察”；当前这项默认动作不同时编验人。它会影响后面的建议资格。 |',
+'| q50 | v35私人条件下的局部回应概率50%，只抽一次、范围0–1；不是最优比例。首死真警等其他分支继承克制规则。本轮不扩q。 |',
+'| `report`／验人声明 | 发言者报某人匪/好人，真实性未认证；警察共同验人、互知队友，平民不能读取。 |',
+'| `accuse`／正式归票 | 当日明确想出的目标；与验人对象可不同。没有把它直接当身份认证。 |',
+'| `relay`／接力 | 获委托者更新来源的建议；不产生独立身份背书。本轮金水双目标处理不变。 |',
+'| `known_bad`／私知匪 | 当事人的验人、自卫或警队成员信息足以判断，且本轮可投的目标；不是全场公认身份。 |',
+'| `known_false_sources`／警察私知假警 | 跳警者不在自己警队。只有警察知道；依赖本模型平民不假跳、警察不乱报的前提。 |',
+'| 报验人门槛 | day2起，来源曾有report记录，才可提供可采纳建议；只喊“我是警察”的来源仍保留在冲突和私有推理中，其建议被挡住。不是数值信用分。 |',
+'| `compatible_sources_protocol`／相容来源建议合并 | 当前冲突图没判来源互斥时，将合资格来源的建议放在一起，再用旧位置排序选。图没发现冲突不等于都是真警。 |',
+'| `compare_conflicting_sources`／来源冲突比较 | 有尚活着的冲突端点时按既有接收器选；这仍可能选错真警。 |',
+'| `other_private_bad`／另一个私知匪 | 平民自己被假查杀，知道那个来源是假警，因而投另一个已知匪。未跟真警归票也可能仍是在投匪。 |',
+'| 归票机会／跟票数 | 每一个真警正式归票×当轮每个存活平民，分别计是否合法、是否进入建议、实际投没投。跨日/同局票相关，不能当独立样本。 |',
+'| 每日(P,M,C) | 警、匪、民存活人数，分别范围0–4、0–4、0–8；报告只由终局后身份标注计算。平民看不到完整角色人数。 |','',
+'信用分继续冻结。没有新增权重、概率后验、奖励加权或LLM。主板仍4警4匪8民，死亡不翻身份，前三死有遗言、一轮PK后再平票平安日。','',
+'## 2. “平民替警察扛推”的推理，哪些部分成立','',
+'你的局部比较有道理。假设A真警、B假警，两边都查杀，并且选手对A/B的信任概率固定：信A时，出B或出A的真查杀，都能出一个匪；信B时，直接出A必掉一警，出B的假查杀则可能只掉一民。从第一日日末存活警察数看，后一方案可以占优。','',
+'但这不推出终局必然占优：信A分支中，出的是公开悍跳者B还是另一名匪，会改变后续控场；信B分支中，保住的已公开真警也可能当夜被刀。下一夜刀位、验人和新声明不再相同。更重要的是，v37并没有固定一个“信任A/B”的抽样器：它扩候选后仍按位置排序，实际信任/出人分配会变。因此本轮不能把v37当作你所说“出人权重完全不变”的严格检验。','',
+'本轮单列历史14对“旧出警→新出民”：首日日末每局由3警变4警，确实保住一警；第二日末平均警数约2.79→3.00、匪数约3.43→3.00。最后两支都0胜，但新支终局总剩匪由28降到22。**短期/过程改善存在，只是没有在这14对转成胜势。** 这是旧批条件描述，不是总体收益或新策略最优证明。新批另有5对相同出人类型，也保住首日一警，两支仍都输；样本小，不能据零胜否定潜在价值。','',
+'例211000020：旧首日出8号真警，新首日出1号民，保住8号。但旧支第二夜刀到4号民，新支第二夜直接刀8号已公开警；到第二日末两支又同为3警3匪6民。新支最终多出了一匪，仍被杀光警察。它同时说明挡推有过程作用、夜刀会回收一部分保护收益。','',
+'## 3. 本轮方法与证据层级','',
+'历史批：对v37普通复制方案2,048对全部重放，共4,096局，全部完整轨迹哈希、胜负、开局及首日出人匹配。旧数据已看过，只作审计，不重新称为独立确认。重点核查旧胜新负且两边首日出匪的91对，同时保留其余307对同出匪过程改变及14对替警扛推作背景。','',
+'新批：冻结全部策略后使用213000000–213001023，1,024对、2,048局完整终局。只有同一固定匪方案与两接收器，没有训练/调参/新反制。另4局冒烟使用214000000–214000001。新批预定两项比较为终局胜率差和首日出匪率差，二项边际Clopper–Pearson区间加union bound，二项同时95%；每侧尾概率0.05/(4×2)=0.00625。','',
+'记录器只读取原策略自己的Observation，返回原动作，不新增随机抽样；源码和输入冻结哈希见results/v38。检查每次投票的合法性、已知匪优先、已知好人保护，并将实际投票时的知识与普通发言时的知识分开。','',
+'每日人数按所有夜刀及日放逐重建，包括游戏已终止、未进入下一日发言循环的终局夜刀；与实际投票时的存活名单核对。已结束游戏到后续共同日序保持终局人数（吸收状态），避免只对活到该日的局取平均产生幸存选择。没有用每日人数替代终局收益。','',
+'## 4. 91场：警察知道的匪有没有被正确归票','',
+'| day2起审计项 | 旧支 | 新支 |','|---|---:|---:|',
+f"| 警察有合法私知匪时的实际票 | {A['police_known_bad_ballots']} | {B['police_known_bad_ballots']} |",
+f"| 有私知匪却投其他目标 | {A.get('police_ignored_known_bad',0)} | {B.get('police_ignored_known_bad',0)} |",
+f"| 有可执行警队归票却未跟 | {A.get('police_team_call_mismatch',0)} | {B.get('police_team_call_mismatch',0)} |",
+f"| 有已知匪的轮次发生警队分票 | {A.get('rounds_police_split_with_private_bad',0)} | {B.get('rounds_police_split_with_private_bad',0)} |",
+f"| 自己已报验人且有私知匪的发言 | {A['report_and_known_bad']} | {B['report_and_known_bad']} |",
+f"| 上述发言确实给出私知匪归票 | {A['report_known_bad_correct_call']} | {B['report_known_bad_correct_call']} |",
+f"| 正式归票目标是已知活假警 | {A['formal_call_to_known_false_source']} | {B['formal_call_to_known_false_source']} |",
+f"| 正式归票目标是其他私知匪 | {A['formal_call_to_other_known_bad']} | {B['formal_call_to_other_known_bad']} |",'',
+'所以没有证据显示“警察投票时忘掉已知匪”或“已有明确团队目标仍各投各的”。但警方不总优先出已知假警：也会在多个已知匪之间选择新查杀。这是现有策略选择，而不是知道假警却去投好人；是否应优先处理有控场能力的活假警，可另作同预算目标选择实验。','',
+'另有16个新支续局轮次：投票时警察已知匪，但当日没有真警正式归票；这16次都发生在当日真警报告时尚无私知匪，后续悍跳才出现。当前不提供所有人任意补发归票的窗口，部分后置警察又按克制策略隐藏。应区分行动时点/表达能力与投票推理，不能事后把投票时知道的事实塞回早先发言。','',
+'## 5. 平民为什么不跟：接收门槛、来源生成和冲突表达','',
+'| day2起真警正式归票×平民机会（91对） | 旧支 | 新支 |','|---|---:|---:|',
+f"| 合法机会 | {A['civilian_call_legal']} | {B['civilian_call_legal']} |",
+f"| 目标进入该来源被采纳建议 | {A['civilian_call_admitted']} | {B['civilian_call_admitted']} |",
+f"| 实际跟票 | {A['civilian_call_followed']} | {B['civilian_call_followed']} |",'',
+'新支未跟的563次分为422次“相容来源合并”、79次“仍在比较冲突来源”、62次“该平民投另一个私知匪”。最后一类不能直接判错投；前两类才是需要认真评估的来源处理与团队协调。目标都进入了建议，故不是简单丢失消息。','',
+'最重要的生成差别：','',
+'| 续局平民实际投票视角（91对；不是独立样本） | 旧支 | 新支 |','|---|---:|---:|',
+f"| 总平民票 | {G['original']['civilian_ballots']} | {G['retain_hits']['civilian_ballots']} |",
+f"| 有匪来源建议被接收 | {G['original'].get('with_admitted_mafia_source',0)} | {G['retain_hits'].get('with_admitted_mafia_source',0)} |",
+f"| 有只跳警、未报验人的匪来源建议被挡 | {G['original'].get('with_bare_mafia_source_blocked',0)} | {G['retain_hits'].get('with_bare_mafia_source_blocked',0)} |",'',
+'91对旧支首日都出了已有假验人记录的公开假警，新支首日都出了尚未公开跳警的另一匪。旧支接续活匪只喊警察，没有新的假验人，建议难过门槛；新支原假警有首日report记录，仍能提供错误建议。这是冻结策略生成器和接收规则的真实互动，不是匪方针对本批重新训练。','',
+'但也不能把旧支容易赢当作完整游戏性质：匪方可以考虑让接续者也编一份假验人；当前固定`succession=claim`没有覆盖这个对应能力。尚未验证同预算接续假验人是否消除旧支优势。应保留这一对手集合边界，不能把它包装为查杀策略的理论劣势。','',
+'还有一个更具体的语义缺口：在53次新支未跟票中，真警A明确归票另一活跳警者B，但当前图没有把这个“两个活来源的正式对立”记成冲突，随后仍按相容建议合并。在本模型真警不推队友的前提下，A/B不能同时为真；现图主要识别验人矛盾，没有完整使用这种正式行动约束。53次属于422次合并的子集，不能叠加。','',
+'例211000044第三日：2号真警明确归有跳警记录的10号匪，10号仍归5号民。除5号自己能反证10号并跟票外，另外6名平民继续把两份建议当作相容建议合并，最后出了5号。这个遗漏关系也不能反过来认证2号真警，只能证明两来源不能同时真。\n\n其余合并并不都能叫逻辑漏洞：真警可能归另一个尚未跳警的已知匪C，活假警B却归好人D；平民没拿到警察的队友名单，光看这两份建议未必能判断A/B不相容。这里需要更清楚地表达归票依据或更完整的来源生成模型，不能靠把警察私有身份直接交给平民。','',
+'本轮只用独立小情形确认了上述图缺口及先发言后获知事实的时点区别；未修接收器，不宣称补边就能提升胜率。新增图边之后仍可能错误选择真来源，所以收益必须另验。','',
+'## 6. 每日人数揭示了什么','',
+'这91对首日日末全部同为4警3匪7民，人数看不出任何差异。之后，71对第二日日末人数首次不同，18对第三日首次不同，2对第四日首次不同。','',
+'| 日末（每局平均；91对） | 旧支警／匪 | 新支警／匪 |','|---|---:|---:|']
+for d in range(1,6):
+    a,b=[S['horizons'][k][d-1]['end_totals'] for k in ('original','retain_hits')]
+    lines.append(f"| 第{d}日序末 | {a['police']/91:.2f}／{a['mafia']/91:.2f} | {b['police']/91:.2f}／{b['mafia']/91:.2f} |")
+lines += ['', '第五日部分对局已经结束，按吸收终局计数；该行不是第五日还有这么多人继续发言。完整(P,M,C)、终止标记和夜/日死亡在原始结果中。','',
+'人数轨迹把“损失何时出现”定位到第二、三天；但这些91对是按最终输赢事后选中，当然不能用表中的日末差距证明某个中间动作具有独立因果效应。相同人数也不等于相同局面：存活的是谁、是否公开、谁知道谁是假警，仍有实质差异。','',
+'后续可以把每日出匪、存活警数、已知匪能否转成公开归票、平民跟票率并列作为诊断结果。暂不自行设“1警等于几匪”等权重，也不据此训练新的奖励函数；若未来使用短期目标，需要证明它有助于终局，而不是只把人数曲线做好看。','',
+'## 7. 全新种子是否仍有相同方向','',
+'以下是新批1,024对的预定主要比较；不同于上述事后选中的91对。','',
+'| 指标 | 原规则 | 保留查杀对象 | 差值（百分点） | 二项同时95%区间（百分点） |','|---|---:|---:|---:|---:|']
+for metric,label in [('win','终局好人胜'),('day1_mafia_exile','首日出匪')]:
+    v=FRESH[metric];a,b=v['counts'];lo,hi=v['precision']['ci_simultaneous']
+    lines.append(f"| {label} | {a}/1024（{100*a/1024:.2f}%） | {b}/1024（{100*b/1024:.2f}%） | {100*(b-a)/1024:+.2f} | [{100*lo:+.2f}, {100*hi:+.2f}] |")
+lines += ['', '新批终局新增1胜、丢78胜，差值约-7.52个百分点；固定策略负向结果得到独立种子确认，不是旧批91场反复挑选出来的平均数。这个确认仍不覆盖更完整匪方接续策略。','',
+f"新批有{F['n']}对同日出匪却由胜转负；其中警方已知匪优先/团队归票同样没有违规，真警正式归票跟随{F['original']['counts']['civilian_call_followed']}/{F['original']['counts']['civilian_call_legal']}→{F['retain_hits']['counts']['civilian_call_followed']}/{F['retain_hits']['counts']['civilian_call_legal']}；出现{D['fresh']['selected_loss_receiver_audit']['compatible_missing_conflict']}次相同的正式对立未入图。它们是新批结果后的机制描述，不另作显著性主张。",'',
+'## 8. 对上一轮解释的修正、建议与复现','',
+'上一轮211000017的解释有一处需要收紧：新支第三日真警在发言时没有已知活匪，随后3号才跳警；到投票时，两名警察都知道3号是假警并投3号。不能说警察整天没有信息或只能盲投。平民仍沿用此前金水归票，出13号民，反映的是信息到来时点和更新归票窗口的问题。新报告保留旧冻结档案、不重写旧结果。','',
+'建议下一步先讨论两项独立而窄的对照：一是明确“正式归票对另一活来源”的互斥关系如何进入接收器，仍不认证任何一方；二是匪方接续者在相同发言预算下，报验人与只喊警察的区别。先补这些可表达/可模仿的机制，再重启条件q(I)。两项都尚未实现，不能把本轮诊断说成已经修好。','',
+'查杀对象继续保留作可切换策略；没有根据低胜率删除。信用分、金水双目标、day2自动公开、跨日票型/公开怀疑、遗言制度、金水假跳挡刀、打平衡各自保持独立待办。','',
+'实际执行命令：','',
+'```text',
+'python -m pytest tests/test_continuation_forensics_v38.py -q',
+'python -m pytest tests -q',
+'python scripts/run_continuation_forensics_v38.py --smoke',
+'python scripts/run_continuation_forensics_v38.py',
+'python scripts/analyze_continuation_forensics_v38.py',
+'python scripts/build_continuation_forensics_report_v38.py',
+'```','',
+'专项8项通过（5.38秒）；首次全库427项通过（36.71秒），补充两个只读语义/时点检查后全库429项通过（34.97秒）。正式6,144局=4,096历史完整重放＋2,048新完整模拟，耗时约'+f"{M['elapsed_seconds']:.1f}"+'秒；另4局冒烟。这些是本轮实际运行，不把v37测试混作本轮新测试。','',
+f"核验：80个冻结资产及输入/原始结果哈希一致；3,072对开局和首轮公开前缀一致；{V['checks']['ballots']:,}次好人实际票约束、投票期存活人数交叉核对通过；12次原API抽样完整重放、对历史91＋新38对失败续局的{V['checks']['selected_loss_full_replays']}次详细重放、4对案例8次详细重放；4个二项区间边际与独立scipy接口核查。分析脚本补充门槛/语义分类与案例后重复运行，正式原始数据未重写。",'',
+'新增策略源码没有变化；新增记录器及正式冻结资产按原字节保留。冻结旧v12两个模块的原有EOF空行不为去掉空白提示而改写。运行依赖同时引用v37冻结配置与源码，其80项传递依赖也与原快照逐一核对；复现需保留v37档案。两个新增只读语义测试及分析/报告脚本在正式冻结后添加，纳入Git和派生清单，未改策略。','',
+'材料：`results/v38/{freeze.json,source/,historical.json.gz,fresh.json.gz,manifest.json}`；全部选中失败局接收日志`loss_receiver_audit.json.gz`；四对完整案例`cases.json.gz`；派生汇总`results/v38_diagnostics.json`、核验`results/v38_validation.json`及哈希`results/v38_analysis_manifest.json`。','',
+'边界：选中91对/38对是事后切片，不能充当可部署的条件标签。每日人数不是身份可见信息，也不是新的等价收益。未独立重跑全部新批原API；只是全部历史匹配、预定新批抽样及选中病例重放。没有求新矩阵、均衡证书或完整游戏GTO。','']
+(ROOT/'docs/continuation_forensics_results_v38.md').write_text('\n'.join(lines))
+
+roles={'police':'警','mafia':'匪','civilian':'民'}
+seat=lambda p:'弃票' if p is None else str(p+1)
+cs=['# v38 通俗案例：谁知道、什么时候知道、为什么没有一起投','',
+'所有座位转为1–16；真实身份只供读者核查，不交给平民。四例来自已经生成的旧批：91场失败的首例、中位例、第一例缺失正式来源冲突，另14场扛推的首例。属于事后解释，不再搜索新种子。','']
+case_names={'both_mafia_loss':'同出匪仍由胜转负','missing_formal_conflict':'正式活来源对立遗漏','police_to_civilian':'平民替警挡推'}
+reason_names={'followed':'跟随正式归票','compatible_sources_protocol':'相容来源建议合并','other_private_bad':'投另一个私知匪','compare_conflicting_sources':'来源冲突比较','target_not_legal':'本轮目标不合法'}
+for c in C:
+    a,b=c['original'],c['retain_hits'];rr=a['roles_evaluation_only']
+    cs += [f"## {c['seed']}：{case_names[c['kind']]}",'',
+        '警察：'+', '.join(str(i+1) for i,r in enumerate(rr) if r=='police')+'；匪徒：'+', '.join(str(i+1) for i,r in enumerate(rr) if r=='mafia')+'。','',
+        '| 日序 | 旧支夜刀／白天出人／日末P-M-C | 新支夜刀／白天出人／日末P-M-C |','|---|---|---|']
+    def describe(v,d):
+        row=next((z for z in v['days'] if z['day']==d),None)
+        if row is None:return '已结束'
+        p=row['night_victim'];x=row['day_exile'];n=row['end']
+        return f"刀{p+1}{roles[rr[p]]}；"+(f"出{x+1}{roles[rr[x]]}" if x is not None else ('平安日' if row['day_played'] else '终局夜，无白天'))+f"；{n['police']}-{n['mafia']}-{n['civilian']}"
+    for d in range(1,max(a['days'][-1]['day'],b['days'][-1]['day'])+1):cs.append(f'| {d} | {describe(a,d)} | {describe(b,d)} |')
+    cs += ['',f"旧{'胜' if a['win'] else '负'}／新{'胜' if b['win'] else '负'}。下面只列新支day2起的警方归票及平民接收，完整逐条消息和票在cases.json.gz。",'']
+    for rd in b['rounds']:
+        if rd['day']<2:continue
+        cv=rd['police'];pv='、'.join(f"{p['player']+1}号投{seat(p['target'])}（私知匪{[x+1 for x in p['known_bad']]}）" for p in cv)
+        cs.append(f"- 第{rd['day']}日{'首次投票' if rd['round']=='first' else 'PK复投'}：警方{pv}。")
+        if not rd['calls']:
+            cs.append('  当日没有真警正式归票；此轮投票时已知匪不代表早先发言时已知道。' if rd['police_with_known_bad'] else '  此轮警察没有合法的私知活匪，也没有正式硬归票，仍需从未知身份中选择。')
+        for call in rd['calls']:
+            cs.append(f"  {call['source']+1}号真警明确归{call['target']+1}号（实际{roles[rr[call['target']]]}），{call['followed']}/{call['eligible']}名有合法机会的平民跟票；接收分类{dict((reason_names.get(k,k),v) for k,v in call['reasons'].items())}。")
+    cs.append('')
+cs += ['## 怎么读这四例','',
+'211000017主要看时点：第三日真警先给金水/名单，3号匪后跳；投票时警队已认出3号，平民却还在出旧金水归的13号。不是警方忘记私有信息。','',
+'211001109主要看并入建议：第二日真警归15号匪，6号旧悍跳者另带13号民；警方统一投15，平民仍把两份建议一起比较，多数投13。这里15并非当时另一个跳警来源，不能凭“归15”直接推出“6与真警不可能同队”；需要更多公开依据。','',
+'第三例查看明确的来源对立：如果A已经跳警且正式归另一活跳警者B，真警不会推自己警队队友。这个条件关系应区别于普通的两个内推，但当前图未完整使用；它仍不认证A或B谁真。','',
+'211000020说明扛推的局部价值：第一日新支保住一警，第二夜真警被刀，人数很快重新相同；新支最后多出一匪，两支仍输。只看0/1会漏掉这个过程。','']
+(ROOT/'docs/continuation_forensics_cases_v38.md').write_text('\n'.join(cs))
+assets=[ROOT/'scripts/analyze_continuation_forensics_v38.py',ROOT/'scripts/build_continuation_forensics_report_v38.py',
+        ROOT/'tests/test_continuation_semantics_v38.py',ROOT/'docs/continuation_forensics_results_v38.md',ROOT/'docs/continuation_forensics_cases_v38.md',
+        ROOT/'results/v38/loss_receiver_audit.json.gz',ROOT/'results/v38/cases.json.gz',ROOT/'results/v38_diagnostics.json',ROOT/'results/v38_validation.json']
+(ROOT/'results/v38_analysis_manifest.json').write_text(json.dumps(dict(files={str(p.relative_to(ROOT)):sha256(p.read_bytes()).hexdigest() for p in assets}),indent=2)+'\n')
+print('reports and derived hashes built')

@@ -1,0 +1,2298 @@
+{
+  "historical": {
+    "contrasts": {
+      "win": {
+        "counts": [
+          479,
+          292
+        ],
+        "gains": 10,
+        "losses": 197,
+        "precision": {
+          "method": "Marginal Clopper-Pearson plus union bound",
+          "family": 2,
+          "tail_alpha": 0.00625,
+          "p_plus": [
+            0.001878818928391769,
+            0.010226515352965568
+          ],
+          "p_minus": [
+            0.08057787812332333,
+            0.11361072107512761
+          ],
+          "ci_simultaneous": [
+            -0.11173190214673584,
+            -0.07035136277035776
+          ]
+        }
+      },
+      "day1_mafia_exile": {
+        "counts": [
+          1493,
+          1240
+        ],
+        "gains": 101,
+        "losses": 354,
+        "precision": {
+          "method": "Marginal Clopper-Pearson plus union bound",
+          "family": 2,
+          "tail_alpha": 0.00625,
+          "p_plus": [
+            0.03812437220165827,
+            0.0625378964815251
+          ],
+          "p_minus": [
+            0.15247859952717097,
+            0.19468119124438774
+          ],
+          "ci_simultaneous": [
+            -0.15655681904272947,
+            -0.08994070304564587
+          ]
+        }
+      }
+    },
+    "all": {
+      "original": {
+        "counts": {
+          "games": 2048,
+          "wins": 479,
+          "police_speech_turns": 11605,
+          "speech_has_known_bad": 9476,
+          "report_and_known_bad": 4399,
+          "report_known_bad_correct_call": 4399,
+          "formal_call_to_known_false_source": 2219,
+          "formal_call_to_other_known_bad": 2180,
+          "known_bad_but_no_own_report": 5077,
+          "rounds": 5883,
+          "police_ballots": 11617,
+          "rounds_with_private_bad": 5272,
+          "rounds_police_split_with_private_bad": 0,
+          "rounds_with_live_false_claimant": 5005,
+          "police_known_bad_ballots": 10787,
+          "police_ignored_known_bad": 0,
+          "police_votes_known_false": 6646,
+          "police_legal_team_call_ballots": 8939,
+          "police_team_call_mismatch": 0,
+          "truthful_police_call_episodes": 4405,
+          "truthful_police_call_to_mafia": 4405,
+          "civilian_call_opportunities": 28649,
+          "civilian_call_legal": 28619,
+          "civilian_call_admitted": 28619,
+          "civilian_call_followed": 27081
+        },
+        "call_nonfollow_reasons": {
+          "followed": 27081,
+          "compatible_sources_protocol": 984,
+          "other_private_bad": 126,
+          "compare_conflicting_sources": 428,
+          "target_not_legal": 30
+        },
+        "speech_flags": [],
+        "round_flags": []
+      },
+      "retain_hits": {
+        "counts": {
+          "games": 2048,
+          "wins": 292,
+          "police_speech_turns": 11019,
+          "speech_has_known_bad": 9071,
+          "report_and_known_bad": 4311,
+          "report_known_bad_correct_call": 4311,
+          "formal_call_to_known_false_source": 2164,
+          "formal_call_to_other_known_bad": 2147,
+          "known_bad_but_no_own_report": 4760,
+          "rounds": 5689,
+          "police_ballots": 11023,
+          "rounds_with_private_bad": 4899,
+          "rounds_police_split_with_private_bad": 0,
+          "rounds_with_live_false_claimant": 4502,
+          "police_known_bad_ballots": 9983,
+          "police_ignored_known_bad": 0,
+          "police_votes_known_false": 5771,
+          "police_legal_team_call_ballots": 8773,
+          "police_team_call_mismatch": 0,
+          "truthful_police_call_episodes": 4313,
+          "truthful_police_call_to_mafia": 4313,
+          "civilian_call_opportunities": 28196,
+          "civilian_call_legal": 28186,
+          "civilian_call_admitted": 28186,
+          "civilian_call_followed": 26616
+        },
+        "call_nonfollow_reasons": {
+          "followed": 26616,
+          "compatible_sources_protocol": 1136,
+          "other_private_bad": 132,
+          "compare_conflicting_sources": 302,
+          "target_not_legal": 10
+        },
+        "speech_flags": [],
+        "round_flags": []
+      }
+    },
+    "slices": {
+      "both_changed": {
+        "n": 398,
+        "original": {
+          "counts": {
+            "games": 398,
+            "wins": 186,
+            "police_speech_turns": 2388,
+            "speech_has_known_bad": 2000,
+            "report_and_known_bad": 924,
+            "report_known_bad_correct_call": 924,
+            "formal_call_to_known_false_source": 440,
+            "formal_call_to_other_known_bad": 484,
+            "known_bad_but_no_own_report": 1076,
+            "rounds": 1194,
+            "police_ballots": 2388,
+            "rounds_with_private_bad": 1194,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 1194,
+            "police_known_bad_ballots": 2388,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 1467,
+            "police_legal_team_call_ballots": 1857,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 924,
+            "truthful_police_call_to_mafia": 924,
+            "civilian_call_opportunities": 6246,
+            "civilian_call_legal": 6246,
+            "civilian_call_admitted": 6246,
+            "civilian_call_followed": 6246
+          },
+          "call_nonfollow_reasons": {
+            "followed": 6246
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "retain_hits": {
+          "counts": {
+            "games": 398,
+            "wins": 95,
+            "police_speech_turns": 2376,
+            "speech_has_known_bad": 1956,
+            "report_and_known_bad": 904,
+            "report_known_bad_correct_call": 904,
+            "formal_call_to_known_false_source": 534,
+            "formal_call_to_other_known_bad": 370,
+            "known_bad_but_no_own_report": 1052,
+            "rounds": 1188,
+            "police_ballots": 2376,
+            "rounds_with_private_bad": 1187,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 1185,
+            "police_known_bad_ballots": 2375,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 1673,
+            "police_legal_team_call_ballots": 1788,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 904,
+            "truthful_police_call_to_mafia": 904,
+            "civilian_call_opportunities": 5922,
+            "civilian_call_legal": 5922,
+            "civilian_call_admitted": 5922,
+            "civilian_call_followed": 5345
+          },
+          "call_nonfollow_reasons": {
+            "followed": 5345,
+            "compatible_sources_protocol": 434,
+            "other_private_bad": 64,
+            "compare_conflicting_sources": 79
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "seeds": [
+          211000001,
+          211000017,
+          211000018,
+          211000021,
+          211000022,
+          211000024,
+          211000028,
+          211000037,
+          211000040,
+          211000043,
+          211000044,
+          211000052,
+          211000054,
+          211000055,
+          211000062,
+          211000064,
+          211000068,
+          211000069,
+          211000077,
+          211000078,
+          211000082,
+          211000083,
+          211000093,
+          211000099,
+          211000101,
+          211000106,
+          211000107,
+          211000112,
+          211000119,
+          211000121,
+          211000125,
+          211000129,
+          211000131,
+          211000135,
+          211000142,
+          211000144,
+          211000146,
+          211000149,
+          211000154,
+          211000163,
+          211000169,
+          211000170,
+          211000180,
+          211000187,
+          211000190,
+          211000207,
+          211000214,
+          211000219,
+          211000220,
+          211000221,
+          211000233,
+          211000240,
+          211000250,
+          211000259,
+          211000266,
+          211000267,
+          211000276,
+          211000280,
+          211000284,
+          211000285,
+          211000286,
+          211000309,
+          211000312,
+          211000314,
+          211000315,
+          211000324,
+          211000327,
+          211000329,
+          211000333,
+          211000343,
+          211000351,
+          211000355,
+          211000359,
+          211000360,
+          211000366,
+          211000376,
+          211000378,
+          211000383,
+          211000392,
+          211000401,
+          211000402,
+          211000403,
+          211000417,
+          211000422,
+          211000425,
+          211000427,
+          211000432,
+          211000435,
+          211000437,
+          211000438,
+          211000444,
+          211000446,
+          211000456,
+          211000463,
+          211000483,
+          211000484,
+          211000485,
+          211000486,
+          211000487,
+          211000490,
+          211000494,
+          211000497,
+          211000505,
+          211000515,
+          211000519,
+          211000521,
+          211000524,
+          211000530,
+          211000531,
+          211000536,
+          211000537,
+          211000539,
+          211000545,
+          211000548,
+          211000551,
+          211000559,
+          211000560,
+          211000568,
+          211000569,
+          211000571,
+          211000590,
+          211000596,
+          211000609,
+          211000611,
+          211000617,
+          211000626,
+          211000629,
+          211000630,
+          211000631,
+          211000634,
+          211000637,
+          211000648,
+          211000649,
+          211000656,
+          211000662,
+          211000666,
+          211000677,
+          211000678,
+          211000685,
+          211000688,
+          211000689,
+          211000704,
+          211000717,
+          211000720,
+          211000728,
+          211000729,
+          211000733,
+          211000734,
+          211000740,
+          211000741,
+          211000743,
+          211000748,
+          211000750,
+          211000756,
+          211000760,
+          211000763,
+          211000764,
+          211000765,
+          211000770,
+          211000780,
+          211000783,
+          211000796,
+          211000801,
+          211000804,
+          211000819,
+          211000821,
+          211000843,
+          211000849,
+          211000861,
+          211000871,
+          211000876,
+          211000879,
+          211000880,
+          211000882,
+          211000888,
+          211000891,
+          211000892,
+          211000895,
+          211000903,
+          211000907,
+          211000910,
+          211000912,
+          211000913,
+          211000914,
+          211000923,
+          211000931,
+          211000942,
+          211000944,
+          211000959,
+          211000960,
+          211000961,
+          211000968,
+          211000976,
+          211000990,
+          211000991,
+          211001001,
+          211001003,
+          211001012,
+          211001023,
+          211001033,
+          211001041,
+          211001042,
+          211001050,
+          211001060,
+          211001078,
+          211001092,
+          211001103,
+          211001109,
+          211001112,
+          211001116,
+          211001137,
+          211001140,
+          211001141,
+          211001153,
+          211001157,
+          211001159,
+          211001163,
+          211001164,
+          211001166,
+          211001167,
+          211001169,
+          211001173,
+          211001189,
+          211001195,
+          211001198,
+          211001211,
+          211001213,
+          211001216,
+          211001230,
+          211001234,
+          211001235,
+          211001238,
+          211001241,
+          211001243,
+          211001253,
+          211001257,
+          211001258,
+          211001259,
+          211001262,
+          211001265,
+          211001266,
+          211001272,
+          211001273,
+          211001277,
+          211001285,
+          211001286,
+          211001290,
+          211001291,
+          211001293,
+          211001295,
+          211001308,
+          211001314,
+          211001319,
+          211001325,
+          211001326,
+          211001341,
+          211001343,
+          211001344,
+          211001345,
+          211001350,
+          211001352,
+          211001361,
+          211001366,
+          211001371,
+          211001377,
+          211001386,
+          211001392,
+          211001403,
+          211001409,
+          211001414,
+          211001415,
+          211001424,
+          211001431,
+          211001435,
+          211001436,
+          211001443,
+          211001445,
+          211001446,
+          211001448,
+          211001449,
+          211001453,
+          211001455,
+          211001458,
+          211001461,
+          211001466,
+          211001468,
+          211001470,
+          211001472,
+          211001475,
+          211001477,
+          211001482,
+          211001486,
+          211001488,
+          211001489,
+          211001497,
+          211001542,
+          211001544,
+          211001545,
+          211001547,
+          211001553,
+          211001555,
+          211001556,
+          211001564,
+          211001567,
+          211001570,
+          211001572,
+          211001576,
+          211001578,
+          211001587,
+          211001595,
+          211001600,
+          211001603,
+          211001614,
+          211001616,
+          211001617,
+          211001618,
+          211001619,
+          211001627,
+          211001631,
+          211001633,
+          211001652,
+          211001670,
+          211001698,
+          211001699,
+          211001702,
+          211001711,
+          211001713,
+          211001717,
+          211001727,
+          211001728,
+          211001730,
+          211001737,
+          211001749,
+          211001755,
+          211001759,
+          211001761,
+          211001767,
+          211001768,
+          211001769,
+          211001772,
+          211001779,
+          211001781,
+          211001782,
+          211001783,
+          211001785,
+          211001798,
+          211001799,
+          211001808,
+          211001830,
+          211001831,
+          211001832,
+          211001836,
+          211001848,
+          211001849,
+          211001854,
+          211001860,
+          211001866,
+          211001869,
+          211001873,
+          211001882,
+          211001896,
+          211001900,
+          211001903,
+          211001904,
+          211001914,
+          211001915,
+          211001916,
+          211001926,
+          211001928,
+          211001930,
+          211001931,
+          211001934,
+          211001943,
+          211001944,
+          211001949,
+          211001950,
+          211001957,
+          211001970,
+          211001973,
+          211001982,
+          211001985,
+          211001989,
+          211001991,
+          211001994,
+          211001996,
+          211002002,
+          211002016,
+          211002023,
+          211002026,
+          211002027,
+          211002028,
+          211002029,
+          211002033,
+          211002034,
+          211002036,
+          211002042,
+          211002044,
+          211002046
+        ],
+        "horizons": {
+          "original": [
+            {
+              "day": 1,
+              "n": 398,
+              "end_totals": {
+                "police": 1592,
+                "mafia": 1194,
+                "civilian": 2786
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 398,
+              "end_totals": {
+                "police": 1194,
+                "mafia": 897,
+                "civilian": 2685
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 398,
+              "end_totals": {
+                "police": 796,
+                "mafia": 548,
+                "civilian": 2636
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 398,
+              "end_totals": {
+                "police": 398,
+                "mafia": 227,
+                "civilian": 2559
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 5,
+              "n": 398,
+              "end_totals": {
+                "police": 186,
+                "mafia": 227,
+                "civilian": 2559
+              },
+              "ended_before": 186,
+              "exact_day_no_speech": 212
+            }
+          ],
+          "retain_hits": [
+            {
+              "day": 1,
+              "n": 398,
+              "end_totals": {
+                "police": 1592,
+                "mafia": 1194,
+                "civilian": 2786
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 398,
+              "end_totals": {
+                "police": 1180,
+                "mafia": 970,
+                "civilian": 2626
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 398,
+              "end_totals": {
+                "police": 786,
+                "mafia": 672,
+                "civilian": 2522
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 398,
+              "end_totals": {
+                "police": 390,
+                "mafia": 333,
+                "civilian": 2467
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 6
+            },
+            {
+              "day": 5,
+              "n": 398,
+              "end_totals": {
+                "police": 95,
+                "mafia": 333,
+                "civilian": 2467
+              },
+              "ended_before": 103,
+              "exact_day_no_speech": 295
+            }
+          ]
+        },
+        "path_counts": {
+          "old_exiled_public_mafia_claimant": 398,
+          "new_exiled_public_mafia_claimant": 209,
+          "original_day2_live_false_claim": 398,
+          "retain_hits_day2_live_false_claim": 398,
+          "old_known_bad_new_none_day3": 0
+        },
+        "first_daily_count_divergence": {
+          "3": 45,
+          "2": 73,
+          "4": 2
+        },
+        "terminal_flips": {
+          "gains": 0,
+          "losses": 91
+        }
+      },
+      "both_lost": {
+        "n": 91,
+        "original": {
+          "counts": {
+            "games": 91,
+            "wins": 91,
+            "police_speech_turns": 546,
+            "speech_has_known_bad": 543,
+            "report_and_known_bad": 270,
+            "report_known_bad_correct_call": 270,
+            "formal_call_to_known_false_source": 93,
+            "formal_call_to_other_known_bad": 177,
+            "known_bad_but_no_own_report": 273,
+            "rounds": 273,
+            "police_ballots": 546,
+            "rounds_with_private_bad": 273,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 273,
+            "police_known_bad_ballots": 546,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 218,
+            "police_legal_team_call_ballots": 543,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 270,
+            "truthful_police_call_to_mafia": 270,
+            "civilian_call_opportunities": 1890,
+            "civilian_call_legal": 1890,
+            "civilian_call_admitted": 1890,
+            "civilian_call_followed": 1890
+          },
+          "call_nonfollow_reasons": {
+            "followed": 1890
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "retain_hits": {
+          "counts": {
+            "games": 91,
+            "wins": 0,
+            "police_speech_turns": 534,
+            "speech_has_known_bad": 505,
+            "report_and_known_bad": 250,
+            "report_known_bad_correct_call": 250,
+            "formal_call_to_known_false_source": 104,
+            "formal_call_to_other_known_bad": 146,
+            "known_bad_but_no_own_report": 255,
+            "rounds": 267,
+            "police_ballots": 534,
+            "rounds_with_private_bad": 266,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 264,
+            "police_known_bad_ballots": 533,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 204,
+            "police_legal_team_call_ballots": 503,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 250,
+            "truthful_police_call_to_mafia": 250,
+            "civilian_call_opportunities": 1597,
+            "civilian_call_legal": 1597,
+            "civilian_call_admitted": 1597,
+            "civilian_call_followed": 1034
+          },
+          "call_nonfollow_reasons": {
+            "followed": 1034,
+            "compatible_sources_protocol": 422,
+            "other_private_bad": 62,
+            "compare_conflicting_sources": 79
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "seeds": [
+          211000017,
+          211000022,
+          211000024,
+          211000040,
+          211000044,
+          211000062,
+          211000064,
+          211000146,
+          211000163,
+          211000219,
+          211000220,
+          211000233,
+          211000240,
+          211000359,
+          211000360,
+          211000366,
+          211000417,
+          211000422,
+          211000427,
+          211000486,
+          211000531,
+          211000536,
+          211000545,
+          211000559,
+          211000590,
+          211000629,
+          211000637,
+          211000656,
+          211000678,
+          211000729,
+          211000740,
+          211000741,
+          211000748,
+          211000750,
+          211000801,
+          211000849,
+          211000891,
+          211000912,
+          211000914,
+          211000991,
+          211001012,
+          211001023,
+          211001042,
+          211001060,
+          211001078,
+          211001109,
+          211001112,
+          211001141,
+          211001198,
+          211001230,
+          211001241,
+          211001257,
+          211001258,
+          211001286,
+          211001325,
+          211001371,
+          211001377,
+          211001415,
+          211001424,
+          211001443,
+          211001449,
+          211001461,
+          211001468,
+          211001486,
+          211001497,
+          211001544,
+          211001547,
+          211001555,
+          211001556,
+          211001572,
+          211001595,
+          211001618,
+          211001652,
+          211001670,
+          211001702,
+          211001755,
+          211001769,
+          211001779,
+          211001808,
+          211001830,
+          211001836,
+          211001849,
+          211001860,
+          211001866,
+          211001900,
+          211001926,
+          211001931,
+          211001970,
+          211001973,
+          211002034,
+          211002036
+        ],
+        "horizons": {
+          "original": [
+            {
+              "day": 1,
+              "n": 91,
+              "end_totals": {
+                "police": 364,
+                "mafia": 273,
+                "civilian": 637
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 91,
+              "end_totals": {
+                "police": 273,
+                "mafia": 182,
+                "civilian": 637
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 91,
+              "end_totals": {
+                "police": 182,
+                "mafia": 91,
+                "civilian": 637
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 91,
+              "end_totals": {
+                "police": 91,
+                "mafia": 0,
+                "civilian": 637
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 5,
+              "n": 91,
+              "end_totals": {
+                "police": 91,
+                "mafia": 0,
+                "civilian": 637
+              },
+              "ended_before": 91,
+              "exact_day_no_speech": 0
+            }
+          ],
+          "retain_hits": [
+            {
+              "day": 1,
+              "n": 91,
+              "end_totals": {
+                "police": 364,
+                "mafia": 273,
+                "civilian": 637
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 91,
+              "end_totals": {
+                "police": 259,
+                "mafia": 253,
+                "civilian": 580
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 91,
+              "end_totals": {
+                "police": 172,
+                "mafia": 186,
+                "civilian": 552
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 91,
+              "end_totals": {
+                "police": 83,
+                "mafia": 106,
+                "civilian": 545
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 6
+            },
+            {
+              "day": 5,
+              "n": 91,
+              "end_totals": {
+                "police": 0,
+                "mafia": 106,
+                "civilian": 545
+              },
+              "ended_before": 8,
+              "exact_day_no_speech": 83
+            }
+          ]
+        },
+        "path_counts": {
+          "old_exiled_public_mafia_claimant": 91,
+          "new_exiled_public_mafia_claimant": 0,
+          "original_day2_live_false_claim": 91,
+          "retain_hits_day2_live_false_claim": 91,
+          "old_known_bad_new_none_day3": 0
+        },
+        "first_daily_count_divergence": {
+          "3": 18,
+          "2": 71,
+          "4": 2
+        },
+        "terminal_flips": {
+          "gains": 0,
+          "losses": 91
+        }
+      },
+      "police_to_civilian": {
+        "n": 14,
+        "original": {
+          "counts": {
+            "games": 14,
+            "wins": 0,
+            "police_speech_turns": 84,
+            "speech_has_known_bad": 77,
+            "report_and_known_bad": 36,
+            "report_known_bad_correct_call": 36,
+            "formal_call_to_known_false_source": 22,
+            "formal_call_to_other_known_bad": 14,
+            "known_bad_but_no_own_report": 41,
+            "rounds": 44,
+            "police_ballots": 88,
+            "rounds_with_private_bad": 42,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 42,
+            "police_known_bad_ballots": 84,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 55,
+            "police_legal_team_call_ballots": 74,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 38,
+            "truthful_police_call_to_mafia": 38,
+            "civilian_call_opportunities": 207,
+            "civilian_call_legal": 197,
+            "civilian_call_admitted": 197,
+            "civilian_call_followed": 137
+          },
+          "call_nonfollow_reasons": {
+            "followed": 137,
+            "other_private_bad": 8,
+            "compare_conflicting_sources": 23,
+            "compatible_sources_protocol": 29,
+            "target_not_legal": 10
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "retain_hits": {
+          "counts": {
+            "games": 14,
+            "wins": 0,
+            "police_speech_turns": 84,
+            "speech_has_known_bad": 63,
+            "report_and_known_bad": 27,
+            "report_known_bad_correct_call": 27,
+            "formal_call_to_known_false_source": 13,
+            "formal_call_to_other_known_bad": 14,
+            "known_bad_but_no_own_report": 36,
+            "rounds": 42,
+            "police_ballots": 84,
+            "rounds_with_private_bad": 27,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 23,
+            "police_known_bad_ballots": 63,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 32,
+            "police_legal_team_call_ballots": 63,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 27,
+            "truthful_police_call_to_mafia": 27,
+            "civilian_call_opportunities": 160,
+            "civilian_call_legal": 160,
+            "civilian_call_admitted": 160,
+            "civilian_call_followed": 160
+          },
+          "call_nonfollow_reasons": {
+            "followed": 160
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "seeds": [
+          211000020,
+          211000211,
+          211000431,
+          211000791,
+          211000984,
+          211001168,
+          211001192,
+          211001387,
+          211001447,
+          211001450,
+          211001473,
+          211001732,
+          211001829,
+          211001963
+        ],
+        "horizons": {
+          "original": [
+            {
+              "day": 1,
+              "n": 14,
+              "end_totals": {
+                "police": 42,
+                "mafia": 56,
+                "civilian": 98
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 14,
+              "end_totals": {
+                "police": 39,
+                "mafia": 48,
+                "civilian": 81
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 14,
+              "end_totals": {
+                "police": 28,
+                "mafia": 41,
+                "civilian": 71
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 14,
+              "end_totals": {
+                "police": 14,
+                "mafia": 28,
+                "civilian": 70
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 5,
+              "n": 14,
+              "end_totals": {
+                "police": 0,
+                "mafia": 28,
+                "civilian": 70
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 14
+            }
+          ],
+          "retain_hits": [
+            {
+              "day": 1,
+              "n": 14,
+              "end_totals": {
+                "police": 56,
+                "mafia": 56,
+                "civilian": 84
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 14,
+              "end_totals": {
+                "police": 42,
+                "mafia": 42,
+                "civilian": 84
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 14,
+              "end_totals": {
+                "police": 28,
+                "mafia": 32,
+                "civilian": 80
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 14,
+              "end_totals": {
+                "police": 14,
+                "mafia": 22,
+                "civilian": 76
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 5,
+              "n": 14,
+              "end_totals": {
+                "police": 0,
+                "mafia": 22,
+                "civilian": 76
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 14
+            }
+          ]
+        },
+        "path_counts": {
+          "old_exiled_public_mafia_claimant": 0,
+          "new_exiled_public_mafia_claimant": 0,
+          "original_day2_live_false_claim": 14,
+          "retain_hits_day2_live_false_claim": 14,
+          "old_known_bad_new_none_day3": 6
+        },
+        "first_daily_count_divergence": {
+          "1": 14
+        },
+        "terminal_flips": {
+          "gains": 0,
+          "losses": 0
+        }
+      }
+    },
+    "selected_loss_receiver_audit": {
+      "call_ballots": 1597,
+      "known_bad_without_public_police_call_rounds": 16,
+      "report_before_known_bad_no_call_rounds": 16,
+      "nonfollow": 563,
+      "other_nonfollow": 510,
+      "reason_compatible_sources_protocol": 422,
+      "nonfollow_with_admitted_mafia_source": 501,
+      "reason_private_refutation_or_check": 62,
+      "missing_live_formal_call_conflict": 53,
+      "compatible_missing_conflict": 53,
+      "reason_compare_conflicting_sources": 79
+    },
+    "selected_loss_advice_gate": {
+      "original": {
+        "civilian_ballots": 1911,
+        "with_admitted_mafia_source": 0,
+        "with_bare_mafia_source_blocked": 1650
+      },
+      "retain_hits": {
+        "civilian_ballots": 1715,
+        "with_admitted_mafia_source": 607,
+        "with_bare_mafia_source_blocked": 185
+      }
+    }
+  },
+  "fresh": {
+    "contrasts": {
+      "win": {
+        "counts": [
+          206,
+          129
+        ],
+        "gains": 1,
+        "losses": 78,
+        "precision": {
+          "method": "Marginal Clopper-Pearson plus union bound",
+          "family": 2,
+          "tail_alpha": 0.00625,
+          "p_plus": [
+            6.122650215089919e-06,
+            0.006987133973259023
+          ],
+          "p_minus": [
+            0.056883878028374586,
+            0.09928815946550458
+          ],
+          "ci_simultaneous": [
+            -0.09928203681528949,
+            -0.049896744055115565
+          ]
+        }
+      },
+      "day1_mafia_exile": {
+        "counts": [
+          731,
+          597
+        ],
+        "gains": 42,
+        "losses": 176,
+        "precision": {
+          "method": "Marginal Clopper-Pearson plus union bound",
+          "family": 2,
+          "tail_alpha": 0.00625,
+          "p_plus": [
+            0.027096003770491258,
+            0.05912143487017308
+          ],
+          "p_minus": [
+            0.14344251140807013,
+            0.20324519922717904
+          ],
+          "ci_simultaneous": [
+            -0.17614919545668778,
+            -0.08432107653789706
+          ]
+        }
+      }
+    },
+    "all": {
+      "original": {
+        "counts": {
+          "games": 1024,
+          "wins": 206,
+          "police_speech_turns": 5788,
+          "speech_has_known_bad": 4684,
+          "report_and_known_bad": 2168,
+          "report_known_bad_correct_call": 2168,
+          "formal_call_to_known_false_source": 1100,
+          "formal_call_to_other_known_bad": 1068,
+          "known_bad_but_no_own_report": 2516,
+          "rounds": 2933,
+          "police_ballots": 5792,
+          "rounds_with_private_bad": 2601,
+          "rounds_police_split_with_private_bad": 0,
+          "rounds_with_live_false_claimant": 2444,
+          "police_known_bad_ballots": 5333,
+          "police_ignored_known_bad": 0,
+          "police_votes_known_false": 3249,
+          "police_legal_team_call_ballots": 4421,
+          "police_team_call_mismatch": 0,
+          "truthful_police_call_episodes": 2170,
+          "truthful_police_call_to_mafia": 2170,
+          "civilian_call_opportunities": 14090,
+          "civilian_call_legal": 14080,
+          "civilian_call_admitted": 14080,
+          "civilian_call_followed": 13485
+        },
+        "call_nonfollow_reasons": {
+          "followed": 13485,
+          "compatible_sources_protocol": 440,
+          "other_private_bad": 47,
+          "compare_conflicting_sources": 108,
+          "target_not_legal": 10
+        },
+        "speech_flags": [],
+        "round_flags": []
+      },
+      "retain_hits": {
+        "counts": {
+          "games": 1024,
+          "wins": 129,
+          "police_speech_turns": 5447,
+          "speech_has_known_bad": 4474,
+          "report_and_known_bad": 2129,
+          "report_known_bad_correct_call": 2129,
+          "formal_call_to_known_false_source": 1079,
+          "formal_call_to_other_known_bad": 1050,
+          "known_bad_but_no_own_report": 2345,
+          "rounds": 2820,
+          "police_ballots": 5449,
+          "rounds_with_private_bad": 2406,
+          "rounds_police_split_with_private_bad": 0,
+          "rounds_with_live_false_claimant": 2197,
+          "police_known_bad_ballots": 4890,
+          "police_ignored_known_bad": 0,
+          "police_votes_known_false": 2790,
+          "police_legal_team_call_ballots": 4326,
+          "police_team_call_mismatch": 0,
+          "truthful_police_call_episodes": 2130,
+          "truthful_police_call_to_mafia": 2130,
+          "civilian_call_opportunities": 13938,
+          "civilian_call_legal": 13933,
+          "civilian_call_admitted": 13933,
+          "civilian_call_followed": 13259
+        },
+        "call_nonfollow_reasons": {
+          "followed": 13259,
+          "compatible_sources_protocol": 508,
+          "other_private_bad": 55,
+          "compare_conflicting_sources": 111,
+          "target_not_legal": 5
+        },
+        "speech_flags": [],
+        "round_flags": []
+      }
+    },
+    "slices": {
+      "both_changed": {
+        "n": 188,
+        "original": {
+          "counts": {
+            "games": 188,
+            "wins": 80,
+            "police_speech_turns": 1128,
+            "speech_has_known_bad": 929,
+            "report_and_known_bad": 429,
+            "report_known_bad_correct_call": 429,
+            "formal_call_to_known_false_source": 210,
+            "formal_call_to_other_known_bad": 219,
+            "known_bad_but_no_own_report": 500,
+            "rounds": 564,
+            "police_ballots": 1128,
+            "rounds_with_private_bad": 564,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 564,
+            "police_known_bad_ballots": 1128,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 695,
+            "police_legal_team_call_ballots": 859,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 429,
+            "truthful_police_call_to_mafia": 429,
+            "civilian_call_opportunities": 2892,
+            "civilian_call_legal": 2892,
+            "civilian_call_admitted": 2892,
+            "civilian_call_followed": 2892
+          },
+          "call_nonfollow_reasons": {
+            "followed": 2892
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "retain_hits": {
+          "counts": {
+            "games": 188,
+            "wins": 42,
+            "police_speech_turns": 1122,
+            "speech_has_known_bad": 909,
+            "report_and_known_bad": 422,
+            "report_known_bad_correct_call": 422,
+            "formal_call_to_known_false_source": 259,
+            "formal_call_to_other_known_bad": 163,
+            "known_bad_but_no_own_report": 487,
+            "rounds": 561,
+            "police_ballots": 1122,
+            "rounds_with_private_bad": 560,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 559,
+            "police_known_bad_ballots": 1121,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 802,
+            "police_legal_team_call_ballots": 825,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 422,
+            "truthful_police_call_to_mafia": 422,
+            "civilian_call_opportunities": 2766,
+            "civilian_call_legal": 2766,
+            "civilian_call_admitted": 2766,
+            "civilian_call_followed": 2533
+          },
+          "call_nonfollow_reasons": {
+            "followed": 2533,
+            "compatible_sources_protocol": 177,
+            "other_private_bad": 26,
+            "compare_conflicting_sources": 30
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "seeds": [
+          213000000,
+          213000029,
+          213000033,
+          213000034,
+          213000039,
+          213000046,
+          213000048,
+          213000057,
+          213000060,
+          213000061,
+          213000063,
+          213000069,
+          213000079,
+          213000086,
+          213000092,
+          213000102,
+          213000105,
+          213000115,
+          213000118,
+          213000121,
+          213000122,
+          213000123,
+          213000126,
+          213000135,
+          213000142,
+          213000143,
+          213000150,
+          213000171,
+          213000180,
+          213000182,
+          213000186,
+          213000200,
+          213000206,
+          213000209,
+          213000218,
+          213000223,
+          213000224,
+          213000228,
+          213000232,
+          213000235,
+          213000242,
+          213000244,
+          213000255,
+          213000262,
+          213000263,
+          213000266,
+          213000268,
+          213000276,
+          213000281,
+          213000288,
+          213000292,
+          213000295,
+          213000302,
+          213000305,
+          213000314,
+          213000315,
+          213000329,
+          213000331,
+          213000340,
+          213000348,
+          213000363,
+          213000365,
+          213000375,
+          213000381,
+          213000388,
+          213000391,
+          213000401,
+          213000404,
+          213000410,
+          213000417,
+          213000426,
+          213000431,
+          213000437,
+          213000444,
+          213000445,
+          213000450,
+          213000456,
+          213000467,
+          213000475,
+          213000482,
+          213000484,
+          213000488,
+          213000492,
+          213000496,
+          213000513,
+          213000517,
+          213000527,
+          213000539,
+          213000547,
+          213000549,
+          213000550,
+          213000554,
+          213000558,
+          213000559,
+          213000562,
+          213000565,
+          213000576,
+          213000585,
+          213000587,
+          213000593,
+          213000594,
+          213000608,
+          213000609,
+          213000615,
+          213000616,
+          213000625,
+          213000628,
+          213000631,
+          213000637,
+          213000652,
+          213000654,
+          213000665,
+          213000666,
+          213000676,
+          213000678,
+          213000682,
+          213000700,
+          213000701,
+          213000702,
+          213000705,
+          213000706,
+          213000707,
+          213000709,
+          213000721,
+          213000722,
+          213000730,
+          213000736,
+          213000740,
+          213000743,
+          213000744,
+          213000751,
+          213000754,
+          213000769,
+          213000774,
+          213000792,
+          213000800,
+          213000804,
+          213000812,
+          213000820,
+          213000825,
+          213000826,
+          213000841,
+          213000844,
+          213000847,
+          213000848,
+          213000859,
+          213000862,
+          213000863,
+          213000867,
+          213000872,
+          213000884,
+          213000888,
+          213000890,
+          213000891,
+          213000892,
+          213000894,
+          213000897,
+          213000898,
+          213000900,
+          213000905,
+          213000907,
+          213000909,
+          213000910,
+          213000916,
+          213000918,
+          213000921,
+          213000924,
+          213000928,
+          213000929,
+          213000930,
+          213000944,
+          213000952,
+          213000957,
+          213000959,
+          213000970,
+          213000972,
+          213000974,
+          213000976,
+          213000981,
+          213000983,
+          213000985,
+          213000989,
+          213000993,
+          213000995,
+          213000998,
+          213000999,
+          213001008,
+          213001021
+        ],
+        "horizons": {
+          "original": [
+            {
+              "day": 1,
+              "n": 188,
+              "end_totals": {
+                "police": 752,
+                "mafia": 564,
+                "civilian": 1316
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 188,
+              "end_totals": {
+                "police": 564,
+                "mafia": 428,
+                "civilian": 1264
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 188,
+              "end_totals": {
+                "police": 376,
+                "mafia": 262,
+                "civilian": 1242
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 188,
+              "end_totals": {
+                "police": 188,
+                "mafia": 118,
+                "civilian": 1198
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 5,
+              "n": 188,
+              "end_totals": {
+                "police": 80,
+                "mafia": 118,
+                "civilian": 1198
+              },
+              "ended_before": 80,
+              "exact_day_no_speech": 108
+            }
+          ],
+          "retain_hits": [
+            {
+              "day": 1,
+              "n": 188,
+              "end_totals": {
+                "police": 752,
+                "mafia": 564,
+                "civilian": 1316
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 188,
+              "end_totals": {
+                "police": 558,
+                "mafia": 458,
+                "civilian": 1240
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 188,
+              "end_totals": {
+                "police": 372,
+                "mafia": 317,
+                "civilian": 1191
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 188,
+              "end_totals": {
+                "police": 184,
+                "mafia": 162,
+                "civilian": 1161
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 3
+            },
+            {
+              "day": 5,
+              "n": 188,
+              "end_totals": {
+                "police": 42,
+                "mafia": 162,
+                "civilian": 1161
+              },
+              "ended_before": 46,
+              "exact_day_no_speech": 142
+            }
+          ]
+        },
+        "path_counts": {
+          "old_exiled_public_mafia_claimant": 188,
+          "new_exiled_public_mafia_claimant": 102,
+          "original_day2_live_false_claim": 188,
+          "retain_hits_day2_live_false_claim": 188,
+          "old_known_bad_new_none_day3": 0
+        },
+        "first_daily_count_divergence": {
+          "3": 25,
+          "2": 30
+        },
+        "terminal_flips": {
+          "gains": 0,
+          "losses": 38
+        }
+      },
+      "both_lost": {
+        "n": 38,
+        "original": {
+          "counts": {
+            "games": 38,
+            "wins": 38,
+            "police_speech_turns": 228,
+            "speech_has_known_bad": 223,
+            "report_and_known_bad": 109,
+            "report_known_bad_correct_call": 109,
+            "formal_call_to_known_false_source": 39,
+            "formal_call_to_other_known_bad": 70,
+            "known_bad_but_no_own_report": 114,
+            "rounds": 114,
+            "police_ballots": 228,
+            "rounds_with_private_bad": 114,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 114,
+            "police_known_bad_ballots": 228,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 99,
+            "police_legal_team_call_ballots": 223,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 109,
+            "truthful_police_call_to_mafia": 109,
+            "civilian_call_opportunities": 763,
+            "civilian_call_legal": 763,
+            "civilian_call_admitted": 763,
+            "civilian_call_followed": 763
+          },
+          "call_nonfollow_reasons": {
+            "followed": 763
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "retain_hits": {
+          "counts": {
+            "games": 38,
+            "wins": 0,
+            "police_speech_turns": 222,
+            "speech_has_known_bad": 209,
+            "report_and_known_bad": 102,
+            "report_known_bad_correct_call": 102,
+            "formal_call_to_known_false_source": 43,
+            "formal_call_to_other_known_bad": 59,
+            "known_bad_but_no_own_report": 107,
+            "rounds": 111,
+            "police_ballots": 222,
+            "rounds_with_private_bad": 111,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 111,
+            "police_known_bad_ballots": 222,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 88,
+            "police_legal_team_call_ballots": 205,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 102,
+            "truthful_police_call_to_mafia": 102,
+            "civilian_call_opportunities": 655,
+            "civilian_call_legal": 655,
+            "civilian_call_admitted": 655,
+            "civilian_call_followed": 441
+          },
+          "call_nonfollow_reasons": {
+            "compatible_sources_protocol": 165,
+            "other_private_bad": 25,
+            "followed": 441,
+            "compare_conflicting_sources": 24
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "seeds": [
+          213000048,
+          213000105,
+          213000123,
+          213000126,
+          213000171,
+          213000228,
+          213000244,
+          213000288,
+          213000305,
+          213000348,
+          213000381,
+          213000401,
+          213000404,
+          213000410,
+          213000547,
+          213000559,
+          213000594,
+          213000608,
+          213000616,
+          213000637,
+          213000682,
+          213000702,
+          213000730,
+          213000800,
+          213000841,
+          213000859,
+          213000863,
+          213000867,
+          213000872,
+          213000892,
+          213000894,
+          213000928,
+          213000952,
+          213000972,
+          213000974,
+          213000998,
+          213000999,
+          213001021
+        ],
+        "horizons": {
+          "original": [
+            {
+              "day": 1,
+              "n": 38,
+              "end_totals": {
+                "police": 152,
+                "mafia": 114,
+                "civilian": 266
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 38,
+              "end_totals": {
+                "police": 114,
+                "mafia": 76,
+                "civilian": 266
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 38,
+              "end_totals": {
+                "police": 76,
+                "mafia": 38,
+                "civilian": 266
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 38,
+              "end_totals": {
+                "police": 38,
+                "mafia": 0,
+                "civilian": 266
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 5,
+              "n": 38,
+              "end_totals": {
+                "police": 38,
+                "mafia": 0,
+                "civilian": 266
+              },
+              "ended_before": 38,
+              "exact_day_no_speech": 0
+            }
+          ],
+          "retain_hits": [
+            {
+              "day": 1,
+              "n": 38,
+              "end_totals": {
+                "police": 152,
+                "mafia": 114,
+                "civilian": 266
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 38,
+              "end_totals": {
+                "police": 109,
+                "mafia": 104,
+                "civilian": 243
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 38,
+              "end_totals": {
+                "police": 72,
+                "mafia": 76,
+                "civilian": 232
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 38,
+              "end_totals": {
+                "police": 34,
+                "mafia": 43,
+                "civilian": 230
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 3
+            },
+            {
+              "day": 5,
+              "n": 38,
+              "end_totals": {
+                "police": 0,
+                "mafia": 43,
+                "civilian": 230
+              },
+              "ended_before": 4,
+              "exact_day_no_speech": 34
+            }
+          ]
+        },
+        "path_counts": {
+          "old_exiled_public_mafia_claimant": 38,
+          "new_exiled_public_mafia_claimant": 0,
+          "original_day2_live_false_claim": 38,
+          "retain_hits_day2_live_false_claim": 38,
+          "old_known_bad_new_none_day3": 0
+        },
+        "first_daily_count_divergence": {
+          "2": 28,
+          "3": 10
+        },
+        "terminal_flips": {
+          "gains": 0,
+          "losses": 38
+        }
+      },
+      "police_to_civilian": {
+        "n": 5,
+        "original": {
+          "counts": {
+            "games": 5,
+            "wins": 0,
+            "police_speech_turns": 27,
+            "speech_has_known_bad": 23,
+            "report_and_known_bad": 11,
+            "report_known_bad_correct_call": 11,
+            "formal_call_to_known_false_source": 8,
+            "formal_call_to_other_known_bad": 3,
+            "known_bad_but_no_own_report": 12,
+            "rounds": 15,
+            "police_ballots": 29,
+            "rounds_with_private_bad": 13,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 14,
+            "police_known_bad_ballots": 26,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 20,
+            "police_legal_team_call_ballots": 23,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 12,
+            "truthful_police_call_to_mafia": 12,
+            "civilian_call_opportunities": 68,
+            "civilian_call_legal": 63,
+            "civilian_call_admitted": 63,
+            "civilian_call_followed": 41
+          },
+          "call_nonfollow_reasons": {
+            "followed": 41,
+            "compatible_sources_protocol": 11,
+            "other_private_bad": 2,
+            "compare_conflicting_sources": 9,
+            "target_not_legal": 5
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "retain_hits": {
+          "counts": {
+            "games": 5,
+            "wins": 0,
+            "police_speech_turns": 30,
+            "speech_has_known_bad": 20,
+            "report_and_known_bad": 8,
+            "report_known_bad_correct_call": 8,
+            "formal_call_to_known_false_source": 5,
+            "formal_call_to_other_known_bad": 3,
+            "known_bad_but_no_own_report": 12,
+            "rounds": 15,
+            "police_ballots": 30,
+            "rounds_with_private_bad": 8,
+            "rounds_police_split_with_private_bad": 0,
+            "rounds_with_live_false_claimant": 8,
+            "police_known_bad_ballots": 20,
+            "police_ignored_known_bad": 0,
+            "police_votes_known_false": 12,
+            "police_legal_team_call_ballots": 20,
+            "police_team_call_mismatch": 0,
+            "truthful_police_call_episodes": 8,
+            "truthful_police_call_to_mafia": 8,
+            "civilian_call_opportunities": 48,
+            "civilian_call_legal": 48,
+            "civilian_call_admitted": 48,
+            "civilian_call_followed": 48
+          },
+          "call_nonfollow_reasons": {
+            "followed": 48
+          },
+          "speech_flags": [],
+          "round_flags": []
+        },
+        "seeds": [
+          213000210,
+          213000367,
+          213000716,
+          213000901,
+          213001020
+        ],
+        "horizons": {
+          "original": [
+            {
+              "day": 1,
+              "n": 5,
+              "end_totals": {
+                "police": 15,
+                "mafia": 20,
+                "civilian": 35
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 5,
+              "end_totals": {
+                "police": 13,
+                "mafia": 18,
+                "civilian": 29
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 5,
+              "end_totals": {
+                "police": 9,
+                "mafia": 14,
+                "civilian": 27
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 5,
+              "end_totals": {
+                "police": 4,
+                "mafia": 12,
+                "civilian": 25
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 1
+            },
+            {
+              "day": 5,
+              "n": 5,
+              "end_totals": {
+                "police": 0,
+                "mafia": 12,
+                "civilian": 25
+              },
+              "ended_before": 1,
+              "exact_day_no_speech": 4
+            }
+          ],
+          "retain_hits": [
+            {
+              "day": 1,
+              "n": 5,
+              "end_totals": {
+                "police": 20,
+                "mafia": 20,
+                "civilian": 30
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 2,
+              "n": 5,
+              "end_totals": {
+                "police": 15,
+                "mafia": 15,
+                "civilian": 30
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 3,
+              "n": 5,
+              "end_totals": {
+                "police": 10,
+                "mafia": 11,
+                "civilian": 29
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 4,
+              "n": 5,
+              "end_totals": {
+                "police": 5,
+                "mafia": 9,
+                "civilian": 26
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 0
+            },
+            {
+              "day": 5,
+              "n": 5,
+              "end_totals": {
+                "police": 0,
+                "mafia": 9,
+                "civilian": 26
+              },
+              "ended_before": 0,
+              "exact_day_no_speech": 5
+            }
+          ]
+        },
+        "path_counts": {
+          "old_exiled_public_mafia_claimant": 0,
+          "new_exiled_public_mafia_claimant": 0,
+          "original_day2_live_false_claim": 5,
+          "retain_hits_day2_live_false_claim": 5,
+          "old_known_bad_new_none_day3": 3
+        },
+        "first_daily_count_divergence": {
+          "1": 5
+        },
+        "terminal_flips": {
+          "gains": 0,
+          "losses": 0
+        }
+      }
+    },
+    "selected_loss_receiver_audit": {
+      "call_ballots": 655,
+      "nonfollow": 214,
+      "other_nonfollow": 194,
+      "reason_compatible_sources_protocol": 165,
+      "nonfollow_with_admitted_mafia_source": 189,
+      "reason_private_refutation_or_check": 25,
+      "reason_compare_conflicting_sources": 24,
+      "known_bad_without_public_police_call_rounds": 9,
+      "report_before_known_bad_no_call_rounds": 9,
+      "missing_live_formal_call_conflict": 20,
+      "compatible_missing_conflict": 20
+    },
+    "selected_loss_advice_gate": {
+      "original": {
+        "civilian_ballots": 798,
+        "with_admitted_mafia_source": 0,
+        "with_bare_mafia_source_blocked": 702
+      },
+      "retain_hits": {
+        "civilian_ballots": 717,
+        "with_admitted_mafia_source": 244,
+        "with_bare_mafia_source_blocked": 103
+      }
+    }
+  }
+}

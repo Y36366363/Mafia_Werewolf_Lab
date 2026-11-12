@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "inherited_v37_source_hashes": 80,
+    "pairs": 3072,
+    "ballots": 216469,
+    "original_api_full_replays": 12,
+    "interval_marginals": 4,
+    "selected_loss_full_replays": 258,
+    "case_full_replays": 8
+  },
+  "source_hashes": 80,
+  "historical_full_matches": 4096,
+  "source_inputs_and_raw_hashes": true,
+  "cases": [
+    {
+      "kind": "both_mafia_loss",
+      "seed": 211000017
+    },
+    {
+      "kind": "both_mafia_loss",
+      "seed": 211001109
+    },
+    {
+      "kind": "missing_formal_conflict",
+      "seed": 211000044
+    },
+    {
+      "kind": "police_to_civilian",
+      "seed": 211000020
+    }
+  ]
+}

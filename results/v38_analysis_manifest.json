@@ -1,0 +1,13 @@
+{
+  "files": {
+    "scripts/analyze_continuation_forensics_v38.py": "ac3b368a78eda4669f3b5bf450f42fd442d042eaf998aede8d85c9816a6bf5ba",
+    "scripts/build_continuation_forensics_report_v38.py": "9f83eade7d0d2fe03e8fb6ca35bc4c0cf75cb67a72c4b1c47d289763772ee03f",
+    "tests/test_continuation_semantics_v38.py": "8d4000e0fc556ccfd133dbce4a4ba5afdf4baadc9fb80b9d43df252005173832",
+    "docs/continuation_forensics_results_v38.md": "ffa454dd8906e546ca2fb8084285ddc23b073ae8838162ad02c8ea55aacce8b7",
+    "docs/continuation_forensics_cases_v38.md": "22676405f434b3c727a3d9a26171269a356cc2340ade7655f2e5420d9cd80af1",
+    "results/v38/loss_receiver_audit.json.gz": "f94ba8a16b7097592527e3368f2af5a81e79374b81941796641c5890ef5121e8",
+    "results/v38/cases.json.gz": "fd6950c8152e931e9577398d5fb955f00b5ead1002deda47065b15c2376cb675",
+    "results/v38_diagnostics.json": "f61db89e4068861d03ca9cbf8de2064be4c7cb1a60b01d601f1202b9d851248a",
+    "results/v38_validation.json": "af0a2925e8d9bbc3b07a523a8e00df7fba4202e318c17f08e3d3a80ae0738fd2"
+  }
+}
