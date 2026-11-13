@@ -1,0 +1,53 @@
+{
+  "n": 4,
+  "day1_mafia": 1,
+  "wins": [
+    1,
+    1
+  ],
+  "gains": 0,
+  "losses": 0,
+  "win_interval": {
+    "method": "Marginal Clopper-Pearson plus union bound",
+    "family": 1,
+    "tail_alpha": 0.0125,
+    "p_plus": [
+      0.0,
+      0.6656298475117892
+    ],
+    "p_minus": [
+      0.0,
+      0.6656298475117892
+    ],
+    "ci_simultaneous": [
+      -0.6656298475117892,
+      0.6656298475117892
+    ]
+  },
+  "day2_follow_interval": [
+    0.0,
+    0.0
+  ],
+  "bootstrap_valid": 4000,
+  "totals": [
+    {
+      "civilian_ballots": 67,
+      "all_opportunities": 54,
+      "all_follows": 54,
+      "day2_opportunities": 27,
+      "day2_follows": 27
+    },
+    {
+      "civilian_ballots": 67,
+      "all_opportunities": 54,
+      "all_follows": 54,
+      "day2_opportunities": 27,
+      "day2_follows": 27
+    }
+  ],
+  "changed_games": 0,
+  "edge_games": [
+    0,
+    0
+  ]
+}

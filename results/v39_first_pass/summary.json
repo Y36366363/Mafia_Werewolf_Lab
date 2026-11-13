@@ -1,0 +1,60 @@
+{
+  "n": 4096,
+  "day1_mafia": 2418,
+  "wins": [
+    582,
+    561
+  ],
+  "gains": 0,
+  "losses": 21,
+  "win_interval": {
+    "method": "Marginal Clopper-Pearson plus union bound",
+    "family": 1,
+    "tail_alpha": 0.0125,
+    "p_plus": [
+      0.0,
+      0.0010692586564921252
+    ],
+    "p_minus": [
+      0.0029546197848134615,
+      0.00824473339874682
+    ],
+    "ci_simultaneous": [
+      -0.00824473339874682,
+      -0.0018853611283213363
+    ]
+  },
+  "day2_follow_interval": [
+    -0.03190890069209722,
+    -0.02221135428128948
+  ],
+  "bootstrap_valid": 4000,
+  "totals": [
+    {
+      "civilian_ballots": 74351,
+      "all_opportunities": 55962,
+      "all_follows": 53307,
+      "day2_opportunities": 24703,
+      "day2_follows": 22300,
+      "edge_ballots": 1882,
+      "day2_edge_opportunities": 1788,
+      "day2_edge_follows": 1377
+    },
+    {
+      "civilian_ballots": 74302,
+      "all_opportunities": 56262,
+      "all_follows": 52106,
+      "day2_opportunities": 24703,
+      "day2_follows": 21635,
+      "edge_ballots": 2528,
+      "changed_ballots": 1557,
+      "day2_edge_opportunities": 1788,
+      "day2_edge_follows": 712
+    }
+  ],
+  "changed_games": 198,
+  "edge_games": [
+    320,
+    320
+  ]
+}

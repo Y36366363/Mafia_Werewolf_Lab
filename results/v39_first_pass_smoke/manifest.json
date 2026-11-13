@@ -1,0 +1,12 @@
+{
+  "games": 8,
+  "elapsed": 21.35536262509413,
+  "baseline_replays": 3,
+  "case_replays": 0,
+  "files": {
+    "summary.json": "a5fb957f192d080088060f5bf5a9bb64690eef587444d90ca4f2487193d6a4b0",
+    "pairs.json.gz": "bdf1e05139ec75dbf0d796a908a8c37feae10a092aa5a82d8dc1ab1e721ad398",
+    "cases.json.gz": "6731668a37f6a3ed10d77860e21c7ba693c377a061571ffa58564d1d699c1798",
+    "freeze.json": "480c2d125f6e6e209cdd3547aeb34f266cc3e72a31273bbc2477de858e0bd051"
+  }
+}
