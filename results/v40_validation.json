@@ -1,0 +1,63 @@
+{
+  "snapshot_assets": 93,
+  "holdout_games": 16384,
+  "sampled_replays": 12,
+  "v39_replays": 4,
+  "interval_crosschecks": 6,
+  "process": {
+    "source_exile_to_call_mapping": {
+      "same_terminal_changed_trace": 190,
+      "same_terminal_changed_daily_exile_roles": 189,
+      "same_terminal_d2_transitions": {
+        "police_to_police": 98,
+        "police_to_civilian": 84,
+        "mafia_to_mafia": 8
+      },
+      "first_succession": {
+        "none": 2803,
+        "2": 976,
+        "3": 309,
+        "4": 8
+      }
+    },
+    "merge_control_to_call_mapping": {
+      "same_terminal_changed_trace": 87,
+      "same_terminal_changed_daily_exile_roles": 87,
+      "same_terminal_d2_transitions": {
+        "mafia_to_police": 46,
+        "mafia_to_civilian": 39,
+        "mafia_to_mafia": 1,
+        "police_to_police": 1
+      },
+      "first_succession": {
+        "none": 2803,
+        "2": 976,
+        "3": 309,
+        "4": 8
+      }
+    },
+    "merge_control_to_succession_report": {
+      "same_terminal_changed_trace": 985,
+      "same_terminal_changed_daily_exile_roles": 586,
+      "same_terminal_d2_transitions": {
+        "mafia_to_civilian": 83,
+        "civilian_to_civilian": 372,
+        "mafia_to_mafia": 450,
+        "police_to_police": 6,
+        "mafia_to_police": 69,
+        "civilian_to_mafia": 5
+      },
+      "first_succession": {
+        "none": 2699,
+        "2": 976,
+        "3": 411,
+        "4": 10
+      },
+      "first_succession_games": 1397,
+      "wins_in_first_succession_games": [
+        429,
+        17
+      ]
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "arms": {
+    "merge_control": {
+      "wins": 592,
+      "day1_mafia": 2401,
+      "day2_exiles": {
+        "mafia": 3366,
+        "civilian": 644,
+        "police": 86
+      },
+      "pair_games": 312,
+      "day2_pair_ballots": 1777,
+      "succession_games": 1397,
+      "day2_succession_games": 976,
+      "pk": 99,
+      "civilian_ballots": 74297,
+      "followed": 53755,
+      "opportunities": 56358,
+      "day2_followed": 22657,
+      "day2_opportunities": 25006,
+      "admitted_mafia_advice_ballots": 3945,
+      "pair_ballots": 1867,
+      "mapped_changes_local": 1137
+    },
+    "source_exile": {
+      "wins": 575,
+      "day1_mafia": 2401,
+      "day2_exiles": {
+        "mafia": 3264,
+        "civilian": 613,
+        "police": 219
+      },
+      "pair_games": 312,
+      "day2_pair_ballots": 1777,
+      "succession_games": 1341,
+      "day2_succession_games": 976,
+      "pk": 114,
+      "civilian_ballots": 74280,
+      "followed": 52583,
+      "opportunities": 56659,
+      "day2_followed": 22045,
+      "day2_opportunities": 25006,
+      "admitted_mafia_advice_ballots": 5185,
+      "pair_ballots": 2474,
+      "mapped_changes_local": 1489
+    },
+    "call_mapping": {
+      "wins": 575,
+      "day1_mafia": 2401,
+      "day2_exiles": {
+        "mafia": 3264,
+        "civilian": 697,
+        "police": 135
+      },
+      "pair_games": 312,
+      "day2_pair_ballots": 1777,
+      "succession_games": 1293,
+      "day2_succession_games": 976,
+      "pk": 99,
+      "civilian_ballots": 73945,
+      "followed": 53076,
+      "opportunities": 56301,
+      "day2_followed": 22045,
+      "day2_opportunities": 25006,
+      "admitted_mafia_advice_ballots": 3945,
+      "pair_ballots": 1867,
+      "mapped_changes_local": 1137
+    },
+    "succession_report": {
+      "wins": 180,
+      "day1_mafia": 2401,
+      "day2_exiles": {
+        "mafia": 3020,
+        "civilian": 851,
+        "police": 225
+      },
+      "pair_games": 796,
+      "day2_pair_ballots": 2488,
+      "succession_games": 1397,
+      "day2_succession_games": 976,
+      "pk": 131,
+      "civilian_ballots": 72903,
+      "followed": 46960,
+      "opportunities": 56049,
+      "day2_followed": 20188,
+      "day2_opportunities": 25006,
+      "admitted_mafia_advice_ballots": 20457,
+      "pair_ballots": 5372,
+      "mapped_changes_local": 2684
+    }
+  },
+  "comparisons": {
+    "source_exile_to_call_mapping": {
+      "gains": 0,
+      "losses": 0,
+      "changed_games": 190,
+      "day2_exile_transitions": {
+        "mafia_to_mafia": 3264,
+        "civilian_to_civilian": 613,
+        "police_to_police": 135,
+        "police_to_civilian": 84
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 3,
+        "tail_alpha": 0.004166666666666667,
+        "p_plus": [
+          0.0,
+          0.0013371518269085201
+        ],
+        "p_minus": [
+          0.0,
+          0.0013371518269085201
+        ],
+        "ci_simultaneous": [
+          -0.0013371518269085201,
+          0.0013371518269085201
+        ]
+      }
+    },
+    "merge_control_to_call_mapping": {
+      "gains": 0,
+      "losses": 17,
+      "changed_games": 104,
+      "day2_exile_transitions": {
+        "mafia_to_mafia": 3264,
+        "civilian_to_civilian": 644,
+        "police_to_police": 86,
+        "mafia_to_police": 49,
+        "mafia_to_civilian": 53
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 3,
+        "tail_alpha": 0.004166666666666667,
+        "p_plus": [
+          0.0,
+          0.0013371518269085201
+        ],
+        "p_minus": [
+          0.0019781822996580755,
+          0.0075963354027976165
+        ],
+        "ci_simultaneous": [
+          -0.0075963354027976165,
+          -0.0006410304727495553
+        ]
+      }
+    },
+    "merge_control_to_succession_report": {
+      "gains": 0,
+      "losses": 412,
+      "changed_games": 1397,
+      "day2_exile_transitions": {
+        "mafia_to_mafia": 3015,
+        "mafia_to_civilian": 212,
+        "civilian_to_civilian": 639,
+        "police_to_police": 86,
+        "mafia_to_police": 139,
+        "civilian_to_mafia": 5
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 3,
+        "tail_alpha": 0.004166666666666667,
+        "p_plus": [
+          0.0,
+          0.0013371518269085201
+        ],
+        "p_minus": [
+          0.08855704004800238,
+          0.11359740410631372
+        ],
+        "ci_simultaneous": [
+          -0.11359740410631372,
+          -0.08721988822109386
+        ]
+      }
+    }
+  }
+}

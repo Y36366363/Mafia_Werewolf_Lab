@@ -1,0 +1,10 @@
+{
+  "games": 16384,
+  "elapsed": 92.20970308315009,
+  "files": {
+    "summary.json": "782179570d4f0d3085078d287a0e49aea97d1b92d77a87918524f5e23d238f84",
+    "pairs.json.gz": "b708fe59125f2d88c6d22867c6d10b2177f9f3299bf469f89851056c8ac1a44d",
+    "cases.json.gz": "d905cb177f7130529fc815f567a722ac6096ddfd3d3fb9e186ca54df1587816b",
+    "freeze.json": "9ef38d46782c431320d9d15e0a246b4a46ab537863beea525a6af766e55bfe5e"
+  }
+}

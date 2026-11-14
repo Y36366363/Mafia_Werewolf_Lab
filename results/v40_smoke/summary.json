@@ -1,0 +1,170 @@
+{
+  "arms": {
+    "merge_control": {
+      "wins": 0,
+      "day1_mafia": 2,
+      "day2_exiles": {
+        "civilian": 2,
+        "mafia": 2
+      },
+      "pair_games": 1,
+      "day2_pair_ballots": 6,
+      "succession_games": 1,
+      "day2_succession_games": 1,
+      "pk": 1,
+      "pair_ballots": 6,
+      "mapped_changes_local": 6,
+      "civilian_ballots": 66,
+      "admitted_mafia_advice_ballots": 6,
+      "followed": 40,
+      "opportunities": 46,
+      "day2_followed": 15,
+      "day2_opportunities": 21
+    },
+    "source_exile": {
+      "wins": 0,
+      "day1_mafia": 2,
+      "day2_exiles": {
+        "police": 1,
+        "civilian": 1,
+        "mafia": 2
+      },
+      "pair_games": 1,
+      "day2_pair_ballots": 6,
+      "succession_games": 1,
+      "day2_succession_games": 1,
+      "pk": 1,
+      "pair_ballots": 11,
+      "mapped_changes_local": 6,
+      "civilian_ballots": 66,
+      "admitted_mafia_advice_ballots": 11,
+      "followed": 40,
+      "opportunities": 46,
+      "day2_followed": 15,
+      "day2_opportunities": 21
+    },
+    "call_mapping": {
+      "wins": 0,
+      "day1_mafia": 2,
+      "day2_exiles": {
+        "civilian": 2,
+        "mafia": 2
+      },
+      "pair_games": 1,
+      "day2_pair_ballots": 6,
+      "succession_games": 1,
+      "day2_succession_games": 1,
+      "pk": 1,
+      "pair_ballots": 6,
+      "mapped_changes_local": 6,
+      "civilian_ballots": 66,
+      "admitted_mafia_advice_ballots": 6,
+      "followed": 40,
+      "opportunities": 46,
+      "day2_followed": 15,
+      "day2_opportunities": 21
+    },
+    "succession_report": {
+      "wins": 0,
+      "day1_mafia": 2,
+      "day2_exiles": {
+        "civilian": 2,
+        "mafia": 2
+      },
+      "pair_games": 1,
+      "day2_pair_ballots": 6,
+      "succession_games": 1,
+      "day2_succession_games": 1,
+      "pk": 1,
+      "pair_ballots": 6,
+      "mapped_changes_local": 6,
+      "civilian_ballots": 65,
+      "admitted_mafia_advice_ballots": 11,
+      "followed": 33,
+      "opportunities": 45,
+      "day2_followed": 15,
+      "day2_opportunities": 21
+    }
+  },
+  "comparisons": {
+    "source_exile_to_call_mapping": {
+      "gains": 0,
+      "losses": 0,
+      "changed_games": 1,
+      "day2_exile_transitions": {
+        "police_to_civilian": 1,
+        "civilian_to_civilian": 1,
+        "mafia_to_mafia": 2
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 3,
+        "tail_alpha": 0.004166666666666667,
+        "p_plus": [
+          0.0,
+          0.7459336259226929
+        ],
+        "p_minus": [
+          0.0,
+          0.7459336259226929
+        ],
+        "ci_simultaneous": [
+          -0.7459336259226929,
+          0.7459336259226929
+        ]
+      }
+    },
+    "merge_control_to_call_mapping": {
+      "gains": 0,
+      "losses": 0,
+      "changed_games": 0,
+      "day2_exile_transitions": {
+        "civilian_to_civilian": 2,
+        "mafia_to_mafia": 2
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 3,
+        "tail_alpha": 0.004166666666666667,
+        "p_plus": [
+          0.0,
+          0.7459336259226929
+        ],
+        "p_minus": [
+          0.0,
+          0.7459336259226929
+        ],
+        "ci_simultaneous": [
+          -0.7459336259226929,
+          0.7459336259226929
+        ]
+      }
+    },
+    "merge_control_to_succession_report": {
+      "gains": 0,
+      "losses": 0,
+      "changed_games": 1,
+      "day2_exile_transitions": {
+        "civilian_to_civilian": 2,
+        "mafia_to_mafia": 2
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 3,
+        "tail_alpha": 0.004166666666666667,
+        "p_plus": [
+          0.0,
+          0.7459336259226929
+        ],
+        "p_minus": [
+          0.0,
+          0.7459336259226929
+        ],
+        "ci_simultaneous": [
+          -0.7459336259226929,
+          0.7459336259226929
+        ]
+      }
+    }
+  }
+}
