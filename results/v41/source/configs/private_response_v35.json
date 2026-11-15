@@ -1,0 +1,18 @@
+{
+ "version":"20261109-private-false-dead-response-v35",
+ "base_config":"configs/unresolved_conflict_v31.json",
+ "profiles":[
+  {"name":"legacy","q":null,"receiver":"original"},
+  {"name":"dead_q0","q":"0","receiver":"original"},
+  {"name":"dead_q50","q":"1/2","receiver":"original"},
+  {"name":"dead_q100","q":"1","receiver":"original"},
+  {"name":"dead_q50_balance","q":"1/2","receiver":"first_live"}
+ ],
+ "ordinary":["late_old","late_copy","late_quiet"],
+ "self_plans":["quiet","copy_early","copy_team_pass","copy_team_relay"],
+ "train":{"seed_start":206000000,"n":128},
+ "holdout":{"seed_start":207000000,"n":2048},
+ "smoke":{"seed_start":208000000,"n":2},
+ "family":56,
+ "logic_samples_per_cell":1
+}

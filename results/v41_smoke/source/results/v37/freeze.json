@@ -1,0 +1,294 @@
+{
+  "config": {
+    "version": "20261111-live-source-hit-candidates-v37",
+    "base_config": "configs/private_response_v35.json",
+    "mafia": [
+      "self_copy_early",
+      "self_copy_team_relay",
+      "late_copy",
+      "late_old"
+    ],
+    "receivers": [
+      "original",
+      "retain_hits"
+    ],
+    "q": "1/2",
+    "holdout": {
+      "seed_start": 211000000,
+      "n": 2048
+    },
+    "smoke": {
+      "seed_start": 212000000,
+      "n": 2
+    },
+    "family": 8,
+    "case_limit": 4
+  },
+  "base_config": {
+    "version": "20261109-private-false-dead-response-v35",
+    "base_config": "configs/unresolved_conflict_v31.json",
+    "profiles": [
+      {
+        "name": "legacy",
+        "q": null,
+        "receiver": "original"
+      },
+      {
+        "name": "dead_q0",
+        "q": "0",
+        "receiver": "original"
+      },
+      {
+        "name": "dead_q50",
+        "q": "1/2",
+        "receiver": "original"
+      },
+      {
+        "name": "dead_q100",
+        "q": "1",
+        "receiver": "original"
+      },
+      {
+        "name": "dead_q50_balance",
+        "q": "1/2",
+        "receiver": "first_live"
+      }
+    ],
+    "ordinary": [
+      "late_old",
+      "late_copy",
+      "late_quiet"
+    ],
+    "self_plans": [
+      "quiet",
+      "copy_early",
+      "copy_team_pass",
+      "copy_team_relay"
+    ],
+    "train": {
+      "seed_start": 206000000,
+      "n": 128
+    },
+    "holdout": {
+      "seed_start": 207000000,
+      "n": 2048
+    },
+    "smoke": {
+      "seed_start": 208000000,
+      "n": 2
+    },
+    "family": 56,
+    "logic_samples_per_cell": 1
+  },
+  "good": {
+    "name": "aligned",
+    "reveal": "silent",
+    "trust": "none",
+    "civilian_message": "pass",
+    "inspect": "random",
+    "dead_police_message": "truth",
+    "dead_claim_response": "trust",
+    "live_counter": "hidden",
+    "inspect_position": "gap",
+    "dead_clear_plan": "truth",
+    "leadership": "nominate",
+    "position_model": "posterior",
+    "prior_model": "equal",
+    "shortlist_rule": "list2",
+    "flow": "timed",
+    "source_credit": true,
+    "history": false,
+    "clear_guard": true,
+    "reply": "keep",
+    "civilian_denial": true,
+    "survival_guard": false,
+    "routing": "evidence",
+    "remember": true,
+    "response_probability": "1/2",
+    "live_conflicts_only": true,
+    "current_advice_only": true,
+    "report_advice_gate": true,
+    "execution_call": true,
+    "vote_history": false,
+    "relay_mode": "local",
+    "dead_gold": "evidence",
+    "typed_advice": true,
+    "conflict_guard": true,
+    "neutral_conflicts": true,
+    "align_intent": true
+  },
+  "rules": {
+    "police": 4,
+    "mafia": 4,
+    "civilians": 8,
+    "last_words_limit": 3,
+    "allow_self_kill": true,
+    "tie_rule": "pk",
+    "direction": 1
+  },
+  "plans": [
+    {
+      "name": "late_old",
+      "policy": {
+        "name": "late_old",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "kill_mode": "safe_late",
+        "response": "forward",
+        "target_rule": "far",
+        "restate": true,
+        "succession": "claim",
+        "vote_mode": "team",
+        "opening_control": "old"
+      },
+      "cooperation": "ordinary",
+      "fake_relay": false
+    },
+    {
+      "name": "late_copy",
+      "policy": {
+        "name": "late_copy",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "kill_mode": "safe_late",
+        "response": "forward",
+        "target_rule": "far",
+        "restate": true,
+        "succession": "claim",
+        "vote_mode": "team",
+        "opening_control": "copy"
+      },
+      "cooperation": "ordinary",
+      "fake_relay": false
+    },
+    {
+      "name": "self_copy_early",
+      "policy": {
+        "name": "self_copy_early",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "kill_mode": "safe_late",
+        "response": "forward",
+        "target_rule": "far",
+        "restate": true,
+        "succession": "claim",
+        "vote_mode": "team",
+        "opening_control": "false_grant"
+      },
+      "cooperation": "copy_early",
+      "fake_relay": false
+    },
+    {
+      "name": "self_copy_team_relay",
+      "policy": {
+        "name": "self_copy_team_relay",
+        "bluff": "none",
+        "kill": "claims",
+        "first_self_kill": 0.0,
+        "opening_mode": "ordinary",
+        "dead_mafia_message": "silent",
+        "kill_mode": "safe_late",
+        "response": "forward",
+        "target_rule": "far",
+        "restate": true,
+        "succession": "claim",
+        "vote_mode": "team",
+        "opening_control": "false_grant"
+      },
+      "cooperation": "copy_team",
+      "fake_relay": true
+    }
+  ],
+  "assets": {
+    "mafia_lab/simulation.py": "b5d5e3296591b815a9f769394b227374e61d60006b86a0118a065441633ea9cb",
+    "mafia_lab/tiny.py": "8990b6867ebcacba58ddf24b2747a1e4e4f45955b1f45abbd7b4515ca30c432d",
+    "mafia_lab/robust_shortlist_experiment_v16.py": "88fa8647de1fe58b6ba838e6ff881b5e404301589e03a743dfba16982a0cc39c",
+    "mafia_lab/strategies_v28.py": "7939d8ce31d68a31532b49c6a17d16105e0844eecb522c5cc7f8e85494028e76",
+    "mafia_lab/mechanism_experiment_v11.py": "e4dce2f58ea668a7b979d8fb94bdc9f17dac61b9115f0b0bbf697e6c0830a177",
+    "mafia_lab/large_experiment.py": "e631a487d85adfd32f246fff95ee17f7c17096b6184ed45804c08b9c003dc191",
+    "mafia_lab/strategies_v18.py": "e88cf25d12ec81732283e450de904a5f7aca6286840118c281d7ed86d4487e36",
+    "mafia_lab/advice_semantics_experiment_v29.py": "a94a3b63d375cbf1d8f2224c29c8cbd806e9eea95ee7dbbaafe5ba939313a97a",
+    "mafia_lab/strategies_v08.py": "ef0b082e841a224c595df569cd45ddb9dc64eeb0f8f0fb6cea063d96a5d8ce93",
+    "mafia_lab/relay_receiver_experiment_v30.py": "5e25cc20b9e11c8f73af378611c3f250252e2f64176c4b4219bd6578eb9c3264",
+    "mafia_lab/strategies_v19.py": "c742b53dc716ede0498744ade83cd07540c49ea83933d2ae4ece62cecfd8aec4",
+    "mafia_lab/strategies_v09.py": "f180ff9779c0b7e9e4c91761f0d1cb884aaaef4f701514b025bd4d740689392e",
+    "mafia_lab/strategies_v29.py": "9c30d6702303a455ffb84eeea0953d6de8a44450b974609c35493f249c4b0739",
+    "mafia_lab/evidence_experiment_v20.py": "c532157117d0ee963fefa7664c0e2fdc13603a436c1923af149a6f322de33dcf",
+    "mafia_lab/leadership_experiment_v15.py": "5d695aa05ee81270dd37075718a7f4c566c987bad32813a375d9b9c0dc11d5b7",
+    "mafia_lab/reply_evaluation_v19.py": "6b9846bf1c96590ddb18d1ded10e5a7fe29bb1b6c96d9059e9f9fbfa51bd8fdd",
+    "mafia_lab/strategies_v22.py": "732558e3fc911e0cc3b1247186b4696765d877b1fbd48edaa822487f2e6668db",
+    "mafia_lab/strategies_v16.py": "4fdbf0f0b33dda19d9b0c5fc12ed985de26a10bf25a981076111f656b8bc0e18",
+    "mafia_lab/gold_relay_experiment_v27.py": "bd0fed87be1da6870563236b67e0a78f0c6ce34f133ced52e0e81806c437c3be",
+    "mafia_lab/position_nomination_experiment_v13.py": "502b1c49ce7cee4591b65f6c090465104b93703e0f476cedcec6061fd7e779f8",
+    "mafia_lab/equilibrium_experiment.py": "8f34053d0a09dd2ba6ccb6c7a7bbc035842f62897f1bd78815cb4b0ec466dcad",
+    "mafia_lab/strategies_v06.py": "922dd39843ce740bb7e3856af6967b2c9719540580eb19b0e0c9e795aec89c97",
+    "mafia_lab/police_response_experiment_v18.py": "7b2ef95e081dab2729de576ac83ac8d70d50e2ae7789b597912653444ba0eddb",
+    "mafia_lab/strategies_v12.py": "fce3a92ebc87bf003034145efa6a68fec59dbdc8829bd047a44f61fad4ac551f",
+    "mafia_lab/succession_experiment_v24.py": "0d04115f1181802c607a4dfeb5bf912db4a9dcb6ad418e34fc8acb0dd22e1d6c",
+    "mafia_lab/strategies_v26.py": "0340a8f0f8449d5fe109dd2df8eaf930cc1d87847e367932788e21b4b1a49847",
+    "mafia_lab/replication_experiment.py": "2aeb2c826415a2ed87429fca73b682a548872027eec3ee313d09644fbb2e194e",
+    "mafia_lab/dead_gold_experiment_v28.py": "e8908490d3dee23b57fd30df3c15a02ed88597d5396777019a6fac90a5a5db1f",
+    "mafia_lab/strategies_v13.py": "0476573bda4965dc530e37184a7725d370b9acac1b0f4a4e50b5135db4bcbc2d",
+    "mafia_lab/strategies_v27.py": "66cf50d0b4bf8ddd976757764aa79d7cdb840d06a298af99bbcce7b7d3de69f6",
+    "mafia_lab/__init__.py": "163e9f77922cd89a4f1ec0d1adfd8df0798fe36b8ebfc68f90d58110443aa7e7",
+    "mafia_lab/source_generation_v33.py": "4d983a64f52c36aff677e3e3eb64827d2a30b55d953739a8648d1b1b1b10a3cf",
+    "mafia_lab/police_execution_experiment_v26.py": "a2f27202cd20dff67c460bdad14a5e15d040dbfe438446e42188c4541e895771",
+    "mafia_lab/strategies_v23.py": "f3df2b9e623ec879ac69778d1f2899756a306037c363bbe12d0ae832e8c9f797",
+    "mafia_lab/strategies_v17.py": "247ae8132714e317d026a0f561d4477f22de0c4b2920f5b4d4f2575ee7e6334c",
+    "mafia_lab/local_pool_experiment.py": "43880e6d529ef41fb3729bb029a51ef3d74e5c3e164e99ecfb3e0fff122b1682",
+    "mafia_lab/restatement_experiment_v23.py": "169c127ce910bfb3d782b70afa88fdde09b9f858f241a188fe8fd670c86b2fde",
+    "mafia_lab/strategies_v07.py": "e4ff8fe0aa16150293fb27706370fbc562c83f8d42dc99ffdb4e0378fb214b80",
+    "mafia_lab/source_hypotheses_v32.py": "27dfb3bba8ae8c54ff6ff01da356da69851fdc9dbb2297793b87257d4cff0117",
+    "mafia_lab/adaptive_experiment.py": "5a2f149043e7a93f960ded05130bcfaacfcbf74aa0ab898b2a03a9b04688baaa",
+    "mafia_lab/strategies_v10.py": "6c353e30007dcd60e3088abfacffec68f2b7de9c26ede029aaf0198c87adcded",
+    "mafia_lab/strategies_v24.py": "5ed3cf2a0572c3fc5db09e72467dae750112c949928b3d423978b09007cdceb7",
+    "mafia_lab/continuation_audit_v36.py": "a098e049b2348108eca651bcf068b21d72a52a60c070a7e47ce7836ea67b3f1e",
+    "mafia_lab/unresolved_conflict_experiment_v31.py": "d90007f03893c435b0239888254d32f7f0f75ba5796f55ba87a460017cc90c3a",
+    "mafia_lab/strategies_v19_hide.py": "8b4a3f0df9ecdcdb6b1303d0826980616eb1dc608bf2b3803111094bda0cf330",
+    "mafia_lab/declaration_experiment_v12.py": "b0e7b76d7713efa2083548b1263583a0c34ef28086480a98bbf8793f599dd2e0",
+    "mafia_lab/strategies_v20.py": "9eb797c9112d9626d057056788e8837e1696a851d971312aee2b33a4c991be10",
+    "mafia_lab/strategies_v14.py": "797242f63e18d733735afacbd990825b1a613686703e5836fab32614ba60f7d8",
+    "mafia_lab/engine.py": "2bf353c95f2f7ad8c0ec94be73ac2295c97043ea642b66dc3cc9102efc471d9a",
+    "mafia_lab/continuation_repair_v22.py": "5c6e3a74a5aa115b1a25bcae8218edf767c93af298b10991a5b01b38af15798e",
+    "mafia_lab/strategies_v18_probe.py": "7d5e654d4dfed98ffbdbe485377f1ec2c99cce6fa52ef4d5afdf9d12de6c54f1",
+    "mafia_lab/experiments.py": "e8331a7b766e7bc9b1e663fae7c62a6f262654645764976781805986d4b5b9f9",
+    "mafia_lab/day1_risk_v34.py": "cd6234fffaf08e89dafb405fb4edd4848f1b9e3520a6db4ff98de87b1a43fd0c",
+    "mafia_lab/strategies_v04.py": "6fa39a2df7f2c72aee65aabb279b01f82e3df7d8d5f5f44cf7353127a484623a",
+    "mafia_lab/strategies_v30.py": "de51ff393e8860ed355b68629020b337ac9620a1804a5b30907f48c97e3eb8b5",
+    "mafia_lab/strategies_v15.py": "1b5a48129caf6342f9c7b336035a24a8c67660357fafa80f4bdab7b2b8eb2165",
+    "mafia_lab/refinement_experiment.py": "9daf616559622ccf08965aaae6deb754a7d01c000b573e5af9f9b0a9f145a56d",
+    "mafia_lab/strategies_v05.py": "0dea71c3617d94329926e92592796a4b8016e5afaba967af179823a13788bff8",
+    "mafia_lab/strategies_v31.py": "a6763f3c26c029391760dca85cd4f55eb5eaa71a3766f4c3b1a089627afa4ce2",
+    "mafia_lab/strategies_v11.py": "a8fab6862103c84c302cf8ec2b7e2e35e343b89cc58268e4fc3dd4dc7aad2e07",
+    "mafia_lab/strategies_v25.py": "eb44bd3a029f78151d7ec0496d578772e7ae771ddf023a16473462065de6a00f",
+    "mafia_lab/private_response_v35.py": "29ea341513fe8e57f551045f33c2fa46304e6704ee081ebd823fdd6ff55d0367",
+    "mafia_lab/statistics.py": "c215b025b8a16ed214608c70a1cb48c2a5b8d6665f909f7b32a0e8c36d0b460a",
+    "mafia_lab/hit_candidates_v37.py": "0352d61046baed0eb5a4a3655dbd265de20f34c3e7980546c9e789a13a45b63c",
+    "mafia_lab/position_repair_experiment_v14.py": "c09eefd824e1be8345abc467a9ab6f9395a745147797170be9621617cd2a1066",
+    "mafia_lab/timed_nomination_experiment_v17.py": "a0f0d84a50828c81c2e229d2820b8e7efaa46443cb8567f3def3e16ae83f2221",
+    "mafia_lab/source_advice_experiment_v25.py": "a3c767574a65928b5c18f958fbffdcfd70ab28ef1148754fe7128f2ecbacd1c6",
+    "mafia_lab/policies.py": "8e72e63b0578730de46840e1f2da2d0e4278cc6eb1ed6f026de5172c0923037c",
+    "mafia_lab/crossfit_experiment.py": "a19d8787f9b67e45249c053eb29230697a36c9fdb18924d0d9818356ab363304",
+    "mafia_lab/__main__.py": "80d349b3e5e19225221de67b14a98e6fda33bebf22cc62b22769f505b33678e4",
+    "mafia_lab/nomination_followup_experiment_v13b.py": "ce91353cadfcfbfe72e73d3bef610a808ea9d4ecfa6bac45f0a8581364197ba0",
+    "mafia_lab/strategies_v20b.py": "ef11d17510bec00aaa48743f463f1d3c5dc5ed0cadf8392a19f2390d12a39d30",
+    "scripts/run_hit_candidates_v37.py": "a5eac07fc5100b291ba9fed49ffea26018882a6b8ebee63a52e0e09ab8ccce4f",
+    "tests/test_hit_candidates_v37.py": "7186defa708b5d3eb84f11e18847c6ac0085780f6bce6e480811b5ea3314e703",
+    "scripts/run_private_response_v35.py": "5bd8ae1fdacc0031637943092184a4bd43b106aa235252c99e274d90fa2801d1",
+    "scripts/run_day1_risk_v34.py": "cc0d9bd37d2bd7446c3acae0a732d4ed2a6f6c5d395c07beb4e464eb859241a1",
+    "configs/hit_candidates_v37.json": "0a949644c7ece159d6ab648d1b472c4852c168eefe56cb043a2981f1e97d332a",
+    "configs/private_response_v35.json": "299e9497359144042335695075a5a4bee031decfa42d56275d3570671435229d",
+    "configs/unresolved_conflict_v31.json": "da80473fc24551bd39195d25a9376c6fff669a859dbce6a815e6117cef554f57",
+    "docs/hit_candidates_protocol_v37.md": "dcf2190cf7cacec1f9a81dd9d4b2b0c3eb61b196a3600b7b4b04535ace19beab"
+  },
+  "python": "3.12.3"
+}

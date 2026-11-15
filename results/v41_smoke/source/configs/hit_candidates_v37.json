@@ -1,0 +1,11 @@
+{
+ "version":"20261111-live-source-hit-candidates-v37",
+ "base_config":"configs/private_response_v35.json",
+ "mafia":["self_copy_early","self_copy_team_relay","late_copy","late_old"],
+ "receivers":["original","retain_hits"],
+ "q":"1/2",
+ "holdout":{"seed_start":211000000,"n":2048},
+ "smoke":{"seed_start":212000000,"n":2},
+ "family":8,
+ "case_limit":4
+}

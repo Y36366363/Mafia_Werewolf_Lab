@@ -1,0 +1,10 @@
+{
+  "version": "20261115-succession-report-channels-v41",
+  "source_freeze": "results/v37/freeze.json",
+  "parent_freeze": "results/v40/freeze.json",
+  "mafia": "late_copy",
+  "q": "1/2",
+  "arms": ["bare", "report_neither", "report_gate", "report_conflict", "report_both"],
+  "holdout": {"seed_start": 221000000, "n": 2048},
+  "smoke": {"seed_start": 222000000, "n": 4}
+}

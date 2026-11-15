@@ -1,0 +1,62 @@
+{
+  "trace_changes": {
+    "report_neither_to_report_conflict": 0,
+    "report_gate_to_report_both": 23
+  },
+  "historical_pairs": 17,
+  "comparisons": {
+    "source_exile": {
+      "first_change_day_2": 17,
+      "day2_exile_mafia_to_police": 17,
+      "voter_civilian": 105,
+      "vote_mafia_to_police": 105,
+      "day1_exiled_mafia": 17,
+      "day2_exiled_police": 17,
+      "day3_exiled_mafia": 4,
+      "day4_exiled_mafia": 9,
+      "night3_death_civilian": 17,
+      "night4_death_police": 8,
+      "night5_death_police": 11,
+      "day2_survival_delta_police": -17,
+      "terminal_survival_total_police": 0,
+      "day2_survival_delta_mafia": 17,
+      "terminal_survival_total_mafia": 38,
+      "day2_survival_delta_civilian": 0,
+      "terminal_survival_total_civilian": 88,
+      "day3_exiled_police": 10,
+      "night4_death_civilian": 9,
+      "day3_exiled_civilian": 3,
+      "day4_exiled_civilian": 2,
+      "day4_exiled_police": 5
+    },
+    "call_mapping": {
+      "first_change_day_2": 17,
+      "day2_exile_mafia_to_civilian": 14,
+      "voter_civilian": 105,
+      "vote_mafia_to_civilian": 84,
+      "day1_exiled_mafia": 17,
+      "day2_exiled_civilian": 14,
+      "day3_exiled_mafia": 17,
+      "day4_exiled_mafia": 13,
+      "night3_death_police": 17,
+      "night4_death_police": 17,
+      "night5_death_police": 14,
+      "day2_survival_delta_police": -3,
+      "terminal_survival_total_police": 0,
+      "day2_survival_delta_mafia": 17,
+      "terminal_survival_total_mafia": 21,
+      "day2_survival_delta_civilian": -14,
+      "terminal_survival_total_civilian": 104,
+      "day2_exile_mafia_to_police": 3,
+      "vote_mafia_to_police": 21,
+      "day2_exiled_police": 3,
+      "day4_exiled_civilian": 1
+    }
+  },
+  "full_historical_replays": 51,
+  "sampled_new_replays": 15,
+  "inherited_api_replays": 6,
+  "interval_checks": 10,
+  "assets": 99,
+  "historical_input_sha256": "b708fe59125f2d88c6d22867c6d10b2177f9f3299bf469f89851056c8ac1a44d"
+}

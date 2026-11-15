@@ -1,0 +1,8 @@
+{
+  "docs/succession_channels_results_v41.md": "ca18766b56fde551cf2a1924e2278f82ced1525733acbd366579d4fdcf795c65",
+  "docs/succession_channels_cases_v41.md": "295958280522151e5f8fae5567ec685e1ba7df8316224c7f511d28a52b0cecbe",
+  "scripts/audit_succession_channels_v41.py": "ee4505354188d57ba785fafa85ca3c6b30aa48ab6e37656f70ea3681a7506151",
+  "scripts/build_succession_channels_report_v41.py": "443e916cdf55c6db6e99625ec9aa2d37fc0220c179d7dad06b6250ae93debad2",
+  "results/v41_validation.json": "03fb5bff5b7269557fdc8ee22034aef2883ad3f59f05ccc11886c7891cc623e9",
+  "results/v41/v40_losses.json.gz": "18f3a8c5a866e9db9495a2534650a8011786d6cea51a21f605d30c5952c41263"
+}

@@ -1,0 +1,10 @@
+{
+  "version": "20261113-formal-live-source-conflict-v39",
+  "source_freeze": "results/v37/freeze.json",
+  "mafia": "late_copy",
+  "q": "1/2",
+  "holdout": {"seed_start": 217000000, "n": 4096},
+  "smoke": {"seed_start": 218000000, "n": 4},
+  "bootstrap": {"seed": 391113, "replicates": 4000},
+  "case_limit": 3
+}

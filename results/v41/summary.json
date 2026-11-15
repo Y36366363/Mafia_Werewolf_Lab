@@ -1,0 +1,229 @@
+{
+  "n": 2048,
+  "triggered": 707,
+  "day1_mafia": 1205,
+  "arms": {
+    "bare": {
+      "wins": 281,
+      "day2_exiles": {
+        "mafia": 1676,
+        "police": 55,
+        "civilian": 317
+      },
+      "counts": {
+        "follow": 26609,
+        "opportunities": 27908,
+        "day2_follow": 11228,
+        "day2_opportunities": 12334
+      }
+    },
+    "report_neither": {
+      "wins": 281,
+      "day2_exiles": {
+        "mafia": 1677,
+        "police": 55,
+        "civilian": 316
+      },
+      "counts": {
+        "follow": 26192,
+        "opportunities": 27921,
+        "day2_follow": 11067,
+        "day2_opportunities": 12334
+      }
+    },
+    "report_gate": {
+      "wins": 80,
+      "day2_exiles": {
+        "mafia": 1504,
+        "police": 120,
+        "civilian": 424
+      },
+      "counts": {
+        "follow": 23216,
+        "opportunities": 27768,
+        "day2_follow": 9989,
+        "day2_opportunities": 12334
+      }
+    },
+    "report_conflict": {
+      "wins": 281,
+      "day2_exiles": {
+        "mafia": 1677,
+        "police": 55,
+        "civilian": 316
+      },
+      "counts": {
+        "follow": 26192,
+        "opportunities": 27921,
+        "day2_follow": 11067,
+        "day2_opportunities": 12334
+      }
+    },
+    "report_both": {
+      "wins": 80,
+      "day2_exiles": {
+        "mafia": 1504,
+        "police": 120,
+        "civilian": 424
+      },
+      "counts": {
+        "follow": 23216,
+        "opportunities": 27768,
+        "day2_follow": 9989,
+        "day2_opportunities": 12334
+      }
+    }
+  },
+  "contrasts": {
+    "bare_to_report_neither": {
+      "gains": 1,
+      "losses": 1,
+      "day2_transitions": {
+        "mafia_to_mafia": 1676,
+        "police_to_police": 55,
+        "civilian_to_civilian": 316,
+        "civilian_to_mafia": 1
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          1.2222308048910101e-06,
+          0.004002697424942136
+        ],
+        "p_minus": [
+          1.2222308048910101e-06,
+          0.004002697424942136
+        ],
+        "ci_simultaneous": [
+          -0.0040014751941372445,
+          0.0040014751941372445
+        ]
+      }
+    },
+    "report_neither_to_report_gate": {
+      "gains": 0,
+      "losses": 201,
+      "day2_transitions": {
+        "mafia_to_mafia": 1504,
+        "police_to_police": 55,
+        "mafia_to_police": 65,
+        "mafia_to_civilian": 108,
+        "civilian_to_civilian": 316
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "p_minus": [
+          0.0805638890133269,
+          0.11795437736763134
+        ],
+        "ci_simultaneous": [
+          -0.11795437736763134,
+          -0.07764264437793886
+        ]
+      }
+    },
+    "report_neither_to_report_conflict": {
+      "gains": 0,
+      "losses": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 1677,
+        "police_to_police": 55,
+        "civilian_to_civilian": 316
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "p_minus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "ci_simultaneous": [
+          -0.0029212446353880385,
+          0.0029212446353880385
+        ]
+      }
+    },
+    "report_gate_to_report_both": {
+      "gains": 0,
+      "losses": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 1504,
+        "police_to_police": 120,
+        "civilian_to_civilian": 424
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "p_minus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "ci_simultaneous": [
+          -0.0029212446353880385,
+          0.0029212446353880385
+        ]
+      }
+    },
+    "bare_to_report_both": {
+      "gains": 0,
+      "losses": 201,
+      "day2_transitions": {
+        "mafia_to_mafia": 1503,
+        "police_to_police": 55,
+        "mafia_to_police": 65,
+        "mafia_to_civilian": 108,
+        "civilian_to_civilian": 316,
+        "civilian_to_mafia": 1
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "p_minus": [
+          0.0805638890133269,
+          0.11795437736763134
+        ],
+        "ci_simultaneous": [
+          -0.11795437736763134,
+          -0.07764264437793886
+        ]
+      }
+    }
+  },
+  "shadows": {
+    "votes": 4904,
+    "report_neither_to_report_gate:admission": 4253,
+    "report_neither_to_report_gate:changed": 1358,
+    "report_neither_to_report_gate:role:mafia_to_police": 530,
+    "report_neither_to_report_gate:route:common_recommendation_protocol_to_compatible_sources_protocol": 773,
+    "report_neither_to_report_gate:role:mafia_to_civilian": 828,
+    "report_neither_to_report_gate:route:common_recommendation_protocol_to_compare_conflicting_sources": 275,
+    "report_neither_to_report_gate:route:single_source_protocol_to_compatible_sources_protocol": 220,
+    "report_neither_to_report_conflict:added_edge": 170,
+    "report_gate_to_report_both:added_edge": 170,
+    "report_neither_to_report_gate:route:single_source_protocol_to_compare_conflicting_sources": 72,
+    "report_neither_to_report_gate:route:compatible_sources_protocol_to_compatible_sources_protocol": 18
+  }
+}

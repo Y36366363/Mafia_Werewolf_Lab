@@ -1,0 +1,201 @@
+{
+  "n": 4,
+  "triggered": 1,
+  "day1_mafia": 2,
+  "arms": {
+    "bare": {
+      "wins": 0,
+      "day2_exiles": {
+        "mafia": 4
+      },
+      "counts": {
+        "follow": 51,
+        "opportunities": 51,
+        "day2_follow": 26,
+        "day2_opportunities": 26
+      }
+    },
+    "report_neither": {
+      "wins": 0,
+      "day2_exiles": {
+        "mafia": 4
+      },
+      "counts": {
+        "follow": 50,
+        "opportunities": 51,
+        "day2_follow": 25,
+        "day2_opportunities": 26
+      }
+    },
+    "report_gate": {
+      "wins": 0,
+      "day2_exiles": {
+        "civilian": 1,
+        "mafia": 3
+      },
+      "counts": {
+        "follow": 49,
+        "opportunities": 56,
+        "day2_opportunities": 26,
+        "day2_follow": 19
+      }
+    },
+    "report_conflict": {
+      "wins": 0,
+      "day2_exiles": {
+        "mafia": 4
+      },
+      "counts": {
+        "follow": 50,
+        "opportunities": 51,
+        "day2_follow": 25,
+        "day2_opportunities": 26
+      }
+    },
+    "report_both": {
+      "wins": 0,
+      "day2_exiles": {
+        "civilian": 1,
+        "mafia": 3
+      },
+      "counts": {
+        "follow": 49,
+        "opportunities": 56,
+        "day2_opportunities": 26,
+        "day2_follow": 19
+      }
+    }
+  },
+  "contrasts": {
+    "bare_to_report_neither": {
+      "gains": 0,
+      "losses": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 4
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      }
+    },
+    "report_neither_to_report_gate": {
+      "gains": 0,
+      "losses": 0,
+      "day2_transitions": {
+        "mafia_to_civilian": 1,
+        "mafia_to_mafia": 3
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      }
+    },
+    "report_neither_to_report_conflict": {
+      "gains": 0,
+      "losses": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 4
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      }
+    },
+    "report_gate_to_report_both": {
+      "gains": 0,
+      "losses": 0,
+      "day2_transitions": {
+        "civilian_to_civilian": 1,
+        "mafia_to_mafia": 3
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      }
+    },
+    "bare_to_report_both": {
+      "gains": 0,
+      "losses": 0,
+      "day2_transitions": {
+        "mafia_to_civilian": 1,
+        "mafia_to_mafia": 3
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      }
+    }
+  },
+  "shadows": {
+    "votes": 7,
+    "report_neither_to_report_gate:admission": 6,
+    "report_neither_to_report_gate:changed": 6,
+    "report_neither_to_report_gate:role:mafia_to_civilian": 6,
+    "report_neither_to_report_gate:route:common_recommendation_protocol_to_compatible_sources_protocol": 6
+  }
+}

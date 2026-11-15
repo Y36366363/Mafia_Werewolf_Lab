@@ -1,0 +1,11 @@
+{
+  "version": "20261114-paired-source-routing-and-succession-v40",
+  "source_freeze": "results/v37/freeze.json",
+  "parent_freeze": "results/v39/freeze.json",
+  "mafia": "late_copy",
+  "q": "1/2",
+  "arms": ["merge_control", "source_exile", "call_mapping", "succession_report"],
+  "holdout": {"seed_start": 219000000, "n": 4096},
+  "smoke": {"seed_start": 220000000, "n": 4},
+  "terminal_family": 3
+}
