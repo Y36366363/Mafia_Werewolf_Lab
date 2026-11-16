@@ -1,0 +1,326 @@
+{
+  "arms": {
+    "late_base": {
+      "wins": 32,
+      "draws": 0,
+      "responded": 0,
+      "police_day1": 499,
+      "day1_exiles": {
+        "mafia": 457,
+        "police": 134,
+        "civilian": 172,
+        "none": 5
+      },
+      "day2_exiles": {
+        "mafia": 555,
+        "civilian": 174,
+        "police": 39
+      },
+      "supported_games": 179,
+      "counts": {
+        "follow_opportunities": 10605,
+        "follows": 8889,
+        "day2_opportunities": 4608,
+        "day2_follows": 3703,
+        "supported_votes": 1110,
+        "supported_police": 1110,
+        "shadow_moves": 696,
+        "shadow_civilian_to_mafia": 476,
+        "shadow_police_to_mafia": 220
+      }
+    },
+    "late_agreement": {
+      "wins": 38,
+      "draws": 0,
+      "responded": 0,
+      "police_day1": 499,
+      "day1_exiles": {
+        "mafia": 457,
+        "police": 134,
+        "civilian": 172,
+        "none": 5
+      },
+      "day2_exiles": {
+        "mafia": 668,
+        "civilian": 95,
+        "police": 5
+      },
+      "supported_games": 179,
+      "counts": {
+        "follow_opportunities": 10511,
+        "follows": 9123,
+        "day2_opportunities": 4608,
+        "day2_follows": 4399,
+        "supported_votes": 1110,
+        "supported_police": 1110,
+        "shadow_moves": 696,
+        "shadow_civilian_to_mafia": 476,
+        "actual_moves": 696,
+        "shadow_police_to_mafia": 220
+      }
+    },
+    "late_q0": {
+      "wins": 32,
+      "draws": 0,
+      "responded": 0,
+      "police_day1": 499,
+      "day1_exiles": {
+        "mafia": 457,
+        "police": 134,
+        "civilian": 172,
+        "none": 5
+      },
+      "day2_exiles": {
+        "mafia": 555,
+        "civilian": 174,
+        "police": 39
+      },
+      "supported_games": 179,
+      "counts": {
+        "follow_opportunities": 10605,
+        "follows": 8889,
+        "day2_opportunities": 4608,
+        "day2_follows": 3703,
+        "supported_votes": 1110,
+        "supported_police": 1110,
+        "shadow_moves": 696,
+        "shadow_civilian_to_mafia": 476,
+        "shadow_police_to_mafia": 220
+      }
+    },
+    "late_q100": {
+      "wins": 32,
+      "draws": 0,
+      "responded": 0,
+      "police_day1": 499,
+      "day1_exiles": {
+        "mafia": 457,
+        "police": 134,
+        "civilian": 172,
+        "none": 5
+      },
+      "day2_exiles": {
+        "mafia": 555,
+        "civilian": 174,
+        "police": 39
+      },
+      "supported_games": 179,
+      "counts": {
+        "follow_opportunities": 10605,
+        "follows": 8889,
+        "day2_opportunities": 4608,
+        "day2_follows": 3703,
+        "supported_votes": 1110,
+        "supported_police": 1110,
+        "shadow_moves": 696,
+        "shadow_civilian_to_mafia": 476,
+        "shadow_police_to_mafia": 220
+      }
+    },
+    "self_q50": {
+      "wins": 251,
+      "draws": 768,
+      "responded": 377,
+      "police_day1": 377,
+      "day1_exiles": {
+        "mafia": 229,
+        "civilian": 287,
+        "police": 252
+      },
+      "day2_exiles": {
+        "mafia": 656,
+        "civilian": 112
+      },
+      "supported_games": 0,
+      "counts": {
+        "follow_opportunities": 7938,
+        "follows": 7938,
+        "day2_opportunities": 4457,
+        "day2_follows": 4457
+      }
+    },
+    "self_q0": {
+      "wins": 300,
+      "draws": 768,
+      "responded": 0,
+      "police_day1": 0,
+      "day1_exiles": {
+        "police": 243,
+        "civilian": 525
+      },
+      "day2_exiles": {
+        "mafia": 768
+      },
+      "supported_games": 0,
+      "counts": {
+        "follow_opportunities": 9544,
+        "follows": 9544,
+        "day2_opportunities": 5108,
+        "day2_follows": 5108
+      }
+    },
+    "self_q100": {
+      "wins": 229,
+      "draws": 768,
+      "responded": 768,
+      "police_day1": 768,
+      "day1_exiles": {
+        "mafia": 447,
+        "police": 265,
+        "civilian": 52,
+        "none": 4
+      },
+      "day2_exiles": {
+        "mafia": 556,
+        "civilian": 212
+      },
+      "supported_games": 0,
+      "counts": {
+        "follow_opportunities": 6486,
+        "follows": 6486,
+        "day2_opportunities": 3788,
+        "day2_follows": 3788
+      }
+    }
+  },
+  "comparisons": {
+    "late_base_to_late_agreement": {
+      "gains": 6,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0017366941125649508,
+          0.021610372677209784
+        ],
+        "p_minus": [
+          0.0,
+          0.007771034296354613
+        ],
+        "ci_simultaneous": [
+          -0.006034340183789662,
+          0.021610372677209784
+        ]
+      },
+      "changed_traces": 113,
+      "changed_day1": 0,
+      "changed_first_succession": 28,
+      "changed_day2_exile": 113
+    },
+    "late_base_to_late_q0": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.007771034296354613
+        ],
+        "p_minus": [
+          0.0,
+          0.007771034296354613
+        ],
+        "ci_simultaneous": [
+          -0.007771034296354613,
+          0.007771034296354613
+        ]
+      },
+      "changed_traces": 0,
+      "changed_day1": 0,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 0
+    },
+    "late_base_to_late_q100": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.007771034296354613
+        ],
+        "p_minus": [
+          0.0,
+          0.007771034296354613
+        ],
+        "ci_simultaneous": [
+          -0.007771034296354613,
+          0.007771034296354613
+        ]
+      },
+      "changed_traces": 0,
+      "changed_day1": 0,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 0
+    },
+    "self_q50_to_self_q0": {
+      "gains": 92,
+      "losses": 43,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.08911517573420902,
+          0.1561280019018759
+        ],
+        "p_minus": [
+          0.03533730303967351,
+          0.08331659668527426
+        ],
+        "ci_simultaneous": [
+          0.005798579048934757,
+          0.1207906988622024
+        ]
+      },
+      "changed_traces": 377,
+      "changed_day1": 377,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 205
+    },
+    "self_q50_to_self_q100": {
+      "gains": 57,
+      "losses": 79,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.05018577927200384,
+          0.10462652257737087
+        ],
+        "p_minus": [
+          0.07442285631503147,
+          0.13722807627822228
+        ],
+        "ci_simultaneous": [
+          -0.08704229700621843,
+          0.030203666262339404
+        ]
+      },
+      "changed_traces": 391,
+      "changed_day1": 391,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 199
+    }
+  },
+  "n": 768,
+  "history": {
+    "n": 17,
+    "counts": {
+      "source_exile:same_public_prefix": 17,
+      "source_exile:changed_civilian_votes": 105,
+      "source_exile:now_police": 105,
+      "call_mapping:same_public_prefix": 17,
+      "call_mapping:changed_civilian_votes": 105,
+      "call_mapping:now_civilian": 84,
+      "call_mapping:now_police": 21
+    }
+  }
+}

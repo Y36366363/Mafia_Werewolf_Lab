@@ -1,0 +1,70 @@
+{
+  "config": {
+    "version": "20261116-public-source-evidence-and-q-pilot-v42",
+    "source_freeze": "results/v37/freeze.json",
+    "parent_freeze": "results/v41/freeze.json",
+    "holdout": {
+      "seed_start": 223000000,
+      "n": 768
+    },
+    "smoke": {
+      "seed_start": 224000000,
+      "n": 4
+    },
+    "arms": {
+      "late_base": [
+        "late_copy",
+        "1/2",
+        "succession_report",
+        false
+      ],
+      "late_agreement": [
+        "late_copy",
+        "1/2",
+        "succession_report",
+        true
+      ],
+      "late_q0": [
+        "late_copy",
+        "0",
+        "succession_report",
+        false
+      ],
+      "late_q100": [
+        "late_copy",
+        "1",
+        "succession_report",
+        false
+      ],
+      "self_q50": [
+        "self_copy_early",
+        "1/2",
+        "merge_control",
+        false
+      ],
+      "self_q0": [
+        "self_copy_early",
+        "0",
+        "merge_control",
+        false
+      ],
+      "self_q100": [
+        "self_copy_early",
+        "1",
+        "merge_control",
+        false
+      ]
+    }
+  },
+  "parent_sha256": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8",
+  "assets": {
+    "configs/source_evidence_pilot_v42.json": "04551473cdc748f572ac4dab82422952dedc9d4f27f027b2c8298a1deaf132bd",
+    "scripts/run_source_evidence_pilot_v42.py": "e77df70115fdd69ca8114b6e0e6cf8dbb92deb1fa72ebc7af5ef9d9702cb7365",
+    "mafia_lab/source_evidence_pilot_v42.py": "b6384879abfd43ac1d914518bc0dc5d39982765a050ceb68c5ecd5d0cf858767",
+    "docs/source_evidence_pilot_protocol_v42.md": "64b7abd47c57baace2fbd3da742a870e0dd0894ecdf3d61c2f9031bd574e242d",
+    "tests/test_source_evidence_pilot_v42.py": "6bddb73d3b9ca16cf2ee73b2f4e24029ef4ad69a3a4be602bba833824a74e49a"
+  },
+  "history_sha256": "18f3a8c5a866e9db9495a2534650a8011786d6cea51a21f605d30c5952c41263",
+  "python": "3.12.3",
+  "failure": "The pilot can change a day-2 ballot before the first mafia succession, so first-succession invariance was overbroad for the agreement arm. The run stopped before writing results. Only this check and diagnostics were revised; policies and seeds stayed frozen."
+}

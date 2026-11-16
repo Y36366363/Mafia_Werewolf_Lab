@@ -1,0 +1,16 @@
+{
+  "version": "20261116-public-source-evidence-and-q-pilot-v42",
+  "source_freeze": "results/v37/freeze.json",
+  "parent_freeze": "results/v41/freeze.json",
+  "holdout": {"seed_start": 223000000, "n": 768},
+  "smoke": {"seed_start": 224000000, "n": 4},
+  "arms": {
+    "late_base": ["late_copy", "1/2", "succession_report", false],
+    "late_agreement": ["late_copy", "1/2", "succession_report", true],
+    "late_q0": ["late_copy", "0", "succession_report", false],
+    "late_q100": ["late_copy", "1", "succession_report", false],
+    "self_q50": ["self_copy_early", "1/2", "merge_control", false],
+    "self_q0": ["self_copy_early", "0", "merge_control", false],
+    "self_q100": ["self_copy_early", "1", "merge_control", false]
+  }
+}

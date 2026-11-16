@@ -1,0 +1,309 @@
+{
+  "arms": {
+    "late_base": {
+      "wins": 0,
+      "draws": 0,
+      "responded": 0,
+      "police_day1": 2,
+      "day1_exiles": {
+        "civilian": 2,
+        "police": 1,
+        "mafia": 1
+      },
+      "day2_exiles": {
+        "mafia": 2,
+        "civilian": 2
+      },
+      "supported_games": 1,
+      "counts": {
+        "follow_opportunities": 63,
+        "follows": 51,
+        "day2_opportunities": 27,
+        "day2_follows": 15,
+        "supported_votes": 6,
+        "supported_police": 6,
+        "shadow_moves": 6,
+        "shadow_civilian_to_mafia": 6
+      }
+    },
+    "late_agreement": {
+      "wins": 0,
+      "draws": 0,
+      "responded": 0,
+      "police_day1": 2,
+      "day1_exiles": {
+        "civilian": 2,
+        "police": 1,
+        "mafia": 1
+      },
+      "day2_exiles": {
+        "mafia": 3,
+        "civilian": 1
+      },
+      "supported_games": 1,
+      "counts": {
+        "follow_opportunities": 64,
+        "follows": 47,
+        "day2_opportunities": 27,
+        "day2_follows": 21,
+        "supported_votes": 6,
+        "supported_police": 6,
+        "shadow_moves": 6,
+        "shadow_civilian_to_mafia": 6,
+        "actual_moves": 6
+      }
+    },
+    "late_q0": {
+      "wins": 0,
+      "draws": 0,
+      "responded": 0,
+      "police_day1": 2,
+      "day1_exiles": {
+        "civilian": 2,
+        "police": 1,
+        "mafia": 1
+      },
+      "day2_exiles": {
+        "mafia": 2,
+        "civilian": 2
+      },
+      "supported_games": 1,
+      "counts": {
+        "follow_opportunities": 63,
+        "follows": 51,
+        "day2_opportunities": 27,
+        "day2_follows": 15,
+        "supported_votes": 6,
+        "supported_police": 6,
+        "shadow_moves": 6,
+        "shadow_civilian_to_mafia": 6
+      }
+    },
+    "late_q100": {
+      "wins": 0,
+      "draws": 0,
+      "responded": 0,
+      "police_day1": 2,
+      "day1_exiles": {
+        "civilian": 2,
+        "police": 1,
+        "mafia": 1
+      },
+      "day2_exiles": {
+        "mafia": 2,
+        "civilian": 2
+      },
+      "supported_games": 1,
+      "counts": {
+        "follow_opportunities": 63,
+        "follows": 51,
+        "day2_opportunities": 27,
+        "day2_follows": 15,
+        "supported_votes": 6,
+        "supported_police": 6,
+        "shadow_moves": 6,
+        "shadow_civilian_to_mafia": 6
+      }
+    },
+    "self_q50": {
+      "wins": 2,
+      "draws": 4,
+      "responded": 3,
+      "police_day1": 3,
+      "day1_exiles": {
+        "police": 1,
+        "mafia": 2,
+        "civilian": 1
+      },
+      "day2_exiles": {
+        "mafia": 4
+      },
+      "supported_games": 0,
+      "counts": {
+        "follow_opportunities": 61,
+        "follows": 61,
+        "day2_opportunities": 31,
+        "day2_follows": 31
+      }
+    },
+    "self_q0": {
+      "wins": 4,
+      "draws": 4,
+      "responded": 0,
+      "police_day1": 0,
+      "day1_exiles": {
+        "civilian": 4
+      },
+      "day2_exiles": {
+        "mafia": 4
+      },
+      "supported_games": 0,
+      "counts": {
+        "follow_opportunities": 77,
+        "follows": 77,
+        "day2_opportunities": 26,
+        "day2_follows": 26
+      }
+    },
+    "self_q100": {
+      "wins": 1,
+      "draws": 4,
+      "responded": 4,
+      "police_day1": 4,
+      "day1_exiles": {
+        "police": 2,
+        "mafia": 2
+      },
+      "day2_exiles": {
+        "mafia": 4
+      },
+      "supported_games": 0,
+      "counts": {
+        "follow_opportunities": 48,
+        "follows": 48,
+        "day2_opportunities": 32,
+        "day2_follows": 32
+      }
+    }
+  },
+  "comparisons": {
+    "late_base_to_late_agreement": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      },
+      "changed_traces": 1,
+      "changed_day1": 0,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 1
+    },
+    "late_base_to_late_q0": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      },
+      "changed_traces": 0,
+      "changed_day1": 0,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 0
+    },
+    "late_base_to_late_q100": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      },
+      "changed_traces": 0,
+      "changed_day1": 0,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 0
+    },
+    "self_q50_to_self_q0": {
+      "gains": 2,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.020697763039926174,
+          0.979302236960074
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.755695439210096,
+          0.979302236960074
+        ]
+      },
+      "changed_traces": 3,
+      "changed_day1": 3,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 0
+    },
+    "self_q50_to_self_q100": {
+      "gains": 0,
+      "losses": 1,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0006255867934636053,
+          0.9125457431065325
+        ],
+        "ci_simultaneous": [
+          -0.9125457431065325,
+          0.7757676154565586
+        ]
+      },
+      "changed_traces": 1,
+      "changed_day1": 1,
+      "changed_first_succession": 0,
+      "changed_day2_exile": 0
+    }
+  },
+  "n": 4,
+  "history": {
+    "n": 17,
+    "counts": {
+      "source_exile:same_public_prefix": 17,
+      "source_exile:changed_civilian_votes": 105,
+      "source_exile:now_police": 105,
+      "call_mapping:same_public_prefix": 17,
+      "call_mapping:changed_civilian_votes": 105,
+      "call_mapping:now_civilian": 84,
+      "call_mapping:now_police": 21
+    }
+  }
+}
