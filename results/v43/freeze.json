@@ -1,0 +1,48 @@
+{
+  "config": {
+    "version": "20261117-succession-copy-and-public-agreement-v43",
+    "source_freeze": "results/v37/freeze.json",
+    "parent_freeze": "results/v42/freeze.json",
+    "ancestor_freeze": "results/v41/freeze.json",
+    "mafia": "late_copy",
+    "q": "1/2",
+    "holdout": {
+      "seed_start": 225000000,
+      "n": 2048
+    },
+    "smoke": {
+      "seed_start": 226000000,
+      "n": 4
+    },
+    "arms": {
+      "old_base": [
+        false,
+        false
+      ],
+      "old_agreement": [
+        false,
+        true
+      ],
+      "copy_base": [
+        true,
+        false
+      ],
+      "copy_agreement": [
+        true,
+        true
+      ]
+    }
+  },
+  "assets": {
+    "configs/succession_copy_v43.json": "b424249c44be355c02676b234ec35a56f47325824c68dfa1baaff8b7cd82df2e",
+    "scripts/run_succession_copy_v43.py": "3c4d32c4489fb67fab52ad4b4e7eeba720c2d1fc5275df47d2a7d11423953e21",
+    "mafia_lab/succession_copy_v43.py": "f5d249ee405516f416a01718942d82d033acb347725e79227d17e0b460adf058",
+    "tests/test_succession_copy_v43.py": "4d6b8be1d44dff3697fb3c9fdb5a14c67d7419e9156fe11ca9433b06ff34274b",
+    "docs/succession_copy_protocol_v43.md": "2972f712619fb2f619144dd68e190bf92c41c78036791e41f27578b5177d50c2"
+  },
+  "parents": {
+    "results/v42/freeze.json": "329d8a4337cfb917eb5778717ed9c85469db5787f78a40b9e9e1b379857a6f3f",
+    "results/v41/freeze.json": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8"
+  },
+  "python": "3.12.3"
+}

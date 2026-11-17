@@ -1,0 +1,248 @@
+{
+  "n": 2048,
+  "arms": {
+    "old_base": {
+      "wins": 79,
+      "day1": {
+        "mafia": 1202,
+        "police": 383,
+        "civilian": 455,
+        "none": 8
+      },
+      "day2": {
+        "civilian": 450,
+        "mafia": 1488,
+        "police": 110
+      },
+      "copy_games": 413,
+      "eligible_slots": 413,
+      "changed_reports": 413,
+      "hit_teammate": 172,
+      "counts": {
+        "opportunities": 27926,
+        "follows": 23224,
+        "day2_opportunities": 12557,
+        "day2_follows": 9984,
+        "match_police": 3087,
+        "current_copy_opportunity_police": 1368,
+        "day2_match_police": 3087,
+        "local_change_police": 1983,
+        "day2_local_change_police": 1983
+      }
+    },
+    "old_agreement": {
+      "wins": 100,
+      "day1": {
+        "mafia": 1202,
+        "police": 383,
+        "civilian": 455,
+        "none": 8
+      },
+      "day2": {
+        "civilian": 213,
+        "mafia": 1812,
+        "police": 23
+      },
+      "copy_games": 413,
+      "eligible_slots": 413,
+      "changed_reports": 413,
+      "hit_teammate": 172,
+      "counts": {
+        "opportunities": 27724,
+        "follows": 23837,
+        "day2_opportunities": 12557,
+        "day2_follows": 11967,
+        "match_police": 3087,
+        "current_copy_opportunity_police": 1368,
+        "day2_match_police": 3087,
+        "local_change_police": 1983,
+        "day2_local_change_police": 1983,
+        "actual_change_police": 1983
+      }
+    },
+    "copy_base": {
+      "wins": 79,
+      "day1": {
+        "mafia": 1202,
+        "police": 383,
+        "civilian": 455,
+        "none": 8
+      },
+      "day2": {
+        "civilian": 452,
+        "mafia": 1486,
+        "police": 110
+      },
+      "copy_games": 413,
+      "eligible_slots": 413,
+      "changed_reports": 413,
+      "hit_teammate": 172,
+      "counts": {
+        "opportunities": 27939,
+        "follows": 23475,
+        "day2_opportunities": 12557,
+        "day2_follows": 10136,
+        "match_multiple": 1368,
+        "current_copy_opportunity_multiple": 1368,
+        "day2_match_multiple": 1368,
+        "match_police": 1719,
+        "day2_match_police": 1719,
+        "local_change_police": 1185,
+        "day2_local_change_police": 1185
+      }
+    },
+    "copy_agreement": {
+      "wins": 90,
+      "day1": {
+        "mafia": 1202,
+        "police": 383,
+        "civilian": 455,
+        "none": 8
+      },
+      "day2": {
+        "civilian": 335,
+        "mafia": 1679,
+        "police": 34
+      },
+      "copy_games": 413,
+      "eligible_slots": 413,
+      "changed_reports": 413,
+      "hit_teammate": 172,
+      "counts": {
+        "opportunities": 27867,
+        "follows": 23974,
+        "day2_opportunities": 12557,
+        "day2_follows": 11321,
+        "match_multiple": 1368,
+        "current_copy_opportunity_multiple": 1368,
+        "day2_match_multiple": 1368,
+        "match_police": 1719,
+        "day2_match_police": 1719,
+        "local_change_police": 1185,
+        "day2_local_change_police": 1185,
+        "actual_change_police": 1185
+      }
+    }
+  },
+  "comparisons": {
+    "old_base_to_old_agreement": {
+      "gains": 21,
+      "losses": 0,
+      "changed_traces": 324,
+      "day2_transitions": {
+        "civilian_to_civilian": 213,
+        "mafia_to_mafia": 1488,
+        "civilian_to_mafia": 237,
+        "police_to_mafia": 87,
+        "police_to_police": 23
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 4,
+        "tail_alpha": 0.003125,
+        "p_plus": [
+          0.005191109614123735,
+          0.017987042927847148
+        ],
+        "p_minus": [
+          0.0,
+          0.0028126001940573945
+        ],
+        "ci_simultaneous": [
+          0.0023785094200663402,
+          0.017987042927847148
+        ]
+      }
+    },
+    "copy_base_to_copy_agreement": {
+      "gains": 11,
+      "losses": 0,
+      "changed_traces": 193,
+      "day2_transitions": {
+        "civilian_to_civilian": 335,
+        "mafia_to_mafia": 1486,
+        "civilian_to_mafia": 117,
+        "police_to_mafia": 76,
+        "police_to_police": 34
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 4,
+        "tail_alpha": 0.003125,
+        "p_plus": [
+          0.001981317572895406,
+          0.011499357591895982
+        ],
+        "p_minus": [
+          0.0,
+          0.0028126001940573945
+        ],
+        "ci_simultaneous": [
+          -0.0008312826211619886,
+          0.011499357591895982
+        ]
+      }
+    },
+    "old_base_to_copy_base": {
+      "gains": 0,
+      "losses": 0,
+      "changed_traces": 413,
+      "day2_transitions": {
+        "civilian_to_civilian": 450,
+        "mafia_to_mafia": 1486,
+        "police_to_police": 110,
+        "mafia_to_civilian": 2
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 4,
+        "tail_alpha": 0.003125,
+        "p_plus": [
+          0.0,
+          0.0028126001940573945
+        ],
+        "p_minus": [
+          0.0,
+          0.0028126001940573945
+        ],
+        "ci_simultaneous": [
+          -0.0028126001940573945,
+          0.0028126001940573945
+        ]
+      }
+    },
+    "old_agreement_to_copy_agreement": {
+      "gains": 0,
+      "losses": 10,
+      "changed_traces": 413,
+      "day2_transitions": {
+        "civilian_to_civilian": 213,
+        "mafia_to_mafia": 1679,
+        "mafia_to_civilian": 122,
+        "police_to_police": 23,
+        "mafia_to_police": 11
+      },
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 4,
+        "tail_alpha": 0.003125,
+        "p_plus": [
+          0.0,
+          0.0028126001940573945
+        ],
+        "p_minus": [
+          0.0016968024895434755,
+          0.010816841082604353
+        ],
+        "ci_simultaneous": [
+          -0.010816841082604353,
+          0.001115797704513919
+        ]
+      }
+    }
+  },
+  "day2_match_transitions": {
+    "police_to_multiple": 1368,
+    "police_to_police": 1719
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "20261117-succession-copy-and-public-agreement-v43",
+  "source_freeze": "results/v37/freeze.json",
+  "parent_freeze": "results/v42/freeze.json",
+  "ancestor_freeze": "results/v41/freeze.json",
+  "mafia": "late_copy",
+  "q": "1/2",
+  "holdout": {"seed_start": 225000000, "n": 2048},
+  "smoke": {"seed_start": 226000000, "n": 4},
+  "arms": {
+    "old_base": [false, false],
+    "old_agreement": [false, true],
+    "copy_base": [true, false],
+    "copy_agreement": [true, true]
+  }
+}
