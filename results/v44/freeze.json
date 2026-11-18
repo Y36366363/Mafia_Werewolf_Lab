@@ -1,0 +1,66 @@
+{
+  "config": {
+    "version": "20261118-common-hit-and-police-coordination-v44",
+    "source_freeze": "results/v37/freeze.json",
+    "parents": [
+      "results/v43/freeze.json",
+      "results/v42/freeze.json",
+      "results/v41/freeze.json"
+    ],
+    "mafia": "late_copy",
+    "q": "1/2",
+    "holdout": {
+      "seed_start": 227000000,
+      "n": 2048
+    },
+    "smoke": {
+      "seed_start": 228000000,
+      "n": 4
+    },
+    "arms": {
+      "copy_base": [
+        true,
+        false,
+        false
+      ],
+      "copy_shared": [
+        true,
+        true,
+        false
+      ],
+      "copy_coordinate": [
+        true,
+        false,
+        true
+      ],
+      "copy_both": [
+        true,
+        true,
+        true
+      ],
+      "old_base": [
+        false,
+        false,
+        false
+      ],
+      "old_shared": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  "assets": {
+    "configs/corroborated_hit_v44.json": "792924c67a30034092c929686bb91593f7f3b1c027707e11c6059819b0bef095",
+    "scripts/run_corroborated_hit_v44.py": "1c2d726e3e6233bc7d1c674573e0160c4fe3a317d89e4d330d06d7fa30cdc101",
+    "mafia_lab/corroborated_hit_v44.py": "abe582f157b2765493c4fa1bbbd22ad0ee5b07dbf26b54c824e3111f9b1a1acb",
+    "tests/test_corroborated_hit_v44.py": "566a08fb81ff0c890d35449947bbdfd95434f6375f96cad9ff2fe8dba53cc1f7",
+    "docs/corroborated_hit_protocol_v44.md": "847726d187035e12c309e25a8be9c62fbbc8b7d6f1090260ee5874f5bf69cccf"
+  },
+  "parents": {
+    "results/v43/freeze.json": "e3ace46df2d3203372286220232dfb4cb83192f77b9578926f5d04e3cea9e3ed",
+    "results/v42/freeze.json": "329d8a4337cfb917eb5778717ed9c85469db5787f78a40b9e9e1b379857a6f3f",
+    "results/v41/freeze.json": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8"
+  },
+  "python": "3.12.3"
+}

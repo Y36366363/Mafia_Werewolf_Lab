@@ -1,0 +1,17 @@
+{
+  "version": "20261118-common-hit-and-police-coordination-v44",
+  "source_freeze": "results/v37/freeze.json",
+  "parents": ["results/v43/freeze.json", "results/v42/freeze.json", "results/v41/freeze.json"],
+  "mafia": "late_copy",
+  "q": "1/2",
+  "holdout": {"seed_start": 227000000, "n": 2048},
+  "smoke": {"seed_start": 228000000, "n": 4},
+  "arms": {
+    "copy_base": [true, false, false],
+    "copy_shared": [true, true, false],
+    "copy_coordinate": [true, false, true],
+    "copy_both": [true, true, true],
+    "old_base": [false, false, false],
+    "old_shared": [false, true, false]
+  }
+}

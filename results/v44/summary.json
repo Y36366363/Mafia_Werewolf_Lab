@@ -1,0 +1,278 @@
+{
+  "n": 2048,
+  "arms": {
+    "copy_base": {
+      "wins": 93,
+      "day2": {
+        "mafia": 1663,
+        "civilian": 337,
+        "police": 48
+      },
+      "counts": {
+        "opportunities": 27708,
+        "follows": 23902,
+        "day2_opportunities": 12473,
+        "day2_follows": 11189,
+        "eligible_calls": 1687,
+        "police_alignment_checks": 3405,
+        "day2_common_mafia": 1344,
+        "preferred_change": 197,
+        "pk": 57,
+        "day2_possible_change_mafia": 876
+      }
+    },
+    "copy_shared": {
+      "wins": 101,
+      "day2": {
+        "mafia": 1800,
+        "civilian": 222,
+        "police": 26
+      },
+      "counts": {
+        "opportunities": 27569,
+        "follows": 23980,
+        "day2_opportunities": 12473,
+        "day2_follows": 11935,
+        "eligible_calls": 1601,
+        "police_alignment_checks": 3254,
+        "day2_common_mafia": 1344,
+        "preferred_change": 192,
+        "pk": 57,
+        "day2_possible_change_mafia": 876,
+        "day2_actual_change_mafia": 876
+      }
+    },
+    "copy_coordinate": {
+      "wins": 87,
+      "day2": {
+        "mafia": 1697,
+        "civilian": 305,
+        "police": 46
+      },
+      "counts": {
+        "opportunities": 27927,
+        "follows": 24012,
+        "day2_opportunities": 12473,
+        "day2_follows": 11495,
+        "eligible_calls": 1719,
+        "police_alignment_checks": 3431,
+        "day2_common_mafia": 1344,
+        "preferred_change": 185,
+        "changed_calls": 185,
+        "projected_gain": 515,
+        "pk": 57,
+        "day2_possible_change_mafia": 888,
+        "day2_changed_calls": 127
+      }
+    },
+    "copy_both": {
+      "wins": 95,
+      "day2": {
+        "mafia": 1819,
+        "civilian": 203,
+        "police": 26
+      },
+      "counts": {
+        "opportunities": 27782,
+        "follows": 24125,
+        "day2_opportunities": 12473,
+        "day2_follows": 12156,
+        "eligible_calls": 1632,
+        "police_alignment_checks": 3288,
+        "day2_common_mafia": 1344,
+        "preferred_change": 180,
+        "changed_calls": 180,
+        "projected_gain": 467,
+        "pk": 57,
+        "day2_possible_change_mafia": 875,
+        "day2_actual_change_mafia": 875,
+        "day2_changed_calls": 113
+      }
+    },
+    "old_base": {
+      "wins": 101,
+      "day2": {
+        "mafia": 1801,
+        "civilian": 221,
+        "police": 26
+      },
+      "counts": {
+        "opportunities": 27544,
+        "follows": 23814,
+        "day2_opportunities": 12473,
+        "day2_follows": 11869,
+        "eligible_calls": 1613,
+        "police_alignment_checks": 3266,
+        "preferred_change": 323,
+        "pk": 77
+      }
+    },
+    "old_shared": {
+      "wins": 101,
+      "day2": {
+        "mafia": 1801,
+        "civilian": 221,
+        "police": 26
+      },
+      "counts": {
+        "opportunities": 27544,
+        "follows": 23814,
+        "day2_opportunities": 12473,
+        "day2_follows": 11869,
+        "eligible_calls": 1613,
+        "police_alignment_checks": 3266,
+        "preferred_change": 323,
+        "pk": 77
+      }
+    }
+  },
+  "contrasts": {
+    "copy_base_to_copy_shared": {
+      "gains": 8,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0011178415959114745,
+          0.009597056679906625
+        ],
+        "p_minus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "ci_simultaneous": [
+          -0.001803403039476564,
+          0.009597056679906625
+        ]
+      },
+      "changed_traces": 140,
+      "changed_prefixes": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 1663,
+        "civilian_to_civilian": 222,
+        "civilian_to_mafia": 115,
+        "police_to_mafia": 22,
+        "police_to_police": 26
+      }
+    },
+    "copy_base_to_copy_coordinate": {
+      "gains": 0,
+      "losses": 6,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "p_minus": [
+          0.0006502855185171794,
+          0.008139325626036717
+        ],
+        "ci_simultaneous": [
+          -0.008139325626036717,
+          0.0022709591168708593
+        ]
+      },
+      "changed_traces": 172,
+      "changed_prefixes": 127,
+      "day2_transitions": {
+        "mafia_to_mafia": 1663,
+        "civilian_to_civilian": 305,
+        "police_to_police": 46,
+        "civilian_to_mafia": 32,
+        "police_to_mafia": 2
+      }
+    },
+    "copy_shared_to_copy_both": {
+      "gains": 0,
+      "losses": 6,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "p_minus": [
+          0.0006502855185171794,
+          0.008139325626036717
+        ],
+        "ci_simultaneous": [
+          -0.008139325626036717,
+          0.0022709591168708593
+        ]
+      },
+      "changed_traces": 167,
+      "changed_prefixes": 113,
+      "day2_transitions": {
+        "mafia_to_mafia": 1800,
+        "civilian_to_civilian": 203,
+        "civilian_to_mafia": 19,
+        "police_to_police": 26
+      }
+    },
+    "copy_coordinate_to_copy_both": {
+      "gains": 8,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0011178415959114745,
+          0.009597056679906625
+        ],
+        "p_minus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "ci_simultaneous": [
+          -0.001803403039476564,
+          0.009597056679906625
+        ]
+      },
+      "changed_traces": 140,
+      "changed_prefixes": 15,
+      "day2_transitions": {
+        "mafia_to_mafia": 1697,
+        "civilian_to_civilian": 203,
+        "civilian_to_mafia": 102,
+        "police_to_mafia": 20,
+        "police_to_police": 26
+      }
+    },
+    "old_base_to_old_shared": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "p_minus": [
+          0.0,
+          0.0029212446353880385
+        ],
+        "ci_simultaneous": [
+          -0.0029212446353880385,
+          0.0029212446353880385
+        ]
+      },
+      "changed_traces": 0,
+      "changed_prefixes": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 1801,
+        "civilian_to_civilian": 221,
+        "police_to_police": 26
+      }
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "n": 4,
+  "arms": {
+    "copy_base": {
+      "wins": 1,
+      "day2": {
+        "mafia": 4
+      },
+      "counts": {
+        "opportunities": 61,
+        "follows": 54,
+        "day2_opportunities": 28,
+        "day2_follows": 27,
+        "eligible_calls": 3,
+        "police_alignment_checks": 8,
+        "pk": 1
+      }
+    },
+    "copy_shared": {
+      "wins": 1,
+      "day2": {
+        "mafia": 4
+      },
+      "counts": {
+        "opportunities": 61,
+        "follows": 54,
+        "day2_opportunities": 28,
+        "day2_follows": 27,
+        "eligible_calls": 3,
+        "police_alignment_checks": 8,
+        "pk": 1
+      }
+    },
+    "copy_coordinate": {
+      "wins": 1,
+      "day2": {
+        "mafia": 4
+      },
+      "counts": {
+        "opportunities": 61,
+        "follows": 54,
+        "day2_opportunities": 28,
+        "day2_follows": 27,
+        "eligible_calls": 3,
+        "police_alignment_checks": 8,
+        "pk": 1
+      }
+    },
+    "copy_both": {
+      "wins": 1,
+      "day2": {
+        "mafia": 4
+      },
+      "counts": {
+        "opportunities": 61,
+        "follows": 54,
+        "day2_opportunities": 28,
+        "day2_follows": 27,
+        "eligible_calls": 3,
+        "police_alignment_checks": 8,
+        "pk": 1
+      }
+    },
+    "old_base": {
+      "wins": 1,
+      "day2": {
+        "mafia": 4
+      },
+      "counts": {
+        "opportunities": 61,
+        "follows": 54,
+        "day2_opportunities": 28,
+        "day2_follows": 27,
+        "eligible_calls": 3,
+        "police_alignment_checks": 8,
+        "pk": 1
+      }
+    },
+    "old_shared": {
+      "wins": 1,
+      "day2": {
+        "mafia": 4
+      },
+      "counts": {
+        "opportunities": 61,
+        "follows": 54,
+        "day2_opportunities": 28,
+        "day2_follows": 27,
+        "eligible_calls": 3,
+        "police_alignment_checks": 8,
+        "pk": 1
+      }
+    }
+  },
+  "contrasts": {
+    "copy_base_to_copy_shared": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      },
+      "changed_traces": 0,
+      "changed_prefixes": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 4
+      }
+    },
+    "copy_base_to_copy_coordinate": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      },
+      "changed_traces": 0,
+      "changed_prefixes": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 4
+      }
+    },
+    "copy_shared_to_copy_both": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      },
+      "changed_traces": 0,
+      "changed_prefixes": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 4
+      }
+    },
+    "copy_coordinate_to_copy_both": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      },
+      "changed_traces": 0,
+      "changed_prefixes": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 4
+      }
+    },
+    "old_base_to_old_shared": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 5,
+        "tail_alpha": 0.0025,
+        "p_plus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "p_minus": [
+          0.0,
+          0.7763932022500222
+        ],
+        "ci_simultaneous": [
+          -0.7763932022500222,
+          0.7763932022500222
+        ]
+      },
+      "changed_traces": 0,
+      "changed_prefixes": 0,
+      "day2_transitions": {
+        "mafia_to_mafia": 4
+      }
+    }
+  }
+}
