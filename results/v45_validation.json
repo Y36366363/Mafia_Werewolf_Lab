@@ -1,0 +1,19 @@
+{
+  "base_commit": "68536862f2f02e16537620899ed5d04b00c84aa0",
+  "command": "python -m pytest -q tests",
+  "tests_passed": 447,
+  "elapsed_seconds": 62.72,
+  "new_focused_tests": 2,
+  "formal_historical_replays": 24,
+  "preflight_duplicate_replays": 24,
+  "fresh_performance_games": 0,
+  "policy_changes": false,
+  "raw_and_analysis_hashes_verified": true,
+  "artifacts": {
+    "results/v45/manifest.json": "6200ce293cae925da6fd6ef4f77aaf3fcb0fcdbe9a448d90171a9bee59b3bbee",
+    "results/v45_analysis_manifest.json": "922d70229514e659327b97331b68fcb3e7d47823d78a59c42c56eb9d43483d51",
+    "docs/continuation_audit_results_v45.md": "b184751abfde30a523dcecf53905179a79cbd81331e4fe69d23709ffbb7faa9a",
+    "docs/continuation_audit_cases_v45.md": "5b540bbd96923628cd99c6b754af1779b0f33ae37dde172a97d6e96341e0e766",
+    "results/v45/preflight_notes.json": "b823b718d900636f1cad627ec3ab3200a05a5d7698f558186011c78b8b42e09b"
+  }
+}

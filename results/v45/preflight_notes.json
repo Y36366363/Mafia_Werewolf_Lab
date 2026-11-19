@@ -1,0 +1,21 @@
+{
+  "preflight_games": 24,
+  "formal_games": 24,
+  "unique_seed_arm_combinations": 24,
+  "case_files_identical": true,
+  "cases_sha256": "fc01b4e168f29f394606afda549d3bd0c4c5ab28fe9d5cd0c474dd344fe4981a",
+  "preflight_manifest": {
+    "games": 24,
+    "historical_selected_cases": 6,
+    "fresh_performance_games": 0,
+    "policy_changes": false,
+    "elapsed": 14.90613833302632,
+    "files": {
+      "cases.json.gz": "fc01b4e168f29f394606afda549d3bd0c4c5ab28fe9d5cd0c474dd344fe4981a",
+      "freeze.json": "ddcf8e95cb761e64d9a963706ac50dd72cd29f9837818980f1127c8712bf40b7"
+    }
+  },
+  "preflight_freeze_sha256": "ddcf8e95cb761e64d9a963706ac50dd72cd29f9837818980f1127c8712bf40b7",
+  "fixture_correction": "Add the public report to the police ballot Observation in the test fixture. No decision implementation changed.",
+  "test_directory_correction": "Unscoped pytest collected archived same-named test modules (57 collection errors). Scoped tests/ run passed 447 tests in 62.72s."
+}

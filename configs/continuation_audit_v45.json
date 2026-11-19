@@ -1,0 +1,11 @@
+{
+  "version": "20261119-six-coordination-loss-audit-v45",
+  "parent_freeze": "results/v44/freeze.json",
+  "parent_pairs": "results/v44/pairs.json.gz",
+  "seeds": [227000092, 227000734, 227001025, 227001070, 227001245, 227001291],
+  "arms": ["copy_base", "copy_shared", "copy_coordinate", "copy_both"],
+  "primary_comparison": ["copy_shared", "copy_both"],
+  "shadow_day": 3,
+  "policy_changes": false,
+  "fresh_performance_estimate": false
+}

@@ -1,0 +1,11 @@
+{
+  "games": 24,
+  "historical_selected_cases": 6,
+  "fresh_performance_games": 0,
+  "policy_changes": false,
+  "elapsed": 12.65151650016196,
+  "files": {
+    "cases.json.gz": "fc01b4e168f29f394606afda549d3bd0c4c5ab28fe9d5cd0c474dd344fe4981a",
+    "freeze.json": "6694d119e8d9ba94f9f9e2e8f211e7307a6e26a9f74f4338eaf5da26019aac50"
+  }
+}

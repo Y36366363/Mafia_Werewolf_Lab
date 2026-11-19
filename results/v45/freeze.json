@@ -1,0 +1,43 @@
+{
+  "config": {
+    "version": "20261119-six-coordination-loss-audit-v45",
+    "parent_freeze": "results/v44/freeze.json",
+    "parent_pairs": "results/v44/pairs.json.gz",
+    "seeds": [
+      227000092,
+      227000734,
+      227001025,
+      227001070,
+      227001245,
+      227001291
+    ],
+    "arms": [
+      "copy_base",
+      "copy_shared",
+      "copy_coordinate",
+      "copy_both"
+    ],
+    "primary_comparison": [
+      "copy_shared",
+      "copy_both"
+    ],
+    "shadow_day": 3,
+    "policy_changes": false,
+    "fresh_performance_estimate": false
+  },
+  "assets": {
+    "configs/continuation_audit_v45.json": "b0505985f01d42ea6a1891da26677f7d0ec59886904bd368c4a2928aeb677e97",
+    "scripts/run_continuation_audit_v45.py": "90db745f77d77b01339940b8a2713960da991b340d21030725ca822b014855aa",
+    "mafia_lab/continuation_audit_v45.py": "9f3a8749b6e3b340e002730c920e748eab0f19920cd54798e1bb515d6db97512",
+    "tests/test_continuation_audit_v45.py": "9f9e5e4c15b821f1bd4bd2410958d20ebd125c13960ff98479527881cf65b069",
+    "docs/continuation_audit_protocol_v45.md": "ee43923be6bea97f4fec7b84aed923d5cfb8a513da578900d50827773fffbd9c"
+  },
+  "parents": {
+    "results/v44/freeze.json": "9fa772ebba048e39aa95fb85f61b38feff171a6bf3ce436208fcb9d6135d0776",
+    "results/v43/freeze.json": "e3ace46df2d3203372286220232dfb4cb83192f77b9578926f5d04e3cea9e3ed",
+    "results/v42/freeze.json": "329d8a4337cfb917eb5778717ed9c85469db5787f78a40b9e9e1b379857a6f3f",
+    "results/v41/freeze.json": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8"
+  },
+  "parent_pairs_sha256": "5269980798f809234e55bb2fe8da10db829919df19472abc9c2b5ea5712c0ba2",
+  "python": "3.12.3"
+}

@@ -1,0 +1,12 @@
+{
+  "builder_sha256": "cfae9b3f3b47ccb157c613084b3f15383a89e6289186b045168522076af4f871",
+  "inputs": {
+    "results/v45/manifest.json": "6200ce293cae925da6fd6ef4f77aaf3fcb0fcdbe9a448d90171a9bee59b3bbee",
+    "results/v45/cases.json.gz": "fc01b4e168f29f394606afda549d3bd0c4c5ab28fe9d5cd0c474dd344fe4981a",
+    "results/v45/freeze.json": "6694d119e8d9ba94f9f9e2e8f211e7307a6e26a9f74f4338eaf5da26019aac50"
+  },
+  "outputs": {
+    "results/v45/summary.json": "17cb2ce179f53514ecc053736a17fdaeb18de3b6f33d9224377196ac5ae4d561",
+    "docs/continuation_audit_cases_v45.md": "5b540bbd96923628cd99c6b754af1779b0f33ae37dde172a97d6e96341e0e766"
+  }
+}
