@@ -1,0 +1,324 @@
+{
+  "raw_and_intervals_verified": true,
+  "historical": {
+    "227000092": {
+      "warnings": [
+        {
+          "day": 2,
+          "kept_original": true,
+          "original": 1,
+          "preferred": 5
+        }
+      ],
+      "day2": [
+        5,
+        1
+      ],
+      "day3": [
+        "civilian",
+        "mafia"
+      ],
+      "wins": [
+        0,
+        1
+      ]
+    },
+    "227000734": {
+      "warnings": [
+        {
+          "day": 2,
+          "kept_original": true,
+          "original": 3,
+          "preferred": 13
+        }
+      ],
+      "day2": [
+        13,
+        3
+      ],
+      "day3": [
+        "civilian",
+        "mafia"
+      ],
+      "wins": [
+        0,
+        1
+      ]
+    },
+    "227001025": {
+      "warnings": [
+        {
+          "day": 2,
+          "kept_original": true,
+          "original": 6,
+          "preferred": 14
+        }
+      ],
+      "day2": [
+        14,
+        6
+      ],
+      "day3": [
+        "civilian",
+        "mafia"
+      ],
+      "wins": [
+        0,
+        1
+      ]
+    },
+    "227001070": {
+      "warnings": [
+        {
+          "day": 2,
+          "kept_original": true,
+          "original": 12,
+          "preferred": 3
+        }
+      ],
+      "day2": [
+        3,
+        12
+      ],
+      "day3": [
+        "civilian",
+        "mafia"
+      ],
+      "wins": [
+        0,
+        1
+      ]
+    },
+    "227001245": {
+      "warnings": [
+        {
+          "day": 2,
+          "kept_original": true,
+          "original": 3,
+          "preferred": 11
+        }
+      ],
+      "day2": [
+        11,
+        3
+      ],
+      "day3": [
+        "civilian",
+        "mafia"
+      ],
+      "wins": [
+        0,
+        1
+      ]
+    },
+    "227001291": {
+      "warnings": [
+        {
+          "day": 2,
+          "kept_original": true,
+          "original": 9,
+          "preferred": 0
+        }
+      ],
+      "day2": [
+        0,
+        9
+      ],
+      "day3": [
+        "civilian",
+        "mafia"
+      ],
+      "wins": [
+        0,
+        1
+      ]
+    }
+  },
+  "warned_pairs": {
+    "n": 93,
+    "changed_day2_exiles": 93,
+    "day2_mafia": [
+      93,
+      93
+    ],
+    "day3_succession": [
+      93,
+      0
+    ],
+    "day3_mafia": [
+      14,
+      48
+    ],
+    "wins": [
+      0,
+      5
+    ]
+  },
+  "game_coverage": {
+    "greedy": {},
+    "lookahead": {},
+    "echo_control": {
+      "report_current_check": 2048,
+      "report_live_echo": 863,
+      "eligible_live_echo_police": 459,
+      "report_legacy_repeat": 457,
+      "report_dead_echo": 167
+    },
+    "echo_timing": {
+      "report_current_check": 2048,
+      "report_live_echo": 863,
+      "eligible_live_echo_police": 459,
+      "report_legacy_repeat": 482,
+      "changed_live_echo_police": 230,
+      "report_dead_echo": 167
+    },
+    "distinct_control": {
+      "report_current_check": 2048,
+      "report_distinct": 884
+    },
+    "distinct_timing": {
+      "report_current_check": 2048,
+      "report_distinct": 884
+    }
+  },
+  "fresh_cases": {
+    "greedy_first_changed": {
+      "greedy": {
+        "seed": 231000110,
+        "win": 0,
+        "exiles": {
+          "1": 6,
+          "2": 10,
+          "3": 5,
+          "4": 7
+        },
+        "exile_roles": {
+          "1": "mafia",
+          "2": "mafia",
+          "3": "civilian",
+          "4": "mafia"
+        }
+      },
+      "lookahead": {
+        "seed": 231000110,
+        "win": 0,
+        "exiles": {
+          "1": 6,
+          "2": 7,
+          "3": 5,
+          "4": 10
+        },
+        "exile_roles": {
+          "1": "mafia",
+          "2": "mafia",
+          "3": "civilian",
+          "4": "mafia"
+        }
+      }
+    },
+    "greedy_first_gain": {
+      "greedy": {
+        "seed": 231000220,
+        "win": 0,
+        "exiles": {
+          "1": 0,
+          "2": 5,
+          "3": 14,
+          "4": 15
+        },
+        "exile_roles": {
+          "1": "mafia",
+          "2": "mafia",
+          "3": "civilian",
+          "4": "mafia"
+        }
+      },
+      "lookahead": {
+        "seed": 231000220,
+        "win": 1,
+        "exiles": {
+          "1": 0,
+          "2": 15,
+          "3": 5,
+          "4": 11
+        },
+        "exile_roles": {
+          "1": "mafia",
+          "2": "mafia",
+          "3": "mafia",
+          "4": "mafia"
+        }
+      }
+    },
+    "echo_control_first_changed": {
+      "echo_control": {
+        "seed": 231000003,
+        "win": 0,
+        "exiles": {
+          "1": 2,
+          "2": 5,
+          "3": 12
+        },
+        "exile_roles": {
+          "1": "police",
+          "2": "police",
+          "3": "police"
+        }
+      },
+      "echo_timing": {
+        "seed": 231000003,
+        "win": 0,
+        "exiles": {
+          "1": 2,
+          "2": 5,
+          "3": 0
+        },
+        "exile_roles": {
+          "1": "police",
+          "2": "police",
+          "3": "mafia"
+        }
+      }
+    },
+    "echo_control_first_gain": {
+      "echo_control": {
+        "seed": 231000021,
+        "win": 0,
+        "exiles": {
+          "1": 14,
+          "2": 9,
+          "3": 7,
+          "4": 8
+        },
+        "exile_roles": {
+          "1": "mafia",
+          "2": "mafia",
+          "3": "civilian",
+          "4": "mafia"
+        }
+      },
+      "echo_timing": {
+        "seed": 231000021,
+        "win": 1,
+        "exiles": {
+          "1": 14,
+          "2": 9,
+          "3": 0,
+          "4": 8
+        },
+        "exile_roles": {
+          "1": "mafia",
+          "2": "mafia",
+          "3": "mafia",
+          "4": "mafia"
+        }
+      }
+    }
+  },
+  "distinct_read_only_replays": 2048,
+  "distinct_ballot_scope": {
+    "not_both_returning_fresh_2": 5742,
+    "not_both_returning_fresh_1": 826
+  },
+  "distinct_returning_example": null
+}

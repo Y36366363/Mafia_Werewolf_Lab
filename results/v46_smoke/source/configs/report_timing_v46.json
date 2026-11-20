@@ -1,0 +1,16 @@
+{
+  "version": "20261120-report-timing-and-continuation-v46",
+  "parent_freeze": "results/v45/freeze.json",
+  "reference_seeds": [227000092, 227000734, 227001025, 227001070, 227001245, 227001291],
+  "holdout": {"seed_start": 231000000, "n": 2048},
+  "smoke": {"seed_start": 232000000, "n": 8},
+  "arms": {
+    "greedy": [false, "inherited", false],
+    "lookahead": [true, "inherited", false],
+    "echo_control": [false, "echo", false],
+    "echo_timing": [false, "echo", true],
+    "distinct_control": [false, "distinct", false],
+    "distinct_timing": [false, "distinct", true]
+  },
+  "comparisons": [["greedy", "lookahead"], ["echo_control", "echo_timing"], ["distinct_control", "distinct_timing"]]
+}

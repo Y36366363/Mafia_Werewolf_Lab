@@ -1,0 +1,86 @@
+{
+  "config": {
+    "version": "20261120-report-timing-and-continuation-v46",
+    "parent_freeze": "results/v45/freeze.json",
+    "reference_seeds": [
+      227000092,
+      227000734,
+      227001025,
+      227001070,
+      227001245,
+      227001291
+    ],
+    "holdout": {
+      "seed_start": 231000000,
+      "n": 2048
+    },
+    "smoke": {
+      "seed_start": 232000000,
+      "n": 8
+    },
+    "arms": {
+      "greedy": [
+        false,
+        "inherited",
+        false
+      ],
+      "lookahead": [
+        true,
+        "inherited",
+        false
+      ],
+      "echo_control": [
+        false,
+        "echo",
+        false
+      ],
+      "echo_timing": [
+        false,
+        "echo",
+        true
+      ],
+      "distinct_control": [
+        false,
+        "distinct",
+        false
+      ],
+      "distinct_timing": [
+        false,
+        "distinct",
+        true
+      ]
+    },
+    "comparisons": [
+      [
+        "greedy",
+        "lookahead"
+      ],
+      [
+        "echo_control",
+        "echo_timing"
+      ],
+      [
+        "distinct_control",
+        "distinct_timing"
+      ]
+    ]
+  },
+  "assets": {
+    "configs/report_timing_v46.json": "faf154bb2182c48ee58c94527957a23dbad597454f496f8dbaeb542416e9caa6",
+    "scripts/run_report_timing_v46.py": "420fc72067a74874cfe4ea24d8a08e562f44164f5f7c7ec063ffddafce8f84ad",
+    "mafia_lab/report_timing_v46.py": "62894c14533219c0017a72703b9e5e5e9f8266a806f131e4ed8e9879fb478bfc",
+    "docs/report_timing_protocol_v46.md": "0a3aa8ca13549221e663ff11a9c0469fb1aa5c7ad89fed1908478e289a6c7faf",
+    "tests/test_report_timing_v46.py": "4a67b69fc45dca17e2372a31823ab980ad024af8e6472958003c29cf09735358"
+  },
+  "parents": {
+    "results/v45/freeze.json": "6694d119e8d9ba94f9f9e2e8f211e7307a6e26a9f74f4338eaf5da26019aac50",
+    "results/v44/freeze.json": "9fa772ebba048e39aa95fb85f61b38feff171a6bf3ce436208fcb9d6135d0776",
+    "results/v43/freeze.json": "e3ace46df2d3203372286220232dfb4cb83192f77b9578926f5d04e3cea9e3ed",
+    "results/v42/freeze.json": "329d8a4337cfb917eb5778717ed9c85469db5787f78a40b9e9e1b379857a6f3f",
+    "results/v41/freeze.json": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8"
+  },
+  "q": "1/2",
+  "reference_sha256": "5269980798f809234e55bb2fe8da10db829919df19472abc9c2b5ea5712c0ba2",
+  "python": "3.12.3",
+  "scipy": "1.16.3"
+}
