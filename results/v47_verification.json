@@ -1,0 +1,251 @@
+{
+  "formal": {
+    "manifest": {
+      "screened": 8192,
+      "qualified": 2720,
+      "games": 10880,
+      "replay_executions": 24,
+      "elapsed": 82.09366624988616,
+      "files": {
+        "summary.json": "19541d1b349b179ba2459e661ac1287a82a88d61010bac5646a19a8a2b45b535",
+        "pairs.json.gz": "a405d296d8a46b537a98b706259acc44ca0bacc736ff266a26da35d14e1d8801",
+        "cases.json.gz": "4fb3b8195578aa4dfbc3b3025a7f932bdbdbb876e7f5075c5e1dcea043a815c2",
+        "freeze.json": "ea8b95ef538fcaa5d255f33859c5cb3e3d7cecc760b111ce17cdf797d1f632db"
+      }
+    },
+    "contrasts": {
+      "unlinked_new": {
+        "exile_transitions": {
+          "mafia→mafia": 1701,
+          "police→police": 628,
+          "civilian→mafia": 149,
+          "police→mafia": 233,
+          "civilian→civilian": 9
+        },
+        "games_with_comparable_ballots": {
+          "qualified": 2134,
+          "preferred_police": 1126,
+          "fresh_2": 1863,
+          "fresh_1": 271
+        },
+        "changed_traces": 664
+      },
+      "prepared_new": {
+        "exile_transitions": {
+          "police→police": 1059,
+          "mafia→mafia": 1577,
+          "civilian→civilian": 84
+        },
+        "games_with_comparable_ballots": {
+          "qualified": 2238,
+          "fresh_2": 1955,
+          "fresh_1": 283
+        },
+        "changed_traces": 0
+      }
+    },
+    "examples": {
+      "first": {
+        "unlinked_new": {
+          "seed": 236000002,
+          "win": 1,
+          "exile": 4,
+          "exile_role": "mafia"
+        },
+        "unlinked_consistent": {
+          "seed": 236000002,
+          "win": 1,
+          "exile": 4,
+          "exile_role": "mafia"
+        },
+        "prepared_new": {
+          "seed": 236000002,
+          "win": 0,
+          "exile": 10,
+          "exile_role": "police"
+        },
+        "prepared_consistent": {
+          "seed": 236000002,
+          "win": 0,
+          "exile": 10,
+          "exile_role": "police"
+        }
+      },
+      "middle": {
+        "unlinked_new": {
+          "seed": 236004100,
+          "win": 1,
+          "exile": 1,
+          "exile_role": "mafia"
+        },
+        "unlinked_consistent": {
+          "seed": 236004100,
+          "win": 1,
+          "exile": 1,
+          "exile_role": "mafia"
+        },
+        "prepared_new": {
+          "seed": 236004100,
+          "win": 1,
+          "exile": 1,
+          "exile_role": "mafia"
+        },
+        "prepared_consistent": {
+          "seed": 236004100,
+          "win": 1,
+          "exile": 1,
+          "exile_role": "mafia"
+        }
+      },
+      "last": {
+        "unlinked_new": {
+          "seed": 236008191,
+          "win": 0,
+          "exile": 13,
+          "exile_role": "civilian"
+        },
+        "unlinked_consistent": {
+          "seed": 236008191,
+          "win": 1,
+          "exile": 3,
+          "exile_role": "mafia"
+        },
+        "prepared_new": {
+          "seed": 236008191,
+          "win": 0,
+          "exile": 15,
+          "exile_role": "police"
+        },
+        "prepared_consistent": {
+          "seed": 236008191,
+          "win": 0,
+          "exile": 15,
+          "exile_role": "police"
+        }
+      },
+      "unlinked_new_vote": {
+        "unlinked_new": {
+          "seed": 236000002,
+          "win": 1,
+          "exile": 4,
+          "exile_role": "mafia"
+        },
+        "unlinked_consistent": {
+          "seed": 236000002,
+          "win": 1,
+          "exile": 4,
+          "exile_role": "mafia"
+        },
+        "prepared_new": {
+          "seed": 236000002,
+          "win": 0,
+          "exile": 10,
+          "exile_role": "police"
+        },
+        "prepared_consistent": {
+          "seed": 236000002,
+          "win": 0,
+          "exile": 10,
+          "exile_role": "police"
+        }
+      },
+      "unlinked_new_gain": {
+        "unlinked_new": {
+          "seed": 236000037,
+          "win": 0,
+          "exile": 0,
+          "exile_role": "police"
+        },
+        "unlinked_consistent": {
+          "seed": 236000037,
+          "win": 1,
+          "exile": 3,
+          "exile_role": "mafia"
+        },
+        "prepared_new": {
+          "seed": 236000037,
+          "win": 0,
+          "exile": 15,
+          "exile_role": "police"
+        },
+        "prepared_consistent": {
+          "seed": 236000037,
+          "win": 0,
+          "exile": 15,
+          "exile_role": "police"
+        }
+      },
+      "unlinked_new_loss": {
+        "unlinked_new": {
+          "seed": 236000503,
+          "win": 1,
+          "exile": 3,
+          "exile_role": "civilian"
+        },
+        "unlinked_consistent": {
+          "seed": 236000503,
+          "win": 0,
+          "exile": 8,
+          "exile_role": "mafia"
+        },
+        "prepared_new": {
+          "seed": 236000503,
+          "win": 0,
+          "exile": 4,
+          "exile_role": "police"
+        },
+        "prepared_consistent": {
+          "seed": 236000503,
+          "win": 0,
+          "exile": 4,
+          "exile_role": "police"
+        }
+      }
+    }
+  },
+  "smoke": {
+    "manifest": {
+      "screened": 96,
+      "qualified": 30,
+      "games": 120,
+      "replay_executions": 0,
+      "elapsed": 17.75976312509738,
+      "files": {
+        "summary.json": "bb94ed5d1c9bccd6a9f00a526fff201baf7b08fdfcb3d3625cda45f8ab53de27",
+        "pairs.json.gz": "b0eda09d3af7c96434ddc5eb2e97d9fd34e2eb8929b0005ff1a3746237bd6305",
+        "cases.json.gz": "a4b04944443134617e3f0ce2d83bd80777944443377c1b3d27d20980cd705f74",
+        "freeze.json": "ea8b95ef538fcaa5d255f33859c5cb3e3d7cecc760b111ce17cdf797d1f632db"
+      }
+    },
+    "contrasts": {
+      "unlinked_new": {
+        "exile_transitions": {
+          "mafia→mafia": 22,
+          "police→police": 5,
+          "civilian→mafia": 1,
+          "police→mafia": 2
+        },
+        "games_with_comparable_ballots": {
+          "qualified": 21,
+          "preferred_police": 13,
+          "fresh_2": 19,
+          "fresh_1": 2
+        },
+        "changed_traces": 8
+      },
+      "prepared_new": {
+        "exile_transitions": {
+          "mafia→mafia": 20,
+          "police→police": 10
+        },
+        "games_with_comparable_ballots": {
+          "qualified": 24,
+          "fresh_2": 22,
+          "fresh_1": 2
+        },
+        "changed_traces": 0
+      }
+    },
+    "examples": {}
+  }
+}

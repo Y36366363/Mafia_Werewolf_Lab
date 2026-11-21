@@ -1,0 +1,13 @@
+{
+  "screened": 8192,
+  "qualified": 2720,
+  "games": 10880,
+  "replay_executions": 24,
+  "elapsed": 82.09366624988616,
+  "files": {
+    "summary.json": "19541d1b349b179ba2459e661ac1287a82a88d61010bac5646a19a8a2b45b535",
+    "pairs.json.gz": "a405d296d8a46b537a98b706259acc44ca0bacc736ff266a26da35d14e1d8801",
+    "cases.json.gz": "4fb3b8195578aa4dfbc3b3025a7f932bdbdbb876e7f5075c5e1dcea043a815c2",
+    "freeze.json": "ea8b95ef538fcaa5d255f33859c5cb3e3d7cecc760b111ce17cdf797d1f632db"
+  }
+}

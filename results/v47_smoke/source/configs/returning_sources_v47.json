@@ -1,0 +1,12 @@
+{
+  "version": "20261121-returning-sources-v47",
+  "parent_freeze": "results/v46/freeze.json",
+  "holdout": {"seed_start": 236000000, "n": 8192},
+  "smoke": {"seed_start": 237000000, "n": 96},
+  "arms": {
+    "unlinked_new": ["unlinked", "novelty"],
+    "unlinked_consistent": ["unlinked", "consistency"],
+    "prepared_new": ["prepared", "novelty"],
+    "prepared_consistent": ["prepared", "consistency"]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "n": 30,
+  "arms": {
+    "unlinked_new": {
+      "wins": 7,
+      "adjusted_nights": 30,
+      "same_report_target": 2,
+      "exiles": {
+        "mafia": 22,
+        "police": 7,
+        "civilian": 1
+      },
+      "counts": {
+        "qualified": 103,
+        "fresh_2": 93,
+        "preferred_police": 60,
+        "flag_mafia_call_without_own_hit_or_rival": 60,
+        "call_mafia": 30,
+        "own_vote_matches_mafia": 30,
+        "civil_opportunity_mafia": 161,
+        "call_police": 30,
+        "own_vote_matches_police": 30,
+        "civil_opportunity_police": 181,
+        "civil_follow_police": 109,
+        "fresh_1": 10,
+        "novel_mafia": 10,
+        "source_mafia": 10,
+        "changed_from_inherited_mafia": 10,
+        "civil_follow_mafia": 31
+      }
+    },
+    "unlinked_consistent": {
+      "wins": 7,
+      "adjusted_nights": 30,
+      "same_report_target": 2,
+      "exiles": {
+        "mafia": 25,
+        "police": 5
+      },
+      "counts": {
+        "qualified": 103,
+        "fresh_2": 93,
+        "preferred_police": 60,
+        "source_police": 60,
+        "flag_mafia_call_without_own_hit_or_rival": 60,
+        "call_mafia": 30,
+        "own_vote_matches_mafia": 30,
+        "civil_opportunity_mafia": 161,
+        "call_police": 30,
+        "own_vote_matches_police": 30,
+        "civil_opportunity_police": 181,
+        "civil_follow_police": 145,
+        "changed_from_inherited_police": 36,
+        "fresh_1": 10,
+        "novel_mafia": 10,
+        "source_mafia": 6,
+        "changed_from_inherited_mafia": 6,
+        "civil_follow_mafia": 27
+      }
+    },
+    "prepared_new": {
+      "wins": 6,
+      "adjusted_nights": 30,
+      "same_report_target": 2,
+      "exiles": {
+        "mafia": 20,
+        "police": 10
+      },
+      "counts": {
+        "qualified": 129,
+        "fresh_2": 118,
+        "call_mafia": 30,
+        "own_vote_matches_mafia": 30,
+        "civil_opportunity_mafia": 175,
+        "call_police": 30,
+        "own_vote_matches_police": 30,
+        "civil_opportunity_police": 181,
+        "civil_follow_police": 103,
+        "fresh_1": 11,
+        "novel_mafia": 11,
+        "source_mafia": 11,
+        "changed_from_inherited_mafia": 6,
+        "civil_follow_mafia": 52
+      }
+    },
+    "prepared_consistent": {
+      "wins": 6,
+      "adjusted_nights": 30,
+      "same_report_target": 2,
+      "exiles": {
+        "mafia": 20,
+        "police": 10
+      },
+      "counts": {
+        "qualified": 129,
+        "fresh_2": 118,
+        "call_mafia": 30,
+        "own_vote_matches_mafia": 30,
+        "civil_opportunity_mafia": 175,
+        "call_police": 30,
+        "own_vote_matches_police": 30,
+        "civil_opportunity_police": 181,
+        "civil_follow_police": 103,
+        "fresh_1": 11,
+        "novel_mafia": 11,
+        "source_mafia": 11,
+        "changed_from_inherited_mafia": 6,
+        "civil_follow_mafia": 52
+      }
+    }
+  },
+  "contrasts": {
+    "unlinked_new_to_unlinked_consistent": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 2,
+        "tail_alpha": 0.00625,
+        "p_plus": [
+          0.0,
+          0.15563672849004587
+        ],
+        "p_minus": [
+          0.0,
+          0.15563672849004587
+        ],
+        "ci_simultaneous": [
+          -0.15563672849004587,
+          0.15563672849004587
+        ]
+      },
+      "changed_games": 8,
+      "changed_ballots": 36,
+      "changed_exiles": 3,
+      "changed_same_loss": 6
+    },
+    "prepared_new_to_prepared_consistent": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 2,
+        "tail_alpha": 0.00625,
+        "p_plus": [
+          0.0,
+          0.15563672849004587
+        ],
+        "p_minus": [
+          0.0,
+          0.15563672849004587
+        ],
+        "ci_simultaneous": [
+          -0.15563672849004587,
+          0.15563672849004587
+        ]
+      },
+      "changed_games": 0,
+      "changed_ballots": 0,
+      "changed_exiles": 0,
+      "changed_same_loss": 0
+    }
+  }
+}

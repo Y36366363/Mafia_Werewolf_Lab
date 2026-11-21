@@ -1,0 +1,167 @@
+{
+  "n": 2720,
+  "arms": {
+    "unlinked_new": {
+      "wins": 420,
+      "adjusted_nights": 2720,
+      "same_report_target": 136,
+      "exiles": {
+        "mafia": 1701,
+        "police": 861,
+        "civilian": 158
+      },
+      "counts": {
+        "qualified": 10212,
+        "fresh_2": 9008,
+        "preferred_police": 4977,
+        "flag_mafia_call_without_own_hit_or_rival": 4977,
+        "call_police": 2720,
+        "own_vote_matches_police": 2720,
+        "civil_opportunity_police": 16340,
+        "civil_follow_police": 9406,
+        "call_mafia": 2720,
+        "own_vote_matches_mafia": 2720,
+        "civil_opportunity_mafia": 14848,
+        "fresh_1": 1204,
+        "novel_mafia": 1204,
+        "source_mafia": 1204,
+        "changed_from_inherited_mafia": 1042,
+        "civil_follow_mafia": 3832
+      }
+    },
+    "unlinked_consistent": {
+      "wins": 490,
+      "adjusted_nights": 2720,
+      "same_report_target": 136,
+      "exiles": {
+        "mafia": 2083,
+        "police": 628,
+        "civilian": 9
+      },
+      "counts": {
+        "qualified": 10212,
+        "fresh_2": 9008,
+        "preferred_police": 4977,
+        "source_police": 4977,
+        "changed_from_inherited_police": 2441,
+        "flag_mafia_call_without_own_hit_or_rival": 4977,
+        "call_police": 2720,
+        "own_vote_matches_police": 2720,
+        "civil_opportunity_police": 16340,
+        "civil_follow_police": 12265,
+        "call_mafia": 2720,
+        "own_vote_matches_mafia": 2720,
+        "civil_opportunity_mafia": 14848,
+        "fresh_1": 1204,
+        "novel_mafia": 1204,
+        "source_mafia": 424,
+        "changed_from_inherited_mafia": 262,
+        "civil_follow_mafia": 3052
+      }
+    },
+    "prepared_new": {
+      "wins": 348,
+      "adjusted_nights": 2720,
+      "same_report_target": 136,
+      "exiles": {
+        "police": 1059,
+        "mafia": 1577,
+        "civilian": 84
+      },
+      "counts": {
+        "qualified": 11851,
+        "fresh_2": 10412,
+        "call_police": 2720,
+        "own_vote_matches_police": 2720,
+        "civil_opportunity_police": 16340,
+        "call_mafia": 2720,
+        "own_vote_matches_mafia": 2720,
+        "civil_opportunity_mafia": 15501,
+        "civil_follow_mafia": 4820,
+        "civil_follow_police": 9076,
+        "fresh_1": 1439,
+        "novel_mafia": 1439,
+        "source_mafia": 1439,
+        "changed_from_inherited_mafia": 1078
+      }
+    },
+    "prepared_consistent": {
+      "wins": 348,
+      "adjusted_nights": 2720,
+      "same_report_target": 136,
+      "exiles": {
+        "police": 1059,
+        "mafia": 1577,
+        "civilian": 84
+      },
+      "counts": {
+        "qualified": 11851,
+        "fresh_2": 10412,
+        "call_police": 2720,
+        "own_vote_matches_police": 2720,
+        "civil_opportunity_police": 16340,
+        "call_mafia": 2720,
+        "own_vote_matches_mafia": 2720,
+        "civil_opportunity_mafia": 15501,
+        "civil_follow_mafia": 4820,
+        "civil_follow_police": 9076,
+        "fresh_1": 1439,
+        "novel_mafia": 1439,
+        "source_mafia": 1439,
+        "changed_from_inherited_mafia": 1078
+      }
+    }
+  },
+  "contrasts": {
+    "unlinked_new_to_unlinked_consistent": {
+      "gains": 75,
+      "losses": 5,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 2,
+        "tail_alpha": 0.00625,
+        "p_plus": [
+          0.020335330283075593,
+          0.036419968820070994
+        ],
+        "p_minus": [
+          0.00041866392789336154,
+          0.005072048532297653
+        ],
+        "ci_simultaneous": [
+          0.01526328175077794,
+          0.036001304892177635
+        ]
+      },
+      "changed_games": 664,
+      "changed_ballots": 2859,
+      "changed_exiles": 382,
+      "changed_same_loss": 412
+    },
+    "prepared_new_to_prepared_consistent": {
+      "gains": 0,
+      "losses": 0,
+      "precision": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 2,
+        "tail_alpha": 0.00625,
+        "p_plus": [
+          0.0,
+          0.0018641330678356494
+        ],
+        "p_minus": [
+          0.0,
+          0.0018641330678356494
+        ],
+        "ci_simultaneous": [
+          -0.0018641330678356494,
+          0.0018641330678356494
+        ]
+      },
+      "changed_games": 0,
+      "changed_ballots": 0,
+      "changed_exiles": 0,
+      "changed_same_loss": 0
+    }
+  }
+}

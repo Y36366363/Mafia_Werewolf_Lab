@@ -1,0 +1,50 @@
+{
+  "config": {
+    "version": "20261121-returning-sources-v47",
+    "parent_freeze": "results/v46/freeze.json",
+    "holdout": {
+      "seed_start": 236000000,
+      "n": 8192
+    },
+    "smoke": {
+      "seed_start": 237000000,
+      "n": 96
+    },
+    "arms": {
+      "unlinked_new": [
+        "unlinked",
+        "novelty"
+      ],
+      "unlinked_consistent": [
+        "unlinked",
+        "consistency"
+      ],
+      "prepared_new": [
+        "prepared",
+        "novelty"
+      ],
+      "prepared_consistent": [
+        "prepared",
+        "consistency"
+      ]
+    }
+  },
+  "parents": {
+    "results/v46/freeze.json": "171bee3d8b0d118c5aac7eef6995477b2fdfc667f91bebebb0cd3652a055af5d",
+    "results/v45/freeze.json": "6694d119e8d9ba94f9f9e2e8f211e7307a6e26a9f74f4338eaf5da26019aac50",
+    "results/v44/freeze.json": "9fa772ebba048e39aa95fb85f61b38feff171a6bf3ce436208fcb9d6135d0776",
+    "results/v43/freeze.json": "e3ace46df2d3203372286220232dfb4cb83192f77b9578926f5d04e3cea9e3ed",
+    "results/v42/freeze.json": "329d8a4337cfb917eb5778717ed9c85469db5787f78a40b9e9e1b379857a6f3f",
+    "results/v41/freeze.json": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8"
+  },
+  "assets": {
+    "configs/returning_sources_v47.json": "70a35d2e86a5e465b3f3808d80638a7ea639e676e4bf283f3b8c25c0ce643519",
+    "scripts/run_returning_sources_v47.py": "e9cdb4e73016a5a0a373e478196982bdcf77feec026fda5135262303207593af",
+    "mafia_lab/returning_sources_v47.py": "99a912781b824cab6cf95445737943213c924d4c1487412ed24ee4caa4bf6588",
+    "docs/returning_sources_protocol_v47.md": "02887703c352e8ccc8ecbecaaac530441236034e31fb7b9f990438ac59c0c60d",
+    "tests/test_returning_sources_v47.py": "4a3a05b5e48bc0e42e8e4accd1d93953cc6fb21e68032a33516239d73ec7ab99"
+  },
+  "q": "1/2",
+  "python": "3.12.3",
+  "scipy": "1.16.3"
+}
