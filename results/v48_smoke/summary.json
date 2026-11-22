@@ -1,0 +1,290 @@
+{
+  "n": 28,
+  "opponents": {
+    "prepared": {
+      "arms": {
+        "novelty": {
+          "wins": 4,
+          "adjusted_nights": 28,
+          "exiles": {
+            "police": 7,
+            "mafia": 21
+          },
+          "counts": {
+            "eligible": 110,
+            "fresh_2": 100,
+            "supported_police": 36,
+            "challenge_would_change_police": 15,
+            "num_challenged_1": 36,
+            "source_vote_matches_police": 28,
+            "civil_opportunities_police": 172,
+            "source_vote_matches_mafia": 28,
+            "civil_opportunities_mafia": 164,
+            "civil_follows_mafia": 20,
+            "civil_follows_police": 127,
+            "fresh_1": 10,
+            "novel_mafia": 10,
+            "num_challenged_0": 64,
+            "num_challenged_2": 10
+          }
+        },
+        "neutral": {
+          "wins": 4,
+          "adjusted_nights": 28,
+          "exiles": {
+            "police": 7,
+            "mafia": 21
+          },
+          "counts": {
+            "eligible": 110,
+            "fresh_2": 100,
+            "supported_police": 36,
+            "challenge_would_change_police": 15,
+            "num_challenged_1": 36,
+            "source_vote_matches_police": 28,
+            "civil_opportunities_police": 172,
+            "source_vote_matches_mafia": 28,
+            "civil_opportunities_mafia": 164,
+            "civil_follows_mafia": 20,
+            "civil_follows_police": 127,
+            "fresh_1": 10,
+            "novel_mafia": 10,
+            "num_challenged_0": 64,
+            "num_challenged_2": 10
+          }
+        },
+        "challenge": {
+          "wins": 5,
+          "adjusted_nights": 28,
+          "exiles": {
+            "mafia": 23,
+            "police": 5
+          },
+          "counts": {
+            "eligible": 110,
+            "fresh_2": 100,
+            "supported_police": 36,
+            "challenge_would_change_police": 15,
+            "num_challenged_1": 36,
+            "source_vote_matches_police": 28,
+            "civil_opportunities_police": 172,
+            "civil_follows_police": 142,
+            "source_vote_matches_mafia": 28,
+            "civil_opportunities_mafia": 164,
+            "fresh_1": 10,
+            "novel_mafia": 10,
+            "num_challenged_0": 64,
+            "num_challenged_2": 10,
+            "civil_follows_mafia": 10
+          }
+        }
+      },
+      "comparisons": {
+        "novelty_to_neutral": {
+          "gains": 0,
+          "losses": 0,
+          "precision": {
+            "method": "Marginal Clopper-Pearson plus union bound",
+            "family": 4,
+            "tail_alpha": 0.003125,
+            "p_plus": [
+              0.0,
+              0.18617625355625375
+            ],
+            "p_minus": [
+              0.0,
+              0.18617625355625375
+            ],
+            "ci_simultaneous": [
+              -0.18617625355625375,
+              0.18617625355625375
+            ]
+          },
+          "changed_games": 0,
+          "changed_ballots": 0,
+          "changed_exiles": 0,
+          "same_loss_changed": 0,
+          "day2_transitions": {
+            "police→police": 7,
+            "mafia→mafia": 21
+          }
+        },
+        "neutral_to_challenge": {
+          "gains": 1,
+          "losses": 0,
+          "precision": {
+            "method": "Marginal Clopper-Pearson plus union bound",
+            "family": 4,
+            "tail_alpha": 0.003125,
+            "p_plus": [
+              0.0001117756458129497,
+              0.2514925170629942
+            ],
+            "p_minus": [
+              0.0,
+              0.18617625355625375
+            ],
+            "ci_simultaneous": [
+              -0.1860644779104408,
+              0.2514925170629942
+            ]
+          },
+          "changed_games": 3,
+          "changed_ballots": 15,
+          "changed_exiles": 2,
+          "same_loss_changed": 1,
+          "day2_transitions": {
+            "police→mafia": 2,
+            "mafia→mafia": 21,
+            "police→police": 5
+          }
+        }
+      }
+    },
+    "unlinked": {
+      "arms": {
+        "novelty": {
+          "wins": 3,
+          "adjusted_nights": 28,
+          "exiles": {
+            "police": 6,
+            "mafia": 21,
+            "civilian": 1
+          },
+          "counts": {
+            "eligible": 87,
+            "fresh_2": 78,
+            "supported_police": 30,
+            "challenge_would_change_police": 13,
+            "num_challenged_1": 30,
+            "source_vote_matches_police": 28,
+            "civil_opportunities_police": 172,
+            "source_vote_matches_mafia": 28,
+            "civil_opportunities_mafia": 154,
+            "civil_follows_mafia": 24,
+            "civil_follows_police": 127,
+            "fresh_1": 9,
+            "novel_mafia": 9,
+            "novel_would_change": 4,
+            "num_challenged_0": 47,
+            "num_challenged_2": 10
+          }
+        },
+        "neutral": {
+          "wins": 4,
+          "adjusted_nights": 28,
+          "exiles": {
+            "police": 6,
+            "mafia": 22
+          },
+          "counts": {
+            "eligible": 87,
+            "fresh_2": 78,
+            "supported_police": 30,
+            "challenge_would_change_police": 13,
+            "num_challenged_1": 30,
+            "source_vote_matches_police": 28,
+            "civil_opportunities_police": 172,
+            "source_vote_matches_mafia": 28,
+            "civil_opportunities_mafia": 154,
+            "civil_follows_mafia": 20,
+            "civil_follows_police": 127,
+            "fresh_1": 9,
+            "novel_mafia": 9,
+            "novel_would_change": 4,
+            "num_challenged_0": 47,
+            "num_challenged_2": 10
+          }
+        },
+        "challenge": {
+          "wins": 4,
+          "adjusted_nights": 28,
+          "exiles": {
+            "mafia": 23,
+            "police": 5
+          },
+          "counts": {
+            "eligible": 87,
+            "fresh_2": 78,
+            "supported_police": 30,
+            "challenge_would_change_police": 13,
+            "num_challenged_1": 30,
+            "source_vote_matches_police": 28,
+            "civil_opportunities_police": 172,
+            "civil_follows_police": 140,
+            "source_vote_matches_mafia": 28,
+            "civil_opportunities_mafia": 154,
+            "fresh_1": 9,
+            "novel_mafia": 9,
+            "novel_would_change": 4,
+            "num_challenged_0": 47,
+            "civil_follows_mafia": 15,
+            "num_challenged_2": 10
+          }
+        }
+      },
+      "comparisons": {
+        "novelty_to_neutral": {
+          "gains": 1,
+          "losses": 0,
+          "precision": {
+            "method": "Marginal Clopper-Pearson plus union bound",
+            "family": 4,
+            "tail_alpha": 0.003125,
+            "p_plus": [
+              0.0001117756458129497,
+              0.2514925170629942
+            ],
+            "p_minus": [
+              0.0,
+              0.18617625355625375
+            ],
+            "ci_simultaneous": [
+              -0.1860644779104408,
+              0.2514925170629942
+            ]
+          },
+          "changed_games": 1,
+          "changed_ballots": 4,
+          "changed_exiles": 1,
+          "same_loss_changed": 0,
+          "day2_transitions": {
+            "police→police": 6,
+            "mafia→mafia": 21,
+            "civilian→mafia": 1
+          }
+        },
+        "neutral_to_challenge": {
+          "gains": 0,
+          "losses": 0,
+          "precision": {
+            "method": "Marginal Clopper-Pearson plus union bound",
+            "family": 4,
+            "tail_alpha": 0.003125,
+            "p_plus": [
+              0.0,
+              0.18617625355625375
+            ],
+            "p_minus": [
+              0.0,
+              0.18617625355625375
+            ],
+            "ci_simultaneous": [
+              -0.18617625355625375,
+              0.18617625355625375
+            ]
+          },
+          "changed_games": 3,
+          "changed_ballots": 13,
+          "changed_exiles": 1,
+          "same_loss_changed": 1,
+          "day2_transitions": {
+            "police→mafia": 1,
+            "mafia→mafia": 22,
+            "police→police": 5
+          }
+        }
+      }
+    }
+  }
+}

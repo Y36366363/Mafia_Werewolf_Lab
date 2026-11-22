@@ -1,0 +1,556 @@
+{
+  "formal": {
+    "manifest": {
+      "screened": 8192,
+      "qualified": 2704,
+      "games": 16224,
+      "sample_replays": 18,
+      "v47_compatibility_checks": 6,
+      "case_replays": 24,
+      "elapsed": 115.39540145802312,
+      "files": {
+        "summary.json": "7ef69cbd213a5192afb22d7be1275c8d5b9249d7291154462d4a3df8b819e722",
+        "pairs.json.gz": "d8f4fe606bc50634376035a9c62662835c7994c97254162242aebec2e68843ec",
+        "cases.json.gz": "b8faa96bea6a71f7403595cec1c36cf99941edd7ff27400fa72c7dc181f52f4d",
+        "freeze.json": "c5611fefab1124fd911002562ed71cc55eff0cec22257fed9339fe6eb1c431ff"
+      }
+    },
+    "coverage": {
+      "prepared": {
+        "games_with_signal": {
+          "eligible": 2205,
+          "supported_police": 1117,
+          "num_challenged_1": 1172,
+          "num_challenged_0": 716,
+          "challenge_would_change_police": 597,
+          "num_challenged_2": 317,
+          "novel_mafia": 320,
+          "novel_would_change": 240,
+          "supported_mafia": 55,
+          "challenge_would_change_mafia": 41
+        },
+        "changed_game_win_transitions": {
+          "neutral→challenge_0→0": 335,
+          "neutral→challenge_1→1": 133,
+          "novelty→neutral_0→0": 151,
+          "neutral→challenge_0→1": 166,
+          "novelty→neutral_0→1": 75,
+          "novelty→neutral_1→1": 8,
+          "novelty→neutral_1→0": 6,
+          "neutral→challenge_1→0": 4
+        }
+      },
+      "unlinked": {
+        "games_with_signal": {
+          "eligible": 2073,
+          "supported_police": 1044,
+          "num_challenged_1": 1101,
+          "num_challenged_0": 648,
+          "challenge_would_change_police": 560,
+          "num_challenged_2": 324,
+          "novel_mafia": 312,
+          "novel_would_change": 287,
+          "supported_mafia": 57,
+          "challenge_would_change_mafia": 26
+        },
+        "changed_game_win_transitions": {
+          "neutral→challenge_0→0": 300,
+          "novelty→neutral_0→0": 159,
+          "neutral→challenge_1→1": 214,
+          "neutral→challenge_0→1": 71,
+          "novelty→neutral_1→1": 46,
+          "novelty→neutral_0→1": 66,
+          "novelty→neutral_1→0": 16,
+          "neutral→challenge_1→0": 1
+        }
+      }
+    },
+    "examples": {
+      "prepared_novelty_neutral_vote": {
+        "novelty": {
+          "seed": 238000092,
+          "win": 0,
+          "exiles": {
+            "1": 5,
+            "2": 13,
+            "3": 0,
+            "4": 3
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "civilian",
+            "3": "mafia",
+            "4": "mafia"
+          }
+        },
+        "neutral": {
+          "seed": 238000092,
+          "win": 0,
+          "exiles": {
+            "1": 5,
+            "2": 0,
+            "3": 9,
+            "4": 2
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia"
+          }
+        }
+      },
+      "prepared_novelty_neutral_gain": {
+        "novelty": {
+          "seed": 238000330,
+          "win": 0,
+          "exiles": {
+            "1": 11,
+            "2": 4,
+            "3": 2,
+            "4": 8
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "civilian",
+            "3": "mafia",
+            "4": "mafia"
+          }
+        },
+        "neutral": {
+          "seed": 238000330,
+          "win": 1,
+          "exiles": {
+            "1": 11,
+            "2": 2,
+            "3": 8,
+            "4": 7
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "mafia",
+            "4": "mafia"
+          }
+        }
+      },
+      "prepared_novelty_neutral_loss": {
+        "novelty": {
+          "seed": 238000893,
+          "win": 1,
+          "exiles": {
+            "1": 5,
+            "2": 7,
+            "3": 13,
+            "4": 3,
+            "5": 1
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "civilian",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        },
+        "neutral": {
+          "seed": 238000893,
+          "win": 0,
+          "exiles": {
+            "1": 5,
+            "2": 13,
+            "3": 11,
+            "4": 1,
+            "5": 0
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "police"
+          }
+        }
+      },
+      "prepared_neutral_challenge_vote": {
+        "neutral": {
+          "seed": 238000020,
+          "win": 0,
+          "exiles": {
+            "1": 10,
+            "2": 14,
+            "3": 4,
+            "4": 11,
+            "5": 8
+          },
+          "roles": {
+            "1": "civilian",
+            "2": "mafia",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "civilian"
+          }
+        },
+        "challenge": {
+          "seed": 238000020,
+          "win": 0,
+          "exiles": {
+            "1": 10,
+            "2": 14,
+            "3": 4,
+            "4": 11,
+            "5": 8
+          },
+          "roles": {
+            "1": "civilian",
+            "2": "mafia",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "civilian"
+          }
+        }
+      },
+      "prepared_neutral_challenge_gain": {
+        "neutral": {
+          "seed": 238000169,
+          "win": 0,
+          "exiles": {
+            "1": 0,
+            "2": 3,
+            "3": 14,
+            "4": 5
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "police",
+            "3": "civilian",
+            "4": "mafia"
+          }
+        },
+        "challenge": {
+          "seed": 238000169,
+          "win": 1,
+          "exiles": {
+            "1": 0,
+            "2": 5,
+            "3": 14,
+            "4": 15,
+            "5": 7
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        }
+      },
+      "prepared_neutral_challenge_loss": {
+        "neutral": {
+          "seed": 238002496,
+          "win": 1,
+          "exiles": {
+            "1": 0,
+            "2": 15,
+            "3": 14,
+            "4": 1,
+            "5": 2
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        },
+        "challenge": {
+          "seed": 238002496,
+          "win": 0,
+          "exiles": {
+            "1": 0,
+            "2": 10,
+            "3": 15,
+            "4": 14,
+            "5": 1
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "civilian",
+            "3": "mafia",
+            "4": "civilian",
+            "5": "mafia"
+          }
+        }
+      },
+      "unlinked_novelty_neutral_vote": {
+        "novelty": {
+          "seed": 238000092,
+          "win": 0,
+          "exiles": {
+            "1": 5,
+            "2": 7,
+            "3": 0,
+            "4": 12
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "civilian",
+            "3": "mafia",
+            "4": "civilian"
+          }
+        },
+        "neutral": {
+          "seed": 238000092,
+          "win": 0,
+          "exiles": {
+            "1": 5,
+            "2": 0,
+            "3": 9,
+            "4": 2
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia"
+          }
+        }
+      },
+      "unlinked_novelty_neutral_gain": {
+        "novelty": {
+          "seed": 238000330,
+          "win": 0,
+          "exiles": {
+            "1": 11,
+            "2": 13,
+            "3": 2,
+            "4": 8
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "civilian",
+            "3": "mafia",
+            "4": "mafia"
+          }
+        },
+        "neutral": {
+          "seed": 238000330,
+          "win": 1,
+          "exiles": {
+            "1": 11,
+            "2": 2,
+            "3": 8,
+            "4": 7
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "mafia",
+            "4": "mafia"
+          }
+        }
+      },
+      "unlinked_novelty_neutral_loss": {
+        "novelty": {
+          "seed": 238000801,
+          "win": 1,
+          "exiles": {
+            "1": 4,
+            "2": 6,
+            "3": 8,
+            "4": 2,
+            "5": 1
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "civilian",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        },
+        "neutral": {
+          "seed": 238000801,
+          "win": 0,
+          "exiles": {
+            "1": 4,
+            "2": 8,
+            "3": 10,
+            "4": 1,
+            "5": 0
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "police"
+          }
+        }
+      },
+      "unlinked_neutral_challenge_vote": {
+        "neutral": {
+          "seed": 238000020,
+          "win": 0,
+          "exiles": {
+            "1": 10,
+            "2": 13,
+            "3": 14,
+            "4": 11
+          },
+          "roles": {
+            "1": "civilian",
+            "2": "police",
+            "3": "mafia",
+            "4": "mafia"
+          }
+        },
+        "challenge": {
+          "seed": 238000020,
+          "win": 0,
+          "exiles": {
+            "1": 10,
+            "2": 14,
+            "3": 4,
+            "4": 11,
+            "5": 8
+          },
+          "roles": {
+            "1": "civilian",
+            "2": "mafia",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "civilian"
+          }
+        }
+      },
+      "unlinked_neutral_challenge_gain": {
+        "neutral": {
+          "seed": 238000169,
+          "win": 0,
+          "exiles": {
+            "1": 0,
+            "2": 3,
+            "3": 14,
+            "4": 5
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "police",
+            "3": "civilian",
+            "4": "mafia"
+          }
+        },
+        "challenge": {
+          "seed": 238000169,
+          "win": 1,
+          "exiles": {
+            "1": 0,
+            "2": 5,
+            "3": 14,
+            "4": 15,
+            "5": 7
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        }
+      },
+      "unlinked_neutral_challenge_loss": {
+        "neutral": {
+          "seed": 238002496,
+          "win": 1,
+          "exiles": {
+            "1": 0,
+            "2": 15,
+            "3": 14,
+            "4": 1,
+            "5": 2
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        },
+        "challenge": {
+          "seed": 238002496,
+          "win": 0,
+          "exiles": {
+            "1": 0,
+            "2": 4,
+            "3": 14,
+            "4": 15
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "police",
+            "3": "civilian",
+            "4": "mafia"
+          }
+        }
+      }
+    }
+  },
+  "smoke": {
+    "manifest": {
+      "screened": 96,
+      "qualified": 28,
+      "games": 168,
+      "sample_replays": 0,
+      "v47_compatibility_checks": 0,
+      "case_replays": 0,
+      "elapsed": 14.188272958155721,
+      "files": {
+        "summary.json": "65cdb65d712573a66576fc33436ecd80390b6e7e115d049a043afd20caa1adbd",
+        "pairs.json.gz": "ddf488de8a53c777302d9c5f5bbab58f52a3f21d931095ab625570fd001ce8da",
+        "cases.json.gz": "a4b04944443134617e3f0ce2d83bd80777944443377c1b3d27d20980cd705f74",
+        "freeze.json": "c5611fefab1124fd911002562ed71cc55eff0cec22257fed9339fe6eb1c431ff"
+      }
+    },
+    "coverage": {
+      "prepared": {
+        "games_with_signal": {
+          "eligible": 20,
+          "supported_police": 7,
+          "challenge_would_change_police": 3,
+          "num_challenged_1": 7,
+          "novel_mafia": 2,
+          "num_challenged_0": 11,
+          "num_challenged_2": 2
+        },
+        "changed_game_win_transitions": {
+          "neutral→challenge_0→0": 1,
+          "neutral→challenge_0→1": 1,
+          "neutral→challenge_1→1": 1
+        }
+      },
+      "unlinked": {
+        "games_with_signal": {
+          "eligible": 18,
+          "supported_police": 7,
+          "challenge_would_change_police": 3,
+          "num_challenged_1": 7,
+          "novel_mafia": 2,
+          "novel_would_change": 1,
+          "num_challenged_0": 9,
+          "num_challenged_2": 2
+        },
+        "changed_game_win_transitions": {
+          "neutral→challenge_0→0": 1,
+          "novelty→neutral_0→1": 1,
+          "neutral→challenge_1→1": 2
+        }
+      }
+    },
+    "examples": {}
+  }
+}

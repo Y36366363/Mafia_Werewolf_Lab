@@ -1,0 +1,8 @@
+{
+  "version": "20261122-public-novelty-ablation-v48",
+  "parent_freeze": "results/v47/freeze.json",
+  "holdout": {"seed_start": 238000000, "n": 8192},
+  "smoke": {"seed_start": 239000000, "n": 96},
+  "opponents": ["prepared", "unlinked"],
+  "receivers": ["novelty", "neutral", "challenge"]
+}

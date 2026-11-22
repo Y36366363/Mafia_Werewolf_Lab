@@ -1,0 +1,42 @@
+{
+  "config": {
+    "version": "20261122-public-novelty-ablation-v48",
+    "parent_freeze": "results/v47/freeze.json",
+    "holdout": {
+      "seed_start": 238000000,
+      "n": 8192
+    },
+    "smoke": {
+      "seed_start": 239000000,
+      "n": 96
+    },
+    "opponents": [
+      "prepared",
+      "unlinked"
+    ],
+    "receivers": [
+      "novelty",
+      "neutral",
+      "challenge"
+    ]
+  },
+  "parents": {
+    "results/v47/freeze.json": "ea8b95ef538fcaa5d255f33859c5cb3e3d7cecc760b111ce17cdf797d1f632db",
+    "results/v46/freeze.json": "171bee3d8b0d118c5aac7eef6995477b2fdfc667f91bebebb0cd3652a055af5d",
+    "results/v45/freeze.json": "6694d119e8d9ba94f9f9e2e8f211e7307a6e26a9f74f4338eaf5da26019aac50",
+    "results/v44/freeze.json": "9fa772ebba048e39aa95fb85f61b38feff171a6bf3ce436208fcb9d6135d0776",
+    "results/v43/freeze.json": "e3ace46df2d3203372286220232dfb4cb83192f77b9578926f5d04e3cea9e3ed",
+    "results/v42/freeze.json": "329d8a4337cfb917eb5778717ed9c85469db5787f78a40b9e9e1b379857a6f3f",
+    "results/v41/freeze.json": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8"
+  },
+  "assets": {
+    "configs/novelty_ablation_v48.json": "25270891d705d75df0f9b2139f7b95edce55184e2aef4a0631fdd69287679ee8",
+    "scripts/run_novelty_ablation_v48.py": "8621dfe7836f91d9b65667b33e348af49ca77e5ee6f097b31d69076fd0968e60",
+    "mafia_lab/novelty_ablation_v48.py": "1c2ea3a9a0c86c410552f5d144fd56a0509a47b7992c9ef7f28f138fd2cf894d",
+    "docs/novelty_ablation_protocol_v48.md": "694a34972ca289d928da70d2fca6c79a032940fbb756a98d3cd5107676d275c1",
+    "tests/test_novelty_ablation_v48.py": "fdf6f8e62c7cacb7ead8227fb66fa120de05283050dcc774dc3a490adc4531f2"
+  },
+  "q": "1/2",
+  "python": "3.12.3",
+  "scipy": "1.16.3"
+}
