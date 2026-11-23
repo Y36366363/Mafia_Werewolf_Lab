@@ -1,0 +1,420 @@
+{
+  "formal": {
+    "manifest": {
+      "screened": 8192,
+      "qualified": 2786,
+      "games": 13930,
+      "sample_replays": 15,
+      "v48_compatibility": 6,
+      "case_replays": 16,
+      "elapsed": 217.70941258291714,
+      "files": {
+        "summary.json": "b25f9ec08ae820985b423a51c29bb9f62eb04bca7033f56b8f640cf59c838177",
+        "pairs.json.gz": "6f89c3f6639f48f80639555f1386dd6e2632a28f9f4feed284f21521573bcb70",
+        "cases.json.gz": "c8e40b873cb6238d4a669e97c756032555b7eff259746e1e27c7ab0854f269bd",
+        "screen.json.gz": "b685dc0fadc1095cc0ced478e6693d85fb23019582c14fbeec11d283e745cdb0",
+        "freeze.json": "cb226edcb16dbb81579a5ef17511bc268e24543f68d90778ff595af41fee49a7"
+      }
+    },
+    "examples": {
+      "original_evidence_vote": {
+        "original_neutral": {
+          "seed": 240000001,
+          "win": 0,
+          "exits": {
+            "1": 14,
+            "2": 2,
+            "3": 12,
+            "4": 13
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "police",
+            "3": "civilian",
+            "4": "mafia"
+          }
+        },
+        "original_evidence": {
+          "seed": 240000001,
+          "win": 1,
+          "exits": {
+            "1": 14,
+            "2": 5,
+            "3": 12,
+            "4": 13,
+            "5": 7
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        }
+      },
+      "original_evidence_gain": {
+        "original_neutral": {
+          "seed": 240000001,
+          "win": 0,
+          "exits": {
+            "1": 14,
+            "2": 2,
+            "3": 12,
+            "4": 13
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "police",
+            "3": "civilian",
+            "4": "mafia"
+          }
+        },
+        "original_evidence": {
+          "seed": 240000001,
+          "win": 1,
+          "exits": {
+            "1": 14,
+            "2": 5,
+            "3": 12,
+            "4": 13,
+            "5": 7
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        }
+      },
+      "original_evidence_loss": {
+        "original_neutral": {
+          "seed": 240001564,
+          "win": 1,
+          "exits": {
+            "1": 10,
+            "2": 13,
+            "3": 9,
+            "4": 15,
+            "5": 3
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "police",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        },
+        "original_evidence": {
+          "seed": 240001564,
+          "win": 0,
+          "exits": {
+            "1": 10,
+            "2": 9,
+            "3": 15,
+            "4": 2,
+            "5": 5
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "mafia",
+            "4": "civilian",
+            "5": "civilian"
+          }
+        }
+      },
+      "counter_evidence_vote": {
+        "counter_neutral": {
+          "seed": 240000019,
+          "win": 0,
+          "exits": {
+            "1": 15,
+            "2": 2,
+            "3": 9,
+            "4": 0,
+            "5": 7
+          },
+          "roles": {
+            "1": "civilian",
+            "2": "police",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "civilian"
+          }
+        },
+        "counter_evidence": {
+          "seed": 240000019,
+          "win": 0,
+          "exits": {
+            "1": 15,
+            "2": 9,
+            "3": 3,
+            "4": 0,
+            "5": 7
+          },
+          "roles": {
+            "1": "civilian",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "civilian"
+          }
+        }
+      },
+      "counter_evidence_gain": {
+        "counter_neutral": {
+          "seed": 240000150,
+          "win": 0,
+          "exits": {
+            "1": 10,
+            "2": 13,
+            "3": 9,
+            "4": 11,
+            "5": 14
+          },
+          "roles": {
+            "1": "civilian",
+            "2": "police",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        },
+        "counter_evidence": {
+          "seed": 240000150,
+          "win": 1,
+          "exits": {
+            "1": 10,
+            "2": 9,
+            "3": 14,
+            "4": 11,
+            "5": 2
+          },
+          "roles": {
+            "1": "civilian",
+            "2": "mafia",
+            "3": "mafia",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        }
+      },
+      "counter_evidence_loss": {
+        "counter_neutral": {
+          "seed": 240000676,
+          "win": 1,
+          "exits": {
+            "1": 6,
+            "2": 4,
+            "3": 3,
+            "4": 5,
+            "5": 7
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        },
+        "counter_evidence": {
+          "seed": 240000676,
+          "win": 0,
+          "exits": {
+            "1": 6,
+            "2": 13,
+            "3": 3,
+            "4": 4,
+            "5": 5
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "civilian",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        }
+      },
+      "counter_backed_vote": {
+        "counter_neutral": {
+          "seed": 240000133,
+          "win": 0,
+          "exits": {
+            "1": 5,
+            "2": 15,
+            "3": 0,
+            "4": 10
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "civilian"
+          }
+        },
+        "counter_backed": {
+          "seed": 240000133,
+          "win": 0,
+          "exits": {
+            "1": 5,
+            "2": 15,
+            "3": 0,
+            "4": 10
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "civilian"
+          }
+        }
+      },
+      "counter_backed_gain": {
+        "counter_neutral": {
+          "seed": 240005863,
+          "win": 0,
+          "exits": {
+            "1": 4,
+            "2": 1,
+            "3": 2,
+            "4": 13,
+            "5": 14
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "police",
+            "3": "mafia",
+            "4": "civilian",
+            "5": "mafia"
+          }
+        },
+        "counter_backed": {
+          "seed": 240005863,
+          "win": 1,
+          "exits": {
+            "1": 4,
+            "2": 2,
+            "3": 13,
+            "4": 14,
+            "5": 11
+          },
+          "roles": {
+            "1": "mafia",
+            "2": "mafia",
+            "3": "civilian",
+            "4": "mafia",
+            "5": "mafia"
+          }
+        }
+      }
+    },
+    "evidence_strata": {
+      "original_evidence": {
+        "counter_available_n": 1358,
+        "counter_available_win_0→1": 101,
+        "counter_available_changed_day2": 414,
+        "no_counter_n": 1428,
+        "no_counter_win_0→0": 1334,
+        "no_counter_changed_day2": 219,
+        "counter_available_win_1→1": 350,
+        "counter_available_win_0→0": 902,
+        "no_counter_win_1→1": 51,
+        "no_counter_win_0→1": 43,
+        "counter_available_win_1→0": 5
+      },
+      "counter_evidence": {
+        "counter_available_n": 1358,
+        "counter_available_win_0→0": 1004,
+        "counter_available_changed_day2": 126,
+        "no_counter_n": 1428,
+        "no_counter_win_0→0": 1334,
+        "no_counter_changed_day2": 219,
+        "counter_available_win_1→1": 348,
+        "no_counter_win_1→1": 51,
+        "no_counter_win_0→1": 43,
+        "counter_available_win_1→0": 6
+      }
+    },
+    "evidence_counter_case": {
+      "seed": 240000001,
+      "sha256": "5d7cb297603637cbc32236ae2a41dbab08482bb53b82cc791f477e08dd3aba49",
+      "replays": 4
+    },
+    "backed_prior_support": {
+      "3 vs 0": 5,
+      "4 vs 0": 2
+    },
+    "backed_conditional": {
+      "gains": 2,
+      "losses": 0,
+      "descriptive_interval": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 1,
+        "tail_alpha": 0.0125,
+        "p_plus": [
+          0.025459542008747667,
+          0.7516584645948458
+        ],
+        "p_minus": [
+          0.0,
+          0.4652755999733036
+        ],
+        "ci_simultaneous": [
+          -0.4398160579645559,
+          0.7516584645948458
+        ]
+      }
+    }
+  },
+  "smoke": {
+    "manifest": {
+      "screened": 96,
+      "qualified": 29,
+      "games": 145,
+      "sample_replays": 0,
+      "v48_compatibility": 0,
+      "case_replays": 0,
+      "elapsed": 42.77579608303495,
+      "files": {
+        "summary.json": "3da1879e4e71c570784542e25b1e9d0b1cd02297f03b9253feba5550ba662e81",
+        "pairs.json.gz": "9a096340b04d79828e8d2f296b21fe2d0b69f1c0db3aefc04390e71f6d745263",
+        "cases.json.gz": "a4b04944443134617e3f0ce2d83bd80777944443377c1b3d27d20980cd705f74",
+        "screen.json.gz": "6d595da7e49810c377385db18cef4ccf9cd1d060b378bc124508ebf5ddfd7885",
+        "freeze.json": "cb226edcb16dbb81579a5ef17511bc268e24543f68d90778ff595af41fee49a7"
+      }
+    },
+    "examples": {},
+    "evidence_strata": {
+      "original_evidence": {
+        "no_counter_n": 16,
+        "no_counter_win_0→0": 15,
+        "no_counter_changed_day2": 2,
+        "counter_available_n": 13,
+        "counter_available_win_0→0": 9,
+        "counter_available_changed_day2": 5,
+        "counter_available_win_1→1": 2,
+        "counter_available_win_0→1": 2,
+        "no_counter_win_1→1": 1
+      },
+      "counter_evidence": {
+        "no_counter_n": 16,
+        "no_counter_win_0→0": 15,
+        "no_counter_changed_day2": 2,
+        "counter_available_n": 13,
+        "counter_available_win_0→0": 11,
+        "counter_available_changed_day2": 0,
+        "counter_available_win_1→1": 2,
+        "no_counter_win_1→1": 1
+      }
+    },
+    "evidence_counter_case": {},
+    "backed_prior_support": {},
+    "backed_conditional": {}
+  }
+}

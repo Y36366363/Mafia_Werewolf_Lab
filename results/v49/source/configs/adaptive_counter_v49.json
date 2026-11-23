@@ -1,0 +1,13 @@
+{
+  "version": "20261123-adaptive-counter-and-backed-call-v49",
+  "parent_freeze": "results/v48/freeze.json",
+  "holdout": {"seed_start": 240000000, "n": 8192},
+  "smoke": {"seed_start": 241000000, "n": 96},
+  "arms": {
+    "original_neutral": [false, "neutral", false],
+    "original_evidence": [false, "challenge", false],
+    "counter_neutral": [true, "neutral", false],
+    "counter_evidence": [true, "challenge", false],
+    "counter_backed": [true, "neutral", true]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "config": {
+    "version": "20261123-adaptive-counter-and-backed-call-v49",
+    "parent_freeze": "results/v48/freeze.json",
+    "holdout": {
+      "seed_start": 240000000,
+      "n": 8192
+    },
+    "smoke": {
+      "seed_start": 241000000,
+      "n": 96
+    },
+    "arms": {
+      "original_neutral": [
+        false,
+        "neutral",
+        false
+      ],
+      "original_evidence": [
+        false,
+        "challenge",
+        false
+      ],
+      "counter_neutral": [
+        true,
+        "neutral",
+        false
+      ],
+      "counter_evidence": [
+        true,
+        "challenge",
+        false
+      ],
+      "counter_backed": [
+        true,
+        "neutral",
+        true
+      ]
+    }
+  },
+  "parents": {
+    "results/v48/freeze.json": "c5611fefab1124fd911002562ed71cc55eff0cec22257fed9339fe6eb1c431ff",
+    "results/v47/freeze.json": "ea8b95ef538fcaa5d255f33859c5cb3e3d7cecc760b111ce17cdf797d1f632db",
+    "results/v46/freeze.json": "171bee3d8b0d118c5aac7eef6995477b2fdfc667f91bebebb0cd3652a055af5d",
+    "results/v45/freeze.json": "6694d119e8d9ba94f9f9e2e8f211e7307a6e26a9f74f4338eaf5da26019aac50",
+    "results/v44/freeze.json": "9fa772ebba048e39aa95fb85f61b38feff171a6bf3ce436208fcb9d6135d0776",
+    "results/v43/freeze.json": "e3ace46df2d3203372286220232dfb4cb83192f77b9578926f5d04e3cea9e3ed",
+    "results/v42/freeze.json": "329d8a4337cfb917eb5778717ed9c85469db5787f78a40b9e9e1b379857a6f3f",
+    "results/v41/freeze.json": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8"
+  },
+  "assets": {
+    "configs/adaptive_counter_v49.json": "4940c876bcb17a533e36d70b5af82af29420d138d2d247f793de54a6bcf40291",
+    "scripts/run_adaptive_counter_v49.py": "6d145b70ad67cfa7807b945a75c01daa33ea501e888e53bd0a5586655284200c",
+    "mafia_lab/adaptive_counter_v49.py": "c5683f69c624e1c63a21a058e1714e5c8bd0a6733a25163963cd31b0924bbafb",
+    "docs/adaptive_counter_protocol_v49.md": "afa88828e97dadcb05aa4efe5c939c71f1d14391dab97d7f52e91c802cbc7dd9",
+    "tests/test_adaptive_counter_v49.py": "2609095db440eb1b937fa33d677c2ec972285e02ef43a33abb2d4969c02503df"
+  },
+  "q": "1/2",
+  "python": "3.12.3",
+  "scipy": "1.16.3"
+}
