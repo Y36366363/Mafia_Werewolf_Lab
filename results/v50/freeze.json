@@ -1,0 +1,74 @@
+{
+  "config": {
+    "version": "20261124-countervote-cost-and-current-support-v50",
+    "parent_freeze": "results/v49/freeze.json",
+    "holdout": {
+      "seed_start": 242000000,
+      "n": 8192
+    },
+    "smoke": {
+      "seed_start": 243000000,
+      "n": 96
+    },
+    "arms": {
+      "original_neutral": [
+        "original",
+        "neutral",
+        false
+      ],
+      "original_evidence": [
+        "original",
+        "challenge",
+        false
+      ],
+      "always_neutral": [
+        "always",
+        "neutral",
+        false
+      ],
+      "always_evidence": [
+        "always",
+        "challenge",
+        false
+      ],
+      "protected_neutral": [
+        "protect_lead",
+        "neutral",
+        false
+      ],
+      "protected_evidence": [
+        "protect_lead",
+        "challenge",
+        false
+      ],
+      "protected_current": [
+        "protect_lead",
+        "neutral",
+        true
+      ]
+    }
+  },
+  "parents": {
+    "results/v49/freeze.json": "cb226edcb16dbb81579a5ef17511bc268e24543f68d90778ff595af41fee49a7",
+    "results/v48/freeze.json": "c5611fefab1124fd911002562ed71cc55eff0cec22257fed9339fe6eb1c431ff",
+    "results/v47/freeze.json": "ea8b95ef538fcaa5d255f33859c5cb3e3d7cecc760b111ce17cdf797d1f632db",
+    "results/v46/freeze.json": "171bee3d8b0d118c5aac7eef6995477b2fdfc667f91bebebb0cd3652a055af5d",
+    "results/v45/freeze.json": "6694d119e8d9ba94f9f9e2e8f211e7307a6e26a9f74f4338eaf5da26019aac50",
+    "results/v44/freeze.json": "9fa772ebba048e39aa95fb85f61b38feff171a6bf3ce436208fcb9d6135d0776",
+    "results/v43/freeze.json": "e3ace46df2d3203372286220232dfb4cb83192f77b9578926f5d04e3cea9e3ed",
+    "results/v42/freeze.json": "329d8a4337cfb917eb5778717ed9c85469db5787f78a40b9e9e1b379857a6f3f",
+    "results/v41/freeze.json": "64d50d82f6c6f03afc058ae04399508201e63e07aaa57f4f51f71173949c4cc8"
+  },
+  "assets": {
+    "configs/response_cost_v50.json": "eee6b929b3cdba2f418b5ed93c7e238f59d5851aa15584f2d9607a8d25150639",
+    "scripts/run_response_cost_v50.py": "2209f34e6a005bbda4675f043ff7f20db5f0704e549586a908d7bf99a0d1d637",
+    "docs/response_cost_protocol_v50.md": "e40682ca2cd39801b6f05eb9cc68f8c863b0499360e44bac4676b684f8dead82",
+    "mafia_lab/response_cost_v50.py": "655d7109a67e4cff51807f8831a51a46b93c6a449f5746ce18dbb5e85cb7b9f7",
+    "mafia_lab/current_support_v50.py": "d007d80b7243e3e6f358bd03b3db9a73fd885fb60a66e227d362660fbd3b1b8f",
+    "tests/test_response_cost_v50.py": "388c09c4029ad53a1ac297d0662d7276003a4ea6f31974c9d6698ba939b02fad",
+    "tests/test_current_support_v50.py": "04e0fa21c3d23df5aa7772535bcb1b40e61f27b70f42290e549a00c780b5bb0f"
+  },
+  "q": "1/2",
+  "python": "3.12.3",
+  "scipy": "1.16.3"
+}

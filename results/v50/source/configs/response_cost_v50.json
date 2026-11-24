@@ -1,0 +1,15 @@
+{
+  "version": "20261124-countervote-cost-and-current-support-v50",
+  "parent_freeze": "results/v49/freeze.json",
+  "holdout": {"seed_start": 242000000, "n": 8192},
+  "smoke": {"seed_start": 243000000, "n": 96},
+  "arms": {
+    "original_neutral": ["original", "neutral", false],
+    "original_evidence": ["original", "challenge", false],
+    "always_neutral": ["always", "neutral", false],
+    "always_evidence": ["always", "challenge", false],
+    "protected_neutral": ["protect_lead", "neutral", false],
+    "protected_evidence": ["protect_lead", "challenge", false],
+    "protected_current": ["protect_lead", "neutral", true]
+  }
+}

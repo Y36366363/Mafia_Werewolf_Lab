@@ -1,0 +1,16 @@
+{
+  "screened": 8192,
+  "qualified": 2743,
+  "games": 19201,
+  "sample_replays": 21,
+  "compatibility_replays": 12,
+  "case_replays": 22,
+  "elapsed": 338.5054204170592,
+  "files": {
+    "summary.json": "2861606de44ee51a106a30b115f77cab70670f2a207f4bfe98fc3abe76838023",
+    "pairs.json.gz": "6c36694c994f949574e429d0c2def26ca8c1c43b6b3b80da2138df3c0943f4bd",
+    "cases.json.gz": "41732c8fcdf82cc66a80fd721c1b485df5f2d96f216985975f21d0714db242b9",
+    "screen.json.gz": "f301784b14737ba21865b2c8989554cf0016f67e8a0629c0c5283b819902f7ca",
+    "freeze.json": "2a1d63f3c58c6b423359f4abffe6103386c5b2b5712bbc40931101d20ef1e01a"
+  }
+}

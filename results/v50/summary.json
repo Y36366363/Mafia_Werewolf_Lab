@@ -1,0 +1,325 @@
+{
+  "n": 2743,
+  "selection": {
+    "original/always/protected": 2743,
+    "neither": 5449
+  },
+  "singleton": {
+    "not_single_source": 7857,
+    "single_live_hit": 335,
+    "mafia→civilian": 335,
+    "mafia→civilian_opportunity": 335,
+    "mafia→civilian_fulfilled": 335
+  },
+  "arms": {
+    "original_neutral": {
+      "wins": 420,
+      "roles": {
+        "mafia": 1783,
+        "police": 960
+      },
+      "counts": {
+        "eligible": 11989,
+        "challenged_1": 5759,
+        "supports_police": 5415,
+        "follows_call": 3944,
+        "challenged_2": 1661,
+        "challenged_0": 4569,
+        "supports_mafia": 344
+      },
+      "opportunities": 0,
+      "protected_games": 0,
+      "modified_nights": 2743
+    },
+    "original_evidence": {
+      "wins": 599,
+      "roles": {
+        "mafia": 2138,
+        "police": 589,
+        "civilian": 16
+      },
+      "counts": {
+        "eligible": 11989,
+        "challenged_1": 5759,
+        "supports_police": 5415,
+        "changes_police": 2722,
+        "challenged_2": 1661,
+        "follows_call": 2461,
+        "challenged_0": 4569,
+        "supports_mafia": 344,
+        "changes_mafia": 223
+      },
+      "opportunities": 0,
+      "protected_games": 0,
+      "modified_nights": 2743
+    },
+    "always_neutral": {
+      "wins": 420,
+      "roles": {
+        "mafia": 1781,
+        "police": 962
+      },
+      "counts": {
+        "nominated": 1368,
+        "attempted": 1368,
+        "fulfilled": 1368,
+        "redirected": 884,
+        "eligible": 11983,
+        "challenged_2": 4914,
+        "follows_call": 3950,
+        "challenged_1": 3009,
+        "supports_police": 2156,
+        "challenged_0": 4060,
+        "supports_mafia": 853,
+        "costly": 5
+      },
+      "opportunities": 1368,
+      "protected_games": 0,
+      "modified_nights": 2743
+    },
+    "always_evidence": {
+      "wins": 455,
+      "roles": {
+        "mafia": 1848,
+        "police": 849,
+        "civilian": 46
+      },
+      "counts": {
+        "nominated": 1368,
+        "attempted": 1368,
+        "fulfilled": 1368,
+        "redirected": 884,
+        "eligible": 11983,
+        "challenged_2": 4914,
+        "challenged_1": 3009,
+        "supports_police": 2156,
+        "changes_police": 904,
+        "follows_call": 3946,
+        "challenged_0": 4060,
+        "supports_mafia": 853,
+        "changes_mafia": 570,
+        "costly": 5
+      },
+      "opportunities": 1368,
+      "protected_games": 0,
+      "modified_nights": 2743
+    },
+    "protected_neutral": {
+      "wins": 420,
+      "roles": {
+        "mafia": 1781,
+        "police": 962
+      },
+      "counts": {
+        "nominated": 1368,
+        "attempted": 1368,
+        "fulfilled": 1363,
+        "redirected": 879,
+        "eligible": 11983,
+        "challenged_2": 4909,
+        "follows_call": 3950,
+        "challenged_1": 2992,
+        "supports_police": 2161,
+        "challenged_0": 4082,
+        "supports_mafia": 831,
+        "costly": 5,
+        "blocked": 5
+      },
+      "opportunities": 1368,
+      "protected_games": 5,
+      "modified_nights": 2743
+    },
+    "protected_evidence": {
+      "wins": 455,
+      "roles": {
+        "mafia": 1848,
+        "police": 851,
+        "civilian": 44
+      },
+      "counts": {
+        "nominated": 1368,
+        "attempted": 1368,
+        "fulfilled": 1363,
+        "redirected": 879,
+        "eligible": 11983,
+        "challenged_2": 4909,
+        "challenged_1": 2992,
+        "supports_police": 2161,
+        "changes_police": 904,
+        "follows_call": 3936,
+        "challenged_0": 4082,
+        "supports_mafia": 831,
+        "changes_mafia": 560,
+        "costly": 5,
+        "blocked": 5
+      },
+      "opportunities": 1368,
+      "protected_games": 5,
+      "modified_nights": 2743
+    },
+    "protected_current": {
+      "wins": 493,
+      "roles": {
+        "mafia": 1935,
+        "police": 808
+      },
+      "counts": {
+        "nominated": 1368,
+        "attempted": 1368,
+        "fulfilled": 1363,
+        "redirected": 879,
+        "eligible": 11659,
+        "challenged_2": 4782,
+        "follows_call": 2527,
+        "challenged_1": 2904,
+        "supports_police": 2104,
+        "challenged_0": 3973,
+        "supports_mafia": 800,
+        "costly": 5,
+        "blocked": 5
+      },
+      "opportunities": 1368,
+      "protected_games": 5,
+      "modified_nights": 2743
+    }
+  },
+  "effects": {
+    "original_neutral_original_evidence": {
+      "gains": 184,
+      "losses": 5,
+      "ci": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 4,
+        "tail_alpha": 0.003125,
+        "p_plus": [
+          0.05468695662361887,
+          0.08118180319202424
+        ],
+        "p_minus": [
+          0.0003513092142379038,
+          0.005399469307508309
+        ],
+        "ci_simultaneous": [
+          0.04928748731611056,
+          0.08083049397778634
+        ]
+      },
+      "changed_votes": 596,
+      "ballots": 2945,
+      "changed_exiles": 428
+    },
+    "always_neutral_always_evidence": {
+      "gains": 41,
+      "losses": 6,
+      "ci": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 4,
+        "tail_alpha": 0.003125,
+        "p_plus": [
+          0.009371324588494889,
+          0.022473187196135586
+        ],
+        "p_minus": [
+          0.0005081899015766329,
+          0.005959315680053132
+        ],
+        "ci_simultaneous": [
+          0.003412008908441757,
+          0.021964997294558954
+        ]
+      },
+      "changed_votes": 284,
+      "ballots": 1474,
+      "changed_exiles": 254
+    },
+    "protected_neutral_protected_evidence": {
+      "gains": 41,
+      "losses": 6,
+      "ci": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 4,
+        "tail_alpha": 0.003125,
+        "p_plus": [
+          0.009371324588494889,
+          0.022473187196135586
+        ],
+        "p_minus": [
+          0.0005081899015766329,
+          0.005959315680053132
+        ],
+        "ci_simultaneous": [
+          0.003412008908441757,
+          0.021964997294558954
+        ]
+      },
+      "changed_votes": 282,
+      "ballots": 1464,
+      "changed_exiles": 252
+    },
+    "protected_neutral_protected_current": {
+      "gains": 75,
+      "losses": 2,
+      "ci": {
+        "method": "Marginal Clopper-Pearson plus union bound",
+        "family": 4,
+        "tail_alpha": 0.003125,
+        "p_plus": [
+          0.019567204334863954,
+          0.037001078857116634
+        ],
+        "p_minus": [
+          2.9614518362736406e-05,
+          0.003586697191143379
+        ],
+        "ci_simultaneous": [
+          0.015980507143720575,
+          0.036971464338753895
+        ]
+      },
+      "changed_votes": 531,
+      "ballots": 2101,
+      "changed_exiles": 157
+    }
+  },
+  "current": {
+    "n": 531,
+    "protected_neutral": {
+      "wins": 42,
+      "follow": 1423,
+      "call_exiled": 261,
+      "exile_roles": {
+        "mafia": 270,
+        "police": 261
+      },
+      "clear_games": 1417
+    },
+    "protected_current": {
+      "wins": 115,
+      "follow": 0,
+      "call_exiled": 0,
+      "exile_roles": {
+        "mafia": 424,
+        "police": 107
+      },
+      "clear_games": 1417
+    }
+  },
+  "strata": {
+    "blocked": {
+      "n": 5,
+      "net": {
+        "original": 0,
+        "always": 0,
+        "protected": 0
+      }
+    },
+    "other": {
+      "n": 2738,
+      "net": {
+        "original": 179,
+        "always": 35,
+        "protected": 35
+      }
+    }
+  }
+}
