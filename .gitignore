@@ -3,6 +3,14 @@ __pycache__/
 .venv/
 *.egg-info/
 
+# File-manager metadata, including .DS_Store case variants.
+.[Dd][Ss]_[Ss][Tt][Oo][Rr][Ee]
+._*
+.AppleDouble/
+__MACOSX/
+Thumbs.db
+Desktop.ini
+
 # Personal academic goals, application plans, and future-work notes stay local.
 /local_planning/
 /docs/academic_*.md
